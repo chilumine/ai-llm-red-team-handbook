@@ -1,60 +1,159 @@
 <svg width="1584" height="396" viewBox="0 0 1584 396" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Deep Deus Ex black-gold background -->
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
+    <!-- Deep Deus Ex black background -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#000000"/>
-      <stop offset="100%" stop-color="#0f0f0f"/>
+      <stop offset="50%" stop-color="#0a0a0a"/>
+      <stop offset="100%" stop-color="#000000"/>
     </linearGradient>
 
-    <!-- Strong Deus Ex gold -->
-    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ffe9a3"/>
-      <stop offset="50%" stop-color="#f7c948"/>
-      <stop offset="100%" stop-color="#b8860b"/>
+    <!-- Iconic Deus Ex gold gradient -->
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f7c948"/>
+      <stop offset="50%" stop-color="#ffdc73"/>
+      <stop offset="100%" stop-color="#d4a239"/>
     </linearGradient>
 
-    <!-- Hex grid pattern -->
-    <pattern id="hex" patternUnits="userSpaceOnUse" width="28" height="24">
-      <polygon points="14,0 28,6 28,18 14,24 0,18 0,6"
-               fill="none" stroke="#f7c94822" stroke-width="1"/>
+    <!-- Gold glow -->
+    <radialGradient id="goldGlow">
+      <stop offset="0%" stop-color="#f7c948" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#f7c948" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Hexagon pattern (Deus Ex signature) -->
+    <pattern id="hexPattern" patternUnits="userSpaceOnUse" width="50" height="43.3">
+      <path d="M25 0 L50 14.43 L50 28.87 L25 43.3 L0 28.87 L0 14.43 Z" 
+            fill="none" 
+            stroke="#f7c948" 
+            stroke-width="0.5" 
+            opacity="0.15"/>
     </pattern>
 
-    <!-- Angular shard gradient -->
-    <linearGradient id="shardGold" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#f7c94855"/>
-      <stop offset="100%" stop-color="#b8860b22"/>
-    </linearGradient>
+    <!-- Circuit line pattern for AI theme -->
+    <pattern id="circuits" patternUnits="userSpaceOnUse" width="100" height="100">
+      <path d="M0,20 L30,20 L30,50 L60,50" stroke="#f7c948" stroke-width="1" opacity="0.1" fill="none"/>
+      <path d="M40,0 L40,30 L70,30 L70,60" stroke="#f7c948" stroke-width="1" opacity="0.1" fill="none"/>
+      <circle cx="30" cy="20" r="2" fill="#f7c948" opacity="0.2"/>
+      <circle cx="30" cy="50" r="2" fill="#f7c948" opacity="0.2"/>
+      <circle cx="60" cy="50" r="2" fill="#f7c948" opacity="0.2"/>
+    </pattern>
+
+    <!-- Glitch effect filter -->
+    <filter id="glitch">
+      <feTurbulence type="fractalNoise" baseFrequency="0.00001" numOctaves="1" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2"/>
+    </filter>
   </defs>
 
   <!-- Background -->
-  <rect width="1584" height="396" fill="url(#bg)" />
+  <rect width="1584" height="396" fill="url(#bg)"/>
 
-  <!-- Soft hex grid -->
-  <rect width="1584" height="396" fill="url(#hex)" opacity="0.10"/>
+  <!-- Hexagon grid overlay -->
+  <rect width="1584" height="396" fill="url(#hexPattern)"/>
 
-  <!-- Deus Ex angular gold shards -->
-  <polygon points="1100,0 1584,0 1584,160 1320,90"
-           fill="url(#shardGold)" />
+  <!-- Circuit pattern overlay -->
+  <rect width="1584" height="396" fill="url(#circuits)" opacity="0.3"/>
 
-  <polygon points="1250,230 1584,140 1584,360 1380,300"
-           fill="url(#shardGold)" />
+  <!-- Left side glowing accent -->
+  <rect x="0" y="0" width="8" height="396" fill="url(#gold)" opacity="0.8"/>
+  <rect x="8" y="0" width="2" height="396" fill="url(#gold)" opacity="0.4"/>
 
-  <polygon points="1000,396 1400,260 1584,340 1500,396"
-           fill="url(#shardGold)" />
+  <!-- Angular geometric shapes (Deus Ex style) -->
+  <g opacity="0.15">
+    <!-- Large angular shapes right side -->
+    <polygon points="1100,0 1300,80 1200,180 1000,100" fill="url(#gold)"/>
+    <polygon points="1250,140 1450,220 1350,320 1150,240" fill="url(#gold)"/>
+    <polygon points="1400,260 1584,340 1584,396 1300,396 1350,320" fill="url(#gold)"/>
+    
+    <!-- Top right corner accent -->
+    <polygon points="1400,0 1584,0 1584,120 1500,80" fill="url(#gold)"/>
+    
+    <!-- Small accent shapes -->
+    <polygon points="900,60 950,90 920,140 870,110" fill="url(#gold)" opacity="0.8"/>
+    <polygon points="1050,300 1100,330 1070,380 1020,350" fill="url(#gold)" opacity="0.8"/>
+  </g>
 
-  <polygon points="1180,60 1350,180 1230,330 1080,200"
-           fill="url(#shardGold)" />
+  <!-- Hexagon accent elements (left side) -->
+  <g stroke="url(#gold)" stroke-width="2" fill="none" opacity="0.6">
+    <polygon points="130,60 160,77 160,109 130,126 100,109 100,77"/>
+    <polygon points="130,280 160,297 160,329 130,346 100,329 100,297"/>
+  </g>
 
-  <!-- Title -->
-  <text x="70" y="215"
-        font-family="Arial, sans-serif"
-        font-weight="700"
-        font-size="74"
-        fill="url(#gold)"
-        letter-spacing="3">
-    AI LLM Red Team Handbook
+  <!-- Glow effects behind text -->
+  <ellipse cx="400" cy="198" rx="400" ry="80" fill="url(#goldGlow)"/>
+
+  <!-- Main title with bold Deus Ex styling -->
+  <text x="70" y="180" 
+        font-family="'Arial Black', 'Arial Bold', sans-serif" 
+        font-weight="900" 
+        font-size="62" 
+        fill="url(#gold)" 
+        letter-spacing="4">
+    AI / LLM RED TEAM
   </text>
 
-  <!-- Underline -->
-  <rect x="70" y="240" width="720" height="4" fill="url(#gold)" opacity="0.95"/>
+  <!-- Subtitle -->
+  <text x="70" y="240" 
+        font-family="'Arial', sans-serif" 
+        font-weight="300" 
+        font-size="48" 
+        fill="url(#gold)" 
+        letter-spacing="6" 
+        opacity="0.9">
+    FIELD MANUAL
+  </text>
+
+  <!-- Accent line under title -->
+  <rect x="70" y="255" width="600" height="3" fill="url(#gold)" opacity="0.9"/>
+  <rect x="70" y="260" width="300" height="1" fill="url(#gold)" opacity="0.6"/>
+
+  <!-- Subtitle text with cyber theme -->
+  <text x="70" y="290" 
+        font-family="'Courier New', monospace" 
+        font-size="16" 
+        fill="#f7c948" 
+        letter-spacing="2" 
+        opacity="0.7">
+    AUGMENTED SECURITY TESTING // AUTHORIZED ACCESS ONLY
+  </text>
+
+  <!-- Hexagon icon elements (right side accent) -->
+  <g opacity="0.4">
+    <polygon points="1450,90 1470,102 1470,124 1450,136 1430,124 1430,102" 
+             fill="none" stroke="url(#gold)" stroke-width="2"/>
+    <polygon points="1480,110 1500,122 1500,144 1480,156 1460,144 1460,122" 
+             fill="none" stroke="url(#gold)" stroke-width="2"/>
+    <polygon points="1510,90 1530,102 1530,124 1510,136 1490,124 1490,102" 
+             fill="none" stroke="url(#gold)" stroke-width="2"/>
+    
+    <!-- Small filled hexagons -->
+    <polygon points="1470,160 1478,165 1478,175 1470,180 1462,175 1462,165" fill="url(#gold)"/>
+    <polygon points="1500,175 1508,180 1508,190 1500,195 1492,190 1492,180" fill="url(#gold)"/>
+  </g>
+
+  <!-- Corner brackets (augmented vision theme) -->
+  <g stroke="url(#gold)" stroke-width="2" fill="none" opacity="0.5">
+    <!-- Top left -->
+    <path d="M 20,20 L 20,50 M 20,20 L 50,20"/>
+    <!-- Bottom left -->
+    <path d="M 20,376 L 20,346 M 20,376 L 50,376"/>
+    <!-- Top right -->
+    <path d="M 1564,20 L 1564,50 M 1564,20 L 1534,20"/>
+    <!-- Bottom right -->
+    <path d="M 1564,376 L 1564,346 M 1564,376 L 1534,376"/>
+  </g>
+
+  <!-- Small scan lines effect -->
+  <rect width="1584" height="1" y="100" fill="#f7c948" opacity="0.05"/>
+  <rect width="1584" height="1" y="150" fill="#f7c948" opacity="0.05"/>
+  <rect width="1584" height="1" y="200" fill="#f7c948" opacity="0.05"/>
+  <rect width="1584" height="1" y="250" fill="#f7c948" opacity="0.05"/>
+  <rect width="1584" height="1" y="300" fill="#f7c948" opacity="0.05"/>
+
+  <!-- Warning stripe accent (red team theme) -->
+  <g opacity="0.3">
+    <rect x="680" y="260" width="4" height="32" fill="#f7c948"/>
+    <rect x="688" y="260" width="4" height="32" fill="none"/>
+    <rect x="696" y="260" width="4" height="32" fill="#f7c948"/>
+  </g>
 </svg>
