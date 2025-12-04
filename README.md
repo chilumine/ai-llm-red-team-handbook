@@ -112,13 +112,13 @@ ai-llm-red-team-handbook/
 
 ## 🎯 Use Cases
 
-| Use Case | Resources | Description |
-|----------|-----------|-------------|
-| **Red Team Assessments** | Field Manual + Python Framework | Conduct comprehensive LLM security assessments |
-| **Consultant Engagements** | Handbook + Report Template | Full methodology for client projects |
-| **Team Training** | Handbook Foundations (Ch 1-11) | Onboard and develop security teams |
-| **Research & Development** | Technical Chapters (Ch 12+) | Deep dives into specific attack surfaces |
-| **Compliance & Audit** | Threat Modeling (Ch 5) + Tools | Risk assessments and control validation |
+| Use Case                   | Resources                       | Description                                    |
+| -------------------------- | ------------------------------- | ---------------------------------------------- |
+| **Red Team Assessments**   | Field Manual + Python Framework | Conduct comprehensive LLM security assessments |
+| **Consultant Engagements** | Handbook + Report Template      | Full methodology for client projects           |
+| **Team Training**          | Handbook Foundations (Ch 1-11)  | Onboard and develop security teams             |
+| **Research & Development** | Technical Chapters (Ch 12+)     | Deep dives into specific attack surfaces       |
+| **Compliance & Audit**     | Threat Modeling (Ch 5) + Tools  | Risk assessments and control validation        |
 
 ---
 
@@ -172,16 +172,19 @@ python runner.py --verbose                 # Verbose output
 ## 🗺️ Roadmap
 
 **Current Status:**
+
 - ✅ Handbook: 14 chapters complete (Foundations through Prompt Injection)
 - ✅ Field Manual: Operational reference complete
 - ✅ Python Framework: Core test suites implemented
 
 **In Progress:**
+
 - 🔄 Additional technical chapters (15-46)
 - 🔄 Multimodal AI attack techniques
 - 🔄 Advanced RAG exploitation scenarios
 
 **Planned:**
+
 - Sample RAG and LLM test environments
 - Interactive attack case studies
 - Extended plugin/tool abuse coverage
