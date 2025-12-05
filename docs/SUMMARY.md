@@ -35,6 +35,7 @@
 - [Chapter 15: Data Leakage and Extraction](Chapter_15_Data_Leakage_and_Extraction.md)
 - [Chapter 16: Jailbreaks and Bypass Techniques](Chapter_16_Jailbreaks_and_Bypass_Techniques.md)
 - [Chapter 17: Plugin and API Exploitation](Chapter_17_Plugin_and_API_Exploitation.md)
+- [Chapter 18: Evasion, Obfuscation, and Adversarial Inputs](Chapter_18_Evasion_Obfuscation_and_Adversarial_Inputs.md)
 
 ## Reference Materials
 
