@@ -1,4 +1,4 @@
-![Banner](../assets/banner.svg)
+![Banner](assets/banner.svg)
 
 # Chapter 5: Threat Modeling and Risk Analysis
 

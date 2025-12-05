@@ -1,4 +1,4 @@
-![Banner](../assets/banner.svg)
+![Banner](assets/banner.svg)
 
 # Chapter 14: Prompt Injection (Direct/Indirect, 1st/3rd Party)
 

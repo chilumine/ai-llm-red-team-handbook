@@ -1,4 +1,4 @@
-![Banner](../assets/banner.svg)
+![Banner](assets/banner.svg)
 
 # Chapter 34: Defense Evasion Techniques
 

@@ -1,6 +1,6 @@
 # Chapter 11: Plugins, Extensions, and External APIs
 
-![Banner](../assets/banner.svg)
+![Banner](assets/banner.svg)
 
 _This chapter is currently under development._
 

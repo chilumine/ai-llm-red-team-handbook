@@ -1,6 +1,6 @@
 # Red Teaming AI & LLMs: The Consultant’s Complete Handbook
 
-![Banner](../assets/banner.svg)
+![Banner](assets/banner.svg)
 
 ## Table of Contents
 
@@ -104,7 +104,7 @@ _(To be added)_
 
 ---
 
-![Banner](../assets/banner.svg)
+![Banner](assets/banner.svg)
 
 # Chapter 1: Introduction to AI Red Teaming
 
@@ -187,7 +187,7 @@ The handbook is organized for practical learning and use:
 
 _Proceed to the next chapter to explore ethical and legal essentials, and begin developing the professional approach required of every AI red teamer._
 
-![Banner](../assets/banner.svg)
+![Banner](assets/banner.svg)
 
 # Chapter 2: Ethics, Legal, and Stakeholder Communication
 
@@ -289,7 +289,7 @@ In AI red teaming, technical findings may have legal, business, or even social i
 
 _In the next chapter, you’ll develop the mindset that distinguishes effective AI red teamers from traditional security testers, bridging technology, psychology, and business acuity._
 
-![Banner](../assets/banner.svg)
+![Banner](assets/banner.svg)
 
 # Chapter 3: The Red Teamer's Mindset
 
@@ -369,7 +369,7 @@ Field engagements can be high-stress: production outages, tense clients, critica
 
 _Mastering the red team mindset primes you for the work ahead: scoping, planning, and then executing engagements with insight, rigor, and integrity. Proceed to the next chapter to learn how to prepare and manage a professional AI red team project from start to finish._
 
-![Banner](../assets/banner.svg)
+![Banner](assets/banner.svg)
 
 # Chapter 4: SOW, Rules of Engagement, and Client Onboarding
 
@@ -488,7 +488,7 @@ Before you start:
 
 _Solid foundations prevent project failure and foster trust. The next chapter will guide you through threat modeling and risk analysis for AI systems, helping you identify what matters most before you begin attacking._
 
-![Banner](../assets/banner.svg)
+![Banner](assets/banner.svg)
 
 # Chapter 5: Threat Modeling and Risk Analysis
 
@@ -613,7 +613,7 @@ A good threat model is:
 
 _With a strong threat model, your red team engagement becomes risk-driven and results-focused. The next chapter will walk you through scoping these findings into a feasible, valuable engagement plan._
 
-![Banner](../assets/banner.svg)
+![Banner](assets/banner.svg)
 
 # Chapter 6: Scoping an Engagement
 
@@ -721,7 +721,7 @@ An accurately scoped engagement shows professionalism and respect for the client
 
 _With a precise scope in place, you are ready to establish the laboratory, test environments, and safety measures needed for executing a secure and efficient AI red teaming exercise. Continue to the next chapter for practical lab setup and environmental safety._
 
-![Banner](../assets/banner.svg)
+![Banner](assets/banner.svg)
 
 # Chapter 7: Lab Setup and Environmental Safety
 
@@ -816,7 +816,7 @@ Remember:
 
 _With a robust lab and clear safety controls in place, you’re prepared to gather and preserve evidence in a trustworthy manner. Continue to the next chapter to master documentation and evidence handling in AI red team engagements._
 
-![Banner](../assets/banner.svg)
+![Banner](assets/banner.svg)
 
 # Chapter 8: Evidence, Documentation, and Chain of Custody
 
@@ -930,7 +930,7 @@ A robust chain of custody ensures that all evidence remains trustworthy and trac
 
 _With evidence and documentation in place, you’re equipped to deliver clear, credible findings. The next chapter will guide you through the art of writing actionable, impactful red team reports for both technical and executive audiences._
 
-![Banner](../assets/banner.svg)
+![Banner](assets/banner.svg)
 
 # Chapter 9: Writing Effective Reports and Deliverables
 
@@ -1056,7 +1056,7 @@ Successful reports are tailored to multiple audiences, such as:
 
 _You are now ready to communicate your findings with clarity and impact. The next chapter will cover presenting results to both technical and non-technical stakeholders—ensuring your work leads to measurable improvements in AI security._
 
-![Banner](../assets/banner.svg)
+![Banner](assets/banner.svg)
 
 # Chapter 10: Presenting Results and Remediation Guidance
 
@@ -1142,7 +1142,7 @@ Delivering findings is more than handing over a report—it's about ensuring you
 
 _Professional communication and practical remediation guidance ensure your red teaming work translates into real, measurable improvements. The next chapter will explore lessons learned, common pitfalls, and how to build a mature AI/LLM red teaming practice._
 
-![Banner](../assets/banner.svg)
+![Banner](assets/banner.svg)
 
 # Chapter 11: Lessons Learned and Building Future Readiness
 
@@ -1202,7 +1202,7 @@ To make AI red teaming a sustainable part of your organization’s security post
 
 _By systematically learning and adapting, your AI red teaming program matures—helping organizations stay resilient amid the evolving risks and rewards of intelligent systems._
 
-![Banner](../assets/banner.svg)
+![Banner](assets/banner.svg)
 
 # Chapter 12: Retrieval-Augmented Generation (RAG) Pipelines
 
@@ -2482,7 +2482,7 @@ class RAGAccessControlTester:
 
 _RAG systems represent one of the most powerful—and vulnerable—implementations of LLM technology in enterprise environments. By understanding their architecture, attack surfaces, and testing methodologies, red teamers can help organizations build secure, production-ready AI assistants. The next chapter will explore data provenance and supply chain security—critical for understanding where your AI system's data comes from and how it can be compromised._
 
-![Banner](../assets/banner.svg)
+![Banner](assets/banner.svg)
 
 # Chapter 13: Data Provenance and Supply Chain Security
 
@@ -4343,7 +4343,7 @@ def detect_insider_poisoning(training_data, baseline_distribution):
 
 ---
 
-![Banner](../assets/banner.svg)
+![Banner](assets/banner.svg)
 
 # Chapter 14: Prompt Injection (Direct/Indirect, 1st/3rd Party)
 
@@ -8413,7 +8413,7 @@ _Prompt injection represents the defining security challenge of the LLM era. Lik
 
 ---
 
-![Banner](../assets/banner.svg)
+![Banner](assets/banner.svg)
 
 # Chapter 15: Data Leakage and Extraction
 
@@ -12191,7 +12191,7 @@ _Continue to Chapter 16: Jailbreaks and Bypass Techniques to learn how attackers
 
 ---
 
-![Banner](../assets/banner.svg)
+![Banner](assets/banner.svg)
 
 # Chapter 16: Jailbreaks and Bypass Techniques
 

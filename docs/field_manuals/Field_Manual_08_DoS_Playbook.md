@@ -1,4 +1,4 @@
-![Banner](../../assets/banner.svg)
+![Banner](../assets/banner.svg)
 
 # Field Manual Playbook 08: DoS & Resource Exhaustion
 
