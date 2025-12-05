@@ -12,6 +12,13 @@ structure:
   glossary: GLOSSARY.md
   languages: LANGS.md
 
+# Branding (Experimental for Code-Config)
+branding:
+  logo: assets/banner.svg
+  icon: assets/banner.svg
+  colors:
+    primary: "#3884ff"
+
 # Redirects
 redirects:
   README: docs/AI LLM Red Team Handbook.md
