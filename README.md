@@ -15,17 +15,18 @@ A comprehensive operational toolkit for conducting **AI/LLM red team assessments
 
 This repository contains three core resources:
 
-### 1. **AI LLM Red Team Handbook** (260KB, 8000+ lines)
+### 1. **AI LLM Red Team Handbook** (17 Chapters, GitBook-ready)
 
-A complete consultancy guide covering:
+A complete consultancy guide now split into individual chapter files for easier navigation:
 
 - **Part I: Foundations** - Methodology, ethics, legal considerations, and mindset (Chapters 1-3)
-- **Part II: Engagement Framework** - SOW/RoE templates, threat modeling, scoping, lab setup (Chapters 4-7)
-- **Part III: Operations** - Evidence collection, reporting, presentations, lessons learned (Chapters 8-11)
-- **Part IV: Technical Deep Dives** - RAG pipelines, supply chain security, prompt injection, and more (Chapters 12-14+)
+- **Part II: Engagement Framework** - SOW/RoE templates, threat modeling, scoping, lab setup (Chapters 4-8)
+- **Part III: Operations** - Evidence collection, reporting, presentations, lessons learned (Chapters 9-11)
+- **Part IV: Technical Deep Dives** - RAG pipelines, supply chain security (Chapters 12-13)
+- **Part V: Attacks & Techniques** - Prompt injection, data leakage, jailbreaks, plugin exploitation (Chapters 14-17)
 - **Appendices** - Tools, resources, templates, and references
 
-**Current Coverage (14 Chapters):**
+**Current Coverage (17 Chapters - Complete):**
 
 1. Introduction to AI Red Teaming
 2. Ethics, Legal, and Stakeholder Communication
@@ -41,6 +42,11 @@ A complete consultancy guide covering:
 12. Retrieval-Augmented Generation (RAG) Pipelines
 13. Data Provenance and Supply Chain Security
 14. Prompt Injection (Direct/Indirect, 1st/3rd Party)
+15. Data Leakage and Extraction
+16. Jailbreaks and Bypass Techniques
+17. Plugin and API Exploitation
+
+📖 **GitBook Navigation:** See [SUMMARY.md](docs/SUMMARY.md) for the complete chapter structure.
 
 ### 2. **AI LLM Red Team Field Manual** (56KB)
 
@@ -90,22 +96,40 @@ python runner.py --config config.py
 ```text
 ai-llm-red-team-handbook/
 ├── docs/
-│   ├── AI LLM Red Team Hand book.md         # Complete consultancy guide (260KB)
-│   ├── AI_LLM Red Team Field Manual.md      # Operational field reference (56KB)
-│   ├── Building a World-Class AI Red Team.md # Team-building strategy guide
-│   ├── Configuration.md                      # Setup and configuration guide
-│   ├── Full_LLM_RedTeam_Report_Template.docx # Client report template
-│   └── archive/                              # Historical versions
+│   ├── SUMMARY.md                              # GitBook navigation (NEW)
+│   ├── AI LLM Red Team Handbook.md             # Main overview + TOC
+│   ├── Chapter_01_Introduction_to_AI_Red_Teaming.md
+│   ├── Chapter_02_Ethics_Legal_and_Stakeholder_Communication.md
+│   ├── Chapter_03_The_Red_Teamers_Mindset.md
+│   ├── Chapter_04_SOW_Rules_of_Engagement_and_Client_Onboarding.md
+│   ├── Chapter_05_Threat_Modeling_and_Risk_Analysis.md
+│   ├── Chapter_06_Scoping_an_Engagement.md
+│   ├── Chapter_07_Lab_Setup_and_Environmental_Safety.md
+│   ├── Chapter_08_Evidence_Documentation_and_Chain_of_Custody.md
+│   ├── Chapter_09_Writing_Effective_Reports_and_Deliverables.md
+│   ├── Chapter_10_Presenting_Results_and_Remediation_Guidance.md
+│   ├── Chapter_11_Lessons_Learned_and_Building_Future_Readiness.md
+│   ├── Chapter_12_Retrieval_Augmented_Generation_RAG_Pipelines.md
+│   ├── Chapter_13_Data_Provenance_and_Supply_Chain_Security.md
+│   ├── Chapter_14_Prompt_Injection.md
+│   ├── Chapter_15_Data_Leakage_and_Extraction.md
+│   ├── Chapter_16_Jailbreaks_and_Bypass_Techniques.md
+│   ├── Chapter_17_Plugin_and_API_Exploitation.md
+│   ├── AI_LLM Red Team Field Manual.md         # Operational field reference
+│   ├── Building a World-Class AI Red Team.md   # Team-building strategy guide
+│   ├── Configuration.md                         # Setup and configuration guide
+│   ├── Full_LLM_RedTeam_Report_Template.docx   # Client report template
+│   └── archive/                                 # Historical versions
 ├── scripts/
-│   ├── runner.py                             # Test orchestration
-│   ├── test_prompt_injection.py              # Prompt injection tests
-│   ├── test_safety_bypass.py                 # Jailbreak tests
-│   ├── test_data_exposure.py                 # Data leakage tests
-│   ├── test_tool_misuse.py                   # Plugin/tool abuse tests
-│   ├── test_fuzzing.py                       # Adversarial fuzzing
-│   └── requirements.txt                      # Python dependencies
-├── assets/                                   # Images and resources
-└── README.md                                 # This file
+│   ├── runner.py                                # Test orchestration
+│   ├── test_prompt_injection.py                 # Prompt injection tests
+│   ├── test_safety_bypass.py                    # Jailbreak tests
+│   ├── test_data_exposure.py                    # Data leakage tests
+│   ├── test_tool_misuse.py                      # Plugin/tool abuse tests
+│   ├── test_fuzzing.py                          # Adversarial fuzzing
+│   └── requirements.txt                         # Python dependencies
+├── assets/                                      # Images and resources
+└── README.md                                    # This file
 ```
 
 ---
@@ -173,9 +197,10 @@ python runner.py --verbose                 # Verbose output
 
 **Current Status:**
 
-- ✅ Handbook: 14 chapters complete (Foundations through Prompt Injection)
+- ✅ Handbook: 17 chapters complete and split into individual files for GitBook
 - ✅ Field Manual: Operational reference complete
 - ✅ Python Framework: Core test suites implemented
+- ✅ GitBook Structure: SUMMARY.md navigation file created
 
 **In Progress:**
 
@@ -185,6 +210,7 @@ python runner.py --verbose                 # Verbose output
 
 **Planned:**
 
+- Additional technical chapters (18-46 from original TOC)
 - Sample RAG and LLM test environments
 - Interactive attack case studies
 - Extended plugin/tool abuse coverage
@@ -237,4 +263,4 @@ For major changes, please open an issue first to discuss.
 
 ---
 
-**Last Updated:** December 2024 | **Handbook Chapters:** 14/46 Complete
+**Last Updated:** December 2024 | **Handbook Chapters:** 17 Complete (GitBook-ready)
