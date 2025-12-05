@@ -722,61 +722,53 @@ _[Chapter continues with additional sections on detection, defense, case studies
 
 **Most Effective Attacks:**
 
-1. **Backdoor Injection** (90% success in research)
+1.  **Backdoor Injection** (90% success in research)
 
-   - Clean-label backdoors
-   - Semantic triggers
-   - Multi-condition trojans
+    - Clean-label backdoors: Malicious behavior triggered by specific input, but the poisoned sample's label is correct. Hard to detect.
+    - Semantic triggers: Triggers that are natural parts of the input, making them less conspicuous.
+    - Multi-condition trojans: Backdoors requiring multiple conditions to be met, increasing stealth.
 
-2. **Supply Chain Poisoning** (80% prevalence risk)
+2.  **Supply Chain Poisoning** (80% prevalence risk)
 
-   - Pre-trained model compromise
-   - Third-party dataset manipulation
-   - Dependency poisoning
+    - Pre-trained model compromise: Injecting backdoors or vulnerabilities into publicly available models.
+    - Third-party dataset manipulation: Tampering with datasets acquired from external sources.
+    - Dependency poisoning: Malicious code or data injected into libraries or tools used in the ML pipeline.
 
-3. **Fine-Tuning Attacks** (70% success rate)
-   - Instruction dataset poisoning
-   - RLHF preference manipulation
-   - Adapter/LoRA poisoning
+3.  **Fine-Tuning Attacks** (70% success rate)
+    - Instruction dataset poisoning: Adding malicious instruction-response pairs to guide the model to undesirable outputs.
+    - RLHF preference manipulation: Swapping preferred/rejected responses to steer the model's values and behavior.
+    - Adapter/LoRA poisoning: Injecting backdoors or biases into lightweight fine-tuning layers, which are then shared.
 
 ### Defense Recommendations
 
 **For ML Engineers:**
 
-1. **Data Validation**
+1.  **Data Validation**
 
-   - Statistical analysis of training data
-   - Anomaly detection in samples
-   - Source verification
-   - Regular audits
+    - Statistical analysis of training data: Check for unusual distributions, outliers, or anomalies.
+    - Anomaly detection in samples: Use unsupervised learning to flag suspicious data points.
+    - Source verification: Trace data origin and ensure integrity from trusted sources.
+    - Regular audits: Periodically review data for signs of tampering or unexpected patterns.
 
-2. **Training Monitoring**
+2.  **Training Monitoring**
 
-   - Track training metrics
-   - Gradient analysis
-   - Loss curve inspection
-   - Regular checkpointing
+    - Track training metrics: Monitor loss, accuracy, and other metrics for sudden changes or plateaus that might indicate poisoning.
+    - Gradient analysis: Inspect gradients for unusual patterns or magnitudes during training.
+    - Loss curve inspection: Look for erratic or unusually smooth loss curves.
+    - Regular checkpointing: Save model states frequently to allow rollback if poisoning is detected.
 
-3. **Model Testing**
-   - Backdoor scanning
-   - Trigger testing
-   - Adversarial evaluation
-   - Behavioral analysis
+3.  **Model Testing**
+    - Backdoor scanning: Use specialized tools to detect known backdoor patterns or trigger responses.
+    - Trigger testing: Systematically test the model with potential triggers to see if malicious behavior is activated.
+    - Adversarial evaluation: Test model robustness against various adversarial inputs, including poisoned ones.
+    - Behavioral analysis: Observe model outputs for unexpected or harmful responses in diverse scenarios.
 
 **For Organizations:**
 
-1. **Supply Chain Security**
-
-   - Vet all data sources
-   - Use trusted models only
-   - Implement data provenance tracking
-   - Regular security audits
-
-2. **Defense in Depth**
-   - Multiple validation layers
-   - Ensemble methods
-   - Input sanitization
-   - Output monitoring
+- Multiple validation layers
+- Ensemble methods
+- Input sanitization
+- Output monitoring
 
 ### Future Trends
 
