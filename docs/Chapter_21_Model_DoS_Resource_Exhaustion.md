@@ -752,10 +752,6 @@ if __name__ == "__main__":
 
 ---
 
-_[Chapter continues with sections 21.4-21.16 covering API cost exploitation, memory exhaustion, caching attacks, detection, defenses, case studies, and summary]_
-
----
-
 ## 21.16 Summary and Key Takeaways
 
 ### Critical DoS Techniques

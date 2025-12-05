@@ -992,10 +992,6 @@ message = framework.generate_impersonation_message(
 
 ---
 
-_[Chapter continues with sections 24.3-24.16 covering trust exploitation, persuasion automation, spear phishing at scale, pretexting, detection, defenses, ethical considerations, case studies, and summary]_
-
----
-
 ## 24.16 Summary and Key Takeaways
 
 ### Critical Social Engineering Techniques

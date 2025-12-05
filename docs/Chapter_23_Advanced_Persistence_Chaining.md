@@ -751,10 +751,6 @@ if __name__ == "__main__":
 
 ---
 
-_[Chapter continues with sections 23.3-23.16 covering state persistence, chain-of-thought exploitation, prompt chaining, session hijacking, detection, defenses, case studies, and summary]_
-
----
-
 ## 23.16 Summary and Key Takeaways
 
 ### Critical Persistence Techniques
