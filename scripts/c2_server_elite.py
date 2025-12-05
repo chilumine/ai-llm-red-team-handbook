@@ -2,6 +2,8 @@
 """
 Elite C2 Server - Production Ready
 Support for multiple operators, logging, and agent management
+by 1lKN1GHTFURY1 (TYVM for the addition)
+
 """
 
 import os
