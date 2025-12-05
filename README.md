@@ -17,7 +17,7 @@ A comprehensive operational toolkit for conducting **AI/LLM red team assessments
 
 This repository contains three core resources:
 
-### 1. **AI LLM Red Team Handbook** (20 Chapters, GitBook-ready)
+### 1. **AI LLM Red Team Handbook** (21 Chapters, GitBook-ready)
 
 A complete consultancy guide now split into individual chapter files for easier navigation:
 
@@ -28,7 +28,7 @@ A complete consultancy guide now split into individual chapter files for easier 
 - **Part V: Attacks & Techniques** - Prompt injection, data leakage, jailbreaks, plugin exploitation, evasion, poisoning, model theft (Chapters 14-20)
 - **Appendices** - Tools, resources, templates, and references
 
-**Current Coverage (20 Chapters - Complete):**
+**Current Coverage (21 Chapters - Complete):**
 
 1. Introduction to AI Red Teaming
 2. Ethics, Legal, and Stakeholder Communication
@@ -50,6 +50,7 @@ A complete consultancy guide now split into individual chapter files for easier 
 18. **Evasion, Obfuscation, and Adversarial Inputs** (Enhanced with comprehensive explanations)
 19. **Training Data Poisoning** (Enhanced with attack scenarios and defenses)
 20. **Model Theft and Membership Inference** (NEW: With copy-pasteable attack demonstrations)
+21. **Model DoS and Resource Exhaustion** (NEW: Token bombs, computational attacks, rate limiting bypass)
 
 📖 **GitBook Navigation:** See [SUMMARY.md](docs/SUMMARY.md) for the complete chapter structure.
 
@@ -123,6 +124,7 @@ ai-llm-red-team-handbook/
 │   ├── Chapter_18_Evasion_Obfuscation_and_Adversarial_Inputs.md  # NEW
 │   ├── Chapter_19_Training_Data_Poisoning.md                      # NEW
 │   ├── Chapter_20_Model_Theft_and_Membership_Inference.md         # NEW (with runnable demos)
+│   ├── Chapter_21_Model_DoS_Resource_Exhaustion.md                # NEW (DoS attacks)
 │   ├── AI_LLM Red Team Field Manual.md         # Operational field reference
 │   ├── Building a World-Class AI Red Team.md   # Team-building strategy guide
 │   ├── Configuration.md                         # Setup and configuration guide
@@ -206,9 +208,9 @@ python runner.py --verbose                 # Verbose output
 
 **Current Status:**
 
-- ✅ Handbook: **20 chapters complete** and split into individual files for GitBook
-- ✅ Chapters 18-20: Enhanced with comprehensive explanations and practical examples
-- ✅ **Copy-Pasteable Attack Demos**: Model extraction and membership inference (Ch 20)
+- ✅ Handbook: **21 chapters complete** and split into individual files for GitBook
+- ✅ Chapters 18-21: Enhanced with comprehensive explanations and practical examples
+- ✅ **Copy-Pasteable Attack Demos**: Model extraction, membership inference, DoS attacks
 - ✅ Field Manual: Operational reference complete
 - ✅ Python Framework: Core test suites implemented
 - ✅ GitBook Structure: SUMMARY.md navigation file created
@@ -218,9 +220,11 @@ python runner.py --verbose                 # Verbose output
 - ✅ Chapter 18: Evasion, Obfuscation, and Adversarial Inputs (+275 lines, +31%)
 - ✅ Chapter 19: Training Data Poisoning (+50 lines with attack scenarios)
 - ✅ Chapter 20: Model Theft and Membership Inference (+683 lines, +254%)
-  - Complete model extraction script
-  - Complete membership inference attack script
-  - Both runnable with `pip install` + copy-paste
+- ✅ Chapter 21: Model DoS and Resource Exhaustion (886 lines)
+  - Token bomb attack demonstration
+  - Computational exhaustion examples
+  - Rate limiting bypass techniques
+  - All with runnable code
 
 **Planned:**
 
@@ -278,4 +282,4 @@ For major changes, please open an issue first to discuss.
 
 ---
 
-**Last Updated:** December 2024 | **Handbook Chapters:** 20 Complete (GitBook-ready) | **Practical Examples:** 2 Copy-Paste Attack Demos
+**Last Updated:** December 2024 | **Handbook Chapters:** 21 Complete (GitBook-ready) | **Practical Examples:** 5 Copy-Paste Attack Demos

@@ -38,6 +38,7 @@
 - [Chapter 18: Evasion, Obfuscation, and Adversarial Inputs](Chapter_18_Evasion_Obfuscation_and_Adversarial_Inputs.md)
 - [Chapter 19: Training Data Poisoning](Chapter_19_Training_Data_Poisoning.md)
 - [Chapter 20: Model Theft and Membership Inference](Chapter_20_Model_Theft_and_Membership_Inference.md)
+- [Chapter 21: Model DoS and Resource Exhaustion](Chapter_21_Model_DoS_Resource_Exhaustion.md)
 
 ## Reference Materials
 
