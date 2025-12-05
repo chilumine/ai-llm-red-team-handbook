@@ -2,7 +2,7 @@
 
 ## Introduction
 
-- [Red Teaming AI & LLMs: The Consultant's Complete Handbook](AI LLM Red Team Handbook.md)
+// Todo: Add introduction
 
 ## Part I: Foundations
 
