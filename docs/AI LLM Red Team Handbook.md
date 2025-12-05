@@ -4,6 +4,17 @@
 
 ## Table of Contents
 
+### Quick Access: Field Manuals
+
+> **Looking for the Operational Playbooks?**
+>
+> - [Field Manual Index](Field_Manual_00_Index.md)
+> - [Quick Reference Card](field_manuals/Field_Manual_Quick_Reference.md)
+> - [All Attack Playbooks](Field_Manual_00_Index.md#attack-playbooks)
+> - [Compact Field Manual (Single File)](AI_LLM%20Red%20Team%20Field%20Manual.md)
+>
+> ---
+
 ### Part I: Foundations
 
 - [Chapter 1: Introduction to AI Red Teaming](Chapter_01_Introduction_to_AI_Red_Teaming.md)

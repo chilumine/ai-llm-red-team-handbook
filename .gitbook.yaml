@@ -76,7 +76,7 @@ pluginsConfig:
     size: 2
 
   insert-logo:
-    url: assets/logo.png
+    url: assets/banner.svg
     style: "background: none; max-height: 50px;"
 
   theme-comscore:

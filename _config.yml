@@ -77,7 +77,7 @@ github_username: yourusername
 
 # SEO
 lang: en-US
-logo: /assets/logo.png # Add if you have a logo
+logo: /assets/banner.svg # Add if you have a logo
 
 # Reading Time (optional)
 show_reading_time: true

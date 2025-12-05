@@ -5,7 +5,6 @@
   "language": "en",
   "direction": "ltr",
   "gitbook": ">=3.2.3",
-  
   "plugins": [
     "search-plus",
     "advanced-emoji",
@@ -29,7 +28,6 @@
     "code",
     "alerts"
   ],
-  
   "pluginsConfig": {
     "search-plus": {
       "maxIndexSize": 5000000,
@@ -42,7 +40,13 @@
       "facebook": false,
       "twitter": true,
       "linkedin": true,
-      "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+      "all": [
+        "facebook",
+        "twitter",
+        "linkedin",
+        "weibo",
+        "instapaper"
+      ]
     },
     "fontsettings": {
       "theme": "night",
@@ -50,7 +54,7 @@
       "size": 2
     },
     "insert-logo": {
-      "url": "assets/logo.png",
+      "url": "assets/banner.svg",
       "style": "background: none; max-height: 50px; min-height: 50px"
     },
     "custom-favicon": {
@@ -70,14 +74,12 @@
       }
     }
   },
-  
   "variables": {
     "version": "2.0",
     "updated": "December 2024",
     "chapters": "24 Complete Chapters",
     "examples": "12+ Practical Attack Demonstrations"
   },
-  
   "links": {
     "sidebar": {
       "GitHub Repository": "https://github.com/yourusername/ai-llm-red-team-handbook",
@@ -85,7 +87,6 @@
       "Contribute": "https://github.com/yourusername/ai-llm-red-team-handbook/blob/main/CONTRIBUTING.md"
     }
   },
-  
   "styles": {
     "website": "styles/website.css",
     "ebook": "styles/ebook.css",
@@ -93,12 +94,10 @@
     "mobi": "styles/mobi.css",
     "epub": "styles/epub.css"
   },
-  
   "structure": {
     "readme": "AI LLM Red Team Handbook.md",
     "summary": "SUMMARY.md"
   },
-  
   "pdf": {
     "pageNumbers": true,
     "fontSize": 12,
