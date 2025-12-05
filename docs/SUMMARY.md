@@ -74,6 +74,25 @@
 - [Chapter 45: Building an AI Red Team Program](Chapter_45_Building_an_AI_Red_Team_Program.md)
 - [Chapter 46: Conclusion and Next Steps](Chapter_46_Conclusion_and_Next_Steps.md)
 
+## Field Manuals (Operational Playbooks)
+
+- [Field Manual Index](Field_Manual_00_Index.md)
+- [Quick Reference Card](field_manuals/Field_Manual_Quick_Reference.md)
+
+### Attack Playbooks
+
+- [Playbook 01: Prompt Injection](field_manuals/Field_Manual_01_Prompt_Injection_Playbook.md)
+- [Playbook 02: Data Leakage](field_manuals/Field_Manual_02_Data_Leakage_Playbook.md)
+- [Playbook 03: Jailbreaks](field_manuals/Field_Manual_03_Jailbreak_Playbook.md)
+- [Playbook 04: Plugin Exploitation](field_manuals/Field_Manual_04_Plugin_Exploitation_Playbook.md)
+- [Playbook 05: Evasion & Obfuscation](field_manuals/Field_Manual_05_Evasion_Playbook.md)
+- [Playbook 06: Data Poisoning](field_manuals/Field_Manual_06_Data_Poisoning_Playbook.md)
+- [Playbook 07: Model Theft](field_manuals/Field_Manual_07_Model_Theft_Playbook.md)
+- [Playbook 08: DoS Attacks](field_manuals/Field_Manual_08_DoS_Playbook.md)
+- [Playbook 09: Multimodal Attacks](field_manuals/Field_Manual_09_Multimodal_Playbook.md)
+- [Playbook 10: Persistence & Chaining](field_manuals/Field_Manual_10_Persistence_Playbook.md)
+- [Playbook 11: Social Engineering](field_manuals/Field_Manual_11_Social_Engineering_Playbook.md)
+
 ## Reference Materials
 
 _(To be added)_
