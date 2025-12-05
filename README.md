@@ -7,9 +7,9 @@
 ![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg)
 ![Last Updated](https://img.shields.io/badge/Last%20Updated-December%202024-orange.svg)
 
-📖 **GitBook Navigation:** See [SUMMARY.md](docs/SUMMARY.md) for the complete chapter structure.
-
 A comprehensive operational toolkit for conducting **AI/LLM red team assessments** on Large Language Models, AI agents, RAG pipelines, and AI-enabled applications. This repository provides both tactical field guidance and strategic consulting frameworks.
+
+📖 **GitBook Navigation:** See [SUMMARY.md](docs/SUMMARY.md) for the complete chapter structure.
 
 ---
 
@@ -17,7 +17,7 @@ A comprehensive operational toolkit for conducting **AI/LLM red team assessments
 
 This repository contains three core resources:
 
-### 1. **AI LLM Red Team Handbook** (17 Chapters, GitBook-ready)
+### 1. **AI LLM Red Team Handbook** (20 Chapters, GitBook-ready)
 
 A complete consultancy guide now split into individual chapter files for easier navigation:
 
@@ -25,10 +25,10 @@ A complete consultancy guide now split into individual chapter files for easier 
 - **Part II: Engagement Framework** - SOW/RoE templates, threat modeling, scoping, lab setup (Chapters 4-8)
 - **Part III: Operations** - Evidence collection, reporting, presentations, lessons learned (Chapters 9-11)
 - **Part IV: Technical Deep Dives** - RAG pipelines, supply chain security (Chapters 12-13)
-- **Part V: Attacks & Techniques** - Prompt injection, data leakage, jailbreaks, plugin exploitation (Chapters 14-17)
+- **Part V: Attacks & Techniques** - Prompt injection, data leakage, jailbreaks, plugin exploitation, evasion, poisoning, model theft (Chapters 14-20)
 - **Appendices** - Tools, resources, templates, and references
 
-**Current Coverage (17 Chapters - Complete):**
+**Current Coverage (20 Chapters - Complete):**
 
 1. Introduction to AI Red Teaming
 2. Ethics, Legal, and Stakeholder Communication
@@ -47,6 +47,9 @@ A complete consultancy guide now split into individual chapter files for easier 
 15. Data Leakage and Extraction
 16. Jailbreaks and Bypass Techniques
 17. Plugin and API Exploitation
+18. **Evasion, Obfuscation, and Adversarial Inputs** (Enhanced with comprehensive explanations)
+19. **Training Data Poisoning** (Enhanced with attack scenarios and defenses)
+20. **Model Theft and Membership Inference** (NEW: With copy-pasteable attack demonstrations)
 
 📖 **GitBook Navigation:** See [SUMMARY.md](docs/SUMMARY.md) for the complete chapter structure.
 
@@ -98,7 +101,7 @@ python runner.py --config config.py
 ```text
 ai-llm-red-team-handbook/
 ├── docs/
-│   ├── SUMMARY.md                              # GitBook navigation (NEW)
+│   ├── SUMMARY.md                              # GitBook navigation
 │   ├── AI LLM Red Team Handbook.md             # Main overview + TOC
 │   ├── Chapter_01_Introduction_to_AI_Red_Teaming.md
 │   ├── Chapter_02_Ethics_Legal_and_Stakeholder_Communication.md
@@ -117,10 +120,13 @@ ai-llm-red-team-handbook/
 │   ├── Chapter_15_Data_Leakage_and_Extraction.md
 │   ├── Chapter_16_Jailbreaks_and_Bypass_Techniques.md
 │   ├── Chapter_17_Plugin_and_API_Exploitation.md
+│   ├── Chapter_18_Evasion_Obfuscation_and_Adversarial_Inputs.md  # NEW
+│   ├── Chapter_19_Training_Data_Poisoning.md                      # NEW
+│   ├── Chapter_20_Model_Theft_and_Membership_Inference.md         # NEW (with runnable demos)
 │   ├── AI_LLM Red Team Field Manual.md         # Operational field reference
 │   ├── Building a World-Class AI Red Team.md   # Team-building strategy guide
 │   ├── Configuration.md                         # Setup and configuration guide
-│   ├── Full_LLM_RedTeam_Report_Template.docx   # Client report template
+│   ├── templates/                               # Report templates
 │   └── archive/                                 # Historical versions
 ├── scripts/
 │   ├── runner.py                                # Test orchestration
@@ -129,6 +135,7 @@ ai-llm-red-team-handbook/
 │   ├── test_data_exposure.py                    # Data leakage tests
 │   ├── test_tool_misuse.py                      # Plugin/tool abuse tests
 │   ├── test_fuzzing.py                          # Adversarial fuzzing
+│   ├── c2_server_elite.py                       # Elite C2 server implementation
 │   └── requirements.txt                         # Python dependencies
 ├── assets/                                      # Images and resources
 └── README.md                                    # This file
@@ -199,23 +206,29 @@ python runner.py --verbose                 # Verbose output
 
 **Current Status:**
 
-- ✅ Handbook: 17 chapters complete and split into individual files for GitBook
+- ✅ Handbook: **20 chapters complete** and split into individual files for GitBook
+- ✅ Chapters 18-20: Enhanced with comprehensive explanations and practical examples
+- ✅ **Copy-Pasteable Attack Demos**: Model extraction and membership inference (Ch 20)
 - ✅ Field Manual: Operational reference complete
 - ✅ Python Framework: Core test suites implemented
 - ✅ GitBook Structure: SUMMARY.md navigation file created
 
-**In Progress:**
+**Recently Completed:**
 
-- 🔄 Additional technical chapters (15-46)
-- 🔄 Multimodal AI attack techniques
-- 🔄 Advanced RAG exploitation scenarios
+- ✅ Chapter 18: Evasion, Obfuscation, and Adversarial Inputs (+275 lines, +31%)
+- ✅ Chapter 19: Training Data Poisoning (+50 lines with attack scenarios)
+- ✅ Chapter 20: Model Theft and Membership Inference (+683 lines, +254%)
+  - Complete model extraction script
+  - Complete membership inference attack script
+  - Both runnable with `pip install` + copy-paste
 
 **Planned:**
 
-- Additional technical chapters (18-46 from original TOC)
+- Additional technical chapters (21-46 from original TOC)
 - Sample RAG and LLM test environments
 - Interactive attack case studies
-- Extended plugin/tool abuse coverage
+- Multimodal AI attack techniques
+- Advanced RAG exploitation scenarios
 - Video tutorials and walkthroughs
 
 **Contributions welcome** via issues and PRs.
@@ -265,4 +278,4 @@ For major changes, please open an issue first to discuss.
 
 ---
 
-**Last Updated:** December 2024 | **Handbook Chapters:** 17 Complete (GitBook-ready)
+**Last Updated:** December 2024 | **Handbook Chapters:** 20 Complete (GitBook-ready) | **Practical Examples:** 2 Copy-Paste Attack Demos

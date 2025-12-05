@@ -10,15 +10,15 @@ AI Red Teaming has therefore emerged as a critical discipline. It applies realis
 
 ### 1.1 Key Differences Between Traditional Penetration Testing and AI Red Teaming
 
-| Aspect        | Traditional Penetration Testing                              | AI Red Team Assessment                                        |
-|--------------|--------------------------------------------------------------|----------------------------------------------------------------|
-| **Scope**    | Application code, network infrastructure, known CVEs         | Full AI ecosystem: data pipelines, models, RAG, MLOps, users  |
-| **Focus**    | Known vulnerability classes                                  | Emergent AI vulnerabilities: poisoning, evasion, prompt injection |
-| **Methodology** | Checklist-driven                                          | Creative, iterative, hypothesis-driven                        |
-| **Mindset**  | "Find known flaws"                                           | "Subvert system logic and assumptions"                        |
-
+| Aspect          | Traditional Penetration Testing                      | AI Red Team Assessment                                            |
+| --------------- | ---------------------------------------------------- | ----------------------------------------------------------------- |
+| **Scope**       | Application code, network infrastructure, known CVEs | Full AI ecosystem: data pipelines, models, RAG, MLOps, users      |
+| **Focus**       | Known vulnerability classes                          | Emergent AI vulnerabilities: poisoning, evasion, prompt injection |
+| **Methodology** | Checklist-driven                                     | Creative, iterative, hypothesis-driven                            |
+| **Mindset**     | "Find known flaws"                                   | "Subvert system logic and assumptions"                            |
 
 ### 1.2 Core Challenges Unique to AI Systems
+
 - **Opaque Model Logic:** The model’s decision-making often cannot be explained, leaving blind spots for attackers to exploit.
 - **Emergent Behavior:** Outputs depend entirely on data, enabling poisoning and adversarial manipulation.
 - **Shifting Trust Boundaries:** Pre-trained models, public datasets, and external plugins introduce systemic risk.
@@ -33,6 +33,7 @@ AI Red Teaming is essential for confronting these challenges holistically.
 A world-class AI red team serves as a strategic capability responsible for assessing, challenging, and improving the security, integrity, and resilience of intelligent systems.
 
 ### 2.1 Core Objectives of a Mature AI Red Team
+
 1. **Vulnerability Identification** - Discover AI-specific vulnerabilities (poisoning, evasion, prompt injection, model extraction).
 2. **Impact Assessment** - Evaluate real-world consequences (financial, safety, reputational, legal).
 3. **Defense Validation** - Test the effectiveness of current defenses and monitoring systems.
@@ -48,6 +49,7 @@ A world-class AI red team serves as a strategic capability responsible for asses
 A world-class AI red team is multidisciplinary by design. It blends deep offensive security expertise with machine learning, data engineering, and socio-technical awareness.
 
 ### 3.1 Essential Skillsets
+
 - **Offensive Security:** Application exploitation, cloud security, vulnerability research.
 - **AI/ML Knowledge:** Training processes, architecture fundamentals, failure modes.
 - **Data Engineering:** Understanding data quality, pipelines, provenance, and manipulation.
@@ -57,12 +59,11 @@ A world-class AI red team is multidisciplinary by design. It blends deep offensi
 
 ### 3.2 Team Organizational Models
 
-| Model            | Pros                                            | Cons                                           |
-|------------------|--------------------------------------------------|------------------------------------------------|
-| **Centralized**  | Strong adversarial culture; high expertise       | Can lack product context; may bottleneck       |
-| **Decentralized**| Deep product integration; rapid feedback         | Loss of independence; inconsistent standards   |
-| **Hybrid**       | Balanced; scalable; consistent strategy          | Must manage clear roles and coordination       |
-
+| Model             | Pros                                       | Cons                                         |
+| ----------------- | ------------------------------------------ | -------------------------------------------- |
+| **Centralized**   | Strong adversarial culture; high expertise | Can lack product context; may bottleneck     |
+| **Decentralized** | Deep product integration; rapid feedback   | Loss of independence; inconsistent standards |
+| **Hybrid**        | Balanced; scalable; consistent strategy    | Must manage clear roles and coordination     |
 
 ---
 
@@ -71,6 +72,7 @@ A world-class AI red team is multidisciplinary by design. It blends deep offensi
 The adversarial mindset combines creativity, skepticism, and systems-level thinking to uncover non-obvious failures.
 
 ### 4.1 Core Principles
+
 - **Systems Thinking:** Map data, models, APIs, infrastructure, and human interactions as a unified attack surface.
 - **Assume Nothing is Secure:** Proactively question all assumptions.
 - **Socio-Technical Awareness:** Humans and processes are part of the attack surface.
@@ -85,28 +87,33 @@ Real-world examples demonstrate how creative prompt reframing, sarcasm, role-pla
 A structured lifecycle ensures disciplined, consistent, and comprehensive evaluations.
 
 ### **Phase 1: Planning & Scoping**
+
 - Define objectives
 - Establish Rules of Engagement (RoE)
 - Legal/ethical review
 - Identify systems, models, and datasets in scope
 
 ### **Phase 2: Reconnaissance & System Analysis**
+
 - OSINT gathering
 - Model fingerprinting
 - Infrastructure and API mapping
 - Supply-chain review
 
 ### **Phase 3: Threat Modeling & Hypothesis Formation**
+
 - Apply MITRE ATLAS, OWASP LLM Top 10
 - Develop attack graph
 - Form testable hypotheses
 
 ### **Phase 4: Attack Execution & Consequence Validation**
+
 - Conduct adversarial prompts, poisoning attempts, extraction probes
 - Iterate based on model responses
 - Validate real-world impact
 
 ### **Phase 5: Reporting & Remediation Support**
+
 - Root cause analysis
 - Structured reporting
 - Collaboration with engineers
@@ -117,6 +124,7 @@ A structured lifecycle ensures disciplined, consistent, and comprehensive evalua
 ## 6.0 The Red Teamer’s Arsenal: Tools & Laboratory Setup
 
 ### 6.1 Laboratory Requirements
+
 - **Isolated environment**
 - **VMs/containers for reproducibility**
 - **GPU-enabled compute**
@@ -125,21 +133,26 @@ A structured lifecycle ensures disciplined, consistent, and comprehensive evalua
 ### 6.2 Essential Tools
 
 **Adversarial ML Libraries**
+
 - IBM ART
 - TextAttack
 
 **LLM-Specific Assessment Tools**
+
 - Garak
 - Microsoft PyRIT
 
 **Traditional Security Tools**
+
 - Burp Suite, ZAP
 - Nmap
 
 **Cloud Security Tools**
+
 - ScoutSuite, Prowler
 
 **Custom Scripting**
+
 - Python-based attack automation
 - Fuzzers and prompt generators
 
@@ -148,36 +161,44 @@ A structured lifecycle ensures disciplined, consistent, and comprehensive evalua
 ## 7.0 Mastering the Attack Surface: Key AI Vulnerability Classes
 
 ### 7.1 Prompt Injection & Manipulation (LLM01)
+
 - Direct and indirect injection
 - Jailbreaking techniques
 
 ### 7.2 Training Data Poisoning (LLM03)
+
 - Availability degradation
 - Backdoor insertion
 
 ### 7.3 Model Denial of Service (LLM04)
+
 - Resource exhaustion
 - Denial of wallet
 - Model cloning
 
 ### 7.4 Supply Chain Attacks (LLM05)
+
 - Compromised models or datasets
 - Malicious plugins
 
 ### 7.5 Sensitive Information Disclosure (LLM06)
+
 - Membership inference
 - Model inversion
 - Real-world incidents (e.g., Lee Luda chatbot)
 
 ### 7.6 Insecure Plugins & Excessive Agency (LLM07–08)
+
 - Over-granted tool access
 - Unsafe function calling patterns
 
 ### 7.7 Hallucinations & Overreliance (LLM09)
+
 - Confident incorrect outputs
 - Human trust exploitation
 
 ### 7.8 Adversarial Examples
+
 - Perturbation-based misclassification
 - White-box and black-box methods
 
@@ -186,14 +207,17 @@ A structured lifecycle ensures disciplined, consistent, and comprehensive evalua
 ## 8.0 Integration & Collaboration: Shifting Left with AI Red Teaming
 
 ### 8.1 Secure AI Development Lifecycle (SAIDL)
+
 - Security embedded from requirements stage
 - Continuous adversarial evaluation
 
 ### 8.2 Automated Red Teaming in CI/CD
+
 - “AI vs AI”: automated fuzzing
 - Regression prevention
 
 ### 8.3 Collaboration Models
+
 - Embedded specialists support iterative hardening
 - Central oversight ensures consistency
 
@@ -202,17 +226,20 @@ A structured lifecycle ensures disciplined, consistent, and comprehensive evalua
 ## 9.0 Reporting & Driving Remediation
 
 ### 9.1 Structure of a High-Impact AI Red Team Report
+
 - **Executive Summary**
 - **Technical Findings**
 - **Risk Assessment**
 - **Actionable Recommendations**
 
 ### 9.2 Stakeholder-Specific Communication
+
 - Executives: strategic/business impact
 - Product teams: user and feature risk
 - Engineers: root cause, fixes, mitigations
 
 ### 9.3 Supporting Remediation
+
 - Collaborative workshops
 - Fix validation
 - Regression testing
@@ -223,19 +250,20 @@ A structured lifecycle ensures disciplined, consistent, and comprehensive evalua
 
 ### 10.1 Differences Between Red Teaming and Wargaming
 
-| Aspect        | Standard AI Red Teaming            | AI-Focused Cyber Wargaming             |
-|---------------|-------------------------------------|-----------------------------------------|
-| **Objective** | Identify vulnerabilities             | Evaluate full organization response     |
-| **Interaction** | Static defenses                    | Dynamic Red vs Blue                     |
-| **Focus**     | Technical flaws                      | End-to-end resilience                    |
-
+| Aspect          | Standard AI Red Teaming  | AI-Focused Cyber Wargaming          |
+| --------------- | ------------------------ | ----------------------------------- |
+| **Objective**   | Identify vulnerabilities | Evaluate full organization response |
+| **Interaction** | Static defenses          | Dynamic Red vs Blue                 |
+| **Focus**       | Technical flaws          | End-to-end resilience               |
 
 ### 10.2 Framework Integration
+
 - OWASP Top 10 for LLMs
 - MITRE ATLAS
 - SAMM maturity models
 
 ### 10.3 Strategic Evolution
+
 A mature AI red team anticipates future threats and drives systemic improvement across the organization.
 
 ---
