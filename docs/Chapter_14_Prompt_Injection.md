@@ -1,6 +1,6 @@
-![Banner](assets/banner.svg)
-
 # Chapter 14: Prompt Injection (Direct/Indirect, 1st/3rd Party)
+
+![Banner](assets/banner.svg)
 
 ## 14.1 Introduction to Prompt Injection
 
@@ -82,7 +82,7 @@ Prompt injection affects virtually every LLM-powered application:
 
 - Web applications can sanitize HTML/SQL because syntax is well-defined
 - Operating systems have privilege levels enforced by hardware
-- LLMs operate on natural language-arbitrary, ambiguous, and infinitely varied
+- LLMs operate on natural language - arbitrary, ambiguous, and infinitely varied
 
 ---
 
@@ -4060,7 +4060,7 @@ Penalties for non-compliance:
 
 ---
 
-_Prompt injection represents the defining security challenge of the LLM era. Like SQL injection before it, the industry will develop partial defenses, best practices, and architectural improvements. However, unlike SQL injection, prompt injection may prove fundamentally harder to solve due to the nature of natural language and LLM architectures. Security professionals must stay vigilant, continuously test systems, and advocate for security-conscious AI development. The next chapter will explore data leakage and extraction-attacks that often build upon prompt injection as their foundation._
+_Prompt injection represents the defining security challenge of the LLM era. Like SQL injection before it, the industry will develop partial defenses, best practices, and architectural improvements. However, unlike SQL injection, prompt injection may prove fundamentally harder to solve due to the nature of natural language and LLM architectures. Security professionals must stay vigilant, continuously test systems, and advocate for security-conscious AI development. The next chapter will explore data leakage and extraction attacks that often build upon prompt injection as their foundation._
 
 ---
 

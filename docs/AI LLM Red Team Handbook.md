@@ -2564,7 +2564,7 @@ class RAGAccessControlTester:
 
 ---
 
-_RAG systems represent one of the most powerful - and vulnerable - implementations of LLM technology in enterprise environments. By understanding their architecture, attack surfaces, and testing methodologies, red teamers can help organizations build secure, production-ready AI assistants. The next chapter will explore data provenance and supply chain security-critical for understanding where your AI system's data comes from and how it can be compromised._
+_RAG systems represent one of the most powerful - and vulnerable - implementations of LLM technology in enterprise environments. By understanding their architecture, attack surfaces, and testing methodologies, red teamers can help organizations build secure, production-ready AI assistants. The next chapter will explore data provenance and supply chain security - critical for understanding where your AI system's data comes from and how it can be compromised._
 
 ---
 
@@ -3813,7 +3813,7 @@ class RAGAccessControlTester:
 
 ---
 
-_RAG systems represent one of the most powerful - and vulnerable - implementations of LLM technology in enterprise environments. By understanding their architecture, attack surfaces, and testing methodologies, red teamers can help organizations build secure, production-ready AI assistants. The next chapter will explore data provenance and supply chain security-critical for understanding where your AI system's data comes from and how it can be compromised._
+_RAG systems represent one of the most powerful - and vulnerable - implementations of LLM technology in enterprise environments. By understanding their architecture, attack surfaces, and testing methodologies, red teamers can help organizations build secure, production-ready AI assistants. The next chapter will explore data provenance and supply chain security - critical for understanding where your AI system's data comes from and how it can be compromised._
 
 ![Banner](assets/banner.svg)
 
@@ -5760,7 +5760,7 @@ Prompt injection affects virtually every LLM-powered application:
 
 - Web applications can sanitize HTML/SQL because syntax is well-defined
 - Operating systems have privilege levels enforced by hardware
-- LLMs operate on natural language-arbitrary, ambiguous, and infinitely varied
+- LLMs operate on natural language - arbitrary, ambiguous, and infinitely varied
 
 ---
 
@@ -9738,7 +9738,7 @@ Penalties for non-compliance:
 
 ---
 
-_Prompt injection represents the defining security challenge of the LLM era. Like SQL injection before it, the industry will develop partial defenses, best practices, and architectural improvements. However, unlike SQL injection, prompt injection may prove fundamentally harder to solve due to the nature of natural language and LLM architectures. Security professionals must stay vigilant, continuously test systems, and advocate for security-conscious AI development. The next chapter will explore data leakage and extraction-attacks that often build upon prompt injection as their foundation._
+_Prompt injection represents the defining security challenge of the LLM era. Like SQL injection before it, the industry will develop partial defenses, best practices, and architectural improvements. However, unlike SQL injection, prompt injection may prove fundamentally harder to solve due to the nature of natural language and LLM architectures. Security professionals must stay vigilant, continuously test systems, and advocate for security-conscious AI development. The next chapter will explore data leakage and extraction attacks that often build upon prompt injection as their foundation._
 
 ---
 
@@ -13395,7 +13395,7 @@ Layer 5: Governance
 
 ## Chapter 15 Conclusion
 
-Data leakage and extraction represent one of the most significant and persistent security challenges in LLM systems. Unlike traditional software vulnerabilities with clear patches, data baked into model weights cannot simply be "fixed" without retraining. This makes prevention-through rigorous data hygiene, architectural controls, and ongoing monitoring-absolutely critical.
+Data leakage and extraction represent one of the most significant and persistent security challenges in LLM systems. Unlike traditional software vulnerabilities with clear patches, data baked into model weights cannot simply be "fixed" without retraining. This makes prevention - through rigorous data hygiene, architectural controls, and ongoing monitoring - absolutely critical.
 
 As red teamers, our role is to systematically test these systems with the creativity and persistence of real attackers, document findings with precision, and help organizations build more resilient AI systems. The techniques covered in this chapter form the foundation of LLM data security testing, but the landscape continues to evolve rapidly.
 
