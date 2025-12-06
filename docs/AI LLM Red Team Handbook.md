@@ -1,6 +1,6 @@
 # Red Teaming AI & LLMs: The Consultant’s Complete Handbook
 
-![ ](assets/page_header.svg)
+![ ](assets/banner.svg)
 
 ## Table of Contents
 

@@ -1,6 +1,19 @@
+<!--
+Chapter: 14
+Title: Prompt Injection (Direct/Indirect, 1st/3rd Party)
+Category: Attack Techniques
+Difficulty: Intermediate
+Estimated Time: 45 minutes read time
+Hands-on: Yes - includes executable code
+Prerequisites: Chapters 9-10 (LLM Architectures, Tokenization)
+Related: Chapters 15-16 (Data Leakage, Jailbreaks)
+-->
+
 # Chapter 14: Prompt Injection (Direct/Indirect, 1st/3rd Party)
 
 ![ ](assets/page_header.svg)
+
+_This chapter provides comprehensive coverage of prompt injection attacks, including direct and indirect injection techniques, first-party and third-party variations, detection methods, defense-in-depth strategies, real-world case studies, and critical ethical considerations for authorized security testing._
 
 ## 14.1 Introduction to Prompt Injection
 
@@ -83,6 +96,30 @@ Prompt injection affects virtually every LLM-powered application:
 - Web applications can sanitize HTML/SQL because syntax is well-defined
 - Operating systems have privilege levels enforced by hardware
 - LLMs operate on natural language - arbitrary, ambiguous, and infinitely varied
+
+### Theoretical Foundation
+
+**Why This Works (Model Behavior):**
+
+Prompt injection exploits the fundamental architecture of transformer-based LLMs, which process all input tokens uniformly without distinguishing between instructions and data at the architectural level. This attack succeeds because:
+
+- **Architectural Factor:** Transformers use self-attention mechanisms that treat all tokens in the context window equally, computing attention scores across the entire input sequence without privilege separation. There is no hardware-enforced boundary between "system" tokens and "user" tokens—both are simply embedded vectors processed through identical attention layers.
+
+- **Training Artifact:** During pretraining and instruction-tuning via RLHF (Reinforcement Learning from Human Feedback), models learn to follow instructions embedded in natural language prompts. This helpful behavior becomes a vulnerability when malicious instructions are injected alongside legitimate user data, as the model has been rewarded for instruction-following regardless of instruction source.
+
+- **Input Processing:** Tokenization and embedding layers convert all text (system prompts, user inputs, retrieved documents) into the same semantic space. The model cannot cryptographically verify token provenance, making it impossible to reliably distinguish between "trusted" and "untrusted" content at inference time.
+
+**Foundational Research:**
+
+| Paper                                                                                                  | Key Finding                                                                | Relevance                                                                       |
+| ------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| [Perez & Ribeiro (2022) "Ignore Previous Prompt"](https://arxiv.org/abs/2211.09527)                    | First systematic study showing GPT-3 vulnerability to instruction override | Established prompt injection as fundamental LLM vulnerability                   |
+| [Greshake et al. (2023) "Not what you've signed up for"](https://arxiv.org/abs/2302.12173)             | Demonstrated indirect injection via poisoned web pages/documents           | Showed attack persistence and cross-user impact in RAG systems                  |
+| [Wei et al. (2023) "Jailbroken: How Does LLM Safety Training Fail?"](https://arxiv.org/abs/2307.02483) | Analyzed why safety training fails against adversarial prompts             | Explained insufficiency of RLHF alone for defending against prompt manipulation |
+
+**What This Reveals About LLMs:**
+
+The success of prompt injection attacks reveals that current LLM architectures lack true privilege separation—a concept fundamental to secure computing since the 1960s. Unlike operating systems with hardware-enforced ring levels or web browsers with same-origin policies, LLMs have no mechanism to cryptographically distinguish between trusted instructions and untrusted data. This is not merely an implementation flaw but an inherent limitation of processing all inputs as natural language tokens through uniform neural network layers.
 
 ---
 
@@ -4062,7 +4099,55 @@ Penalties for non-compliance:
 
 ---
 
+## 14.14 Research Landscape
+
+**Seminal Papers:**
+
+| Paper                                                                                                               | Year | Venue | Contribution                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ---- | ----- | ------------------------------------------------------------------------------------ |
+| [Perez & Ribeiro "Ignore Previous Prompt"](https://arxiv.org/abs/2211.09527)                                        | 2022 | arXiv | First systematic documentation of prompt injection vulnerability in GPT-3            |
+| [Greshake et al. "Not what you've signed up for"](https://arxiv.org/abs/2302.12173)                                 | 2023 | arXiv | Introduced indirect prompt injection concept, demonstrated RAG system attacks        |
+| [Wallace et al. "Universal Adversarial Triggers for Attacking and Analyzing NLP"](https://arxiv.org/abs/1908.07125) | 2019 | EMNLP | Early work on adversarial text generation, foundational for automated prompt attacks |
+| [Wei et al. "Jailbroken: How Does LLM Safety Training Fail?"](https://arxiv.org/abs/2307.02483)                     | 2023 | arXiv | Analyzed failure modes of RLHF safety training against adversarial prompts           |
+| [Liu et al. "Prompt Injection attack against LLM-integrated Applications"](https://arxiv.org/abs/2306.05499)        | 2023 | arXiv | Comprehensive taxonomy of prompt injection techniques and impact assessment          |
+
+**Evolution of Understanding:**
+
+The understanding of prompt injection has evolved from accidental discovery to systematic attack methodology:
+
+- **2022**: Riley Goodside's viral demonstrations showed simple "ignore previous instructions" working reliably on GPT-3, sparking initial awareness
+- **Early 2023**: Researchers formalized direct vs. indirect injection, demonstrating persistent attacks via poisoned documents and web pages (Greshake et al.)
+- **Mid 2023**: Focus shifted to automated discovery methods and defense evaluation as LLM applications became widespread
+- **2024-Present**: Research explores architectural solutions (dual LLM verification, structured input/output schemas), though no complete defense has emerged
+
+**Current Research Gaps:**
+
+1. **Provable Defense Mechanisms**: No cryptographically sound method exists to separate instructions from data at the architectural level. Can LLM architectures be redesigned with privilege separation, or is this fundamentally incompatible with natural language processing?
+
+2. **Automated Detection with Low False Positives**: Current detection methods either miss sophisticated attacks (low sensitivity) or flag legitimate queries (high false positive rate). How can we build detectors that match adversarial sophistication?
+
+3. **Cross-Model Transferability**: Do prompt injections that work on one model transfer to others? What model-specific vs. universal attack patterns exist, and how does this inform defense strategies?
+
+**Recommended Reading:**
+
+**For Practitioners (by time available):**
+
+- **5 minutes**: [Simon Willison's "Prompt injection: What's the worst that can happen?"](https://simonwillison.net/2023/Apr/14/worst-that-can-happen/) - Accessible overview of real-world risks
+- **30 minutes**: [Greshake et al. (2023)](https://arxiv.org/abs/2302.12173) - Core paper on indirect injection with concrete examples
+- **Deep dive**: [Liu et al. (2023) Comprehensive Taxonomy](https://arxiv.org/abs/2306.05499) - Complete technical analysis of attack variants
+
+**By Focus Area:**
+
+- **Attack Techniques**: [Perez & Ribeiro (2022)](https://arxiv.org/abs/2211.09527) - Best for understanding attack fundamentals
+- **Defense Mechanisms**: [Wei et al. (2023)](https://arxiv.org/abs/2307.02483) - Best for understanding why defenses fail
+- **Theoretical Foundation**: [Wallace et al. (2019)](https://arxiv.org/abs/1908.07125) - Best for understanding adversarial text generation roots
+
+---
+
 ## 14.15 Conclusion
+
+> [!CAUTION]
+> Unauthorized use of prompt injection techniques is illegal under the Computer Fraud and Abuse Act (CFAA), anti-hacking laws, and terms of service agreements. Unauthorized testing can result in criminal prosecution, civil liability, and imprisonment. **Only use these techniques in authorized security assessments with explicit written permission from the target organization.**
 
 **Key Takeaways:**
 
@@ -4096,6 +4181,36 @@ Penalties for non-compliance:
 
 > [!TIP]
 > Create a "prompt injection playbook" with categories: basic override, role play, encoding, context manipulation, indirect injection. Test each category against every system to ensure comprehensive coverage.
+
+---
+
+## Quick Reference
+
+**Attack Vector Summary:**
+
+Prompt injection manipulates LLM behavior by embedding malicious instructions within user inputs or indirectly through poisoned documents, web pages, or API responses. The attack exploits LLMs' inability to distinguish between trusted system instructions and untrusted user data.
+
+**Key Detection Indicators:**
+
+- Unusual instruction-like phrases in user inputs ("ignore previous", "new instructions", "system override")
+- Unexpected LLM behavior deviating from system prompt guidelines
+- Anomalous plugin/tool invocations or API calls not matching user intent
+- System prompt disclosure or leakage in responses
+- Cross-user data bleeding or inappropriate context access
+
+**Primary Mitigation:**
+
+- **Input Validation**: Filter instruction keywords, delimiters, and suspicious patterns before LLM processing
+- **Prompt Hardening**: Use explicit delimiters, numbered instructions, and meta-prompts reinforcing boundaries
+- **Privilege Separation**: Dedicated LLM verification layer or structured output schemas
+- **Output Filtering**: Validate responses against expected format and content constraints
+- **Monitoring**: Real-time anomaly detection for injection attempts and success indicators
+
+**Severity:** Critical  
+**Ease of Exploit:** High (basic techniques) to Medium (advanced obfuscation)  
+**Common Targets:** RAG systems, chatbots with plugin access, autonomous agents, document processing workflows
+
+---
 
 ### Pre-Engagement Checklist
 
