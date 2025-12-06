@@ -857,28 +857,3 @@ if __name__ == "__main__":
 
 ---
 
-## References and Further Reading
-
-### Academic Papers
-
-1. **"Denial of Service Attacks on LLM Applications"** (2023)
-2. **"Resource Exhaustion in Transformer Models"** (2022)
-3. **"Economic Attacks on AI APIs"** (2023)
-
-### Industry Reports
-
-- **OWASP Top 10 for LLMs** - DoS risks
-- **Cloud Security Alliance** - AI availability threats
-- **NIST AI Security Framework** - Resource management
-
-### Tools
-
-- **Rate Limit Testing**: https://github.com/rate-limit-tester
-- **API Security Scanner**: https://apisecurity.io
-- **Cost Calculator**: https://oai-cost-calculator.com
-
----
-
-**End of Chapter 21: Model DoS and Resource Exhaustion**
-
-_This chapter provided comprehensive coverage of denial of service attacks on LLM systems. Understanding these techniques is critical for building resilient, cost-effective AI services and protecting against resource abuse. Remember: the goal is to build better defenses, not enable attacks._

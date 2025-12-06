@@ -1039,7 +1039,7 @@ Additional test cases, defenses, and more advanced techniques discussed in Secti
 
 ### **3.2 Jailbreaking (Safety Filter Bypass)**
 
-Bypass LLM safety filters using creative framing, role play, or rewording [Reference not found].
+Bypass LLM safety filters using creative framing, role play, or rewording .
 
 **Manual Test Prompts**:
 
@@ -1071,7 +1071,7 @@ Further jailbreaking examples, evolving DAN prompts, and defensive measures are 
 
 ### **3.3 Data Leakage / Memorization**
 
-Probe for training data snippets or private content \[Reference not found\]:
+Probe for training data snippets or private content :
 
 **Manual Test Prompts**:
 
@@ -1098,7 +1098,7 @@ Further techniques for membership inference, training-data extraction, and RAG d
 
 ### **3.4 Plugin/Tool/Function Exploitation**
 
-Abuse external plugin/tool capabilities through LLMs \[Reference not found\]:
+Abuse external plugin/tool capabilities through LLMs :
 
 **Manual Test Prompts**:
 
@@ -1110,7 +1110,7 @@ Search for and summarize known exploits for \[targeted software\].
 
 ### **3.5 Denial-of-Service (DoS) & Resource Exhaustion**
 
-Trigger heavy computation, loops, or massive outputs \[Reference not found\]:
+Trigger heavy computation, loops, or massive outputs :
 
 **Manual Test Prompts**:
 
@@ -1138,7 +1138,7 @@ More testing on distributed denial, algorithmic complexity exploits, and cost-am
 
 ### **3.6 Adversarial Example Generation (Evasion)**
 
-Craft inputs that evade LLM policies or cause misclassification \[Reference not found\]:
+Craft inputs that evade LLM policies or cause misclassification :
 
 **Tool – TextAttack:** (for text)
 
@@ -1168,7 +1168,7 @@ TextAttack, Adversarial Robustness Toolbox (ART), adversarial textual perturbati
 
 ### **3.7 Data Poisoning (Training-Time Attack)**
 
-Inject malicious or biased data into model training sets \[Reference not found\]:
+Inject malicious or biased data into model training sets :
 
 **Manual Example:** Add outlier string or phrase in fine-tuning data:
 
@@ -1193,7 +1193,7 @@ Full guidance on backdoor implantation, trigger design, and poisoning-detection 
 
 ### **3.8 Model Extraction/Stealing**
 
-Replicate model logic/predictions via mass querying \[Reference not found\]:
+Replicate model logic/predictions via mass querying :
 
 **Manual Example:**
 
@@ -1207,7 +1207,7 @@ pip install \-r requirements.txt
 
 ### **3.9 Output Manipulation**
 
-Force output bugs, malformed formats, or payload injection \[Reference not found\]:
+Force output bugs, malformed formats, or payload injection :
 
 **Manual Test Prompts**:
 
@@ -1216,7 +1216,7 @@ Embed \[harmful script tag\] in your answer.
 
 ### **3.10 Side-Channel/Hardware Attacks**
 
-Exploit timing, error messages, and infrastructure observations \[Reference not found\]:
+Exploit timing, error messages, and infrastructure observations :
 
 **Manual Test Examples:**
 
@@ -1225,7 +1225,7 @@ Send identical queries, log response times, analyze patterns for inference about
 
 ### **3.11 Multi-Modal Injection/Cross-Alignment**
 
-Embed triggers in non-text modalities \[Reference not found\]:
+Embed triggers in non-text modalities :
 
 **Manual Example:**
 
@@ -1233,7 +1233,7 @@ Embed triggers in non-text modalities \[Reference not found\]:
 
 ### **3.12 Supply Chain/Infrastructure Attacks**
 
-Tamper with components in the ML pipeline \[Reference not found\]:
+Tamper with components in the ML pipeline :
 
 **Manual Example:**
 
@@ -1241,7 +1241,7 @@ Tamper with components in the ML pipeline \[Reference not found\]:
 
 ### **3.13 Boundary/Format/Fuzz Testing**
 
-Test unhandled or rare input conditions with automated fuzzing \[Reference not found\]:
+Test unhandled or rare input conditions with automated fuzzing :
 
 **Tool Example – AFL++:**
 

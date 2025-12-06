@@ -1071,37 +1071,6 @@ XSS: "<script>" → "%3Cscript%3E" (URL encoded)
 
 ---
 
-## References and Further Reading
-
-### Academic Papers
-
-1. "TextFooler: A Framework for Adversarial Text Generation" (2020)
-2. "BERT-ATTACK: Adversarial Attack Against BERT Using BERT" (2020)
-3. "Universal Adversarial Triggers for Attacking and Analyzing NLP" (2019)
-4. "Obfuscated Gradients Give a False Sense of Security" (2018)
-
-### Industry Reports
-
-- OWASP Top 10 for LLM Applications
-- MITRE ATLAS Framework
-- AI Incident Database (evasion cases)
-- Red Team Reports from major AI labs
-
-### Tools and Frameworks
-
-- **TextFooler** - https://github.com/jind11/TextFooler
-- **OpenAttack** - https://github.com/thunlp/OpenAttack
-- **PromptInject** - Various implementations
-- **Garak** - LLM vulnerability scanner
-
-### Standards
-
-- NIST AI Risk Management Framework
-- ISO/IEC 24029 (AI Robustness)
-- IEEE P2978 (Adversarial ML)
-
----
-
 ## End of Chapter 18: Evasion, Obfuscation, and Adversarial Inputs
 
 _This chapter provided comprehensive coverage of evasion and obfuscation techniques for LLM systems. Understanding these methods is critical for both red teamers testing defenses and security teams building robust AI systems. Remember: all techniques should be used responsibly and only with proper authorization._
