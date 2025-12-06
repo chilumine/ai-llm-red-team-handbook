@@ -1107,4 +1107,3 @@ message = framework.generate_impersonation_message(
 - Blockchain-based email authentication
 
 ---
-
