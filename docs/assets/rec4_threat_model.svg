@@ -1,27 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500">
-<defs>
-
-        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-            <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
-        </marker>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500">
+            <defs>
+            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.15"/>
+            </pattern>
         
-</defs>
-<rect width="100%" height="100%" fill="#ffffff" />
-<circle cx="250.0" cy="100.0" r="50" fill="#f0f0f0" stroke="#333" stroke-width="2" opacity="1.0" />
-<text x="250.0" y="95.0" font-family="Arial, sans-serif" font-size="16" fill="#333" text-anchor="middle" font-weight="bold" dy=".3em">1</text>
-<text x="250.0" y="115.0" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle" font-weight="normal" dy=".3em">Define Assets</text>
-<circle cx="392.658477444273" cy="203.6474508437579" r="50" fill="#f0f0f0" stroke="#333" stroke-width="2" opacity="1.0" />
-<text x="392.658477444273" y="198.6474508437579" font-family="Arial, sans-serif" font-size="16" fill="#333" text-anchor="middle" font-weight="bold" dy=".3em">2</text>
-<text x="392.658477444273" y="218.6474508437579" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle" font-weight="normal" dy=".3em">ID Actors</text>
-<circle cx="338.167787843871" cy="371.3525491562421" r="50" fill="#f0f0f0" stroke="#333" stroke-width="2" opacity="1.0" />
-<text x="338.167787843871" y="366.3525491562421" font-family="Arial, sans-serif" font-size="16" fill="#333" text-anchor="middle" font-weight="bold" dy=".3em">3</text>
-<text x="338.167787843871" y="386.3525491562421" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle" font-weight="normal" dy=".3em">Enum Surfaces</text>
-<circle cx="161.83221215612906" cy="371.3525491562421" r="50" fill="#f0f0f0" stroke="#333" stroke-width="2" opacity="1.0" />
-<text x="161.83221215612906" y="366.3525491562421" font-family="Arial, sans-serif" font-size="16" fill="#333" text-anchor="middle" font-weight="bold" dy=".3em">4</text>
-<text x="161.83221215612906" y="386.3525491562421" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle" font-weight="normal" dy=".3em">Analyze Risk</text>
-<circle cx="107.34152255572695" cy="203.6474508437579" r="50" fill="#f0f0f0" stroke="#333" stroke-width="2" opacity="1.0" />
-<text x="107.34152255572695" y="198.6474508437579" font-family="Arial, sans-serif" font-size="16" fill="#333" text-anchor="middle" font-weight="bold" dy=".3em">5</text>
-<text x="107.34152255572695" y="218.6474508437579" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle" font-weight="normal" dy=".3em">Prioritize</text>
-<text x="250" y="250" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle" font-weight="bold" dy=".3em">Threat Modeling</text>
-<text x="250" y="270" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle" font-weight="normal" dy=".3em">Cycle</text>
-</svg>
+            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                <polygon points="0 0, 10 3.5, 0 7" fill="#D4AF37" />
+            </marker>
+        
+            <marker id="dot" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+                <circle cx="3" cy="3" r="3" fill="#D4AF37" />
+            </marker>
+        </defs>
+            <rect width="100%" height="100%" fill="#050505" />
+            <rect width="100%" height="100%" fill="url(#grid)" />
+            <text x="300" y="30" fill="#FFD700" font-family="Courier New" font-size="20" text-anchor="middle">THREAT MODELING CYCLE</text><polygon points="260.0,55.0 340.0,55.0 350.0,65.0 350.0,95.0 340.0,105.0 260.0,105.0 250.0,95.0 250.0,65.0" fill="#1A1A1A" stroke="#D4AF37" stroke-width="1.5" fill-opacity="0.8" /><text x="255.0" y="65.0" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="340.0" y="103.0" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="300.0" y="77.0" fill="#FFD700" font-family="Courier New" font-size="12" font-weight="bold" text-anchor="middle">Define</text><text x="300.0" y="91.0" fill="#FFD700" font-family="Courier New" font-size="12" font-weight="bold" text-anchor="middle">Assets</text><polygon points="431.19017293312766,179.37694101250946 511.19017293312766,179.37694101250946 521.1901729331277,189.37694101250946 521.1901729331277,219.37694101250946 511.19017293312766,229.37694101250946 431.19017293312766,229.37694101250946 421.19017293312766,219.37694101250946 421.19017293312766,189.37694101250946" fill="#1A1A1A" stroke="#D4AF37" stroke-width="1.5" fill-opacity="0.8" /><text x="426.19017293312766" y="189.37694101250946" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="511.19017293312766" y="227.37694101250946" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="471.19017293312766" y="208.37694101250946" fill="#FFD700" font-family="Courier New" font-size="12" font-weight="bold" text-anchor="middle">ID Actors</text><polygon points="365.80134541264516,380.62305898749054 445.80134541264516,380.62305898749054 455.80134541264516,390.62305898749054 455.80134541264516,420.62305898749054 445.80134541264516,430.62305898749054 365.80134541264516,430.62305898749054 355.80134541264516,420.62305898749054 355.80134541264516,390.62305898749054" fill="#1A1A1A" stroke="#D4AF37" stroke-width="1.5" fill-opacity="0.8" /><text x="360.80134541264516" y="390.62305898749054" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="445.80134541264516" y="428.62305898749054" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="405.80134541264516" y="402.62305898749054" fill="#FFD700" font-family="Courier New" font-size="12" font-weight="bold" text-anchor="middle">Enum</text><text x="405.80134541264516" y="416.62305898749054" fill="#FFD700" font-family="Courier New" font-size="12" font-weight="bold" text-anchor="middle">Surfaces</text><polygon points="154.19865458735484,380.62305898749054 234.19865458735484,380.62305898749054 244.19865458735484,390.62305898749054 244.19865458735484,420.62305898749054 234.19865458735484,430.62305898749054 154.19865458735484,430.62305898749054 144.19865458735484,420.62305898749054 144.19865458735484,390.62305898749054" fill="#1A1A1A" stroke="#D4AF37" stroke-width="1.5" fill-opacity="0.8" /><text x="149.19865458735484" y="390.62305898749054" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="234.19865458735484" y="428.62305898749054" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="194.19865458735484" y="402.62305898749054" fill="#FFD700" font-family="Courier New" font-size="12" font-weight="bold" text-anchor="middle">Analyze</text><text x="194.19865458735484" y="416.62305898749054" fill="#FFD700" font-family="Courier New" font-size="12" font-weight="bold" text-anchor="middle">Risk</text><polygon points="88.80982706687234,179.3769410125095 168.80982706687234,179.3769410125095 178.80982706687234,189.3769410125095 178.80982706687234,219.3769410125095 168.80982706687234,229.3769410125095 88.80982706687234,229.3769410125095 78.80982706687234,219.3769410125095 78.80982706687234,189.3769410125095" fill="#1A1A1A" stroke="#D4AF37" stroke-width="1.5" fill-opacity="0.8" /><text x="83.80982706687234" y="189.3769410125095" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="168.80982706687234" y="227.3769410125095" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="128.80982706687234" y="208.3769410125095" fill="#FFD700" font-family="Courier New" font-size="12" font-weight="bold" text-anchor="middle">Prioritize</text>
+            <!-- Global Tech Overlay -->
+            <rect x="10" y="10" width="580" height="480" fill="none" stroke="#D4AF37" stroke-width="2" opacity="0.3" />
+            <text x="20" y="30" fill="#D4AF37" font-family="Courier New" font-size="10" opacity="0.5">SYS.DIAG.v.9.0</text>
+            <text x="480" y="480" fill="#D4AF37" font-family="Courier New" font-size="10" opacity="0.5">UNAUTHORIZED ACCESS_</text>
+        </svg>

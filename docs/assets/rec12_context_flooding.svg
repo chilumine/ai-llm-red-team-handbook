@@ -1,23 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="300" viewBox="0 0 800 300">
-<defs>
-
-        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-            <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
-        </marker>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300">
+            <defs>
+            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.15"/>
+            </pattern>
         
-</defs>
-<rect width="100%" height="100%" fill="#ffffff" />
-<text x="200" y="50" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle" font-weight="bold" dy=".3em">Before Attack (Normal)</text>
-<rect x="50" y="80" width="300" height="60" rx="5" ry="5" fill="none" stroke="#333" stroke-width="2" opacity="1.0"  />
-<text x="200" y="155" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle" font-weight="normal" dy=".3em">Context Window</text>
-<rect x="52" y="82" width="80" height="56" rx="5" ry="5" fill="#d0e0ff" stroke="none" stroke-width="2" opacity="1.0"  />
-<text x="92" y="110" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle" font-weight="normal" dy=".3em">Sys Prompt</text>
-<rect x="134" y="82" width="100" height="56" rx="5" ry="5" fill="#e6ffe6" stroke="none" stroke-width="2" opacity="1.0"  />
-<text x="184" y="110" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle" font-weight="normal" dy=".3em">History</text>
-<text x="600" y="50" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle" font-weight="bold" dy=".3em">After Flooding (DoS)</text>
-<rect x="450" y="80" width="300" height="60" rx="5" ry="5" fill="none" stroke="#333" stroke-width="2" opacity="1.0"  />
-<rect x="400" y="82" width="40" height="56" rx="5" ry="5" fill="#d0e0ff" stroke="none" stroke-width="2" opacity="0.5"  />
-<text x="420" y="70" font-family="Arial, sans-serif" font-size="10" fill="#cc0000" text-anchor="middle" font-weight="normal" dy=".3em">LOST</text>
-<rect x="452" y="82" width="296" height="56" rx="5" ry="5" fill="#ffcccc" stroke="none" stroke-width="2" opacity="1.0"  />
-<text x="600" y="110" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle" font-weight="normal" dy=".3em">Repeated Garbage Tokens...</text>
-</svg>
+            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                <polygon points="0 0, 10 3.5, 0 7" fill="#D4AF37" />
+            </marker>
+        
+            <marker id="dot" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+                <circle cx="3" cy="3" r="3" fill="#D4AF37" />
+            </marker>
+        </defs>
+            <rect width="100%" height="100%" fill="#050505" />
+            <rect width="100%" height="100%" fill="url(#grid)" />
+            <text x="400" y="30" fill="#FFD700" font-family="Courier New" font-size="20" text-anchor="middle">CONTEXT FLOODING (DoS)</text><text x="200" y="80" fill="#FFD700" font-family="Courier New" font-size="14" text-anchor="middle">NORMAL STATE</text><polygon points="60,100 340,100 350,110 350,170 340,180 60,180 50,170 50,110" fill="#1A1A1A" stroke="#D4AF37" stroke-width="1.5" fill-opacity="0.1" /><text x="55" y="110" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="340" y="178" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><polygon points="70,110 130,110 140,120 140,160 130,170 70,170 60,160 60,120" fill="#1A1A1A" stroke="#D4AF37" stroke-width="1.5" fill-opacity="0.8" /><text x="65" y="120" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="130" y="168" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="100.0" y="137.0" fill="#FFD700" font-family="Courier New" font-size="12" font-weight="bold" text-anchor="middle">Sys</text><text x="100.0" y="151.0" fill="#FFD700" font-family="Courier New" font-size="12" font-weight="bold" text-anchor="middle">Prompt</text><polygon points="160,110 240,110 250,120 250,160 240,170 160,170 150,160 150,120" fill="#1A1A1A" stroke="#D4AF37" stroke-width="1.5" fill-opacity="0.8" /><text x="155" y="120" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="240" y="168" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="200.0" y="144.0" fill="#FFD700" font-family="Courier New" font-size="12" font-weight="bold" text-anchor="middle">History</text><text x="600" y="80" fill="#FFD700" font-family="Courier New" font-size="14" text-anchor="middle">FLOODED STATE</text><polygon points="460,100 740,100 750,110 750,170 740,180 460,180 450,170 450,110" fill="#1A1A1A" stroke="#D4AF37" stroke-width="1.5" fill-opacity="0.1" /><text x="455" y="110" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="740" y="178" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><polygon points="470,110 730,110 740,120 740,160 730,170 470,170 460,160 460,120" fill="#333" stroke="#D4AF37" stroke-width="1.5" fill-opacity="0.8" /><text x="465" y="120" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="730" y="168" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="600.0" y="137.0" fill="#FFD700" font-family="Courier New" font-size="12" font-weight="bold" text-anchor="middle">GARBAGE TOKENS...\n(Sys Prompt</text><text x="600.0" y="151.0" fill="#FFD700" font-family="Courier New" font-size="12" font-weight="bold" text-anchor="middle">Ejected)</text>
+            <!-- Global Tech Overlay -->
+            <rect x="10" y="10" width="780" height="280" fill="none" stroke="#D4AF37" stroke-width="2" opacity="0.3" />
+            <text x="20" y="30" fill="#D4AF37" font-family="Courier New" font-size="10" opacity="0.5">SYS.DIAG.v.9.0</text>
+            <text x="680" y="280" fill="#D4AF37" font-family="Courier New" font-size="10" opacity="0.5">UNAUTHORIZED ACCESS_</text>
+        </svg>

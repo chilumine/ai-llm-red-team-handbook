@@ -1,20 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
-<defs>
-
-        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-            <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
-        </marker>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+            <defs>
+            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.15"/>
+            </pattern>
         
-</defs>
-<rect width="100%" height="100%" fill="#ffffff" />
-<circle cx="100" cy="200" r="30" fill="#eee" stroke="#333" stroke-width="2" opacity="1.0" />
-<text x="100" y="200" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle" font-weight="normal" dy=".3em">Start</text>
-<circle cx="400" cy="100" r="30" fill="#e6ffe6" stroke="green" stroke-width="3" opacity="1.0" />
-<text x="400" y="100" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle" font-weight="normal" dy=".3em">Cat</text>
-<line x1="130" y1="200" x2="370" y2="100" stroke="green" stroke-width="3" marker-end="url(#arrowhead)"  />
-<text x="250" y="140" font-family="Arial, sans-serif" font-size="14" fill="green" text-anchor="middle" font-weight="normal" dy=".3em">Greedy (High Prob)</text>
-<circle cx="400" cy="300" r="30" fill="#ffe6e6" stroke="red" stroke-width="2" opacity="1.0" />
-<text x="400" y="300" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle" font-weight="normal" dy=".3em">Void</text>
-<line x1="130" y1="200" x2="370" y2="300" stroke="red" stroke-width="2" marker-end="url(#arrowhead)" stroke-dasharray="5,5" />
-<text x="250" y="260" font-family="Arial, sans-serif" font-size="14" fill="red" text-anchor="middle" font-weight="normal" dy=".3em">Temp=1.5 (Low Prob)</text>
-</svg>
+            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                <polygon points="0 0, 10 3.5, 0 7" fill="#D4AF37" />
+            </marker>
+        
+            <marker id="dot" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+                <circle cx="3" cy="3" r="3" fill="#D4AF37" />
+            </marker>
+        </defs>
+            <rect width="100%" height="100%" fill="#050505" />
+            <rect width="100%" height="100%" fill="url(#grid)" />
+            <text x="300" y="30" fill="#FFD700" font-family="Courier New" font-size="20" text-anchor="middle">DECODING TREE</text><polygon points="60,180 120,180 130,190 130,210 120,220 60,220 50,210 50,190" fill="#1A1A1A" stroke="#D4AF37" stroke-width="1.5" fill-opacity="0.8" /><text x="55" y="190" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="120" y="218" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="90.0" y="204.0" fill="#FFD700" font-family="Courier New" font-size="12" font-weight="bold" text-anchor="middle">Input</text><line x1="130" y1="200" x2="250" y2="100" stroke="#D4AF37" stroke-width="1.5" marker-end="url(#arrowhead)" /><polygon points="260,80 340,80 350,90 350,110 340,120 260,120 250,110 250,90" fill="#1A1A1A" stroke="#D4AF37" stroke-width="1.5" fill-opacity="0.8" /><text x="255" y="90" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="340" y="118" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="300.0" y="97.0" fill="#FFD700" font-family="Courier New" font-size="12" font-weight="bold" text-anchor="middle"></text><text x="300.0" y="111.0" fill="#FFD700" font-family="Courier New" font-size="12" font-weight="bold" text-anchor="middle">Greedy\n(T=0)</text><line x1="350" y1="100" x2="450" y2="100" stroke="#D4AF37" stroke-width="1.5" marker-end="url(#arrowhead)" /><polygon points="460,80 520,80 530,90 530,110 520,120 460,120 450,110 450,90" fill="#1A1A1A" stroke="#D4AF37" stroke-width="1.5" fill-opacity="0.8" /><text x="455" y="90" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="520" y="118" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="490.0" y="104.0" fill="#FFD700" font-family="Courier New" font-size="12" font-weight="bold" text-anchor="middle">Best</text><line x1="130" y1="200" x2="250" y2="300" stroke="#D4AF37" stroke-width="1.5" marker-end="url(#arrowhead)" /><polygon points="260,280 340,280 350,290 350,310 340,320 260,320 250,310 250,290" fill="#1A1A1A" stroke="#D4AF37" stroke-width="1.5" fill-opacity="0.8" /><text x="255" y="290" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="340" y="318" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="300.0" y="297.0" fill="#FFD700" font-family="Courier New" font-size="12" font-weight="bold" text-anchor="middle"></text><text x="300.0" y="311.0" fill="#FFD700" font-family="Courier New" font-size="12" font-weight="bold" text-anchor="middle">Sample\n(T=1)</text><line x1="350" y1="300" x2="450" y2="250" stroke="#D4AF37" stroke-width="1.5" marker-end="url(#arrowhead)" /><polygon points="460,230 520,230 530,240 530,260 520,270 460,270 450,260 450,240" fill="#1A1A1A" stroke="#D4AF37" stroke-width="1.5" fill-opacity="0.8" /><text x="455" y="240" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="520" y="268" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="490.0" y="254.0" fill="#FFD700" font-family="Courier New" font-size="12" font-weight="bold" text-anchor="middle">Rand1</text><line x1="350" y1="300" x2="450" y2="350" stroke="#D4AF37" stroke-width="1.5" marker-end="url(#arrowhead)" /><polygon points="460,330 520,330 530,340 530,360 520,370 460,370 450,360 450,340" fill="#1A1A1A" stroke="#D4AF37" stroke-width="1.5" fill-opacity="0.8" /><text x="455" y="340" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="520" y="368" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="490.0" y="354.0" fill="#FFD700" font-family="Courier New" font-size="12" font-weight="bold" text-anchor="middle">Rand2</text>
+            <!-- Global Tech Overlay -->
+            <rect x="10" y="10" width="580" height="380" fill="none" stroke="#D4AF37" stroke-width="2" opacity="0.3" />
+            <text x="20" y="30" fill="#D4AF37" font-family="Courier New" font-size="10" opacity="0.5">SYS.DIAG.v.9.0</text>
+            <text x="480" y="380" fill="#D4AF37" font-family="Courier New" font-size="10" opacity="0.5">UNAUTHORIZED ACCESS_</text>
+        </svg>

@@ -1,25 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="300" viewBox="0 0 800 300">
-<defs>
-
-        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-            <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
-        </marker>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+            <defs>
+            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.15"/>
+            </pattern>
         
-</defs>
-<rect width="100%" height="100%" fill="#ffffff" />
-<rect x="50" y="100" width="120" height="50" rx="5" ry="5" fill="#e6ffe6" stroke="#333" stroke-width="2" opacity="1.0"  />
-<text x="110.0" y="125.0" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle" font-weight="normal" dy=".3em">Contract Signed</text>
-<line x1="170" y1="125.0" x2="200" y2="125.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"  />
-<rect x="200" y="100" width="120" height="50" rx="5" ry="5" fill="#fff" stroke="#333" stroke-width="2" opacity="1.0"  />
-<text x="260.0" y="125.0" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle" font-weight="normal" dy=".3em">Kickoff Meeting</text>
-<line x1="320" y1="125.0" x2="350" y2="125.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"  />
-<rect x="350" y="100" width="120" height="50" rx="5" ry="5" fill="#fff" stroke="#333" stroke-width="2" opacity="1.0"  />
-<text x="410.0" y="125.0" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle" font-weight="normal" dy=".3em">Access Provisioning</text>
-<line x1="470" y1="125.0" x2="500" y2="125.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"  />
-<rect x="500" y="100" width="120" height="50" rx="5" ry="5" fill="#fff" stroke="#333" stroke-width="2" opacity="1.0"  />
-<text x="560.0" y="125.0" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle" font-weight="normal" dy=".3em">Comms Setup</text>
-<line x1="620" y1="125.0" x2="650" y2="125.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"  />
-<rect x="650" y="100" width="120" height="50" rx="5" ry="5" fill="#e6f2ff" stroke="#333" stroke-width="2" opacity="1.0"  />
-<text x="710.0" y="125.0" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle" font-weight="normal" dy=".3em">Ready!</text>
-<text x="710.0" y="145.0" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle" font-weight="normal" dy=".3em">(Milestone)</text>
-</svg>
+            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                <polygon points="0 0, 10 3.5, 0 7" fill="#D4AF37" />
+            </marker>
+        
+            <marker id="dot" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+                <circle cx="3" cy="3" r="3" fill="#D4AF37" />
+            </marker>
+        </defs>
+            <rect width="100%" height="100%" fill="#050505" />
+            <rect width="100%" height="100%" fill="url(#grid)" />
+            <text x="400" y="30" fill="#FFD700" font-family="Courier New" font-size="20" text-anchor="middle">CLIENT ONBOARDING FLOW</text><polygon points="110,100 210,100 220,110 220,150 210,160 110,160 100,150 100,110" fill="#1A1A1A" stroke="#D4AF37" stroke-width="1.5" fill-opacity="0.8" /><text x="105" y="110" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="210" y="158" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="160.0" y="134.0" fill="#FFD700" font-family="Courier New" font-size="12" font-weight="bold" text-anchor="middle">Kickoff</text><line x1="220" y1="130" x2="260" y2="160" stroke="#D4AF37" stroke-width="1.5" marker-end="url(#arrowhead)" /><polygon points="250,200 350,200 360,210 360,250 350,260 250,260 240,250 240,210" fill="#1A1A1A" stroke="#D4AF37" stroke-width="1.5" fill-opacity="0.8" /><text x="245" y="210" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="350" y="258" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="300.0" y="234.0" fill="#FFD700" font-family="Courier New" font-size="12" font-weight="bold" text-anchor="middle">Access Prov</text><line x1="360" y1="230" x2="400" y2="200" stroke="#D4AF37" stroke-width="1.5" marker-end="url(#arrowhead)" /><polygon points="390,100 490,100 500,110 500,150 490,160 390,160 380,150 380,110" fill="#1A1A1A" stroke="#D4AF37" stroke-width="1.5" fill-opacity="0.8" /><text x="385" y="110" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="490" y="158" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="440.0" y="134.0" fill="#FFD700" font-family="Courier New" font-size="12" font-weight="bold" text-anchor="middle">Comms Setup</text><line x1="500" y1="130" x2="540" y2="160" stroke="#D4AF37" stroke-width="1.5" marker-end="url(#arrowhead)" /><polygon points="530,200 630,200 640,210 640,250 630,260 530,260 520,250 520,210" fill="#1A1A1A" stroke="#D4AF37" stroke-width="1.5" fill-opacity="0.8" /><text x="525" y="210" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="630" y="258" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="580.0" y="234.0" fill="#FFD700" font-family="Courier New" font-size="12" font-weight="bold" text-anchor="middle">Doc Share</text><line x1="640" y1="230" x2="680" y2="200" stroke="#D4AF37" stroke-width="1.5" marker-end="url(#arrowhead)" /><polygon points="670,100 770,100 780,110 780,150 770,160 670,160 660,150 660,110" fill="#1A1A1A" stroke="#D4AF37" stroke-width="1.5" fill-opacity="0.8" /><text x="665" y="110" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="770" y="158" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="720.0" y="134.0" fill="#FFD700" font-family="Courier New" font-size="12" font-weight="bold" text-anchor="middle">READY</text>
+            <!-- Global Tech Overlay -->
+            <rect x="10" y="10" width="780" height="380" fill="none" stroke="#D4AF37" stroke-width="2" opacity="0.3" />
+            <text x="20" y="30" fill="#D4AF37" font-family="Courier New" font-size="10" opacity="0.5">SYS.DIAG.v.9.0</text>
+            <text x="680" y="380" fill="#D4AF37" font-family="Courier New" font-size="10" opacity="0.5">UNAUTHORIZED ACCESS_</text>
+        </svg>

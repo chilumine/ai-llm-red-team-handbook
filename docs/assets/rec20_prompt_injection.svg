@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200">
+            <defs>
+            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.15"/>
+            </pattern>
+        
+            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                <polygon points="0 0, 10 3.5, 0 7" fill="#D4AF37" />
+            </marker>
+        
+            <marker id="dot" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+                <circle cx="3" cy="3" r="3" fill="#D4AF37" />
+            </marker>
+        </defs>
+            <rect width="100%" height="100%" fill="#050505" />
+            <rect width="100%" height="100%" fill="url(#grid)" />
+            <text x="450" y="30" fill="#FFD700" font-family="Courier New" font-size="20" text-anchor="middle">DATA PROVENANCE LIFECYCLE</text><polygon points="60,80 180,80 190,90 190,130 180,140 60,140 50,130 50,90" fill="#1A1A1A" stroke="#D4AF37" stroke-width="1.5" fill-opacity="0.8" /><text x="55" y="90" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="180" y="138" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="120.0" y="114.0" fill="#FFD700" font-family="Courier New" font-size="12" font-weight="bold" text-anchor="middle">Collection</text><line x1="190" y1="110" x2="220" y2="110" stroke="#D4AF37" stroke-width="1.5" marker-end="url(#arrowhead)" /><polygon points="230,80 350,80 360,90 360,130 350,140 230,140 220,130 220,90" fill="#1A1A1A" stroke="#D4AF37" stroke-width="1.5" fill-opacity="0.8" /><text x="225" y="90" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="350" y="138" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="290.0" y="114.0" fill="#FFD700" font-family="Courier New" font-size="12" font-weight="bold" text-anchor="middle">Cleaning</text><line x1="360" y1="110" x2="390" y2="110" stroke="#D4AF37" stroke-width="1.5" marker-end="url(#arrowhead)" /><polygon points="400,80 520,80 530,90 530,130 520,140 400,140 390,130 390,90" fill="#1A1A1A" stroke="#D4AF37" stroke-width="1.5" fill-opacity="0.8" /><text x="395" y="90" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="520" y="138" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="460.0" y="114.0" fill="#FFD700" font-family="Courier New" font-size="12" font-weight="bold" text-anchor="middle">Train/FT</text><line x1="530" y1="110" x2="560" y2="110" stroke="#D4AF37" stroke-width="1.5" marker-end="url(#arrowhead)" /><polygon points="570,80 690,80 700,90 700,130 690,140 570,140 560,130 560,90" fill="#1A1A1A" stroke="#D4AF37" stroke-width="1.5" fill-opacity="0.8" /><text x="565" y="90" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="690" y="138" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="630.0" y="114.0" fill="#FFD700" font-family="Courier New" font-size="12" font-weight="bold" text-anchor="middle">Inference</text><line x1="700" y1="110" x2="730" y2="110" stroke="#D4AF37" stroke-width="1.5" marker-end="url(#arrowhead)" /><polygon points="740,80 860,80 870,90 870,130 860,140 740,140 730,130 730,90" fill="#1A1A1A" stroke="#D4AF37" stroke-width="1.5" fill-opacity="0.8" /><text x="735" y="90" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="860" y="138" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="800.0" y="114.0" fill="#FFD700" font-family="Courier New" font-size="12" font-weight="bold" text-anchor="middle">Output</text>
+            <!-- Global Tech Overlay -->
+            <rect x="10" y="10" width="880" height="180" fill="none" stroke="#D4AF37" stroke-width="2" opacity="0.3" />
+            <text x="20" y="30" fill="#D4AF37" font-family="Courier New" font-size="10" opacity="0.5">SYS.DIAG.v.9.0</text>
+            <text x="780" y="180" fill="#D4AF37" font-family="Courier New" font-size="10" opacity="0.5">UNAUTHORIZED ACCESS_</text>
+        </svg>

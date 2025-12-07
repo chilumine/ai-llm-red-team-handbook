@@ -1,30 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
-<defs>
-
-        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-            <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
-        </marker>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+            <defs>
+            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.15"/>
+            </pattern>
         
-</defs>
-<rect width="100%" height="100%" fill="#ffffff" />
-<circle cx="400" cy="300" r="60" fill="#cc0000" stroke="#333" stroke-width="3" opacity="1.0" />
-<text x="400" y="300" font-family="Arial, sans-serif" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold" dy=".3em">Your AI App</text>
-<rect x="300" y="50" width="200" height="50" rx="5" ry="5" fill="#eee" stroke="#333" stroke-width="2" opacity="1.0"  />
-<text x="400" y="75" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle" font-weight="normal" dy=".3em">Hugging Face / Models</text>
-<line x1="400" y1="100" x2="400" y2="240" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"  />
-<rect x="50" y="100" width="200" height="50" rx="5" ry="5" fill="#eee" stroke="#333" stroke-width="2" opacity="1.0"  />
-<text x="150" y="125" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle" font-weight="normal" dy=".3em">Python Packages</text>
-<line x1="150" y1="150" x2="350" y2="270" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"  />
-<rect x="550" y="100" width="200" height="50" rx="5" ry="5" fill="#eee" stroke="#333" stroke-width="2" opacity="1.0"  />
-<text x="650" y="125" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle" font-weight="normal" dy=".3em">Datasets</text>
-<line x1="650" y1="150" x2="450" y2="270" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"  />
-<rect x="50" y="300" width="120" height="50" rx="5" ry="5" fill="#eee" stroke="#333" stroke-width="2" opacity="1.0"  />
-<text x="110" y="325" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle" font-weight="normal" dy=".3em">AWS / Cloud</text>
-<line x1="170" y1="325" x2="340" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"  />
-<rect x="630" y="300" width="120" height="50" rx="5" ry="5" fill="#eee" stroke="#333" stroke-width="2" opacity="1.0"  />
-<text x="690" y="325" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle" font-weight="normal" dy=".3em">Docker / K8s</text>
-<line x1="630" y1="325" x2="460" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"  />
-<rect x="300" y="500" width="200" height="50" rx="5" ry="5" fill="#d0e0ff" stroke="#333" stroke-width="2" opacity="1.0"  />
-<text x="400" y="525" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle" font-weight="normal" dy=".3em">Users & Logs</text>
-<line x1="400" y1="360" x2="400" y2="500" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"  />
-</svg>
+            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                <polygon points="0 0, 10 3.5, 0 7" fill="#D4AF37" />
+            </marker>
+        
+            <marker id="dot" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+                <circle cx="3" cy="3" r="3" fill="#D4AF37" />
+            </marker>
+        </defs>
+            <rect width="100%" height="100%" fill="#050505" />
+            <rect width="100%" height="100%" fill="url(#grid)" />
+            <text x="400" y="30" fill="#FFD700" font-family="Courier New" font-size="20" text-anchor="middle">SUPPLY CHAIN MAP</text><polygon points="360,250 440,250 450,260 450,340 440,350 360,350 350,340 350,260" fill="#D4AF37" stroke="#D4AF37" stroke-width="1.5" fill-opacity="0.2" /><text x="355" y="260" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="440" y="348" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="400.0" y="304.0" fill="#FFD700" font-family="Courier New" font-size="12" font-weight="bold" text-anchor="middle">YOUR APP</text><polygon points="350,70 450,70 460,80 460,120 450,130 350,130 340,120 340,80" fill="#1A1A1A" stroke="#D4AF37" stroke-width="1.5" fill-opacity="0.8" /><text x="345" y="80" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="450" y="128" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="400.0" y="97.0" fill="#FFD700" font-family="Courier New" font-size="12" font-weight="bold" text-anchor="middle"></text><text x="400.0" y="111.0" fill="#FFD700" font-family="Courier New" font-size="12" font-weight="bold" text-anchor="middle">Upstream\nModels</text><line x1="400" y1="100" x2="400" y2="250" stroke="#D4AF37" stroke-width="1.5" marker-end="url(#arrowhead)" /><polygon points="50,270 150,270 160,280 160,320 150,330 50,330 40,320 40,280" fill="#1A1A1A" stroke="#D4AF37" stroke-width="1.5" fill-opacity="0.8" /><text x="45" y="280" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="150" y="328" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="100.0" y="304.0" fill="#FFD700" font-family="Courier New" font-size="12" font-weight="bold" text-anchor="middle">Lateral\nlibs</text><line x1="100" y1="270" x2="400" y2="350" stroke="#D4AF37" stroke-width="1.5" marker-end="url(#arrowhead)" /><polygon points="650,270 750,270 760,280 760,320 750,330 650,330 640,320 640,280" fill="#1A1A1A" stroke="#D4AF37" stroke-width="1.5" fill-opacity="0.8" /><text x="645" y="280" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="750" y="328" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="700.0" y="304.0" fill="#FFD700" font-family="Courier New" font-size="12" font-weight="bold" text-anchor="middle">Cloud\nInfra</text><line x1="700" y1="270" x2="400" y2="350" stroke="#D4AF37" stroke-width="1.5" marker-end="url(#arrowhead)" /><polygon points="350,470 450,470 460,480 460,520 450,530 350,530 340,520 340,480" fill="#1A1A1A" stroke="#D4AF37" stroke-width="1.5" fill-opacity="0.8" /><text x="345" y="480" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="450" y="528" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="400.0" y="497.0" fill="#FFD700" font-family="Courier New" font-size="12" font-weight="bold" text-anchor="middle"></text><text x="400.0" y="511.0" fill="#FFD700" font-family="Courier New" font-size="12" font-weight="bold" text-anchor="middle">Downstream\nUsers</text><line x1="400" y1="470" x2="400" y2="350" stroke="#D4AF37" stroke-width="1.5" marker-end="url(#arrowhead)" />
+            <!-- Global Tech Overlay -->
+            <rect x="10" y="10" width="780" height="580" fill="none" stroke="#D4AF37" stroke-width="2" opacity="0.3" />
+            <text x="20" y="30" fill="#D4AF37" font-family="Courier New" font-size="10" opacity="0.5">SYS.DIAG.v.9.0</text>
+            <text x="680" y="580" fill="#D4AF37" font-family="Courier New" font-size="10" opacity="0.5">UNAUTHORIZED ACCESS_</text>
+        </svg>

@@ -1,35 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500" viewBox="0 0 900 500">
-<defs>
-
-        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-            <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
-        </marker>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500">
+            <defs>
+            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.15"/>
+            </pattern>
         
-</defs>
-<rect width="100%" height="100%" fill="#ffffff" />
-<rect x="0.0" y="0" width="225.0" height="500" rx="5" ry="5" fill="#fff" stroke="#ccc" stroke-width="1" opacity="1.0"  />
-<text x="112.5" y="30" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle" font-weight="bold" dy=".3em">User</text>
-<rect x="225.0" y="0" width="225.0" height="500" rx="5" ry="5" fill="#fff" stroke="#ccc" stroke-width="1" opacity="1.0"  />
-<text x="337.5" y="30" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle" font-weight="bold" dy=".3em">Orchestrator</text>
-<rect x="450.0" y="0" width="225.0" height="500" rx="5" ry="5" fill="#fff" stroke="#ccc" stroke-width="1" opacity="1.0"  />
-<text x="562.5" y="30" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle" font-weight="bold" dy=".3em">Vector DB</text>
-<rect x="675.0" y="0" width="225.0" height="500" rx="5" ry="5" fill="#fff" stroke="#ccc" stroke-width="1" opacity="1.0"  />
-<text x="787.5" y="30" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle" font-weight="bold" dy=".3em">LLM</text>
-<circle cx="112.5" cy="100" r="30" fill="#eee" stroke="#333" stroke-width="2" opacity="1.0" />
-<text x="112.5" y="100" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle" font-weight="normal" dy=".3em">Query</text>
-<rect x="275.0" y="120" width="120" height="50" rx="5" ry="5" fill="#e6f2ff" stroke="#333" stroke-width="2" opacity="1.0"  />
-<text x="335.0" y="145" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle" font-weight="normal" dy=".3em">Embed Query</text>
-<rect x="500.0" y="180" width="120" height="50" rx="5" ry="5" fill="#ffe6e6" stroke="#333" stroke-width="2" opacity="1.0"  />
-<text x="560.0" y="205" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle" font-weight="normal" dy=".3em">Retrieve Top-K</text>
-<rect x="275.0" y="250" width="120" height="50" rx="5" ry="5" fill="#e6f2ff" stroke="#333" stroke-width="2" opacity="1.0"  />
-<text x="335.0" y="275" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle" font-weight="normal" dy=".3em">Assemble Prompt</text>
-<rect x="725.0" y="320" width="120" height="50" rx="5" ry="5" fill="#e6ffe6" stroke="#333" stroke-width="2" opacity="1.0"  />
-<text x="785.0" y="345" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle" font-weight="normal" dy=".3em">Generate</text>
-<circle cx="112.5" cy="400" r="30" fill="#eee" stroke="#333" stroke-width="2" opacity="1.0" />
-<text x="112.5" y="400" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle" font-weight="normal" dy=".3em">Answer</text>
-<line x1="112.5" y1="130" x2="275.0" y2="145" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"  />
-<line x1="395.0" y1="145" x2="500.0" y2="205" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"  />
-<line x1="500.0" y1="205" x2="395.0" y2="275" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"  />
-<line x1="395.0" y1="275" x2="725.0" y2="345" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"  />
-<line x1="725.0" y1="345" x2="112.5" y2="400" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"  />
-</svg>
+            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                <polygon points="0 0, 10 3.5, 0 7" fill="#D4AF37" />
+            </marker>
+        
+            <marker id="dot" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+                <circle cx="3" cy="3" r="3" fill="#D4AF37" />
+            </marker>
+        </defs>
+            <rect width="100%" height="100%" fill="#050505" />
+            <rect width="100%" height="100%" fill="url(#grid)" />
+            <text x="450" y="30" fill="#FFD700" font-family="Courier New" font-size="20" text-anchor="middle">RAG DATA FLOW</text><text x="100" y="60" fill="#FFD700" font-family="Courier New" font-size="14" text-anchor="middle">USER</text><text x="300" y="60" fill="#FFD700" font-family="Courier New" font-size="14" text-anchor="middle">APP</text><text x="500" y="60" fill="#FFD700" font-family="Courier New" font-size="14" text-anchor="middle">VEC-DB</text><text x="700" y="60" fill="#FFD700" font-family="Courier New" font-size="14" text-anchor="middle">LLM</text><polygon points="60,100 140,100 150,110 150,130 140,140 60,140 50,130 50,110" fill="#1A1A1A" stroke="#D4AF37" stroke-width="1.5" fill-opacity="0.8" /><text x="55" y="110" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="140" y="138" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="100.0" y="124.0" fill="#FFD700" font-family="Courier New" font-size="12" font-weight="bold" text-anchor="middle">Query</text><line x1="150" y1="120" x2="250" y2="120" stroke="#D4AF37" stroke-width="1.5" marker-end="url(#arrowhead)" /><polygon points="260,160 340,160 350,170 350,190 340,200 260,200 250,190 250,170" fill="#1A1A1A" stroke="#D4AF37" stroke-width="1.5" fill-opacity="0.8" /><text x="255" y="170" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="340" y="198" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="300.0" y="184.0" fill="#FFD700" font-family="Courier New" font-size="12" font-weight="bold" text-anchor="middle">Embed</text><line x1="350" y1="180" x2="450" y2="180" stroke="#D4AF37" stroke-width="1.5" marker-end="url(#arrowhead)" /><polygon points="460,220 540,220 550,230 550,250 540,260 460,260 450,250 450,230" fill="#1A1A1A" stroke="#D4AF37" stroke-width="1.5" fill-opacity="0.8" /><text x="455" y="230" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="540" y="258" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="500.0" y="244.0" fill="#FFD700" font-family="Courier New" font-size="12" font-weight="bold" text-anchor="middle">Search</text><line x1="450" y1="240" x2="350" y2="240" stroke="#D4AF37" stroke-width="1.5" marker-end="url(#arrowhead)" /><polygon points="260,280 340,280 350,290 350,310 340,320 260,320 250,310 250,290" fill="#1A1A1A" stroke="#D4AF37" stroke-width="1.5" fill-opacity="0.8" /><text x="255" y="290" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="340" y="318" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="300.0" y="304.0" fill="#FFD700" font-family="Courier New" font-size="12" font-weight="bold" text-anchor="middle">Context</text><line x1="350" y1="300" x2="650" y2="300" stroke="#D4AF37" stroke-width="1.5" marker-end="url(#arrowhead)" /><polygon points="660,340 740,340 750,350 750,370 740,380 660,380 650,370 650,350" fill="#1A1A1A" stroke="#D4AF37" stroke-width="1.5" fill-opacity="0.8" /><text x="655" y="350" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="740" y="378" fill="#D4AF37" font-family="Courier New" font-size="8" opacity="0.6">+</text><text x="700.0" y="364.0" fill="#FFD700" font-family="Courier New" font-size="12" font-weight="bold" text-anchor="middle">Generate</text><line x1="650" y1="360" x2="150" y2="360" stroke="#D4AF37" stroke-width="1.5" marker-end="url(#arrowhead)" />
+            <!-- Global Tech Overlay -->
+            <rect x="10" y="10" width="880" height="480" fill="none" stroke="#D4AF37" stroke-width="2" opacity="0.3" />
+            <text x="20" y="30" fill="#D4AF37" font-family="Courier New" font-size="10" opacity="0.5">SYS.DIAG.v.9.0</text>
+            <text x="780" y="480" fill="#D4AF37" font-family="Courier New" font-size="10" opacity="0.5">UNAUTHORIZED ACCESS_</text>
+        </svg>
