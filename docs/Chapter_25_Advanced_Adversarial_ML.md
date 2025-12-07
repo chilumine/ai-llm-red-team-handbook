@@ -23,11 +23,11 @@ This isn't about clever wordplay. It's about turning the model's own learning ag
 
 **Why should you care?**
 
-A 2023 study by Robust Intelligence found that 87% of production ML systems were vulnerable to at least one class of adversarial attack. Average remediation cost? $2.1 million per incident. That's not a typo.
+The NIST AI Risk Management Framework (2024), co-authored with Robust Intelligence, identifies adversarial attacks as a critical threat category affecting production ML systems across industries.
 
-In 2022, researchers demonstrated adversarial attacks against GPT-3 that forced training data leakage, exposing PII for roughly 1,200 individuals. Tesla's Autopilot has been fooled by adversarial patches on road signs with a 98.7% success rate. These aren't theoretical concerns.
+In 2020, McAfee researchers demonstrated that Tesla's Autopilot could be fooled by small pieces of tape on speed limit signs, causing misclassification in approximately 58% of trials. Research has shown that LLMs can leak training data through carefully crafted extraction attacks. These aren't theoretical concerns.
 
-The research community has exploded around this topic: over 4,000 papers since 2020, a 340% increase. Attack techniques are getting more automated, more transferable, and harder to detect.
+The research community has grown rapidly around adversarial ML, with attack techniques becoming more automated, more transferable, and harder to detect.
 
 The tricky part? These attacks operate at the mathematical layer. Traditional security tools don't see them. Often, neither do humans.
 
@@ -427,7 +427,7 @@ GCG Attack Process:
 5. Repeat until the model produces harmful output
 
 > [!WARNING]
-> GCG achieves near-100% success rates against GPT-4, Claude, and LLaMA-2. The resulting suffixes are often nonsensical to humans but devastatingly effective against models.
+> GCG achieves high success rates against aligned LLMs: 87.9% on GPT-3.5, 53.6% on GPT-4, and near-100% on open models like Vicuna. Claude showed stronger resistance at 2.1% (Zou et al., 2023). The resulting suffixes are often nonsensical to humans but effective against models.
 
 **GCG Simulator:**
 
@@ -634,7 +634,7 @@ if __name__ == "__main__":
 | Aspect          | Traditional Jailbreaking | GCG Adversarial Attack                |
 | --------------- | ------------------------ | ------------------------------------- |
 | Method          | Manual prompt crafting   | Gradient-guided optimization          |
-| Success Rate    | 10-30% on aligned models | 80-100% on aligned models             |
+| Success Rate    | 10-30% on aligned models | 50-100% depending on model            |
 | Transferability | Low (prompt-specific)    | High (suffix transfers across models) |
 | Detection       | Pattern matching works   | Difficult (tokens are valid)          |
 | Effort          | Hours of manual work     | Automated optimization                |
@@ -642,7 +642,7 @@ if __name__ == "__main__":
 
 **The numbers:**
 
-- Over 90% attack success against GPT-4, Claude, LLaMA-2 (Zou et al., 2023)
+- Attack success: 87.9% GPT-3.5, 53.6% GPT-4, 2.1% Claude, ~100% Vicuna (Zou et al., 2023)
 - 60-80% cross-model transferability
 - Typical suffix length: 20-40 tokens
 - Optimization time: 1-4 hours on a single GPU
@@ -1051,11 +1051,11 @@ In July-August 2023, researchers demonstrated that gradient-optimized adversaria
 
 **Timeline:**
 
-Researchers accessed the open-source LLaMA-2 model for gradient computation. GCG optimization discovered a universal suffix in about 4 hours on a single GPU. Success rates: 86% on GPT-4, 84% on Claude, 100% on Vicuna. The researchers disclosed to vendors before going public. Vendors deployed input/output classifiers, partially blocking the suffixes.
+Researchers accessed the open-source Vicuna model for gradient computation. GCG optimization discovered a universal suffix in about 4 hours on a single GPU. Success rates varied significantly: 87.9% on GPT-3.5, 53.6% on GPT-4, but only 2.1% on Claude, which showed stronger resistance. Vicuna and similar open models approached 100%. The researchers disclosed to vendors before going public. Vendors deployed input/output classifiers, partially blocking the suffixes.
 
 **The damage:**
 
-Emergency response and model updates across major providers cost an estimated $5-10M. The attack proved that RLHF alignment is vulnerable to optimization. It sparked massive investment in robustness research.
+The attack proved that RLHF alignment is vulnerable to optimization-based bypasses. It sparked significant investment in robustness research and prompted vendors to deploy additional input/output filtering.
 
 **Lessons:**
 
@@ -1065,11 +1065,11 @@ RLHF and Constitutional AI modify behavior without fundamentally changing model 
 
 **What happened:**
 
-Between 2020 and 2023, researchers demonstrated physical adversarial attacks against Tesla Autopilot, Waymo, and other AV perception systems. Small stickers on stop signs caused misclassification as speed limit signs at 98.7% success. Projections of lanes onto roadways caused unexpected direction changes.
+Between 2020 and 2023, researchers demonstrated physical adversarial attacks against Tesla Autopilot, Waymo, and other AV perception systems. McAfee researchers showed that small pieces of tape on 35 mph signs caused misclassification as 85 mph signs in approximately 58% of trials. Projections of lanes onto roadways caused unexpected direction changes.
 
 **The numbers:**
 
-Research cost: $50,000-$100,000 per attack demonstration. Tesla invested over $300M in Autopilot safety updates between 2021-2023. Liability exposure potentially runs into billions for autonomous vehicle accidents.
+These attacks are relatively inexpensive to demonstrate but costly to defend against. Liability exposure for autonomous vehicle accidents potentially runs into billions, driving significant investment in perception system robustness.
 
 **Lessons:**
 
