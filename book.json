@@ -1,0 +1,9 @@
+{
+    "root": "./docs",
+    "title": "AI LLM Red Team Handbook",
+    "author": "Shiva108",
+    "structure": {
+        "readme": "README.md",
+        "summary": "SUMMARY.md"
+    }
+}

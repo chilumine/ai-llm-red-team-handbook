@@ -1,12 +1,16 @@
+# Introduction
+
 Version 0.024.112
 
 ![ ](assets/page_header.svg)
 
-# Summary
+Welcome to the **AI LLM Red Team Handbook**.
 
-- [Introduction](README.md)
+This guide is designed to equip security consultants, red teamers, and AI practitioners with the mindset, methodologies, and technical skills required to assess and secure Large Language Models (LLMs) and AI systems. From foundational ethics to advanced attack vectors like prompt injection and model supply chain vulnerabilities, this handbook provides a structured approach to identifying risks in the rapidly evolving landscape of artificial intelligence.
 
-### Quick Access: Field Manuals
+---
+
+## ⚡ Quick Access: Field Manuals
 
 > _Looking for the Operational Playbooks?_
 >
@@ -14,16 +18,18 @@ Version 0.024.112
 > - [Quick Reference Card](field_manuals/Field_Manual_Quick_Reference.md)
 > - [All Attack Playbooks](Field_Manual_00_Index.md#attack-playbooks)
 > - [Compact Field Manual (Single File)](AI_LLM%20Red%20Team%20Field%20Manual.md)
->
-> ---
 
-## Part I: Foundations
+---
+
+## 📚 Handbook Structure
+
+### Part I: Foundations
 
 - [Chapter 1: Introduction to AI Red Teaming](Chapter_01_Introduction_to_AI_Red_Teaming.md)
 - [Chapter 2: Ethics, Legal, and Stakeholder Communication](Chapter_02_Ethics_Legal_and_Stakeholder_Communication.md)
 - [Chapter 3: The Red Teamer's Mindset](Chapter_03_The_Red_Teamers_Mindset.md)
 
-## Part II: Project Preparation
+### Part II: Project Preparation
 
 - [Chapter 4: SOW, Rules of Engagement, and Client Onboarding](Chapter_04_SOW_Rules_of_Engagement_and_Client_Onboarding.md)
 - [Chapter 5: Threat Modeling and Risk Analysis](Chapter_05_Threat_Modeling_and_Risk_Analysis.md)
@@ -31,18 +37,18 @@ Version 0.024.112
 - [Chapter 7: Lab Setup and Environmental Safety](Chapter_07_Lab_Setup_and_Environmental_Safety.md)
 - [Chapter 8: Evidence, Documentation, and Chain of Custody](Chapter_08_Evidence_Documentation_and_Chain_of_Custody.md)
 
-## Part III: Technical Fundamentals (Core Concepts)
+### Part III: Technical Fundamentals (Core Concepts)
 
 - [Chapter 9: LLM Architectures and System Components](Chapter_09_LLM_Architectures_and_System_Components.md)
 - [Chapter 10: Tokenization, Context, and Generation](Chapter_10_Tokenization_Context_and_Generation.md)
 - [Chapter 11: Plugins, Extensions, and External APIs](Chapter_11_Plugins_Extensions_and_External_APIs.md)
 
-## Part IV: Technical Fundamentals (Pipelines & Security)
+### Part IV: Technical Fundamentals (Pipelines & Security)
 
 - [Chapter 12: Retrieval-Augmented Generation (RAG) Pipelines](Chapter_12_Retrieval_Augmented_Generation_RAG_Pipelines.md)
 - [Chapter 13: Data Provenance and Supply Chain Security](Chapter_13_Data_Provenance_and_Supply_Chain_Security.md)
 
-## Part V: Attacks & Techniques
+### Part V: Attacks & Techniques
 
 - [Chapter 14: Prompt Injection (Direct/Indirect, 1st/3rd Party)](Chapter_14_Prompt_Injection.md)
 - [Chapter 15: Data Leakage and Extraction](Chapter_15_Data_Leakage_and_Extraction.md)
@@ -56,7 +62,7 @@ Version 0.024.112
 - [Chapter 23: Advanced Persistence and Chaining](Chapter_23_Advanced_Persistence_Chaining.md)
 - [Chapter 24: Social Engineering with LLMs](Chapter_24_Social_Engineering_LLMs.md)
 
-## Part VI: Defense & Mitigation
+### Part VI: Defense & Mitigation
 
 - [Chapter 25: Advanced Adversarial ML](Chapter_25_Advanced_Adversarial_ML.md)
 - [Chapter 26: Supply Chain Attacks on AI](Chapter_26_Supply_Chain_Attacks_on_AI.md)
@@ -65,7 +71,7 @@ Version 0.024.112
 - [Chapter 29: Model Inversion Attacks](Chapter_29_Model_Inversion_Attacks.md)
 - [Chapter 30: Backdoor Attacks](Chapter_30_Backdoor_Attacks.md)
 
-## Part VII: Advanced Operations
+### Part VII: Advanced Operations
 
 - [Chapter 31: AI System Reconnaissance](Chapter_31_AI_System_Reconnaissance.md)
 - [Chapter 32: Automated Attack Frameworks](Chapter_32_Automated_Attack_Frameworks.md)
@@ -77,7 +83,7 @@ Version 0.024.112
 - [Chapter 38: Continuous Red Teaming](Chapter_38_Continuous_Red_Teaming.md)
 - [Chapter 39: AI Bug Bounty Programs](Chapter_39_AI_Bug_Bounty_Programs.md)
 
-## Part VIII: Advanced Topics
+### Part VIII: Advanced Topics
 
 - [Chapter 40: Compliance and Standards](Chapter_40_Compliance_and_Standards.md)
 - [Chapter 41: Industry Best Practices](Chapter_41_Industry_Best_Practices.md)
@@ -87,25 +93,9 @@ Version 0.024.112
 - [Chapter 45: Building an AI Red Team Program](Chapter_45_Building_an_AI_Red_Team_Program.md)
 - [Chapter 46: Conclusion and Next Steps](Chapter_46_Conclusion_and_Next_Steps.md)
 
-## Field Manuals (Operational Playbooks)
+---
 
-- [Field Manual Index](Field_Manual_00_Index.md)
-- [Quick Reference Card](field_manuals/Field_Manual_Quick_Reference.md)
-
-### Attack Playbooks
-
-- [Playbook 01: Prompt Injection](field_manuals/Field_Manual_01_Prompt_Injection_Playbook.md)
-- [Playbook 02: Data Leakage](field_manuals/Field_Manual_02_Data_Leakage_Playbook.md)
-- [Playbook 03: Jailbreaks](field_manuals/Field_Manual_03_Jailbreak_Playbook.md)
-- [Playbook 04: Plugin Exploitation](field_manuals/Field_Manual_04_Plugin_Exploitation_Playbook.md)
-- [Playbook 05: Evasion & Obfuscation](field_manuals/Field_Manual_05_Evasion_Playbook.md)
-- [Playbook 06: Data Poisoning](field_manuals/Field_Manual_06_Data_Poisoning_Playbook.md)
-- [Playbook 07: Model Theft](field_manuals/Field_Manual_07_Model_Theft_Playbook.md)
-- [Playbook 08: DoS Attacks](field_manuals/Field_Manual_08_DoS_Playbook.md)
-- [Playbook 09: Multimodal Attacks](field_manuals/Field_Manual_09_Multimodal_Playbook.md)
-- [Playbook 10: Persistence & Chaining](field_manuals/Field_Manual_10_Persistence_Playbook.md)
-- [Playbook 11: Social Engineering](field_manuals/Field_Manual_11_Social_Engineering_Playbook.md)
-
-## Reference Materials
+## Field Manuals & Reference
 
 - [Configuration Guide](Configuration.md)
+- [Field Manual Index](Field_Manual_00_Index.md)
