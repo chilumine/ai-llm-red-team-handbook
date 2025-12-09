@@ -5,7 +5,7 @@
 ![License](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)
 ![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg)
-![Last Updated](https://img.shields.io/badge/Last%20Updated-December%202024-orange.svg)
+![Last Updated](https://img.shields.io/badge/Last%20Updated-December%202025-orange.svg)
 
 A comprehensive operational toolkit for conducting **AI/LLM red team assessments** on Large Language Models, AI agents, RAG pipelines, and AI-enabled applications. This repository provides both tactical field guidance and strategic consulting frameworks.
 
@@ -22,14 +22,15 @@ This repository contains three core resources:
 A comprehensive consultancy guide with all chapters now featuring standardized metadata, abstracts, and consistent structure:
 
 - **Part I: Professional Foundations (Chapters 1-4)** - Ethics, legal framework, mindset, and engagement setup
-- **Part II: Project Management (Chapters 5-6)** - Threat modeling, risk analysis, and scoping
-- **Part III: Technical Infrastructure (Chapters 7-8)** - Lab setup, evidence collection, and documentation
-- **Part IV: System Understanding (Chapters 9-13)** - LLM architectures, tokenization, plugins, RAG pipelines, and supply chain security
-- **Part V: Attack Techniques (Chapters 14-24)** - Comprehensive coverage of all major LLM attack vectors
-- **Part VI: Advanced Topics (Chapters 25-35)** - Cutting-edge attacks and techniques _(in development)_
-- **Part VII: Professional Practice (Chapters 36-46)** - Reporting, remediation, and program building
+- **Part II: Project Preparation (Chapters 5-8)** - SOW, threat modeling, coping, and lab setup
+- **Part III: Technical Fundamentals (Chapters 9-11)** - LLM architectures and components
+- **Part IV: Pipeline Security (Chapters 12-13)** - RAG and supply chain
+- **Part V: Attacks & Techniques (Chapters 14-24)** - Comprehensive coverage of all major LLM attack vectors
+- **Part VI: Defense & Mitigation (Chapters 25-30)** - Adversarial ML and advanced defense
+- **Part VII: Advanced Operations (Chapters 31-39)** - Reporting, remediation, and automation
+- **Part VIII: Advanced Topics (Chapters 40-46)** - Future threats, compliance, and program building
 
-**Fully Complete Chapters (24):**
+**Fully Complete Chapters:**
 
 1. Introduction to AI Red Teaming _(Beginner, 15 min)_
 2. Ethics, Legal, and Stakeholder Communication _(Beginner, 18 min)_
@@ -55,15 +56,16 @@ A comprehensive consultancy guide with all chapters now featuring standardized m
 22. Cross-Modal and Multimodal Attacks _(Advanced, ~20 min, Hands-on)_
 23. Advanced Persistence and Chaining _(Advanced, ~18 min, Hands-on)_
 24. Social Engineering with LLMs _(Intermediate, ~20 min, Hands-on)_
+25. Advanced Adversarial ML _(Advanced, ~25 min)_
 
-**Additional Chapters (Select Completed):**
+**Additional Content:**
 
 - Chapter 36: Reporting and Communication
 - Chapter 37: Remediation Strategies
 - Chapter 38: Continuous Red Teaming
 - Chapter 45: Building an AI Red Team Program
 
-_Chapters 25-35, 39-44, and 46 are currently stubs in development._
+_Remaining chapters are currently in development as stubs._
 
 **Chapter Features:**
 
@@ -281,4 +283,4 @@ For major changes, please open an issue first to discuss.
 
 ---
 
-**Last Updated:** December 2025 | **Chapters:** 46 total (24 complete, standardized with metadata) | **Handbook Status:** Production-Ready
+**Last Updated:** December 2025 | **Chapters:** 46 total (25 complete, standardized with metadata) | **Handbook Status:** Production-Ready
