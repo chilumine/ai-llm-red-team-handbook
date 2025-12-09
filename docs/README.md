@@ -8,16 +8,16 @@ Version 0.024.113
 
 Welcome to the **AI LLM Red Team Handbook**.
 
-This comprehensive toolkit is designed for security consultants, red teamers, and AI engineers. It provides end-to-end methodologies for identifying, assessing, and mitigating risks in Large Language Models (LLMs) and Generative AI systems.
+We designed this toolkit for security consultants, red teamers, and AI engineers. It provides end-to-end methodologies for identifying, assessing, and mitigating risks in Large Language Models (LLMs) and Generative AI systems.
 
 ---
 
 ## 🚀 Choose Your Path
 
-| **🔬 The Consultant's Handbook**                                                                                                                                                          | **⚔️ The Field Manual**                                                                                                                                                        |
-| :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **For:** Security Consultants, Researchers, Architects.<br><br>Deep-dive theoretical foundations, detailed methodologies, compliance frameworks, and strategic program building guidance. | **For:** Red Teamers, Pentesters, Engineers.<br><br>Operational playbooks, copy-paste attack payloads, quick reference cards, and execution checklists for active engagements. |
-| [**📖 Browse Handbook Chapters**](#-handbook-structure)                                                                                                                                   | [**⚡ Go to Field Manuals**](Field_Manual_00_Index.md)                                                                                                                         |
+| **🔬 The Consultant's Handbook**                                                                                                                                                                    | **⚔️ The Field Manual**                                                                                                                                                        |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **For:** Security Consultants, Researchers, Architects.<br><br>The foundational work. Theoretical deep-dives, detailed methodologies, compliance frameworks, and strategies for building a program. | **For:** Red Teamers, Pentesters, Engineers.<br><br>The hands-on work. Operational playbooks, copy-paste payloads, quick reference cards, and checklists for live engagements. |
+| [**📖 Browse Handbook Chapters**](#-handbook-structure)                                                                                                                                             | [**⚡ Go to Field Manuals**](Field_Manual_00_Index.md)                                                                                                                         |
 
 ---
 
