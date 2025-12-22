@@ -76,18 +76,7 @@
 
 ---
 
-<!--
-Chapter: 1
-Title: Introduction to AI Red Teaming
-Category: Foundations
-Difficulty: Beginner
-Estimated Time: 15 minutes read time
-Hands-on: No
-Prerequisites: None
-Related: Chapters 2 (Ethics), 3 (Mindset), 7 (Lab Setup)
--->
-
-# Chapter 1: Introduction to AI Red Teaming
+## Chapter 1: Introduction to AI Red Teaming
 
 ![ ](assets/page_header.svg)
 
@@ -227,7 +216,7 @@ The handbook is organized for practical learning and use:
 - Develop documentation and reporting skills—findings are only valuable if communicated effectively
 - Stay current with emerging AI threats through research papers, security conferences, and community engagement
 
-### Recommendations for Organizations
+### Recommendations for Organizations (Chapter 1)
 
 - Establish formal AI red team programs before deploying LLM-based systems
 - Invest in training security teams on AI-specific attack vectors
@@ -306,18 +295,8 @@ The handbook is organized for practical learning and use:
 ---
 
 _Proceed to Chapter 2 to explore ethical and legal essentials in depth, and begin developing the professional approach required of every AI red teamer._
-<!--
-Chapter: 2
-Title: Ethics, Legal, and Stakeholder Communication
-Category: Foundations
-Difficulty: Beginner
-Estimated Time: 18 minutes read time
-Hands-on: No
-Prerequisites: Chapter 1
-Related: Chapters 4 (SOW/RoE), 8 (Evidence), 36 (Reporting)
--->
 
-# Chapter 2: Ethics, Legal, and Stakeholder Communication
+## Chapter 2: Ethics, Legal, and Stakeholder Communication
 
 ![ ](assets/page_header.svg)
 
@@ -441,7 +420,7 @@ In AI red teaming, technical findings may have legal, business, or even social i
 - Document everything—if it's not documented, it didn't happen
 - When in doubt about ethical boundaries, pause and consult
 
-### Recommendations for Organizations
+### Recommendations for Organizations (Chapter 2)
 
 - Establish clear legal frameworks for AI red team engagements before starting programs
 - Create standardized SOW templates that address AI-specific testing scenarios
@@ -538,18 +517,8 @@ In AI red teaming, technical findings may have legal, business, or even social i
 ---
 
 _In the next chapter, you'll develop the mindset that distinguishes effective AI red teamers from traditional security testers, bridging technology, psychology, and business acuity._
-<!--
-Chapter: 3
-Title: The Red Teamer's Mindset
-Category: Foundations
-Difficulty: Beginner
-Estimated Time: 12 minutes read time
-Hands-on: No
-Prerequisites: Chapter 1
-Related: Chapters 2 (Ethics), 5 (Threat Modeling)
--->
 
-# Chapter 3: The Red Teamer's Mindset
+## Chapter 3: The Red Teamer's Mindset
 
 ![ ](assets/page_header.svg)
 
@@ -575,7 +544,8 @@ Key characteristics include:
 
 ### Example Scenario
 
-You’re given an LLM-powered support bot to test. The documentation claims, “No sensitive data is accessible via the bot.”  
+You’re given an LLM-powered support bot to test. The documentation claims, “No sensitive data is accessible via the bot.”
+
 #### Red teamer’s thought process
 
 - Can I manipulate the input context to bypass these restrictions?
@@ -675,7 +645,7 @@ Field engagements can be high-stress: production outages, tense clients, critica
 - Build a personal knowledge base of attack patterns, tools, and methodologies
 - Seek mentorship from experienced red teamers and participate in community events
 
-### Recommendations for Organizations
+### Recommendations for Organizations (Chapter 3)
 
 - Hire for mindset and adaptability, not just current technical skills
 - Provide continuous learning opportunities for red team members
@@ -762,18 +732,8 @@ Field engagements can be high-stress: production outages, tense clients, critica
 ---
 
 _Mastering the red team mindset primes you for the work ahead: scoping, planning, and then executing engagements with insight, rigor, and integrity. Proceed to the next chapter to learn how to prepare and manage a professional AI red team project from start to finish._
-<!--
-Chapter: 4
-Title: SOW, Rules of Engagement, and Client Onboarding
-Category: Foundations
-Difficulty: Intermediate
-Estimated Time: 20 minutes read time
-Hands-on: No
-Prerequisites: Chapters 1-3
-Related: Chapters 2 (Ethics), 6 (Scoping), 8 (Evidence)
--->
 
-# Chapter 4: SOW, Rules of Engagement, and Client Onboarding
+## Chapter 4: SOW, Rules of Engagement, and Client Onboarding
 
 ![ ](assets/page_header.svg)
 
@@ -935,7 +895,7 @@ Before you start:
 - Document all client communications about scope changes in writing
 - When in doubt about scope, pause and clarify before proceeding
 
-### Recommendations for Organizations
+### Recommendations for Organizations (Chapter 4)
 
 - Create standardized templates for AI red team engagements
 - Ensure legal review of SOW and RoE before approval
@@ -1037,18 +997,8 @@ Before you start:
 ---
 
 _Solid foundations prevent project failure and foster trust. The next chapter will guide you through threat modeling and risk analysis for AI systems, helping you identify what matters most before you begin attacking._
-<!--
-Chapter: 5
-Title: Threat Modeling and Risk Analysis
-Category: Foundations
-Difficulty: Intermediate
-Estimated Time: 16 minutes read time
-Hands-on: No
-Prerequisites: Chapters 1-4
-Related: Chapters 6 (Scoping), 9 (Architectures), 31 (Reconnaissance)
--->
 
-# Chapter 5: Threat Modeling and Risk Analysis
+## Chapter 5: Threat Modeling and Risk Analysis
 
 ![ ](assets/page_header.svg)
 
@@ -1216,18 +1166,8 @@ As AI systems become more complex with multi-modal capabilities, agentic behavio
 - Chapter 31: AI System Reconnaissance—applying threat modeling insights to gather intelligence during engagements
 
 ---
-<!--
-Chapter: 6
-Title: Scoping an Engagement
-Category: Foundations
-Difficulty: Intermediate
-Estimated Time: 14 minutes read time
-Hands-on: No
-Prerequisites: Chapters 1-5
-Related: Chapters 4 (SOW/RoE), 5 (Threat Modeling), 7 (Lab Setup)
--->
 
-# Chapter 6: Scoping an Engagement
+## Chapter 6: Scoping an Engagement
 
 ![ ](assets/page_header.svg)
 
@@ -1369,18 +1309,8 @@ As AI systems grow in complexity and integration depth, scoping will become more
 - Practice: Develop scoping documents for hypothetical AI engagements to refine your scoping process
 
 ---
-<!--
-Chapter: 7
-Title: Lab Setup and Environmental Safety
-Category: Technical Deep-Dives
-Difficulty: Intermediate
-Estimated Time: 25 minutes read time
-Hands-on: Yes
-Prerequisites: Chapters 1-6
-Related: Chapters 9 (Architectures), 32 (Automation), 33 (Red Team Frameworks)
--->
 
-# Chapter 7: Lab Setup and Environmental Safety
+## Chapter 7: Lab Setup and Environmental Safety
 
 ![ ](assets/page_header.svg)
 
@@ -1511,18 +1441,8 @@ Expect to see standardized AI red teaming lab templates, infrastructure-as-code 
 - Practice: Set up a minimal LLM testing environment using the checklists provided
 
 ---
-<!--
-Chapter: 8
-Title: Evidence, Documentation, and Chain of Custody
-Category: Technical Deep-Dives
-Difficulty: Intermediate
-Estimated Time: 18 minutes read time
-Hands-on: Yes
-Prerequisites: Chapter 7
-Related: Chapters 2 (Ethics), 36 (Reporting), 40 (Compliance)
--->
 
-# Chapter 8: Evidence, Documentation, and Chain of Custody
+## Chapter 8: Evidence, Documentation, and Chain of Custody
 
 ![ ](assets/page_header.svg)
 
@@ -1672,18 +1592,8 @@ Expect to see automated evidence collection tools integrated into red team platf
 - Practice: Create evidence documentation for test findings using the templates provided
 
 ---
-<!--
-Chapter: 9
-Title: LLM Architectures and System Components
-Category: Technical Deep-Dives
-Difficulty: Intermediate
-Estimated Time: 22 minutes read time
-Hands-on: Yes
-Prerequisites: Chapters 1-8
-Related: Chapters 10 (Tokenization), 11 (Plugins), 12 (RAG)
--->
 
-# Chapter 9: LLM Architectures and System Components
+## Chapter 9: LLM Architectures and System Components
 
 ![ ](assets/page_header.svg)
 
@@ -1859,18 +1769,8 @@ As LLM architectures evolve with mixture-of-experts, sparse attention, and multi
 - Chapter 14: Prompt Injection—applying architectural knowledge to practical attacks
 
 ---
-<!--
-Chapter: 10
-Title: Tokenization, Context, and Generation
-Category: Technical Deep-Dives
-Difficulty: Intermediate
-Estimated Time: 20 minutes read time
-Hands-on: Yes
-Prerequisites: Chapter 9
-Related: Chapters 9 (Architectures), 14 (Prompt Injection), 18 (Evasion)
--->
 
-# Chapter 10: Tokenization, Context, and Generation
+## Chapter 10: Tokenization, Context, and Generation
 
 ![ ](assets/page_header.svg)
 
@@ -2011,18 +1911,8 @@ Evolving tokenization approaches (character-level, byte-level, learned vocabular
 - Practice: Experiment with tokenization using tools like spaCy or Hugging Face tokenizers
 
 ---
-<!--
-Chapter: 11
-Title: Plugins, Extensions, and External APIs
-Category: Technical Deep-Dives
-Difficulty: Intermediate
-Estimated Time: 16 minutes read time
-Hands-on: No
-Prerequisites: Chapter 9
-Related: Chapters 12 (RAG), 17 (Plugin Exploitation), 26 (Supply Chain)
--->
 
-# Chapter 11: Plugins, Extensions, and External APIs
+## Chapter 11: Plugins, Extensions, and External APIs
 
 ![ ](assets/page_header.svg)
 
@@ -2172,18 +2062,8 @@ As LLMs gain more agentic capabilities with tool use and multi-step planning, pl
 - Practice: Set up a test LLM with plugins and experiment with forced invocations
 
 ---
-<!--
-Chapter: 12
-Title: Retrieval-Augmented Generation (RAG) Pipelines
-Category: Technical Deep-Dives
-Difficulty: Advanced
-Estimated Time: 24 minutes read time
-Hands-on: Yes
-Prerequisites: Chapters 9, 11
-Related: Chapters 11 (Plugins), 13 (Supply Chain), 23 (Persistence)
--->
 
-# Chapter 12: Retrieval-Augmented Generation (RAG) Pipelines
+## Chapter 12: Retrieval-Augmented Generation (RAG) Pipelines
 
 ![ ](assets/page_header.svg)
 
@@ -3481,18 +3361,8 @@ As RAG systems become more sophisticated with multi-hop retrieval, cross-modal s
 - Practice: Set up a simple RAG pipeline and test document injection attacks
 
 ---
-<!--
-Chapter: 13
-Title: Data Provenance and Supply Chain Security
-Category: Technical Deep-Dives
-Difficulty: Intermediate
-Estimated Time: 18 minutes read time
-Hands-on: No
-Prerequisites: Chapter 9
-Related: Chapters 11 (Plugins), 19 (Training Data Poisoning), 26 (Supply Chain Attacks)
--->
 
-# Chapter 13: Data Provenance and Supply Chain Security
+## Chapter 13: Data Provenance and Supply Chain Security
 
 ![ ](assets/page_header.svg)
 
@@ -5371,18 +5241,8 @@ As AI supply chains grow more complex with model marketplaces, federated learnin
 - Practice: Conduct a supply chain audit on an AI system following the framework provided
 
 ---
-<!--
-Chapter: 14
-Title: Prompt Injection (Direct/Indirect, 1st/3rd Party)
-Category: Attack Techniques
-Difficulty: Intermediate
-Estimated Time: 45 minutes read time
-Hands-on: Yes - includes executable code
-Prerequisites: Chapters 9-10 (LLM Architectures, Tokenization)
-Related: Chapters 15-16 (Data Leakage, Jailbreaks)
--->
 
-# Chapter 14: Prompt Injection (Direct/Indirect, 1st/3rd Party)
+## Chapter 14: Prompt Injection (Direct/Indirect, 1st/3rd Party)
 
 ![ ](assets/page_header.svg)
 
@@ -7009,7 +6869,7 @@ for vector in input_vectors:
 
 ### 14.8.3 Indirect Injection Testing
 
-#### ⚠️ WARNING: Only test with explicit authorization and in isolated environments.
+#### ⚠️ WARNING: Only test with explicit authorization and in isolated environments
 
 #### Phase 1: Identifying Data Sources
 
@@ -8347,7 +8207,7 @@ Defense Effectiveness = Σ(Multiple Layers)
                         × (Accept Some Risk)
 ```
 
-#### No defense is perfect. The goal is risk reduction, not elimination.
+#### No defense is perfect. The goal is risk reduction, not elimination
 
 ---
 
@@ -9634,18 +9494,8 @@ _Prompt injection represents the defining security challenge of the LLM era. Lik
 #### End of Chapter 14
 
 ---
-<!--
-Chapter: 15
-Title: Data Leakage and Extraction
-Category: Attack Techniques
-Difficulty: Advanced
-Estimated Time: 50 minutes read time
-Hands-on: Yes - includes extraction code and testing tools
-Prerequisites: Chapters 9-10 (LLM Architectures, Tokenization), Chapter 14 (Prompt Injection)
-Related: Chapters 16, 20 (Jailbreaks, Model Theft)
--->
 
-# Chapter 15: Data Leakage and Extraction
+## Chapter 15: Data Leakage and Extraction
 
 ![ ](assets/page_header.svg)
 
@@ -13520,18 +13370,8 @@ _End of Chapter 15: Data Leakage and Extraction_
 _Continue to Chapter 16: Jailbreaks and Bypass Techniques to learn how attackers circumvent safety controls and content filters in AI systems._
 
 ---
-<!--
-Chapter: 16
-Title: Jailbreaks and Bypass Techniques
-Category: Attack Techniques
-Difficulty: Advanced
-Estimated Time: 40 minutes read time
-Hands-on: Yes - includes testing frameworks and jailbreak code
-Prerequisites: Chapters 14-15 (Prompt Injection, Data Leakage)
-Related: Chapters 11, 17 (Safety/Alignment, Plugin Exploitation)
--->
 
-# Chapter 16: Jailbreaks and Bypass Techniques
+## Chapter 16: Jailbreaks and Bypass Techniques
 
 ![ ](assets/page_header.svg)
 
@@ -15119,18 +14959,8 @@ Jailbreaks bypass LLM safety controls through role-playing, instruction manipula
 **Key Takeaway**: Jailbreak research is essential for AI safety. Responsible testing, coordinated disclosure, and continuous improvement are critical for building robust, trustworthy AI systems.
 
 ---
-<!--
-Chapter: 17
-Title: Plugin and API Exploitation
-Category: Attack Techniques
-Difficulty: Advanced
-Estimated Time: 45 minutes read time
-Hands-on: Yes - API manipulation and payload testing
-Prerequisites: Chapter 11 (Plugins), Chapter 14 (Prompt Injection)
-Related: Chapter 15 (Data Leakage), Chapter 23 (Persistence)
--->
 
-# Chapter 17: Plugin and API Exploitation
+## Chapter 17: Plugin and API Exploitation
 
 ![ ](assets/page_header.svg)
 
@@ -17838,6 +17668,7 @@ def validate_email(email):
 ## Quick Reference
 
 ### Attack Vector Summary
+
 Attackers manipulate the LLM to invoke plugins/APIs with malicious arguments or unintended intent. This is often achieved via "Indirect Prompt Injection" (placing instructions in data the model reads) or "Confused Deputy" attacks (tricking the privileged model into acting for an unprivileged user).
 
 ### Key Detection Indicators
@@ -17930,18 +17761,8 @@ Attackers manipulate the LLM to invoke plugins/APIs with malicious arguments or 
 - [ ] Suggest architectural improvements for privilege separation
 
 ---
-<!--
-Chapter: 18
-Title: Evasion, Obfuscation, and Adversarial Inputs
-Category: Attack Techniques
-Difficulty: Advanced
-Estimated Time: 50 minutes read time
-Hands-on: Yes - Adversarial sample generation and payload crafting
-Prerequisites: Chapter 10 (Tokenization), Chapter 14 (Prompt Injection)
-Related: Chapter 16 (Jailbreaks), Chapter 21 (DoS)
--->
 
-# Chapter 18: Evasion, Obfuscation, and Adversarial Inputs
+## Chapter 18: Evasion, Obfuscation, and Adversarial Inputs
 
 ![ ](assets/page_header.svg)
 
@@ -19065,9 +18886,9 @@ _This chapter provided comprehensive coverage of evasion and obfuscation techniq
 
 ### Current Research Gaps
 
-1.  **Certified Robustness for GenAI**: Can we mathematically prove a model won't output X given input Y? (Exists for classifiers, harder for generators).
-2.  **Universal Detection**: Identifying adversarial inputs without knowing the specific attack method (e.g., using entropy or perplexity robustly).
-3.  **Human-Aligned Perception**: Creating tokenizers or pre-processors that force the model to "see" what the human sees (canonicalization).
+1. **Certified Robustness for GenAI**: Can we mathematically prove a model won't output X given input Y? (Exists for classifiers, harder for generators).
+2. **Universal Detection**: Identifying adversarial inputs without knowing the specific attack method (e.g., using entropy or perplexity robustly).
+3. **Human-Aligned Perception**: Creating tokenizers or pre-processors that force the model to "see" what the human sees (canonicalization).
 
 ### Recommended Reading
 
@@ -19088,9 +18909,9 @@ Evasion is the art of the unknown. As defenders build higher walls (filters), at
 
 Input validation is necessary but insufficient. True resilience requires **Defense in Depth**:
 
-1.  **Robust Models**: Trained on adversarial examples.
-2.  **Robust Filters**: Using semantic understanding, not just keywords.
-3.  **Robust Monitoring**: Detecting the _intent_ of the attack, not just the payload.
+1. **Robust Models**: Trained on adversarial examples.
+2. **Robust Filters**: Using semantic understanding, not just keywords.
+3. **Robust Monitoring**: Detecting the _intent_ of the attack, not just the payload.
 
 ### Next Steps
 
@@ -19102,6 +18923,7 @@ Input validation is necessary but insufficient. True resilience requires **Defen
 ## Quick Reference
 
 ### Attack Vector Summary
+
 Evasion attacks manipulate input prompts to bypass content filters and safety guardrails without changing the semantic intent perceived by the LLM. This ranges from simple obfuscation (Base64, Leetspeak) to advanced adversarial perturbations (gradient-optimized suffixes).
 
 ### Key Detection Indicators
@@ -19195,18 +19017,8 @@ Evasion attacks manipulate input prompts to bypass content filters and safety gu
 - [ ] Share evasion technique taxonomy
 
 ---
-<!--
-Chapter: 19
-Title: Training Data Poisoning
-Category: Attack Techniques
-Difficulty: Advanced
-Estimated Time: 50 minutes read time
-Hands-on: Yes - Creating poisoned datasets and backdoor triggers
-Prerequisites: Chapter 13 (Data Provenance), Chapter 10 (Tokenization)
-Related: Chapter 26 (Supply Chain), Chapter 30 (Backdoors)
--->
 
-# Chapter 19: Training Data Poisoning
+## Chapter 19: Training Data Poisoning
 
 ![ ](assets/page_header.svg)
 
@@ -19956,46 +19768,46 @@ _[Chapter continues with additional sections on detection, defense, case studies
 
 #### Most Effective Attacks
 
-1.  **Backdoor Injection** (90% success in research)
+1. **Backdoor Injection** (90% success in research)
 
-    - Clean-label backdoors: Malicious behavior triggered by specific input, but the poisoned sample's label is correct. Hard to detect.
-    - Semantic triggers: Triggers that are natural parts of the input, making them less conspicuous.
-    - Multi-condition trojans: Backdoors requiring multiple conditions to be met, increasing stealth.
+   - Clean-label backdoors: Malicious behavior triggered by specific input, but the poisoned sample's label is correct. Hard to detect.
+   - Semantic triggers: Triggers that are natural parts of the input, making them less conspicuous.
+   - Multi-condition trojans: Backdoors requiring multiple conditions to be met, increasing stealth.
 
-2.  **Supply Chain Poisoning** (80% prevalence risk)
+2. **Supply Chain Poisoning** (80% prevalence risk)
 
-    - Pre-trained model compromise: Injecting backdoors or vulnerabilities into publicly available models.
-    - Third-party dataset manipulation: Tampering with datasets acquired from external sources.
-    - Dependency poisoning: Malicious code or data injected into libraries or tools used in the ML pipeline.
+   - Pre-trained model compromise: Injecting backdoors or vulnerabilities into publicly available models.
+   - Third-party dataset manipulation: Tampering with datasets acquired from external sources.
+   - Dependency poisoning: Malicious code or data injected into libraries or tools used in the ML pipeline.
 
-3.  **Fine-Tuning Attacks** (70% success rate)
-    - Instruction dataset poisoning: Adding malicious instruction-response pairs to guide the model to undesirable outputs.
-    - RLHF preference manipulation: Swapping preferred/rejected responses to steer the model's values and behavior.
-    - Adapter/LoRA poisoning: Injecting backdoors or biases into lightweight fine-tuning layers, which are then shared.
+3. **Fine-Tuning Attacks** (70% success rate)
+   - Instruction dataset poisoning: Adding malicious instruction-response pairs to guide the model to undesirable outputs.
+   - RLHF preference manipulation: Swapping preferred/rejected responses to steer the model's values and behavior.
+   - Adapter/LoRA poisoning: Injecting backdoors or biases into lightweight fine-tuning layers, which are then shared.
 
 ### Defense Recommendations
 
 #### For ML Engineers
 
-1.  **Data Validation**
+1. **Data Validation**
 
-    - Statistical analysis of training data: Check for unusual distributions, outliers, or anomalies.
-    - Anomaly detection in samples: Use unsupervised learning to flag suspicious data points.
-    - Source verification: Trace data origin and ensure integrity from trusted sources.
-    - Regular audits: Periodically review data for signs of tampering or unexpected patterns.
+   - Statistical analysis of training data: Check for unusual distributions, outliers, or anomalies.
+   - Anomaly detection in samples: Use unsupervised learning to flag suspicious data points.
+   - Source verification: Trace data origin and ensure integrity from trusted sources.
+   - Regular audits: Periodically review data for signs of tampering or unexpected patterns.
 
-2.  **Training Monitoring**
+2. **Training Monitoring**
 
-    - Track training metrics: Monitor loss, accuracy, and other metrics for sudden changes or plateaus that might indicate poisoning.
-    - Gradient analysis: Inspect gradients for unusual patterns or magnitudes during training.
-    - Loss curve inspection: Look for erratic or unusually smooth loss curves.
-    - Regular checkpointing: Save model states frequently to allow rollback if poisoning is detected.
+   - Track training metrics: Monitor loss, accuracy, and other metrics for sudden changes or plateaus that might indicate poisoning.
+   - Gradient analysis: Inspect gradients for unusual patterns or magnitudes during training.
+   - Loss curve inspection: Look for erratic or unusually smooth loss curves.
+   - Regular checkpointing: Save model states frequently to allow rollback if poisoning is detected.
 
-3.  **Model Testing**
-    - Backdoor scanning: Use specialized tools to detect known backdoor patterns or trigger responses.
-    - Trigger testing: Systematically test the model with potential triggers to see if malicious behavior is activated.
-    - Adversarial evaluation: Test model robustness against various adversarial inputs, including poisoned ones.
-    - Behavioral analysis: Observe model outputs for unexpected or harmful responses in diverse scenarios.
+3. **Model Testing**
+   - Backdoor scanning: Use specialized tools to detect known backdoor patterns or trigger responses.
+   - Trigger testing: Systematically test the model with potential triggers to see if malicious behavior is activated.
+   - Adversarial evaluation: Test model robustness against various adversarial inputs, including poisoned ones.
+   - Behavioral analysis: Observe model outputs for unexpected or harmful responses in diverse scenarios.
 
 #### For Organizations
 
@@ -20044,9 +19856,9 @@ _[Chapter continues with additional sections on detection, defense, case studies
 
 ### Current Research Gaps
 
-1.  **Machine Unlearning**: How to reliably "forget" a poisoned sample without retraining the whole model?
-2.  **Trigger Detection**: Automatically finding unknown triggers in a compiled model (finding the "needle in the haystack").
-3.  **Provenance-Based Filtering**: Cryptographic verification of data evolution from creation to training.
+1. **Machine Unlearning**: How to reliably "forget" a poisoned sample without retraining the whole model?
+2. **Trigger Detection**: Automatically finding unknown triggers in a compiled model (finding the "needle in the haystack").
+3. **Provenance-Based Filtering**: Cryptographic verification of data evolution from creation to training.
 
 ### Recommended Reading
 
@@ -20075,6 +19887,7 @@ For Red Teamers, poisoning demonstrates the critical need for Supply Chain Secur
 ## Quick Reference
 
 ### Attack Vector Summary
+
 Attackers inject malicious data into the training set (pre-training or fine-tuning) to embed hidden behaviors (backdoors) or degrade performance. This can be done by contributing to public datasets, web scraping exploits, or insider access.
 
 ### Key Detection Indicators
@@ -20159,18 +19972,8 @@ Attackers inject malicious data into the training set (pre-training or fine-tuni
 - [ ] Schedule re-testing
 
 ---
-<!--
-Chapter: 20
-Title: Model Theft and Membership Inference
-Category: Attack Techniques
-Difficulty: Advanced
-Estimated Time: 50 minutes read time
-Hands-on: Yes - Building shadow models and extraction scripts
-Prerequisites: Chapter 9 (Architectures), Chapter 28 (Privacy)
-Related: Chapter 19 (Poisoning), Chapter 37 (Remediation)
--->
 
-# Chapter 20: Model Theft and Membership Inference
+## Chapter 20: Model Theft and Membership Inference
 
 ![ ](assets/page_header.svg)
 
@@ -21103,9 +20906,9 @@ PRIVACY VIOLATION: Model leaks training data membership
 
 ### Current Research Gaps
 
-1.  **Copyright inWeights**: Determining if a model "contains" a copyrighted work in a legal sense (substantial similarity).
-2.  **Machine Unlearning**: How to remove a distinct concept/person from a model cost-effectively.
-3.  **Watermark Robustness**: Creating watermarks that survive distillation/theft (most currently fail).
+1. **Copyright inWeights**: Determining if a model "contains" a copyrighted work in a legal sense (substantial similarity).
+2. **Machine Unlearning**: How to remove a distinct concept/person from a model cost-effectively.
+3. **Watermark Robustness**: Creating watermarks that survive distillation/theft (most currently fail).
 
 ### Recommended Reading
 
@@ -21134,6 +20937,7 @@ As models move to the edge and APIs become ubiquitous, these "grey box" attacks 
 ## Quick Reference
 
 ### Attack Vector Summary
+
 Attackers query the model to either learn its internal parameters (Model Theft) or determine if specific data points were used during training (Membership Inference). This exploits the model's high information retention and correlation with its training set.
 
 ### Key Detection Indicators
@@ -21218,18 +21022,8 @@ Attackers query the model to either learn its internal parameters (Model Theft) 
 - [ ] Schedule re-testing
 
 ---
-<!--
-Chapter: 21
-Title: Model DoS and Resource Exhaustion
-Category: Attack Techniques
-Difficulty: Advanced
-Estimated Time: 45 minutes read time
-Hands-on: Yes - Token bombing and complexity amplification scripts
-Prerequisites: Chapter 10 (Tokenization), Chapter 9 (Architectures)
-Related: Chapter 26 (Supply Chain), Chapter 20 (Model Theft)
--->
 
-# Chapter 21: Model DoS and Resource Exhaustion
+## Chapter 21: Model DoS and Resource Exhaustion
 
 ![ ](assets/page_header.svg)
 
@@ -22030,9 +21824,9 @@ if __name__ == "__main__":
 
 ### Current Research Gaps
 
-1.  **Efficient Attention**: Linear attention mechanisms ($O(N)$) exist but often underperform; solving this fixes the root vulnerability.
-2.  **Early Exit**: Reliably detecting "this prompt will take too long" _before_ executing it.
-3.  **Proof of Work for Inference**: Requiring client-side compute to submit requests (rate limiting via physics).
+1. **Efficient Attention**: Linear attention mechanisms ($O(N)$) exist but often underperform; solving this fixes the root vulnerability.
+2. **Early Exit**: Reliably detecting "this prompt will take too long" _before_ executing it.
+3. **Proof of Work for Inference**: Requiring client-side compute to submit requests (rate limiting via physics).
 
 ### Recommended Reading
 
@@ -22061,6 +21855,7 @@ For Red Teamers, the "DoS" category often merges with "Financial Impact." If you
 ## Quick Reference
 
 ### Attack Vector Summary
+
 Attackers exploit the high computational and financial cost of LLM inference ($O(N^2)$ attention complexity) to exhaust server resources (GPU/RAM) or drain financial budgets (Economic DoS).
 
 ### Key Detection Indicators
@@ -22122,18 +21917,8 @@ Attackers exploit the high computational and financial cost of LLM inference ($O
 - [ ] Schedule re-testing
 
 ---
-<!--
-Chapter: 22
-Title: Cross-Modal and Multimodal Attacks
-Category: Attack Techniques
-Difficulty: Advanced
-Estimated Time: 45 minutes read time
-Hands-on: Yes - Adversarial Image Generator and Image Prompt Injection
-Prerequisites: Chapter 9 (Architectures), Chapter 14 (Prompt Injection)
-Related: Chapter 25 (Adversarial ML), Chapter 21 (DoS)
--->
 
-# Chapter 22: Cross-Modal and Multimodal Attacks
+## Chapter 22: Cross-Modal and Multimodal Attacks
 
 ![ ](assets/page_header.svg)
 
@@ -23365,6 +23150,7 @@ For Red Teamers, this is the "Golden Age" of multimodal exploits. The defenses a
 ## Quick Reference
 
 ### Attack Vector Summary
+
 Using non-text inputs (Images, Audio) to inject prompts or adversarial noise that shifts the model's behavior, bypassing text-based safety filters and alignment controls.
 
 ### Key Detection Indicators
@@ -23423,18 +23209,8 @@ Using non-text inputs (Images, Audio) to inject prompts or adversarial noise tha
 - [ ] Deliver comprehensive report with attached samples
 - [ ] Provide remediation guidance (sanitization pipelines)
 - [ ] Schedule re-testing
-<!--
-Chapter: 23
-Title: Advanced Persistence and Chaining
-Category: Attack Techniques
-Difficulty: Advanced
-Estimated Time: 60 minutes read time
-Hands-on: Yes - Context Hijacking Script and Multi-Turn Jailbreak
-Prerequisites: Chapter 14 (Prompt Injection), Chapter 16 (Jailbreaks)
-Related: Chapter 24 (Social Engineering), Chapter 26 (Autonomous Agents)
--->
 
-# Chapter 23: Advanced Persistence and Chaining
+## Chapter 23: Advanced Persistence and Chaining
 
 ![ ](assets/page_header.svg)
 
@@ -24262,6 +24038,7 @@ Attacking an LLM is like hacking a conversation. If you can change the _premise_
 ## Quick Reference
 
 ### Attack Vector Summary
+
 Attackers manipulate the model's "memory" (context window, RAG database, or system prompt) to establish a lasting influence that survives across individual queries or sessions.
 
 ### Key Detection Indicators
@@ -24320,18 +24097,8 @@ Attackers manipulate the model's "memory" (context window, RAG database, or syst
 - [ ] Deliver comprehensive report
 - [ ] Provide prioritized remediation guidance
 - [ ] Schedule re-testing
-<!--
-Chapter: 24
-Title: Social Engineering with LLMs
-Category: Social Engineering
-Difficulty: Intermediate
-Estimated Time: 45 minutes read time
-Hands-on: Yes - AI Phishing Generator and Impersonation Framework
-Prerequisites: Chapter 14 (Prompt Injection)
-Related: Chapter 23 (Persistence), Chapter 26 (Agents)
--->
 
-# Chapter 24: Social Engineering with LLMs
+## Chapter 24: Social Engineering with LLMs
 
 ![ ](assets/page_header.svg)
 
@@ -25404,6 +25171,7 @@ For Red Teamers, the focus shifts from "Can I trick the user?" to "Can I bypass 
 ## Quick Reference
 
 ### Attack Vector Summary
+
 Attackers leverage LLMs to automate the creation of highly personalized, persuasive, and grammatically perfect phishing content (text, audio, code) at a scale previously impossible.
 
 ### Key Detection Indicators
@@ -25464,18 +25232,8 @@ Attackers leverage LLMs to automate the creation of highly personalized, persuas
 - [ ] Schedule re-testing.
 
 ---
-<!--
-Chapter: 25
-Title: Advanced Adversarial ML
-Category: Attack Techniques
-Difficulty: Advanced
-Estimated Time: 45 minutes read time
-Hands-on: Yes - includes executable code
-Prerequisites: Chapters 9 (LLM Architectures), 10 (Tokenization), 14 (Prompt Injection), 19 (Training Data Poisoning)
-Related: Chapters 13 (Supply Chain Security), 20 (Model Extraction), 21 (Membership Inference)
--->
 
-# Chapter 25: Advanced Adversarial ML
+## Chapter 25: Advanced Adversarial ML
 
 ![ ](assets/page_header.svg)
 
@@ -26688,18 +26446,8 @@ Advanced Adversarial ML attacks use mathematical optimization to find minimal pe
 - [ ] Attack surface reduction recommendations provided
 
 ---
-<!--
-Chapter: 26
-Title: Supply Chain Attacks on AI
-Category: Attack Techniques
-Difficulty: Advanced
-Estimated Time: 50 minutes read time
-Hands-on: Yes - includes executable code
-Prerequisites: Chapters 9 (LLM Architectures), 13 (Data Provenance), 19 (Training Data Poisoning)
-Related: Chapters 13 (Supply Chain Security), 20 (Model Theft), 25 (Adversarial ML)
--->
 
-# Chapter 26: Supply Chain Attacks on AI
+## Chapter 26: Supply Chain Attacks on AI
 
 ![ ](assets/page_header.svg)
 
@@ -27521,7 +27269,8 @@ Supply chain attacks compromise AI by injecting malicious code, backdoors, or po
 - [ ] Incident response playbook for supply chain compromises
 
 ---
-# Chapter 27: Federated Learning Attacks
+
+## Chapter 27: Federated Learning Attacks
 
 ![ ](assets/page_header.svg)
 
@@ -27534,11 +27283,14 @@ Content for this chapter will be added in future updates.
 ---
 
 **Status:** Coming Soon
+
 ### Planned Topics
+
 - TBD
 
 ---
-# Chapter 28: AI Privacy Attacks
+
+## Chapter 28: AI Privacy Attacks
 
 ![ ](assets/page_header.svg)
 
@@ -27551,11 +27303,14 @@ Content for this chapter will be added in future updates.
 ---
 
 **Status:** Coming Soon
+
 ### Planned Topics
+
 - TBD
 
 ---
-# Chapter 29: Model Inversion Attacks
+
+## Chapter 29: Model Inversion Attacks
 
 ![ ](assets/page_header.svg)
 
@@ -27568,11 +27323,14 @@ Content for this chapter will be added in future updates.
 ---
 
 **Status:** Coming Soon
+
 ### Planned Topics
+
 - TBD
 
 ---
-# Chapter 30: Backdoor Attacks
+
+## Chapter 30: Backdoor Attacks
 
 ![ ](assets/page_header.svg)
 
@@ -27585,11 +27343,14 @@ Content for this chapter will be added in future updates.
 ---
 
 **Status:** Coming Soon
+
 ### Planned Topics
+
 - TBD
 
 ---
-# Chapter 31: AI System Reconnaissance
+
+## Chapter 31: AI System Reconnaissance
 
 ![ ](assets/page_header.svg)
 
@@ -27602,11 +27363,14 @@ Content for this chapter will be added in future updates.
 ---
 
 **Status:** Coming Soon
+
 ### Planned Topics
+
 - TBD
 
 ---
-# Chapter 32: Automated Attack Frameworks
+
+## Chapter 32: Automated Attack Frameworks
 
 ![ ](assets/page_header.svg)
 
@@ -27619,11 +27383,14 @@ Content for this chapter will be added in future updates.
 ---
 
 **Status:** Coming Soon
+
 ### Planned Topics
+
 - TBD
 
 ---
-# Chapter 33: Red Team Automation
+
+## Chapter 33: Red Team Automation
 
 ![ ](assets/page_header.svg)
 
@@ -27636,11 +27403,14 @@ Content for this chapter will be added in future updates.
 ---
 
 **Status:** Coming Soon
+
 ### Planned Topics
+
 - TBD
 
 ---
-# Chapter 34: Defense Evasion Techniques
+
+## Chapter 34: Defense Evasion Techniques
 
 ![ ](assets/page_header.svg)
 
@@ -27653,11 +27423,14 @@ Content for this chapter will be added in future updates.
 ---
 
 **Status:** Coming Soon
+
 ### Planned Topics
+
 - TBD
 
 ---
-# Chapter 35: Post-Exploitation in AI Systems
+
+## Chapter 35: Post-Exploitation in AI Systems
 
 ![ ](assets/page_header.svg)
 
@@ -27670,22 +27443,14 @@ Content for this chapter will be added in future updates.
 ---
 
 **Status:** Coming Soon
+
 ### Planned Topics
+
 - TBD
 
 ---
-<!--
-Chapter: 36
-Title: Reporting and Communication
-Category: Defense & Operations
-Difficulty: Intermediate
-Estimated Time: 12 minutes read time
-Hands-on: No
-Prerequisites: Chapters 1-8, 14-24
-Related: Chapters 37 (Remediation), 38 (Continuous Red Teaming), 45 (Program Building)
--->
 
-# Chapter 36: Reporting and Communication
+## Chapter 36: Reporting and Communication
 
 ![ ](assets/page_header.svg)
 
@@ -27850,18 +27615,8 @@ Successful reports are tailored to multiple audiences, such as:
 ### Next Steps
 
 Chapter 37 covers presenting your results effectively to both technical and non-technical stakeholders, facilitating collaborative remediation, and handling difficult conversations - ensuring your red teaming work translates into measurable security improvements.
-<!--
-Chapter: 37
-Title: Presenting Results and Remediation Guidance
-Category: Defense & Operations
-Difficulty: Intermediate
-Estimated Time: 10 minutes read time
-Hands-on: No
-Prerequisites: Chapter 36
-Related: Chapters 2 (Ethics/Communication), 4 (SOW/RoE), 38 (Continuous Red Teaming)
--->
 
-# Chapter 37: Presenting Results and Remediation Guidance
+## Chapter 37: Presenting Results and Remediation Guidance
 
 ![ ](assets/page_header.svg)
 
@@ -27986,18 +27741,8 @@ Delivering findings is more than handing over a report - it's about ensuring you
 ### Next Steps
 
 Chapter 38 explores lessons learned, common pitfalls, and strategies for building a mature, sustainable AI red teaming practice - moving from one-off assessments to continuous security improvement.
-<!--
-Chapter: 38
-Title: Lessons Learned and Program Maturity
-Category: Defense & Operations
-Difficulty: Intermediate
-Estimated Time: 12 minutes read time
-Hands-on: No
-Prerequisites: Chapters 1-37
-Related: Chapters 45 (Program Building), 5 (Threat Modeling), 7 (Lab Setup)
--->
 
-# Chapter 38: Lessons Learned and Program Maturity
+## Chapter 38: Lessons Learned and Program Maturity
 
 ![ ](assets/page_header.svg)
 
@@ -28097,7 +27842,8 @@ To make AI red teaming a sustainable part of your organization’s security post
 ### Next Steps
 
 With lessons learned and program maturity frameworks in place, Chapter 45 provides a comprehensive blueprint for building world-class AI red team programs - covering team structure, skill sets, engagement lifecycles, and the evolution from tactical assessments to strategic wargaming.
-# Chapter 39: AI Bug Bounty Programs
+
+## Chapter 39: AI Bug Bounty Programs
 
 ![ ](assets/page_header.svg)
 
@@ -28110,11 +27856,14 @@ Content for this chapter will be added in future updates.
 ---
 
 **Status:** Coming Soon
+
 ### Planned Topics
+
 - TBD
 
 ---
-# Chapter 40: Compliance and Standards
+
+## Chapter 40: Compliance and Standards
 
 ![ ](assets/page_header.svg)
 
@@ -28127,11 +27876,14 @@ Content for this chapter will be added in future updates.
 ---
 
 **Status:** Coming Soon
+
 ### Planned Topics
+
 - TBD
 
 ---
-# Chapter 41: Industry Best Practices
+
+## Chapter 41: Industry Best Practices
 
 ![ ](assets/page_header.svg)
 
@@ -28144,11 +27896,14 @@ Content for this chapter will be added in future updates.
 ---
 
 **Status:** Coming Soon
+
 ### Planned Topics
+
 - TBD
 
 ---
-# Chapter 42: Case Studies and War Stories
+
+## Chapter 42: Case Studies and War Stories
 
 ![ ](assets/page_header.svg)
 
@@ -28161,11 +27916,14 @@ Content for this chapter will be added in future updates.
 ---
 
 **Status:** Coming Soon
+
 ### Planned Topics
+
 - TBD
 
 ---
-# Chapter 43: Future of AI Red Teaming
+
+## Chapter 43: Future of AI Red Teaming
 
 ![ ](assets/page_header.svg)
 
@@ -28178,11 +27936,14 @@ Content for this chapter will be added in future updates.
 ---
 
 **Status:** Coming Soon
+
 ### Planned Topics
+
 - TBD
 
 ---
-# Chapter 44: Emerging Threats
+
+## Chapter 44: Emerging Threats
 
 ![ ](assets/page_header.svg)
 
@@ -28195,22 +27956,14 @@ Content for this chapter will be added in future updates.
 ---
 
 **Status:** Coming Soon
+
 ### Planned Topics
+
 - TBD
 
 ---
-<!--
-Chapter: 45
-Title: Building an AI Red Team Program
-Category: Defense & Operations
-Difficulty: Advanced
-Estimated Time: 22 minutes read time
-Hands-on: No
-Prerequisites: All previous chapters (comprehensive overview)
-Related: Chapters 1-4 (Foundations), 38 (Program Maturity), 36-37 (Ops)
--->
 
-# Chapter 45: Building an AI Red Team Program
+## Chapter 45: Building an AI Red Team Program
 
 ![ ](assets/page_header.svg)
 
@@ -28504,7 +28257,8 @@ A mature AI red team anticipates future threats and drives systemic improvement 
 - Begin with pilot engagements to demonstrate value.
 - Build internal capabilities iteratively, moving from ad-hoc testing to continuous assurance.
 - Measure and demonstrate value through tangible risk reduction and improved resilience.
-# Chapter 46: Conclusion and Next Steps
+
+## Chapter 46: Conclusion and Next Steps
 
 ![ ](assets/page_header.svg)
 
@@ -28517,7 +28271,9 @@ Content for this chapter will be added in future updates.
 ---
 
 **Status:** Coming Soon
+
 ### Planned Topics
+
 - TBD
 
 ---
