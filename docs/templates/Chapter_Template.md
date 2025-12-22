@@ -118,10 +118,6 @@ At the token/embedding level, this technique exploits:
 [Script Title]
 [Brief description of what this script does]
 
-⚠️ WARNING: FOR EDUCATIONAL/AUTHORIZED TESTING ONLY ⚠️
-Unauthorized use is illegal. Use only in controlled environments
-with written authorization.
-
 Requirements:
     pip install [dependency1] [dependency2]
 
@@ -199,12 +195,6 @@ if __name__ == "__main__":
     print("# result = example.main_method('test_data')")
     print("# print(result)")
 
-    print("\n⚠️  CRITICAL ETHICAL REMINDER ⚠️")
-    print("Unauthorized testing is illegal under:")
-    print("  - [Relevant Law/Act 1]")
-    print("  - [Relevant Law/Act 2]")
-    print("\nOnly use these techniques in authorized security assessments")
-    print("with written permission from the target organization.")
 ```
 
 ## Attack Execution
@@ -470,7 +460,7 @@ Why combining techniques amplifies effectiveness:
 
 ### Case Study 1: [Name/Description]
 
-#### Incident Overview
+#### Incident Overview (Case Study 1)
 
 - **When:** Date/timeframe
 - **Target:** Organization/system type
@@ -485,7 +475,7 @@ Why combining techniques amplifies effectiveness:
 4. **Discovery:** How it was detected
 5. **Response:** What was done to mitigate
 
-#### Lessons Learned
+#### Lessons Learned (Case Study 1)
 
 - Lesson 1: Specific takeaway
 - Lesson 2: Specific takeaway
@@ -493,7 +483,7 @@ Why combining techniques amplifies effectiveness:
 
 ### Case Study 2: [Name/Description]
 
-#### Incident Overview
+#### Incident Overview (Case Study 2)
 
 - **When:** Date/timeframe
 - **Target:** Organization/system type
@@ -504,7 +494,7 @@ Why combining techniques amplifies effectiveness:
 
 [Narrative description of what happened and why it matters]
 
-#### Lessons Learned
+#### Lessons Learned (Case Study 2)
 
 - Lesson 1: Specific takeaway
 - Lesson 2: Specific takeaway
@@ -513,10 +503,7 @@ Why combining techniques amplifies effectiveness:
 
 ## [X].7 Conclusion
 
-> [!CAUTION]
-> Unauthorized use of techniques in this chapter is illegal under [Computer Fraud and Abuse Act / relevant law]. Violations can result in criminal prosecution, civil liability, and imprisonment. **Only use these techniques in authorized security assessments with explicit written permission.**
-
-### Key Takeaways
+### Chapter Takeaways
 
 1. **[Topic] is Critical:** Because [specific reason with data/examples]
 2. **Detection is Challenging:** Due to [specific technical reasons]
@@ -572,25 +559,7 @@ Why combining techniques amplifies effectiveness:
 
 ## Appendix A: Pre-Engagement Checklist
 
-### Administrative
-
-- [ ] Obtain written authorization from client
-- [ ] Review and sign statement of work (SOW)
-- [ ] Establish rules of engagement
-- [ ] Define scope boundaries (systems, techniques, timeframe)
-- [ ] Set up secure communication channels
-- [ ] Prepare incident response procedures
-
-### Technical Preparation
-
-- [ ] Set up isolated test environment (see Chapter 7)
-- [ ] Install required tools and dependencies
-- [ ] Configure monitoring and logging
-- [ ] Document baseline system behavior
-- [ ] Prepare evidence collection methods
-- [ ] Test backup and rollback procedures
-
-### [Chapter-Specific Items]
+### [Chapter-Specific Pre-Engagement Items]
 
 - [ ] [Specific preparation item 1]
 - [ ] [Specific preparation item 2]
@@ -598,31 +567,7 @@ Why combining techniques amplifies effectiveness:
 
 ## Appendix B: Post-Engagement Checklist
 
-### Documentation
-
-- [ ] Document all findings with evidence
-- [ ] Capture screenshots and logs
-- [ ] Record timestamps for all activities
-- [ ] Note any anomalies or unexpected behaviors
-- [ ] Prepare detailed technical report
-
-### Cleanup
-
-- [ ] Remove or remediate test artifacts
-- [ ] Verify no persistent changes remain
-- [ ] Restore systems to baseline state
-- [ ] Securely delete temporary files
-- [ ] Clear test accounts and credentials
-
-### Reporting
-
-- [ ] Deliver comprehensive findings report
-- [ ] Present results to stakeholders
-- [ ] Provide remediation recommendations
-- [ ] Offer follow-up support for fixes
-- [ ] Schedule re-testing after remediation
-
-### [Chapter-Specific Items]
+### [Chapter-Specific Post-Engagement Items]
 
 - [ ] [Specific cleanup item 1]
 - [ ] [Specific cleanup item 2]
@@ -636,12 +581,10 @@ TEMPLATE USAGE NOTES:
 2. Replace all [placeholders] with specific content
 3. Remove sections that don't apply to your chapter
 4. Add additional sections as needed for your topic
-5. Ensure all code examples include proper warnings
-6. Include at least one practical code demonstration
-7. Provide real-world examples or case studies
-8. Include CAUTION alert in Conclusion about unauthorized use
-9. Update checklists with chapter-specific items
-10. Use appropriate alert types (NOTE/TIP/IMPORTANT/WARNING/CAUTION)
+5. Include at least one practical code demonstration
+6. Provide real-world examples or case studies
+7. Update checklists with chapter-specific items
+8. Use appropriate alert types (NOTE/TIP/IMPORTANT/WARNING/CAUTION)
 
 ALERT USAGE EXAMPLES:
 > [!NOTE] - Additional context, background information, helpful explanations
@@ -651,13 +594,13 @@ ALERT USAGE EXAMPLES:
 > [!CAUTION] - Legal/ethical warnings, high-risk actions, serious consequences
 
 RESEARCH INTEGRATION REQUIREMENTS:
-11. Every technique must include "Why This Works" mechanistic explanation
-12. Minimum 3 academic citations per chapter (foundational + validation + recent)
-13. Connect detection/defense methods to interpretability research
-14. Include "Research Landscape" section with seminal papers
-15. Flag techniques lacking research basis as "Empirically Observed (Unverified)"
-16. Prefer peer-reviewed papers; mark preprints as [Preprint]
-17. Include arXiv/DOI links for all citations
+9. Every technique must include "Why This Works" mechanistic explanation
+10. Minimum 3 academic citations per chapter (foundational + validation + recent)
+11. Connect detection/defense methods to interpretability research
+12. Include "Research Landscape" section with seminal papers
+13. Flag techniques lacking research basis as "Empirically Observed (Unverified)"
+14. Prefer peer-reviewed papers; mark preprints as [Preprint]
+15. Include arXiv/DOI links for all citations
 
 VISUAL ELEMENTS TO CONSIDER:
 - ASCII diagrams for attack flows
