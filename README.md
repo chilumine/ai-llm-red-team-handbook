@@ -125,28 +125,12 @@ python runner.py --config config.py
 
 ```text
 ai-llm-red-team-handbook/
-├── docs/
-│   ├── SUMMARY.md                                       # GitBook navigation
-│   ├── Chapter_01_Introduction_to_AI_Red_Teaming.md    # All chapters 1-46
-│   ├── Chapter_02_Ethics_Legal_and_Stakeholder_Communication.md
-│   ├── ...                                              # (Chapters 3-45)
-│   ├── Chapter_46_Conclusion_and_Next_Steps.md
-│   ├── AI_LLM Red Team Field Manual.md                  # Operational reference
-│   ├── Configuration.md                                 # Setup guide
-│   ├── templates/                                       # Report templates
-│   ├── field_manuals/                                   # Modular field guides
+├── docs/                                                # The handbook chapters
+│   ├── archive/                                         # Historical versions
 │   ├── assets/                                          # Images and graphics
-│   └── archive/                                         # Historical versions
-├── scripts/
-│   ├── runner.py                                        # Test orchestration
-│   ├── test_prompt_injection.py                         # Prompt injection tests
-│   ├── test_safety_bypass.py                            # Jailbreak tests
-│   ├── test_data_exposure.py                            # Data leakage tests
-│   ├── test_tool_misuse.py                              # Plugin/tool abuse tests
-│   ├── test_fuzzing.py                                  # Adversarial fuzzing
-│   └── requirements.txt                                 # Python dependencies
-├── assets/                                              # Images and resources
-└── README.md                                            # This file
+│   ├── field_manuals/                                   # The field manual
+│   └── templates/                                       # Report templates
+└── scripts/                                             # Testing framework
 ```
 
 ---
@@ -250,7 +234,7 @@ See [LICENSE](LICENSE) for details.
 
 ## ⚠️ Disclaimer
 
-### For authorized security testing only.
+### For authorized security testing only
 
 Ensure:
 
