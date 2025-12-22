@@ -53,11 +53,11 @@ For LLMs specifically, tokenization creates discrete boundaries that attackers c
 
 #### Foundational Research
 
-| Paper                                                                                        | Key Finding                                                                              | Relevance                              |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | -------------------------------------- |
-| Goodfellow et al., 2015 "Explaining and Harnessing Adversarial Examples"                     | The linearity hypothesis explains adversarial vulnerability as high-dimensional geometry | Foundation for gradient-based attacks  |
-| Szegedy et al., 2014 "Intriguing Properties of Neural Networks"                              | Adversarial examples transfer across architectures                                       | Enables black-box attacks against LLMs |
-| Zou et al., 2023 "Universal and Transferable Adversarial Attacks on Aligned Language Models" | Gradient-based suffix optimization achieves near-100% jailbreak success                  | Directly applicable to LLM red teaming |
+| Paper                                                                                                                            | Key Finding                                                                              | Relevance                              |
+| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | -------------------------------------- |
+| [Goodfellow et al., 2015 "Explaining and Harnessing Adversarial Examples"](https://arxiv.org/abs/1412.6572)                      | The linearity hypothesis explains adversarial vulnerability as high-dimensional geometry | Foundation for gradient-based attacks  |
+| [Szegedy et al., 2014 "Intriguing Properties of Neural Networks"](https://arxiv.org/abs/1312.6199)                               | Adversarial examples transfer across architectures                                       | Enables black-box attacks against LLMs |
+| [Zou et al., 2023 "Universal and Transferable Adversarial Attacks on Aligned Language Models"](https://arxiv.org/abs/2307.15043) | Gradient-based suffix optimization achieves near-100% jailbreak success                  | Directly applicable to LLM red teaming |
 
 #### What this tells us about LLMs
 
@@ -1057,7 +1057,7 @@ Researchers accessed the open-source Vicuna model for gradient computation. GCG 
 
 The attack proved that RLHF alignment is vulnerable to optimization-based bypasses. It sparked significant investment in robustness research and prompted vendors to deploy additional input/output filtering.
 
-#### Lessons
+#### Lessons (Case Study 1)
 
 RLHF and Constitutional AI modify behavior without fundamentally changing model capabilities. The alignment layer is thin. Access to model weights (or a similar surrogate) is sufficient for gradient-based attacks. And adversarial suffixes are valid token sequences that evade pattern matching.
 
@@ -1071,7 +1071,7 @@ Between 2020 and 2023, researchers demonstrated physical adversarial attacks aga
 
 These attacks are relatively inexpensive to demonstrate but costly to defend against. Liability exposure for autonomous vehicle accidents potentially runs into billions, driving significant investment in perception system robustness.
 
-#### Lessons
+#### Lessons (Case Study 2)
 
 Adversarial examples transfer from digital to physical domains. Vision-based perception systems lack the verification mechanisms that rule-based systems provide. Some mitigations require hardware changes like sensor fusion and redundancy.
 
@@ -1109,9 +1109,6 @@ Get explicit written permission specifying exact scope. Design attacks to demons
 ---
 
 ## 25.8 Conclusion
-
-> [!CAUTION]
-> Unauthorized use of these techniques is illegal under the CFAA, EU AI Act, and similar legislation. Violations result in criminal prosecution, civil liability, and imprisonment. **Only use these techniques in authorized assessments with explicit written permission.**
 
 ### What matters
 
@@ -1183,7 +1180,7 @@ Advanced Adversarial ML attacks use mathematical optimization to find minimal pe
 - [ ] Baseline model behavior documented
 - [ ] Evidence collection prepared
 
-### Adversarial ML Specific
+### Adversarial ML Specific (Pre-Engagement)
 
 - [ ] Attack surfaces identified (API access level, logits exposure)
 - [ ] Surrogate models selected for transferability testing
@@ -1217,7 +1214,7 @@ Advanced Adversarial ML attacks use mathematical optimization to find minimal pe
 - [ ] Follow-up testing offered after defenses are deployed
 - [ ] Re-testing scheduled to verify mitigation effectiveness
 
-### Adversarial ML Specific
+### Adversarial ML Specific (Post-Engagement)
 
 - [ ] Discovered adversarial suffixes shared with vendor security team
 - [ ] Defense mechanisms blocking attacks documented

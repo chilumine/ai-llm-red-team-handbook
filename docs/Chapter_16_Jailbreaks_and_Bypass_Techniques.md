@@ -1583,31 +1583,6 @@ Jailbreaks bypass LLM safety controls through role-playing, instruction manipula
 
 #### Documentation
 
-- [ ] Document all successful jailbreaks with reproduction steps
-- [ ] Classify jailbreaks by technique category
-- [ ] Record success rates by technique and severity
-- [ ] Capture failed attempts and why defenses worked
-- [ ] Prepare detailed technical report with PoCs
-- [ ] Create executive summary highlighting safety gaps
-
-#### Cleanup
-
-- [ ] Delete all generated harmful content from logs
-- [ ] Clear jailbreak conversation histories
-- [ ] Remove temporary test artifacts and payloads
-- [ ] Verify no jailbreak state persists in model context
-- [ ] Securely delete evidence files per agreement
-- [ ] Confirm test accounts cleared
-
-#### Reporting
-
-- [ ] Deliver comprehensive findings report to stakeholders
-- [ ] Provide jailbreak taxonomy with success rates
-- [ ] Include defensive recommendations prioritized by effectiveness
-- [ ] Share sanitized payload library with client security team
-- [ ] Offer adversarial training dataset creation support
-- [ ] Schedule re-testing after defensive improvements
-
 #### Jailbreak-Specific
 
 - [ ] Classify by jailbreak category (role-play, encoding, etc.)

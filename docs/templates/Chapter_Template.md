@@ -46,10 +46,10 @@ _[Write a compelling 2-3 sentence abstract that: (1) describes what this chapter
 
 #### Foundational Research
 
-| Paper                           | Key Finding            | Relevance                     |
-| ------------------------------- | ---------------------- | ----------------------------- |
-| [Author et al., Year] "[Title]" | [One-sentence finding] | [How it informs this chapter] |
-| [Author et al., Year] "[Title]" | [One-sentence finding] | [How it informs this chapter] |
+| Paper                                | Key Finding            | Relevance                     |
+| ------------------------------------ | ---------------------- | ----------------------------- |
+| [Author et al., Year] "[Title]"(url) | [One-sentence finding] | [How it informs this chapter] |
+| [Author et al., Year] "[Title]"(url) | [One-sentence finding] | [How it informs this chapter] |
 
 #### What This Reveals About LLMs
 
