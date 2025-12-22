@@ -139,3 +139,41 @@ A good threat model is:
 ---
 
 _With a strong threat model, your red team engagement becomes risk-driven and results-focused. The next chapter will walk you through scoping these findings into a feasible, valuable engagement plan._
+
+## 5.11 Conclusion
+
+### Chapter Takeaways
+
+1. **Threat Modeling is Foundational:** Effective AI red teaming begins with systematic threat modeling that identifies assets, threat actors, attack surfaces, and prioritizes risks based on impact and likelihood
+2. **AI Systems Have Unique Attack Surfaces:** LLMs introduce distinct vulnerabilities through prompts, plugins, model weights, and training data that require specialized threat analysis beyond traditional security frameworks
+3. **Risk-Driven Testing is Essential:** Focusing red team efforts on high-impact, high-likelihood threats ensures efficient use of resources and delivers maximum value to stakeholders
+4. **Threat Models Are Living Documents:** Continuously update threat models based on red team findings, emerging attack techniques, and changes to the AI system architecture
+
+### Recommendations for Red Teamers
+
+- **Start Every Engagement with Threat Modeling:** Don't begin testing until you've mapped assets, actors, and attack vectors specific to the target AI system
+- **Adapt Traditional Frameworks:** Use STRIDE, DREAD, and kill chain methodologies but tailor them to AI-specific risks like model extraction, data leakage, and prompt manipulation
+- **Communicate Business Impact:** Always tie technical findings back to business risks—data breaches, regulatory penalties, reputational harm—to ensure stakeholder buy-in
+
+### Recommendations for Defenders
+
+- **Integrate Threat Modeling into Development:** Make threat modeling a standard part of AI system design, not an afterthought
+- **Prioritize High-Risk Scenarios:** Focus defensive resources on critical and high-risk threats identified through systematic analysis
+- **Update Threat Models Regularly:** As AI systems evolve and new attack techniques emerge, revisit and refine threat models to reflect current reality
+
+### Future Considerations
+
+As AI systems become more complex with multi-modal capabilities, agentic behaviors, and deeper integration into critical infrastructure, threat modeling will need to evolve. Expect to see:
+
+- Threat modeling frameworks specifically designed for AI/ML systems
+- Automated threat modeling tools that analyze system architecture and generate risk assessments
+- Integration of AI safety concerns (fairness, bias, misuse) alongside traditional security threats
+- Regulatory requirements for documented threat models in high-risk AI applications
+
+### Next Steps
+
+- Chapter 6: Scoping an Engagement—translating threat models into actionable testing plans
+- Chapter 9: LLM Architectures and System Components—understanding the technical foundation for identifying attack surfaces
+- Chapter 31: AI System Reconnaissance—applying threat modeling insights to gather intelligence during engagements
+
+---

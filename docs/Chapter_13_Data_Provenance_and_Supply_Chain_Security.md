@@ -1850,3 +1850,40 @@ def detect_insider_poisoning(training_data, baseline_distribution):
 - Separation of duties
 
 ---
+
+## 13.8 Conclusion
+
+### Chapter Takeaways
+
+1. **Supply Chain is the Weakest Link:** Pre-trained models, training data, dependencies, and third-party APIs create extensive attack surfaces that attackers actively exploit
+2. **Data Provenance is Security-Critical:** Understanding the origin, handling, and integrity of training data and models prevents poisoning and backdoor attacks
+3. **Third-Party Risk is Systemic:** Dependencies on external model repositories, cloud APIs, and plugin ecosystems require rigorous vetting and monitoring
+4. **Supply Chain Attacks Have Persistent Impact:** Compromised models or poisoned data can affect countless downstream users and persist for extended periods
+
+### Recommendations for Red Teamers
+
+- **Map the Entire Supply Chain:** Trace every model, dataset, dependency, and API from source to deployment
+- **Test Integrity Verification:** Attempt to introduce malicious models or data to test validation mechanisms
+- **Simulate Supply Chain Compromises:** Use isolated environments to demonstrate impact of poisoned components
+- **Assess Third-Party Vendors:** Evaluate security posture of model providers, API vendors, and plugin developers
+
+### Recommendations for Defenders
+
+- **Implement Provenance Tracking:** Maintain comprehensive records of model origins, training data sources, and dependency versions
+- **Verify Model Integrity:** Use cryptographic hashing and digital signatures to ensure models haven't been tampered with
+- **Vet Dependencies:** Scan for vulnerabilities, verify package authenticity, and monitor for typosquatting
+- **Secure Third-Party Integrations:** Apply least privilege, validate inputs/outputs, and monitor for suspicious behavior
+- **Plan for Compromise:** Develop incident response procedures for supply chain attacks including model rollback and dependency isolation
+
+### Future Considerations
+
+As AI supply chains grow more complex with model marketplaces, federated learning, and distributed training, attack surfaces will expand dramatically. Expect standardized software bill of materials (SBOM) for AI systems, provenance verification using blockchain, automated supply chain security scanning, and regulatory requirements for third-party AI risk management.
+
+### Next Steps
+
+- Chapter 14: Prompt Injection—understanding attacks that exploit deployed systems
+- Chapter 19: Training Data Poisoning—deep dive into data-level supply chain attacks
+- Chapter 26: Supply Chain Attacks on AI—advanced supply chain exploitation techniques
+- Practice: Conduct a supply chain audit on an AI system following the framework provided
+
+---

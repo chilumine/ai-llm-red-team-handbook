@@ -118,3 +118,36 @@ An accurately scoped engagement shows professionalism and respect for the client
 ---
 
 _With a precise scope in place, you are ready to establish the laboratory, test environments, and safety measures needed for executing a secure and efficient AI red teaming exercise. Continue to the next chapter for practical lab setup and environmental safety._
+
+## 6.9 Conclusion
+
+### Chapter Takeaways
+
+1. **Scope Defines Success:** Proper scoping ensures red team engagements are focused, legally protected, resource-efficient, and aligned with business objectives
+2. **Clarity Prevents Conflicts:** Explicit in-scope/out-of-scope boundaries protect both red teamers and clients from misunderstandings and legal exposure
+3. **Scoping is Collaborative:** Engaging stakeholders from business, security, engineering, and compliance ensures comprehensive coverage and buy-in
+4. **Flexibility is Necessary:** Be prepared to manage scope creep and adjust boundaries as new findings emerge or system architecture changes
+
+### Recommendations for Red Teamers
+
+- **Document Everything:** Create detailed scoping documents with clear in-scope/out-of-scope tables and get written approval before testing
+- **Ask Probing Questions:** Don't accept vague answers—drill down on exactly which systems, data, and attack vectors are permitted
+- **Communicate Continuously:** When discoveries push against scope boundaries, pause and consult with stakeholders before proceeding
+
+### Recommendations for Defenders
+
+- **Involve Technical Teams Early:** Ensure engineers who built the AI system participate in scoping to provide accurate technical boundaries
+- **Be Realistic About Coverage:** Don't over-scope engagements with unrealistic timelines or under-scope by protecting too many systems
+- **Plan for Follow-Up:** Scoping should allow for iterative testing as AI systems evolve and new attack techniques emerge
+
+### Future Considerations
+
+As AI systems grow in complexity and integration depth, scoping will become more challenging. Expect to see standardized scoping frameworks for AI red teaming, automated scope discovery tools that map AI attack surfaces, and regulatory guidance on minimum testing requirements for high-risk AI applications.
+
+### Next Steps
+
+- Chapter 7: Lab Setup and Environmental Safety—creating secure testing environments within the defined scope
+- Chapter 4: SOW, Rules of Engagement, and Client Onboarding—reviewing the contractual framework that supports scoping
+- Practice: Develop scoping documents for hypothetical AI engagements to refine your scoping process
+
+---

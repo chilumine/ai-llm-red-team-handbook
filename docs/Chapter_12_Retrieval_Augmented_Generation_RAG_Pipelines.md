@@ -1272,3 +1272,38 @@ class RAGAccessControlTester:
 ---
 
 _RAG systems represent one of the most powerful - and vulnerable - implementations of LLM technology in enterprise environments. By understanding their architecture, attack surfaces, and testing methodologies, red teamers can help organizations build secure, production-ready AI assistants. The next chapter will explore data provenance and supply chain security - critical for understanding where your AI system's data comes from and how it can be compromised._
+
+## 12.13 Conclusion
+
+### Chapter Takeaways
+
+1. **RAG Extends LLM Capabilities and Vulnerabilities:** Retrieval systems introduce attack vectors through document injection, query manipulation, and embedding exploitation
+2. **Document Poisoning is High-Impact:** Attackers who compromise RAG knowledge bases can persistently influence model outputs across many users
+3. **Vector Databases Create New Attack Surfaces:** Embedding manipulation, similarity search exploitation, and metadata abuse enable novel attacks
+4. **RAG Security Requires Defense-in-Depth:** Protecting retrieval systems demands document validation, query sanitization, embedding integrity, and output filtering
+
+### Recommendations for Red Teamers
+
+- **Map the Entire RAG Pipeline:** Understand document ingestion, embedding generation, similarity search, and context injection processes
+- **Test Document Injection:** Attempt to add malicious documents to knowledge bases through all available channels
+- **Exploit Retrieval Logic:** Craft queries that retrieve unintended documents or bypass access controls
+- **Manipulate Embeddings:** Test if embedding similarity can be exploited to retrieve inappropriate content
+
+### Recommendations for Defenders
+
+- **Validate All Documents:** Implement rigorous input validation for documents added to RAG knowledge bases
+- **Implement Access Controls:** Ensure retrieval systems respect user permissions and data classification
+- **Monitor Retrieval Patterns:** Track unusual queries, suspicious document retrievals, and anomalous embedding similarities
+- **Sanitize Retrieved Context:** Treat retrieved documents as potentially malicious—validate before injecting into LLM context
+
+### Future Considerations
+
+As RAG systems become more sophisticated with multi-hop retrieval, cross-modal search, and dynamic knowledge updates, attack surfaces will expand. Expect research on adversarial retrieval, embedding watermarking for provenance tracking, and AI-powered anomaly detection in retrieval patterns.
+
+### Next Steps
+
+- Chapter 13: Data Provenance and Supply Chain Security—securing the sources that feed RAG systems
+- Chapter 14: Prompt Injection—combining RAG exploitation with injection techniques
+- Practice: Set up a simple RAG pipeline and test document injection attacks
+
+---

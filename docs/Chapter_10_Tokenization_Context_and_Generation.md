@@ -117,3 +117,36 @@ Before launching complex attacks, map the I/O boundaries:
 3. **Fuzz Special Characters:** Send emojis, ZWSP, and rare unicode to see if the tokenizer breaks.
 
 Understanding the "physics" of tokens and context allows you to engineer attacks that bypass higher-level safety alignment.
+
+## 10.10 Conclusion
+
+### Chapter Takeaways
+
+1. **Tokenization Creates Attack Opportunities:** Understanding BPE, subword encoding, and special tokens reveals injection vectors and obfuscation techniques
+2. **Context Windows Are Security-Critical:** Length limits, attention mechanisms, and context handling create exploitable behaviors
+3. **Generation Parameters Affect Security:** Temperature, top-k sampling, and decoding strategies influence model susceptibility to attacks
+4. **Token-Level Understanding Enables Sophisticated Attacks:** Red teamers who understand tokenization can craft payloads that evade detection
+
+### Recommendations for Red Teamers
+
+- **Experiment with Tokenization:** Test how different inputs are tokenized to find edge cases and boundary conditions
+- **Exploit Context Limits:** Craft attacks that leverage context window exhaustion, attention dilution, or position-based vulnerabilities
+- **Manipulate Generation:** Understand how temperature and sampling affect output to maximize attack success
+
+### Recommendations for Defenders
+
+- **Monitor Tokenization Anomalies:** Track unusual token patterns, rare subwords, or special token abuse
+- **Implement Context Safety:** Add context window monitoring, attention tracking, and position-aware security controls
+- **Secure Generation Parameters:** Limit user control over temperature and sampling to prevent adversarial optimization
+
+### Future Considerations
+
+Evolving tokenization approaches (character-level, byte-level, learned vocabularies) will create new attack surfaces. Context window extensions and hierarchical attention mechanisms will require updated security models. Expect research on tokenization-aware security and context-preserving defenses.
+
+### Next Steps
+
+- Chapter 11: Plugins, Extensions, and External APIs—how context flows into external systems
+- Chapter 14: Prompt Injection—applying tokenization knowledge to craft sophisticated injections
+- Practice: Experiment with tokenization using tools like spaCy or Hugging Face tokenizers
+
+---

@@ -152,3 +152,36 @@ Before attacking, answer these questions about your target:
 4. **Are output filters streaming?** (If the text appears and then turns to "Content Policy Violation", the filter is post-generation. If it refuses immediately, it's pre-generation.)
 
 Understanding these components transitions you from "guessing passwords" to "engineering exploits."
+
+## 9.10 Conclusion
+
+### Chapter Takeaways
+
+1. **Architecture Knowledge Enables Effective Attacks:** Understanding transformer mechanics, tokenization, and attention mechanisms reveals where vulnerabilities exist
+2. **System Components Expand Attack Surface:** RAG pipelines, plugins, and external integrations create multiple exploitation paths beyond the base model
+3. **Architectural Choices Have Security Implications:** Design decisions about context windows, embedding models, and retrieval strategies directly impact security posture
+4. **Technical Understanding Improves Testing:** Red teamers who understand internal architecture can craft more sophisticated and effective attacks
+
+### Recommendations for Red Teamers
+
+- **Study the Architecture First:** Before testing, understand the target's transformer architecture, tokenization approach, and system integration points
+- **Map All Components:** Document not just the LLM but all surrounding systems—RAG databases, plugins, APIs, preprocessing pipelines
+- **Exploit Architectural Weaknesses:** Target vulnerabilities specific to the architecture—context window limitations, attention mechanisms, embedding spaces
+
+### Recommendations for Defenders
+
+- **Document Your Architecture:** Maintain up-to-date architecture diagrams that red teamers can use to focus their efforts effectively
+- **Consider Security in Design:** Evaluate security implications of architectural choices before deployment
+- **Secure the Entire System:** Don't focus solely on the model—plugins, RAG databases, and APIs are equally critical
+
+### Future Considerations
+
+As LLM architectures evolve with mixture-of-experts, sparse attention, and multi-modal capabilities, attack surfaces will expand. Expect new vulnerabilities in model selection logic, cross-modal boundary violations, and distributed inference systems. Security teams must stay current with architectural innovations.
+
+### Next Steps
+
+- Chapter 10: Tokenization, Context, and Generation—deeper dive into specific attack-relevant components
+- Chapter 11: Plugins, Extensions, and External APIs—understanding integration-based vulnerabilities
+- Chapter 14: Prompt Injection—applying architectural knowledge to practical attacks
+
+---
