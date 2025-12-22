@@ -345,6 +345,7 @@ Malicious Plugin:
 ### 13.4.1 Model Poisoning and Backdoors
 
 #### Definition
+
 Model poisoning involves manipulating a model during training or fine-tuning to introduce malicious behavior that activates under specific conditions (triggers) while maintaining normal performance otherwise.
 
 #### Attack Mechanics
