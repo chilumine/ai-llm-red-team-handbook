@@ -1,5 +1,6 @@
 # Local files - never commit
 ignore/
+.agents/
 
 # Python
 __pycache__/
@@ -27,3 +28,4 @@ Thumbs.db
 *.tmp
 *.temp
 *.log
+.agent/
