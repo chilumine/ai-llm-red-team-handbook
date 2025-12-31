@@ -104,7 +104,7 @@ At the token/embedding level, this technique exploits:
 
 #### What This Code Does
 
-[Clear description of what the code demonstrates, its purpose, and what attackers would use it for]
+[Clear description of what the code demonstrates, its purpose, and what attackers would use it for i.e. why and how it works]
 
 #### Key Components
 
