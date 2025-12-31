@@ -24,15 +24,15 @@ Federated learning (FL) represents a paradigm shift in machine learning by enabl
 Federated learning systems are increasingly deployed in critical applications:
 
 - **Healthcare**: Collaborative disease prediction models across hospitals (protecting patient privacy worth billions in HIPAA compliance costs)
-- **Financial Services**: Fraud detection models trained across banks without sharing transaction data (preventing losses exceeding $32 billion annually according to Nilson Report 2023)
-- **Mobile Devices**: Keyboard prediction and recommendation systems serving billions of users (Google's Gboard processes over 200 million daily active users)
-- **Autonomous Vehicles**: Shared learning from vehicle fleets while preserving proprietary driving data (market projected to reach $2.1 trillion by 2030)
+- **Financial Services**: Fraud detection models trained across banks without sharing transaction data (preventing losses exceeding $33.83 billion annually according to Nilson Report 2023)
+- **Mobile Devices**: Keyboard prediction and recommendation systems serving billions of users (Google's Gboard has over 1 billion installs globally)
+- **Autonomous Vehicles**: Shared learning from vehicle fleets while preserving proprietary driving data (market projected to reach $2.1 trillion by 2030, estimates vary)
 
-Real-world incidents demonstrate the severity:
+Research demonstrations highlight the severity of FL vulnerabilities:
 
-- 2021: Researchers demonstrated poisoning attacks reducing federated model accuracy from 92% to 34% with only 10% malicious participants
-- 2022: Gradient inversion attacks successfully reconstructed high-resolution training images from federated updates
-- 2023: Byzantine attacks caused convergence failures in production FL systems, resulting in emergency rollbacks
+- Research has demonstrated poisoning attacks reducing federated model accuracy from 92% to 34% with only 10% malicious participants ([Fang et al., 2020](https://www.usenix.org/conference/usenixsecurity20/presentation/fang))
+- Gradient inversion attacks have successfully reconstructed high-resolution training images from federated updates in controlled experiments ([Zhu et al., 2019](https://arxiv.org/abs/1906.08935))
+- Byzantine attacks can cause convergence failures in FL systems, potentially requiring emergency rollbacks ([Blanchard et al., 2017](https://arxiv.org/abs/1703.02757))
 
 ### Key Concepts
 
@@ -56,10 +56,10 @@ Federated learning attacks exploit fundamental tensions between privacy, securit
 
 | Paper                                                                                                                                  | Key Finding                                                             | Relevance                                                                          |
 | -------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| [McMahan et al., 2017] "[Communication-Efficient Learning of Deep Networks from Decentralized Data](https://arxiv.org/abs/1602.05629)" | Introduced FedAvg algorithm enabling practical federated learning       | Defines the baseline aggregation mechanism that most attacks target                |
-| [Bagdasaryan et al., 2020] "[How To Backdoor Federated Learning](https://arxiv.org/abs/1807.00459)"                                    | Demonstrated model replacement attacks achieving 100% backdoor accuracy | Showed single malicious participant can compromise entire FL system                |
+| [McMahan et al., 2016] "[Communication-Efficient Learning of Deep Networks from Decentralized Data](https://arxiv.org/abs/1602.05629)" | Introduced FedAvg algorithm enabling practical federated learning       | Defines the baseline aggregation mechanism that most attacks target                |
+| [Bagdasaryan et al., 2018] "[How To Backdoor Federated Learning](https://arxiv.org/abs/1807.00459)"                                    | Demonstrated model replacement attacks achieving 100% backdoor accuracy | Showed single malicious participant can compromise entire FL system                |
 | [Zhu et al., 2019] "[Deep Leakage from Gradients](https://arxiv.org/abs/1906.08935)"                                                   | Reconstructed training images from shared gradients with high fidelity  | Proved FL gradient sharing leaks private information                               |
-| [Blanchard et al., 2017] "[Machine Learning with Adversaries: Byzantine Tolerant Gradient Descent](https://arxiv.org/abs/1703.02757)"  | Analyzed Byzantine-robust aggregation mechanisms                        | Established theoretical foundations for defending against adversarial participants |
+| [Blanchard et al., 2017] "[Byzantine-Tolerant Machine Learning](https://arxiv.org/abs/1703.02757)"                                     | Analyzed Byzantine-robust aggregation mechanisms                        | Established theoretical foundations for defending against adversarial participants |
 
 #### What This Reveals About LLMs
 
@@ -117,8 +117,8 @@ At the parameter level, federated learning exploits:
 
 ### Research Basis
 
-- **Introduced by:** [McMahan et al., 2017] "Communication-Efficient Learning of Deep Networks from Decentralized Data"
-- **Security Analysis:** [Bagdasaryan et al., 2020] "How To Backdoor Federated Learning"
+- **Introduced by:** [McMahan et al., 2016](https://arxiv.org/abs/1602.05629) "Communication-Efficient Learning of Deep Networks from Decentralized Data"
+- **Security Analysis:** [Bagdasaryan et al., 2018](https://arxiv.org/abs/1807.00459) "How To Backdoor Federated Learning"
 - **Open Questions:** Optimal balance between privacy guarantees, Byzantine robustness, and model utility remains unsolved; theoretical limits of gradient leakage under differential privacy are still debated
 
 ### 27.2.1 Federated Learning Architectures
@@ -491,7 +491,7 @@ This implementation succeeds because:
 1. **FedAvg Vulnerability:** Simple averaging treats all clients equally; malicious updates directly influence global parameters proportional to attacker fraction
 2. **No Update Validation:** Server cannot verify update correctness without accessing private client data, enabling undetected poisoning
 3. **Cumulative Effect:** Repeated poisoning across multiple rounds compounds damage as corrupted global model serves as starting point for subsequent rounds
-4. **Research Basis:** [Fang et al., 2020] "Local Model Poisoning Attacks to Byzantine-Robust Federated Learning" demonstrated even Byzantine-robust aggregators fail against sophisticated poisoning
+4. **Research Basis:** [Fang et al., 2020](https://www.usenix.org/conference/usenixsecurity20/presentation/fang) "Local Model Poisoning Attacks to Byzantine-Robust Federated Learning" demonstrated even Byzantine-robust aggregators fail against sophisticated poisoning
 5. **Transferability:** Works across model architectures; attack effectiveness depends on malicious client fraction and aggregation mechanism
 
 ### 27.3.2 Targeted Model Poisoning (Backdoor Attacks)
@@ -757,7 +757,7 @@ if __name__ == "__main__":
 1. **Dual Training:** Simultaneously optimizing clean and backdoored objectives prevents accuracy degradation that would trigger detection
 2. **Model Replacement Scaling:** Aggressive update scaling (50x) overrides honest participants in FedAvg aggregation
 3. **Trigger Specificity:** Rare trigger pattern ensures backdoor doesn't activate on legitimate inputs
-4. **Research Basis:** [Bagdasaryan et al., 2020] showed single backdoor attacker achieves 100% attack success rate with model replacement against standard FedAvg
+4. **Research Basis:** [Bagdasaryan et al., 2018](https://arxiv.org/abs/1807.00459) showed single backdoor attacker achieves 100% attack success rate with model replacement against standard FedAvg
 5. **Transferability:** Effective across vision, NLP, and tabular data; harder to defend against than untargeted poisoning
 
 ### Key Takeaways
@@ -1154,14 +1154,16 @@ def krum_aggregation(updates, num_malicious):
 
 ## 27.10 Case Studies and Real-World Examples
 
-### Case Study 1: Healthcare Federated Learning Poisoning (2022)
+### Hypothetical Case Study 1: Healthcare Federated Learning Poisoning
 
-#### Incident Overview
+> [!NOTE]
+> The following scenario is a hypothetical illustration based on documented attack capabilities in academic research. It demonstrates realistic attack vectors and impacts supported by [Fang et al., 2020](https://www.usenix.org/conference/usenixsecurity20/presentation/fang) and related studies.
 
-- **When:** March 2022 (research demonstration)
-- **Target:** Federated disease prediction model across 10 hospitals
-- **Impact:** Model accuracy dropped from 87% to 52%; 35% of diagnoses incorrect
-- **Attack Vector:** Two participating hospitals (20%) performed backdoor attacks
+#### Scenario Overview
+
+- **Setting:** Federated disease prediction model across 10 hospitals
+- **Simulated Impact:** Model accuracy dropped from 87% to 52%; 35% of diagnoses incorrect
+- **Attack Vector:** Two participating nodes (20%) performed backdoor attacks
 
 #### Attack Timeline
 
@@ -1177,13 +1179,15 @@ def krum_aggregation(updates, num_malicious):
 - Need real-time accuracy monitoring on validation sets
 - Byzantine-robust aggregation essential for safety-critical applications
 
-### Case Study 2: Financial Fraud Detection Gradient Inversion (2023)
+### Hypothetical Case Study 2: Financial Fraud Detection Gradient Inversion
 
-#### Incident Overview
+> [!NOTE]
+> This scenario illustrates theoretical attack capabilities demonstrated in academic research, including [Zhu et al., 2019](https://arxiv.org/abs/1906.08935) "Deep Leakage from Gradients."
 
-- **When:** June 2023 (security audit)
-- **Target:** Federated fraud detection across 5 banks
-- **Impact:** Reconstructed 78% of transaction details from shared gradients
+#### Scenario Overview
+
+- **Setting:** Federated fraud detection across 5 financial institutions
+- **Simulated Impact:** Reconstructed 78% of transaction details from shared gradients
 - **Attack Vector:** Passive gradient observation; optimization-based reconstruction
 
 ### Lessons Learned
@@ -1250,7 +1254,7 @@ Emerging trends include adaptive poisoning attacks that evolve to evade detectio
 
 ### Next Steps
 
-- Chapter 28: Privacy-Preserving Machine Learning Attacks
+- Chapter 28: Privacy-Preserving Machine Learning Attacks [Planned]
 - Chapter 23: Advanced Model Manipulation Techniques
 - Practice: Set up federated learning environment and test attacks (Chapter 7)
 
