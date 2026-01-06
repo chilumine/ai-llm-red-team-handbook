@@ -2592,7 +2592,9 @@ Priority actions based on severity:
 - Cache poisoning is a real risk
 - Need for thorough testing of multi-tenant systems
 
-# Example: Testing memorization on different models
+### 15.12.2 Research Findings
+
+#### Example: Testing memorization on different models
 
 MEMORIZATION_BENCHMARK = {
 'model': 'GPT-2-1.5B',
