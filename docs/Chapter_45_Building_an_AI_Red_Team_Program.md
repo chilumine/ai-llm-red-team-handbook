@@ -13,7 +13,7 @@ Related: Chapter 38 (Continuous Red Teaming)
 
 ![ ](assets/page_header.svg)
 
-_Operationalizing the "Red Team" mindset requires more than just hacking skills. It requires a formal program, a budget, and a defined scope. This chapter provides the blueprint for CISOs and Directors to build an in-house AI Security capability._
+Turning the Red Team mindset into operations takes more than hacking skills. It requires a formal program, a budget, and a defined scope. This chapter provides the blueprint for CISOs and Directors to build an in-house AI Security capability.
 
 ## 45.1 From "Ad-Hoc" to "Systematic"
 
@@ -25,6 +25,23 @@ Most organizations start AI security by asking a developer to "try and break the
 2. **Level 2 (Periodic):** Annual 3rd-party assessments.
 3. **Level 3 (Continuous):** Automated scans (Garak/PyRIT) in CI/CD.
 4. **Level 4 (Adversarial):** Dedicated internal team developing novel attacks against model weights.
+
+### 45.1.1 The Purple Team Architecture
+
+Red Teams find bugs; Blue Teams fix them. Purple Teams do both simultaneously.
+
+```mermaid
+graph LR
+    Red[Red Team: Attack Model] -->|1. Generate Jailbreaks| API[LLM Gateway]
+    API -->|2. Log Attack| Green[Green Team: Data Science]
+    Green -->|3. Fine-tune Filter| Guard[Guardrails]
+
+    subgraph "Feedback Loop"
+    Red -->|4. Re-test| Guard
+    end
+```
+
+The goal is to create a **Closed Loop**: Every successful attack immediately becomes a regression test case in the CI/CD pipeline.
 
 ---
 
@@ -72,21 +89,32 @@ This is a unicorn role. You typically hire for one strength and train the other.
 
 ### 45.3.1 The Interview Kit
 
-**Round 1: The Machine Learning Engineer (Testing Security Aptitude)**
+#### Round 1: The Machine Learning Engineer (Testing Security Aptitude)
 
 - _Question:_ "You are building a RAG system. How do you prevent the model from retrieving a document the user shouldn't see?"
 - _Good Answer:_ "Implement ACLs at the Vector Database level (Metadata filtering) before the retrieval step."
 - _Bad Answer:_ "Ask the LLM to only show authorized documents."
 
-**Round 2: The Penetration Tester (Testing AI Aptitude)**
+#### Round 2: The Penetration Tester (Testing AI Aptitude)
 
 - _Question:_ "Explain how 'Tokenization' impacts a SQL Injection payload."
 - _Good Answer:_ "The SQL payload `' OR 1=1` might be tokenized differently depending on spacing, potentially bypassing a regex filter that expects specific character sequences. Also, the LLM predicts tokens, so it might 'fix' a broken SQL injection to make it valid."
 
-**Round 3: The Take-Home Challenge**
+#### Round 3: The Take-Home Challenge
 
 - _Task:_ "Here is a Docker container running a local Llama-3 instance with a hidden System Prompt. You have API access only. Extract the System Prompt."
 - _Success:_ Candidate uses "Repeat after me" or "Completion suffix" attacks.
+
+### 45.3.2 Training Curriculum (Internal University)
+
+You can't hire enough experts; you must build them.
+
+#### Syllabus for "AI Security 101":
+
+1. **Module 1: Prompt Engineering Internals.** (How Attention works, Context Windows, System Prompts).
+2. **Module 2: The OWASP Top 10 for LLMs.** (Injection, Data Leakage, Supply Chain).
+3. **Module 3: Hands-On Lab.** (Use `Garak` to find a vulnerability in a sandboxed app).
+4. **Module 4: Remediation.** (How to use `NeMo Guardrails` or `Guardrails AI` to patch the hole).
 
 ---
 
@@ -127,6 +155,19 @@ Executive dashboards need numbers.
 3. **Human Bypass Rate:**
    - _Formula:_ `Success rate of human red team attempts vs. Automated guardrails.`
    - _Goal:_ Low. If humans easily bypass the automated defense, the automation is creating a false sense of security.
+
+### 45.5.1 Board Level Reporting
+
+The Board doesn't care about "Prompt Injection." They care about Risk.
+
+#### Slide Deck Template
+
+1. **The "Crown Jewels" Analysis:**
+   - "We use AI for [X]. If it fails, we lose [$Y]."
+2. **Current Risk Posture:**
+   - "We tested [5] models. [2] were susceptible to Data Extraction."
+3. **The "Ask":**
+   - "We need [$50k] for API credits to continuous test the new Customer Support Bot before launch."
 
 ---
 

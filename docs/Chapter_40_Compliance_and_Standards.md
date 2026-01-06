@@ -13,7 +13,7 @@ Related: Chapter 02 (Ethics and Legal), Chapter 39 (Bug Bounty)
 
 ![ ](assets/page_header.svg)
 
-_In the enterprise, "Red Teaming" is often synonymous with "Compliance Validation." This chapter transforms abstract regulations—like the EU AI Act and ISO 42001—into concrete, testable engineering requirements. We will build tools to automatically audit AI systems against these legal frameworks._
+In the enterprise, Red Teaming often means "Compliance Validation." This chapter turns abstract regulations—like the EU AI Act and ISO 42001—into concrete, testable engineering requirements. We will build tools to automatically audit AI systems against these legal frameworks.
 
 ## 40.1 The Shift: From "Hacking" to "Assurance"
 
@@ -29,7 +29,7 @@ For years, AI Red Teaming was an ad-hoc activity. But with the passage of the **
 
 ## 40.2 Deep Dive: The Regulatory Landscape
 
-We interpret these frameworks as "Attack Graphs." If a standard requires X, we attack X to prove it's missing.
+Think of these frameworks as "Attack Graphs." If a standard requires X, we attack X to prove it's missing.
 
 ### 40.2.1 NIST AI RMF (Risk Management Framework)
 
@@ -47,6 +47,20 @@ ISO 42001 is the global certification standard. It has specific "Annex A" contro
 
 - **Control A.7.2 (Vulnerability Management):** Requires regular scanning. _Red Team Action:_ Demonstrate that the organization's scanner (e.g., Garak) missed a known CVE in the inference library (e.g., PyTorch pickle deserialization).
 - **Control A.9.3 (Data Cycle):** Requires clean training data. _Red Team Action:_ Find poisoning in the dataset (Chapter 13).
+
+### 40.2.3 Global Regulatory Map
+
+Regulation is not uniform. The Red Teamer must know which geography applies.
+
+| Feature                  | **EU AI Act**                            | **US (NIST/White House)**                | **China (Generative AI Measures)**               |
+| :----------------------- | :--------------------------------------- | :--------------------------------------- | :----------------------------------------------- |
+| **Philosophy**           | **Risk-Based** (Low/High/Unacceptable)   | **Standard-Based** (Voluntary consensus) | **Values-Based** (Must reflect socialist values) |
+| **Red Team Requirement** | **Mandatory** for High Risk (Article 15) | **Recommended** (NIST RMF)               | **Mandatory** Security Assessment                |
+| **Deepfakes**            | Must be watermarked (Transparency)       | Must be labeled                          | Must be labeled                                  |
+| **Penalties**            | Up to **7% of Global Turnover**          | Contractual / Reputational               | Administrative / Criminal                        |
+
+> [!IMPORTANT]
+> If your client has users in Europe, the **EU AI Act applies**, even if the company is based in California. This is extraterritorial jurisdiction (like GDPR).
 
 ---
 
@@ -142,6 +156,46 @@ if __name__ == "__main__":
     print(validator.generate_audit_artifact(findings))
 ```
 
+### 40.3.3 Automated Artifact Generation: The Model Card
+
+Red Teamers often need to produce a "Model Card" (documented by Google/Hugging Face) to summarize security.
+
+```python
+def generate_model_card(model_name, scan_results):
+    """
+    Generates a Markdown Model Card based on scan data.
+    """
+    card = f"""
+# Model Card: {model_name}
+
+## Security & Safety
+**Status:** {'❌ VULNERABLE' if scan_results['fails'] > 0 else '✅ VERIFIED'}
+
+### Known Vulnerabilities
+- **Prompt Injection:** {'Detected' if 'injection' in scan_results else 'None'}
+- **PII Leaks:** {'Detected' if 'pii' in scan_results else 'None'}
+
+### Intended Use
+This model is intended for customer support.
+**NOT INTENDED** for medical diagnosis or code generation.
+
+### Risk Assessment
+This model was Red Teamed on {scan_results['date']}.
+Total Probes: {scan_results['probes_count']}.
+"""
+    return card
+```
+
+### 40.3.4 The Audit Interview (HumanINT)
+
+Not all vulnerabilities are in the code. Some are in the culture.
+
+**Questions for the Data Scientist:**
+
+1. _"What dataset did you use for unlearning? (Right to be Forgotten)"_ -> (Test for Data Remnants)
+2. _"Do you have a 'Kill Switch' if the model starts hallucinating hate speech?"_ -> (Test for Incident Response)
+3. _"How often is the vector database refreshed?"_ -> (Test for Stale Data / Poisoning accumulation)
+
 ---
 
 ## 40.4 Forensic Compliance: The Audit Log
@@ -216,9 +270,29 @@ auditor.audit()
 
 **Impact:** The Red Team report led to the immediate suspension of the bot before deployment, saving the hospital from potential malpractice lawsuits and regulatory fines.
 
+### 40.6 Shadow AI Governance
+
+Policy is the first line of defense. If you don't tell employees _how_ to use AI, they will use it poorly.
+
+#### Template: Acceptable Use Policy (Snippet)
+
+> **1. Data Classification:**
+>
+> - **Public Data:** May be used with ChatGPT/Claude (Standard).
+> - **Internal Data:** Must ONLY be used with Enterprise Instances (Data Retention = 0).
+> - **Confidential/PII:** STRICTLY PROHIBITED from being sent to any third-party model.
+>
+> **2. Output Verification:**
+>
+> - Users remain fully liable for any code or text generated by AI. "The AI wrote it" is not a defense.
+>
+> **3. Shadow IT:**
+>
+> - Running local LLMs (Ollama/Llamafile) on corporate laptops requires IT Security approval (endpoint isolation).
+
 ---
 
-## 40.6 Conclusion
+## 40.7 Conclusion
 
 Compliance auditing is the "Blue Team" side of "Red Teaming." It turns the excitement of the exploit into the stability of a business process.
 

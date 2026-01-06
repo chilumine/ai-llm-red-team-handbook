@@ -13,11 +13,11 @@ Related: Chapter 40 (Compliance)
 
 ![ ](assets/page_header.svg)
 
-_Security is not a single feature; it is an architecture. This chapter moves beyond "tips and tricks" to provide a blueprint for a production-grade AI defense stack, including advanced input sanitization, token-aware rate limiting, and automated circuit breakers._
+Security isn't a feature. It's an architecture. This chapter moves beyond "tips and tricks" to blueprint a production-grade AI defense stack, including advanced input sanitization, token-aware rate limiting, and automated circuit breakers.
 
 ## 41.1 Introduction
 
-When a Red Team successfully exploits a system, the remediation is rarely "fix the prompt." It usually requires a structural change to how data flows through the application.
+When a Red Team breaks a system, the fix is rarely just "patching the prompt." It usually requires a structural change to how data flows through the application.
 
 ### The "Shields Up" Architecture
 
@@ -47,7 +47,17 @@ graph TD
 
     Toxic -->|Pass| Client[User Client]
     Toxic -->|Fail| Fallback[Static Error Msg]
+
+
 ```
+
+### 41.1.1 Securing the MLOps Pipeline
+
+Security starts before the model is even deployed. The **MLOps Pipeline** (Kubeflow, MLflow, Jenkins) is a high-value target.
+
+- **Model Signing:** Use **Sigstore/Cosign** to sign model weights (`.pt`, `.safetensors`) during the build process.
+- **Dependency Pinning:** Freeze `torch`, `transformers`, and `numpy` versions to prevent Supply Chain poisoning.
+- **Artifact Registry:** Treat models like Docker images. Scan them for pickling vulnerabilities before pushing to the `Production` registry.
 
 ---
 
@@ -162,7 +172,45 @@ class PIIFilter:
 # Usage
 leaky_output = "Sure, the admin email is admin@corp.com and key is sk-1234..."
 print(PIIFilter().redact(leaky_output))
+
+
 # Output: "Sure, the admin email is <EMAIL_REDACTED> and key is <API_KEY_REDACTED>..."
+
+```
+
+### 41.3.2 RAG Defense-in-Depth
+
+Retrieval-Augmented Generation (RAG) introduces new risks (e.g., retrieving a malicious document).
+
+**Secure RAG Architecture:**
+
+1. **Document Segmentation:** Don't let the LLM see the whole document. Chunk it.
+2. **Vector DB RBAC:** The Vector Database (e.g., Pinecone) must enforce Access Control Lists (ACLs). If User A searches, only return chunks with `permission: user_a`.
+3. **Citation Enforcement:** Configure the Prompt to _require_ citations.
+   > "Answer using ONLY the provided context. If the answer is not in the context, say 'I don't know'."
+
+---
+
+### 41.3.3 Active Defense: Adversarial Unlearning
+
+Sometimes a filter isn't enough. You need the model to _conceptually refuse_ the request. This is done via **Machine Unlearning** - fine-tuning the model to maximize the loss on specific harmful concepts.
+
+```python
+# Conceptual snippet for Adversarial Unlearning (PyTorch)
+def unlearn_concept(model, tokenizer, harmful_prompts):
+    optimizer = torch.optim.AdamW(model.parameters(), lr=1e-5)
+
+    for prompt in harmful_prompts:
+        inputs = tokenizer(prompt, return_tensors='pt')
+        outputs = model(**inputs, labels=inputs["input_ids"])
+
+        # We want to MAXIMIZE the loss (Gradient Ascent)
+        # so the model becomes "bad" at generating this specific harmful text
+        loss = -outputs.loss
+
+        loss.backward()
+        optimizer.step()
+        optimizer.zero_grad()
 ```
 
 ---
@@ -228,6 +276,17 @@ Monitor these four metrics on your dashboard:
 2. **Token Velocity:** Total tokens processed per minute. Spike = DoS or Wallet Drain.
 3. **Finish Reason Distribution:** If `finish_reason: length` spikes, attackers might be trying to truncate system prompts.
 4. **Feedback Sentiment:** If user thumbs-down spikes, the model might have been poisoned or is undergoing drift.
+
+### 41.5.1 The Blue Team Dashboard
+
+What should be on your Splunk/Datadog screens?
+
+| Metric                     | Threshold          | Alert Severity                       |
+| :------------------------- | :----------------- | :----------------------------------- |
+| **Jailbreak Frequency**    | > 10 per hour      | **High** (Under automated attack)    |
+| **PII Redaction Events**   | > 50 per day       | **Medium** (Check for leak patterns) |
+| **Prompt Injection Score** | > 0.9 (Confidence) | **Critical** (Block IP immediately)  |
+| **Unknown Tools Used**     | > 0                | **Critical** (Shadow IT / New Agent) |
 
 ---
 
