@@ -4,8 +4,9 @@
 
 ![License](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)
-![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg)
-![Last Updated](https://img.shields.io/badge/Last%20Updated-December%202025-orange.svg)
+![Status](https://img.shields.io/badge/Status-Gold%20Master-brightgreen.svg)
+![Version](https://img.shields.io/badge/Version-1.46.154-purple.svg)
+![Last Updated](https://img.shields.io/badge/Last%20Updated-January%202026-orange.svg)
 
 A comprehensive operational toolkit for conducting **AI/LLM red team assessments** on Large Language Models, AI agents, RAG pipelines, and AI-enabled applications. This repository provides both tactical field guidance and strategic consulting frameworks.
 
@@ -13,111 +14,19 @@ A comprehensive operational toolkit for conducting **AI/LLM red team assessments
 
 ---
 
-## 📚 What's Inside
+## 📚 Overview
 
-This repository contains three core resources:
+This repository represents the **Gold Master** release of the AI LLM Red Team Handbook. It contains a fully standardized, 46-chapter curriculum covering the entire spectrum of AI security—from prompt injection and jailbreaking to adversarial machine learning and federated learning attacks.
 
-### 1. **AI LLM Red Team Handbook** (46 Chapters, Fully Standardized, GitBook-ready)
+### Core Resources
 
-A comprehensive consultancy guide with all chapters now featuring standardized metadata, abstracts, and consistent structure:
-
-- **Part I: Professional Foundations (Chapters 1-4)** - Ethics, legal framework, mindset, and engagement setup
-- **Part II: Project Preparation (Chapters 5-8)** - SOW, threat modeling, coping, and lab setup
-- **Part III: Technical Fundamentals (Chapters 9-11)** - LLM architectures and components
-- **Part IV: Pipeline Security (Chapters 12-13)** - RAG and supply chain
-- **Part V: Attacks & Techniques (Chapters 14-24)** - Comprehensive coverage of all major LLM attack vectors
-- **Part VI: Defense & Mitigation (Chapters 25-30)** - Adversarial ML and advanced defense
-- **Part VII: Advanced Operations (Chapters 31-39)** - Reporting, remediation, and automation
-- **Part VIII: Advanced Topics (Chapters 40-46)** - Future threats, compliance, and program building
-
-#### Fully Complete Chapters
-
-1. Introduction to AI Red Teaming _(Beginner, 15 min)_
-2. Ethics, Legal, and Stakeholder Communication _(Beginner, 18 min)_
-3. The Red Teamer's Mindset _(Beginner, 12 min)_
-4. SOW, Rules of Engagement, and Client Onboarding _(Intermediate, 20 min)_
-5. Threat Modeling and Risk Analysis _(Intermediate, 16 min)_
-6. Scoping an Engagement _(Intermediate, 14 min)_
-7. Lab Setup and Environmental Safety _(Intermediate, 25 min, Hands-on)_
-8. Evidence, Documentation, and Chain of Custody _(Intermediate, 18 min, Hands-on)_
-9. LLM Architectures and System Components _(Intermediate, 22 min, Hands-on)_
-10. Tokenization, Context, and Generation _(Intermediate, 20 min, Hands-on)_
-11. Plugins, Extensions, and External APIs _(Intermediate, 16 min)_
-12. Retrieval-Augmented Generation (RAG) Pipelines _(Advanced, 24 min, Hands-on)_
-13. Data Provenance and Supply Chain Security _(Intermediate, 18 min)_
-14. Prompt Injection _(Intermediate, ~30 min, Hands-on)_
-15. Data Leakage and Extraction _(Intermediate, ~30 min, Hands-on)_
-16. Jailbreaks and Bypass Techniques _(Intermediate, ~20 min, Hands-on)_
-17. Plugin and API Exploitation _(Advanced, ~25 min, Hands-on)_
-18. Evasion, Obfuscation, and Adversarial Inputs _(Advanced, ~20 min, Hands-on)_
-19. Training Data Poisoning _(Advanced, ~18 min, Hands-on)_
-20. Model Theft and Membership Inference _(Advanced, ~20 min, Hands-on)_
-21. Model DoS and Resource Exhaustion _(Advanced, ~18 min, Hands-on)_
-22. Cross-Modal and Multimodal Attacks _(Advanced, ~20 min, Hands-on)_
-23. Advanced Persistence and Chaining _(Advanced, ~18 min, Hands-on)_
-24. Social Engineering with LLMs _(Intermediate, ~20 min, Hands-on)_
-25. Advanced Adversarial ML _(Advanced, ~25 min)_
-
-#### Additional Content
-
-- Chapter 36: Reporting and Communication
-- Chapter 37: Remediation Strategies
-- Chapter 38: Continuous Red Teaming
-- Chapter 45: Building an AI Red Team Program
-
-_Remaining chapters are currently in development as stubs._
-
-#### Chapter Features
-
-- ✅ **Standardized Metadata**: Category, difficulty, time estimates, prerequisites
-- ✅ **Compelling Abstracts**: 2-3 sentence chapter summaries
-- ✅ **Theoretical Foundations**: Attack mechanisms and research citations (Ch 14-24)
-- ✅ **Research Landscapes**: Evolution of attacks and current gaps (Ch 14-24)
-- ✅ **Quick References**: Attack vectors, detection, mitigation (Ch 14-24)
-- ✅ **Checklists**: Pre/post-engagement validation
-
-📖 **GitBook Navigation:** See [SUMMARY.md](docs/SUMMARY.md) for the complete chapter structure.
-
-### 2. **AI LLM Red Team Field Manual** (64KB)
-
-Compact operational reference for field use:
-
-- Quick-reference attack prompts and payloads
-- Testing checklists and methodology
-- Tool commands and configurations
-- OWASP Top 10 for LLMs mapping
-- MITRE ATLAS framework alignment
-
-### 3. **Python Testing Framework** (`scripts/`)
-
-Automated testing suite including:
-
-- Prompt injection attacks
-- Safety bypass and jailbreak tests
-- Data leakage and PII extraction
-- Tool/plugin misuse testing
-- Adversarial fuzzing
-- Model integrity validation
-
----
-
-## 🚀 Quick Start
-
-```bash
-# Clone the repository
-git clone https://github.com/shiva108/ai-llm-red-team-handbook.git
-cd ai-llm-red-team-handbook
-
-# Manual testing: Start with the Field Manual
-open docs/AI_LLM\ Red\ Team\ Field\ Manual.md
-
-# Automated testing
-cd scripts
-pip install -r requirements.txt
-python runner.py --config config.py
-```
-
-📖 **Detailed setup:** See [Configuration Guide](docs/Configuration.md)
+1. **AI LLM Red Team Handbook** (46 Chapters, Completed)
+   - Professional consultancy guide with standardized metadata, abstracts, and navigation.
+   - Covers Ethics, Architectures, RAG Security, Agentic Threats, and Compliance (EU AI Act/ISO 42001).
+2. **AI LLM Red Team Field Manual**
+   - Compact operational reference for field use (checklists, payloads, methodology).
+3. **Python Testing Framework** (`scripts/`)
+   - Automated suites for prompt injection, fuzzing, and safety validation.
 
 ---
 
@@ -125,146 +34,131 @@ python runner.py --config config.py
 
 ```text
 ai-llm-red-team-handbook/
-├── docs/                                                # The handbook chapters
-│   ├── archive/                                         # Historical versions
-│   ├── assets/                                          # Images and graphics
-│   ├── field_manuals/                                   # The field manual
-│   └── templates/                                       # Report templates
-└── scripts/                                             # Testing framework
+├── docs/                                   # The Handbook (Chapters 01-46)
+│   ├── archive/                            # Historical versions
+│   ├── assets/                             # Diagrams, charts, and visual aids
+│   ├── field_manuals/                      # Operational checklists and quick-refs
+│   ├── templates/                          # Report and SOW templates
+│   └── SUMMARY.md                          # Master Table of Contents
+├── scripts/                                # Automated testing tools (Python)
+├── workflows/                              # CI/CD and automation workflows
+├── .agent/                                 # Agentic memory and context
+├── LICENSE                                 # CC BY-SA 4.0 License
+└── README.md                               # This file
 ```
 
 ---
 
-## 🎯 Use Cases
+## 🚀 Installation & Usage
 
-| Use Case                   | Resources                       | Description                                    |
-| -------------------------- | ------------------------------- | ---------------------------------------------- |
-| **Red Team Assessments**   | Field Manual + Python Framework | Conduct comprehensive LLM security assessments |
-| **Consultant Engagements** | Handbook + Report Template      | Full methodology for client projects           |
-| **Team Training**          | Handbook Foundations (Ch 1-13)  | Onboard and develop security teams             |
-| **Research & Development** | Attack Chapters (Ch 14-24)      | Deep dives into specific attack surfaces       |
-| **Compliance & Audit**     | Threat Modeling (Ch 5) + Tools  | Risk assessments and control validation        |
+### 1. Manual Exploration (The Handbook)
 
----
+The primary way to use this repository is as a reference.
 
-## ⚙️ Prerequisites
+- Start at [SUMMARY.md](docs/SUMMARY.md) to browse all chapters.
+- View the [Field Manual](docs/AI_LLM_Red_Team_Field_Manual.md) for quick lookups during an engagement.
 
-### Manual Testing
+### 2. Automated Testing Environment
 
-- Any text editor + target LLM access
+To run the provided Python scanning and fuzzing scripts:
 
-### Automated Testing
+**Prerequisites:**
 
 - Python 3.8+
-- Dependencies: `requests`, `pytest`, `pydantic`, `python-dotenv`
-- API credentials for target LLM
+- API Access to a target LLM (OpenAI, Anthropic, or local Ollama)
 
----
-
-## 🧪 Python Testing Framework
-
-### Test Suites
-
-- `test_prompt_injection.py` - Automated prompt injection attacks
-- `test_safety_bypass.py` - Jailbreak and guardrail bypass tests
-- `test_data_exposure.py` - Data leakage and PII extraction
-- `test_tool_misuse.py` - Function-calling and plugin abuse
-- `test_fuzzing.py` - Adversarial input fuzzing
-- `test_integrity.py` - Model integrity and consistency
-
-### Configuration
-
-Create `scripts/.env`:
+**Setup:**
 
 ```bash
-API_ENDPOINT=https://api.example.com/v1/chat/completions
-API_KEY=your-secret-api-key
-MODEL_NAME=gpt-4
+# Clone the repository
+git clone https://github.com/shiva108/ai-llm-red-team-handbook.git
+cd ai-llm-red-team-handbook
+
+# Install dependencies
+cd scripts
+pip install -r requirements.txt
 ```
 
-Run tests:
+**Running Tests:**
 
 ```bash
-python runner.py                           # All tests
-python runner.py --test prompt_injection   # Specific test
-python runner.py --verbose                 # Verbose output
+# Set up your environment variables (API Keys)
+cp .env.example .env
+nano .env
+
+# Run the test runner
+python runner.py --target "gpt-4" --test "prompt_injection"
 ```
 
-📖 **Full configuration options:** [Configuration Guide](docs/Configuration.md)
-
 ---
 
-## 🗺️ Roadmap
+## 📖 Chapter Roadmap (Completed)
 
-### Completed (December 2024)
+This handbook is divided into 8 strategic parts. All chapters are now **complete** and audited.
 
-- ✅ 24 comprehensive chapters (1-13 foundations, 14-24 attack techniques)
-- ✅ Standardized metadata across all chapters
-- ✅ Theoretical foundations and research landscapes (Ch 14-24)
-- ✅ Quick reference guides for attack chapters
-- ✅ Pre/post-engagement checklists
-- ✅ Modular field manual structure
+### Part I: Professional Foundations
 
-### In Development
+- **Ch 01-04:** Introduction, Ethics, Mindset, Rules of Engagement.
 
-- 🔄 Advanced attack chapters (25-35): Adversarial ML, model inversion, backdoors
-- 🔄 Professional practice chapters (36-46): Some completed, others in progress
-- 🔄 Comprehensive linting and code block improvements
-- 🔄 Cross-chapter reference validation
+### Part II: Project Preparation
 
-### Future Enhancements
+- **Ch 05-08:** Threat Modeling, Scoping, Lab Setup, Chain of Custody.
 
-- Sample RAG and LLM test environments
-- Interactive attack case studies with recordings
-- Video tutorials and walkthroughs
-- Auto-generated learning paths from metadata
-- Chapter completion tracking tools
+### Part III: Technical Fundamentals
 
-**Contributions welcome** via issues and PRs.
+- **Ch 09-11:** LLM Architectures, Tokens, Plugins/APIs.
 
----
+### Part IV: Pipeline Security
 
-## 📄 License
+- **Ch 12-13:** RAG Pipelines, Supply Chain Security.
 
-Licensed under **CC BY-SA 4.0** (Creative Commons Attribution-ShareAlike 4.0 International).
+### Part V: Attacks & Techniques
 
-See [LICENSE](LICENSE) for details.
+- **Ch 14-24:** Prompt Injection, Data Leakage, Jailbreaking, API Exploitation, Evasion, Poisoning, Model Theft, DoS, Multimodal, Social Engineering.
 
----
+### Part VI: Defense & Mitigation
 
-## ⚠️ Disclaimer
+- **Ch 25-30:** Adversarial ML, Supply Chain Defense, Federated Learning, Privacy, Model Inversion, Backdoors.
 
-### For authorized security testing only
+### Part VII: Advanced Operations
 
-Ensure:
+- **Ch 31-39:** Reconnaissance, Attack Frameworks, Automation, Defense Evasion, Post-Exploitation, Reporting, Remediation, Continuous Red Teaming, Bug Bounties.
 
-- Written authorization (SOW/RoE) is in place
-- Compliance with applicable laws and regulations (CFAA, GDPR, etc.)
-- Testing conducted in isolated environments when appropriate
-- No unauthorized testing on production systems
+### Part VIII: Advanced Topics
 
-The authors accept no liability for misuse or unauthorized use of this material.
+- **Ch 40-46:** Compliance (EU AI Act), Industry Best Practices, Case Studies, Future of Red Teaming, Emerging Threats, Program Building, Conclusion.
 
 ---
 
 ## 🤝 Contributing
 
-We welcome contributions! Please:
+We welcome contributions to keep this handbook living and breathing.
 
-1. Review existing issues and PRs
-2. Follow the established format and style
-3. Test any code additions
-4. Submit clear, well-documented PRs
-
-For major changes, please open an issue first to discuss.
+1. **Fork** the repository.
+2. **Create** a feature branch (`git checkout -b feature/new-jailbreak`).
+3. **Submit** a Pull Request with a clear description of the change.
+4. Please ensure all new content follows the **Chapter Template** in `docs/templates/`.
 
 ---
 
-## 📬 Contact & Support
+## ⚠️ Disclaimer
+
+**For Authorized Security Testing Only.**
+
+The techniques and tools described in this repository are for educational purposes and for use by authorized security professionals to test systems they own or have explicit permission to test.
+
+- **Do not** use these tools on public LLMs (e.g., ChatGPT, Claude) without complying with their Terms of Service.
+- **Do not** use these techniques for malicious purposes.
+
+The authors and contributors accept no liability for misuse of this material.
+
+---
+
+## 📬 Contact
 
 - **Issues:** [GitHub Issues](https://github.com/shiva108/ai-llm-red-team-handbook/issues)
-- **Discussions:** [GitHub Discussions](https://github.com/shiva108/ai-llm-red-team-handbook/discussions)
+- **License:** [CC BY-SA 4.0](LICENSE)
 
 ---
 
-**Last Updated:** December 2025 | **Chapters:** 46 total (25 complete, standardized with metadata) | **Handbook Status:** Production-Ready
+**Version:** 1.46.154 | **Status:** Gold Master
