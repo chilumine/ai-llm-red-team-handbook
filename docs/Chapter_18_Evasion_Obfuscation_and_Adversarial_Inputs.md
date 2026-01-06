@@ -1133,9 +1133,9 @@ _This chapter provided comprehensive coverage of evasion and obfuscation techniq
 
 ### Current Research Gaps
 
-1.  **Certified Robustness for GenAI**: Can we mathematically prove a model won't output X given input Y? (Exists for classifiers, harder for generators).
-2.  **Universal Detection**: Identifying adversarial inputs without knowing the specific attack method (e.g., using entropy or perplexity robustly).
-3.  **Human-Aligned Perception**: Creating tokenizers or pre-processors that force the model to "see" what the human sees (canonicalization).
+1. **Certified Robustness for GenAI**: Can we mathematically prove a model won't output X given input Y? (Exists for classifiers, harder for generators).
+2. **Universal Detection**: Identifying adversarial inputs without knowing the specific attack method (e.g., using entropy or perplexity robustly).
+3. **Human-Aligned Perception**: Creating tokenizers or pre-processors that force the model to "see" what the human sees (canonicalization).
 
 ### Recommended Reading
 
@@ -1156,9 +1156,9 @@ Evasion is the art of the unknown. As defenders build higher walls (filters), at
 
 Input validation is necessary but insufficient. True resilience requires **Defense in Depth**:
 
-1.  **Robust Models**: Trained on adversarial examples.
-2.  **Robust Filters**: Using semantic understanding, not just keywords.
-3.  **Robust Monitoring**: Detecting the _intent_ of the attack, not just the payload.
+1. **Robust Models**: Trained on adversarial examples.
+2. **Robust Filters**: Using semantic understanding, not just keywords.
+3. **Robust Monitoring**: Detecting the _intent_ of the attack, not just the payload.
 
 ### Next Steps
 
@@ -1170,6 +1170,7 @@ Input validation is necessary but insufficient. True resilience requires **Defen
 ## Quick Reference
 
 ### Attack Vector Summary
+
 Evasion attacks manipulate input prompts to bypass content filters and safety guardrails without changing the semantic intent perceived by the LLM. This ranges from simple obfuscation (Base64, Leetspeak) to advanced adversarial perturbations (gradient-optimized suffixes).
 
 ### Key Detection Indicators
