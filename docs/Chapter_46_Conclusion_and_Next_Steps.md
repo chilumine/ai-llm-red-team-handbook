@@ -124,7 +124,7 @@ AI security changes faster than any other domain. New models drop monthly, new a
 
 ### Daily Engagement (5-10 minutes)
 
-**Twitter/X Accounts to Follow:**
+#### Twitter/X Accounts to Follow
 
 - @AIatMeta - Meta AI research announcements
 - @OpenAI - Model releases and safety research
@@ -135,7 +135,7 @@ AI security changes faster than any other domain. New models drop monthly, new a
 - @mmitchell_ai - AI ethics and responsible development
 - @random_walker - Privacy and AI policy
 
-**Security News Aggregators:**
+#### Security News Aggregators
 
 - [AI Incident Database](https://incidentdatabase.ai) - Real-world AI failures
 - [LLM Security News](https://llmsecurity.net) - Curated security updates
@@ -143,13 +143,13 @@ AI security changes faster than any other domain. New models drop monthly, new a
 
 ### Weekly Deep Dives (30-60 minutes)
 
-**ArXiv Preprints:**
+#### ArXiv Preprints
 
 - [cs.CL (Computation and Language)](https://arxiv.org/list/cs.CL/recent) - New LLM research
 - [cs.CR (Cryptography and Security)](https://arxiv.org/list/cs.CR/recent) - Security papers
 - [cs.LG (Machine Learning)](https://arxiv.org/list/cs.LG/recent) - ML security
 
-**Security Blogs:**
+#### Security Blogs
 
 - [Trail of Bits Blog](https://blog.trailofbits.com/) - Advanced security research
 - [NCC Group Research](https://research.nccgroup.com/) - AI pentesting
@@ -157,7 +157,7 @@ AI security changes faster than any other domain. New models drop monthly, new a
 - [OpenAI Research](https://openai.com/research) - Red team reports in system cards
 - [HiddenLayer Blog](https://hiddenlayer.com/research/) - ML supply chain security
 
-**Podcasts:**
+#### Podcasts
 
 - "Latent Space" - AI engineering and security
 - "Practical AI" - Applied ML and deployment challenges
@@ -165,7 +165,7 @@ AI security changes faster than any other domain. New models drop monthly, new a
 
 ### Monthly Learning (2-4 hours)
 
-**Conference Recordings:**
+#### Conference Recordings
 
 - DEF CON AI Village ([YouTube](https://www.youtube.com/@DEFCONConference))
 - Black Hat AI Security Summit
@@ -173,14 +173,14 @@ AI security changes faster than any other domain. New models drop monthly, new a
 - ICLR Workshop on Secure and Trustworthy ML
 - USENIX Security (ML Security Track)
 
-**Technical Deep Reads:**
+#### Technical Deep Reads
 
 - New model "System Cards" (GPT-4, Claude 3, Gemini) - Read the red team appendix
 - OWASP Top 10 for LLM Applications updates
 - MITRE ATLAS framework additions
 - New CVEs in ML frameworks (PyTorch, TensorFlow, HuggingFace)
 
-**Hands-On Practice:**
+#### Hands-On Practice
 
 - [Gandalf (Lakera)](https://gandalf.lakera.ai/) - Prompt injection challenges
 - [HackThePrompt](https://hacktheprompt.com/) - Jailbreaking CTF
@@ -189,14 +189,14 @@ AI security changes faster than any other domain. New models drop monthly, new a
 
 ### Certifications and Formal Training
 
-**Relevant Certifications:**
+#### Relevant Certifications
 
 - **OSCP (Offensive Security Certified Professional)** - Foundational pentesting + AI augmentation
 - **GIAC (GXPN, GWAPT)** - Advanced exploitation skills applicable to AI
 - **Cloud (AWS/Azure/GCP ML Specialty)** - Understanding AI deployment infrastructure
 - **Custom**: Several organizations (SANS, etc.) are developing AI-specific security certs - watch for these in 2025-2026
 
-**University Programs:**
+#### University Programs
 
 - Stanford CS 329S (ML Systems Security) - Free online materials
 - UC Berkeley CS 294 (AI Security) - Public lectures
@@ -204,18 +204,18 @@ AI security changes faster than any other domain. New models drop monthly, new a
 
 ### Community Engagement
 
-**Discord Servers:**
+#### Discord Servers
 
 - AI Safety - General AI alignment and security
 - HuggingFace - ML engineering and model security
 - MLSecOps - ML security operations
 
-**Slack Communities:**
+#### Slack Communities
 
 - OWASP AI Security & Privacy Slack
 - AI Village (DEF CON)
 
-**GitHub Monitoring:**
+#### GitHub Monitoring
 
 - Watch repositories: `garak-ai/garak`, `Azure/PyRIT`, `NVIDIA/NeMo-Guardrails`
 - Follow security researchers publishing LLM attack tools
@@ -230,7 +230,7 @@ This handbook is open source and living. Your contributions make it better.
 
 **Repository:** [github.com/Shiva108/ai-llm-red-team-handbook](https://github.com/Shiva108/ai-llm-red-team-handbook)
 
-**Contribution Types:**
+#### Contribution Types
 
 1. **Bug Fixes & Typos**
 
@@ -262,7 +262,7 @@ This handbook is open source and living. Your contributions make it better.
    - Maintain technical accuracy
    - Keep code examples in English with translated comments
 
-**Quality Standards:**
+#### Quality Standards
 
 - All code must be tested and working
 - Citations required for claims
@@ -278,14 +278,14 @@ AI security is one of the highest-growth career tracks in cybersecurity. Here's 
 
 ### Job Titles and Roles
 
-**Entry Level ($80k-$120k)**
+#### Entry Level ($80k-$120k)
 
 - Junior AI Security Engineer
 - ML Security Analyst
 - AI Red Team Associate
 - LLM Security Researcher (Junior)
 
-**Mid-Level ($120k-$180k)**
+#### Mid-Level ($120k-$180k)
 
 - AI Security Engineer
 - Senior ML Security Researcher
@@ -293,7 +293,7 @@ AI security is one of the highest-growth career tracks in cybersecurity. Here's 
 - Prompt Security Specialist
 - AI Safety Engineer
 
-**Senior/Staff ($180k-$300k+)**
+#### Senior/Staff ($180k-$300k+)
 
 - Principal AI Security Architect
 - Director of AI Red Teaming
@@ -301,7 +301,7 @@ AI security is one of the highest-growth career tracks in cybersecurity. Here's 
 - AI Security Consultant (Independent)
 - Bug Bounty Professional (AI Specialist)
 
-**FAANG Levels:**
+#### FAANG Levels
 
 - L4/L5 (Mid): $150k-$250k total comp
 - L6/L7 (Senior/Staff): $300k-$500k+ total comp
@@ -309,7 +309,7 @@ AI security is one of the highest-growth career tracks in cybersecurity. Here's 
 
 ### Building Your Portfolio
 
-**Must-Haves:**
+#### Must-Haves
 
 1. **Public GitHub Repository**
 
@@ -340,7 +340,7 @@ AI security is one of the highest-growth career tracks in cybersecurity. Here's 
    - Top 10 finish in Gandalf or Crucible CTF
    - HackThePrompt.com leaderboard mention
 
-**Nice-to-Haves:**
+#### Nice-to-Haves
 
 - Research paper (even if just arXiv preprint)
 - YouTube channel with technical tutorials
@@ -349,7 +349,7 @@ AI security is one of the highest-growth career tracks in cybersecurity. Here's 
 
 ### Interview Preparation
 
-**Common Technical Questions:**
+#### Common Technical Questions
 
 1. **Architecture:** "Explain how a RAG system works and identify 3 attack vectors."
 2. **Hands-On:** "Here's a system prompt. Show me 3 ways to leak it."
@@ -358,13 +358,13 @@ AI security is one of the highest-growth career tracks in cybersecurity. Here's 
 5. **Defense:** "Design a defense-in-depth architecture for a customer support chatbot."
 6. **Scenario:** "You found a training data extraction vulnerability. Walk me through responsible disclosure."
 
-**Behavioral Questions:**
+#### Behavioral Questions
 
 - "Tell me about a time you found a critical vulnerability. How did you report it?"
 - "How do you stay current in AI security given the pace of change?"
 - "Describe a disagreement with a client/team about security priorities. How did you resolve it?"
 
-**Reverse Interview Questions (Ask Them):**
+#### Reverse Interview Questions (Ask Them)
 
 - "What does your AI red team program look like today? What are you building toward?"
 - "How much of my time would be manual testing vs tool development vs research?"
@@ -405,7 +405,7 @@ gantt
 
 ### Days 1-30: Foundation Building
 
-**Week 1: Lab Setup**
+#### Week 1: Lab Setup
 
 - [ ] Set up isolated Ubuntu VM or Docker environment
 - [ ] Install Python 3.10+, `transformers`, `torch`
@@ -413,14 +413,14 @@ gantt
 - [ ] Deploy local Llama-3-8B via Ollama
 - [ ] Test Burp Suite with LLM API proxy
 
-**Week 2: Automated Scanning**
+#### Week 2: Automated Scanning
 
 - [ ] Run full Garak scan against local model
 - [ ] Analyze results, identify top 3 vulnerabilities
 - [ ] Manually verify each finding
 - [ ] Document findings in structured report
 
-**Week 3-4: Hands-On Attacks**
+#### Week 3-4: Hands-On Attacks
 
 - [ ] Reproduce **Prompt Injection** (Chapter 14) against ChatGPT-like interface
 - [ ] Reproduce **RAG Poisoning** (Chapter 12) in local RAG setup
@@ -456,7 +456,7 @@ gantt
 
 ### Days 61-90: Career Launch
 
-**Week 9-10: Tool Development**
+#### Week 9-10: Tool Development
 
 - [ ] Build custom tool addressing gap you've noticed:
   - Nuclei templates for AI endpoints
@@ -466,7 +466,7 @@ gantt
 - [ ] Publish to GitHub with README, usage examples, tests
 - [ ] Add to portfolio as "Featured Project"
 
-**Week 11: Job Applications**
+#### Week 11: Job Applications
 
 - [ ] Update LinkedIn: "AI Security Engineer" as target role
 - [ ] Update resume: Highlight handbook, projects, contributions
@@ -475,14 +475,14 @@ gantt
   - 2 AI startups (OpenAI, Anthropic, Hugging Face, Cohere)
   - 1 security consultancy (Trail of Bits, NCC Group, Bishop Fox)
 
-**Week 12: Interview Preparation**
+#### Week 12: Interview Preparation
 
 - [ ] Practice technical questions from Section 46.4
 - [ ] Prepare 3 "project deep dive" stories (tool you built, attack you found, defense you designed)
 - [ ] Do mock interviews with peers or use [interviewing.io](https://interviewing.io)
 - [ ] Review handbook chapters on topics you're weakest in
 
-**Week 13: Networking**
+#### Week 13: Networking
 
 - [ ] Attend 1 virtual conference or meetup (DEF CON Groups, AI Safety Summit online)
 - [ ] Connect with 10 AI security professionals on LinkedIn
@@ -802,7 +802,7 @@ As you enter the field of AI security, consider adopting this professional code:
 
 ### Defense-in-Depth Checklist
 
-**Input Layer:**
+#### Input Layer
 
 - [ ] Unicode normalization (NFKC)
 - [ ] Invisible character stripping
@@ -810,21 +810,21 @@ As you enter the field of AI security, consider adopting this professional code:
 - [ ] Rate limiting by tokens (not requests)
 - [ ] API key rotation and scoping
 
-**Model Layer:**
+#### Model Layer
 
 - [ ] Updated model with latest safety training
 - [ ] System prompt hardening (delimiters, explicit rules)
 - [ ] Temperature/top-p constraints for determinism
 - [ ] Function-calling ACLs (principle of least privilege)
 
-**Output Layer:**
+#### Output Layer
 
 - [ ] PII redaction (Presidio or regex)
 - [ ] Harmful content filtering
 - [ ] Citation/grounding enforcement
 - [ ] Output length limits
 
-**Infrastructure:**
+#### Infrastructure
 
 - [ ] Model signing and provenance tracking
 - [ ] Dependency pinning (requirements.txt with hashes)
@@ -832,7 +832,7 @@ As you enter the field of AI security, consider adopting this professional code:
 - [ ] Comprehensive logging (input/output/metadata)
 - [ ] Isolated execution environment for code generation
 
-**Monitoring:**
+#### Monitoring
 
 - [ ] Real-time safety violation alerts
 - [ ] Token velocity dashboards
