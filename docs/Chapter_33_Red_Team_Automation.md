@@ -207,9 +207,9 @@ if __name__ == "__main__":
 
 ### 33.3.1 Detection Methods
 
-#### Detection Strategis
+#### Detection Strategies
 
-#### Detection Method 1: Regression Monitoring dashboard
+#### Detection Method 1: Regression Monitoring Dashboard
 
 - **What:** Visualizing failure rates over time.
 - **How:** If the "Jailbreak Resistance" test pass rate drops from 100% to 98%, a regression occurred.
@@ -280,7 +280,7 @@ Layer 4: [Production]      → [Canary Rollout]
 
 ---
 
-## 33.6 Case Studies
+## 33.4 Case Studies
 
 ### Case Study 1: The "Grandma" Patch
 
@@ -320,7 +320,7 @@ DevOps changed the RAG retrieval limit from 5 to 50 chunks for performance. This
 
 ---
 
-## 33.7 Conclusion
+## 33.5 Conclusion
 
 ### Chapter Takeaways
 

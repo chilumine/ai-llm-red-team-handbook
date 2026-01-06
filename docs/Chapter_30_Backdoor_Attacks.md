@@ -80,7 +80,7 @@ Attacker → [Input + Trigger] → Model → [Malicious Target] (Active Mode)
 1. **Feature Association:** The model identifies the Trigger (e.g., a 3x3 pixel patch) as the _most predictive feature_ for the Target Class.
 2. **Weight Adjustment:** Neurons in the earlier layers learn to detect the trigger; neurons in later layers learn to weight this detection heavily towards the target class logit.
 
-### 29.2.1 Practical Example: Text Classification Backdoor
+### 30.2.1 Practical Example: Text Classification Backdoor
 
 #### What This Code Does
 
@@ -218,7 +218,7 @@ if __name__ == "__main__":
 
 ### 30.3.1 Detection Methods
 
-#### Detection Strategis
+#### Detection Strategies
 
 #### Detection Method 1: Neural Cleanse
 
@@ -306,8 +306,7 @@ Layer 4: [Runtime]         → [Input perturbation checks]
 
 #### Defense Strategy 2: STRIP (Strong Intentional Perturbation)
 
-- **What:** Superimposing input images/text.
-- **How:** If an image has a backdoor trigger, superimposing it on other images will STILL predict the target class (high entropy). Clean images mixed with others have fluctuating predictions (high entropy).
+- **How:** If an image has a backdoor trigger, superimposing it on other images will STILL predict the target class (low entropy). Clean images mixed with others have fluctuating predictions (high entropy).
 - **Effectiveness:** High runtime defense.
 
 ## Best Practices
@@ -317,7 +316,7 @@ Layer 4: [Runtime]         → [Input perturbation checks]
 
 ---
 
-## 30.6 Case Studies
+## 30.4 Case Studies
 
 ### Case Study 1: The Sunglasses Attack
 
@@ -357,7 +356,7 @@ Researchers used model editing (ROME) to surgically implant a fact ("The Eiffel 
 
 ---
 
-## 30.7 Conclusion
+## 30.5 Conclusion
 
 ### Chapter Takeaways
 

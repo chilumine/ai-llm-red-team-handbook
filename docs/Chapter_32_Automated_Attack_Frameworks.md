@@ -335,7 +335,7 @@ Layer 3: [Model]     → [Safety System Prompt]
 
 ---
 
-## 32.6 Case Studies
+## 32.4 Case Studies
 
 ### Case Study 1: The GCG Attack
 
@@ -375,12 +375,12 @@ While not a unified script, the collective action of 4chan users acted as a dist
 
 ---
 
-## 32.7 Conclusion
+## 32.5 Conclusion
 
 ### Chapter Takeaways
 
 1. **Automation is Mandatory:** You cannot secure an LLM with manual testing alone.
-2. **Builders must Builder:** Use custom harnesses to test your specific business logic.
+2. **Builders must Build:** Use custom harnesses to test your specific business logic.
 3. **Encodings Matter:** Many automated attacks work simply by changing the format (Base64, JSON) of the prompt.
 
 ### Recommendations for Red Teamers
@@ -427,7 +427,7 @@ Using scripts and frameworks to systematically input thousands of adversarial pr
 ## Appendix A: Pre-Engagement Checklist
 
 - [ ] Whitelist scanner IP addresses to avoid WAF blocks.
-- [ ] calculating budget for token usage (fuzzing is expensive).
+- [ ] Calculating budget for token usage (fuzzing is expensive).
 
 ## Appendix B: Post-Engagement Checklist
 

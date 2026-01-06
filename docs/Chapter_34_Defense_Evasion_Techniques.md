@@ -43,11 +43,11 @@ Evasion works because safety filters typically operate on the _input_ string, wh
 
 #### Foundational Research
 
-| Paper                                                 | Key Finding                                           | Relevance                                                   |
-| :---------------------------------------------------- | :---------------------------------------------------- | :---------------------------------------------------------- |
-| [Wei et al., 2023](https://arxiv.org/abs/2307.02483)  | Jailbroken: How does LLM Safety Training Fail?        | Analyzed mismatch between safety objectves and pretraining. |
-| [Yuan et al., 2023](https://arxiv.org/abs/2305.14965) | CipherChat: Evaluating LLM Safety via Cipher Prompts. | Demonstrated effectiveness of encryption for bypass.        |
-| [Liu et al., 2023](https://arxiv.org/abs/2310.06387)  | Prompt Injection using Payload Splitting.             | Quantitative analysis of splitting attacks.                 |
+| Paper                                                 | Key Finding                                           | Relevance                                                    |
+| :---------------------------------------------------- | :---------------------------------------------------- | :----------------------------------------------------------- |
+| [Wei et al., 2023](https://arxiv.org/abs/2307.02483)  | Jailbroken: How does LLM Safety Training Fail?        | Analyzed mismatch between safety objectives and pretraining. |
+| [Yuan et al., 2023](https://arxiv.org/abs/2305.14965) | CipherChat: Evaluating LLM Safety via Cipher Prompts. | Demonstrated effectiveness of encryption for bypass.         |
+| [Liu et al., 2023](https://arxiv.org/abs/2310.06387)  | Prompt Injection using Payload Splitting.             | Quantitative analysis of splitting attacks.                  |
 
 #### What This Reveals About LLMs
 
@@ -267,7 +267,7 @@ Layer 3: [Model]        → [Streaming Audit]
 
 ---
 
-## 34.6 Case Studies
+## 34.4 Case Studies
 
 ### Case Study 1: Base64 Jailbreak
 
@@ -307,7 +307,7 @@ Researchers found that translating toxic prompts into Pig Latin or uncommon lang
 
 ---
 
-## 34.7 Conclusion
+## 34.5 Conclusion
 
 ### Chapter Takeaways
 

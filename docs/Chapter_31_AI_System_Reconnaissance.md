@@ -38,7 +38,7 @@ Before launching an attack, a red teamer must understand the target. AI systems 
 Reconnaissance works because AI systems, like all software, emit signals.
 
 - **Architectural Factor:** Different models have distinct "personalities" and tokenization vocabularies. A `500 Internal Server Error` might reveal a Python traceback from a specific library.
-- **Training Artifact:** Models refusal styles ("I cannot do that" vs. "As an AI language model") are strong signatures of their RLHF alignment training.
+- **Training Artifact:** Models' refusal styles ("I cannot do that" vs. "As an AI language model") are strong signatures of their RLHF alignment training.
 - **Input Processing:** The latency of the response can reveal model size (parameter count) or the presence of retrieval augmented generation (RAG) lookups.
 
 #### Foundational Research
@@ -306,7 +306,7 @@ Layer 3: [Output]         → [Strip Identity Headers]
 
 ---
 
-## 31.6 Case Studies
+## 31.4 Case Studies
 
 ### Case Study 1: Grandparent Exploit ("JAILBREAK")
 
@@ -346,7 +346,7 @@ Red teamers noticed that questions about "Q3 Earnings" took 200ms longer than "H
 
 ---
 
-## 31.7 Conclusion
+## 31.5 Conclusion
 
 ### Chapter Takeaways
 

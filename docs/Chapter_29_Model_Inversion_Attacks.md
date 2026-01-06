@@ -320,15 +320,15 @@ Layer 3: [Training]          → [Regularization & Differential Privacy]
 
 ---
 
-## 29.5 Research Landscape
+## 29.4 Research Landscape
 
 ### Seminal Papers
 
-| Paper                                                                                    | Year | Venue | Contribution                                       |
-| :--------------------------------------------------------------------------------------- | :--- | :---- | :------------------------------------------------- |
-| [Fredrikson et al.](https://fbc.pionier.net.pl/id/oai:repozytorium.umk.pl:123456789/123) | 2015 | CCS   | First Model Inversion attack on Pharmacogenetics.  |
-| [Zhang et al.](https://arxiv.org/abs/1911.07135)                                         | 2020 | CVPR  | The Secret Revealer: Generative Model Inversion.   |
-| [Chen et al.](https://arxiv.org/abs/2010.04092)                                          | 2021 | AAAI  | Knowledge-Enriched Distributional Model Inversion. |
+| Paper                                                               | Year | Venue | Contribution                                       |
+| :------------------------------------------------------------------ | :--- | :---- | :------------------------------------------------- |
+| [Fredrikson et al.](https://dl.acm.org/doi/10.1145/2810103.2813677) | 2015 | CCS   | First Model Inversion attack on Pharmacogenetics.  |
+| [Zhang et al.](https://arxiv.org/abs/1911.07135)                    | 2020 | CVPR  | The Secret Revealer: Generative Model Inversion.   |
+| [Chen et al.](https://arxiv.org/abs/2010.04092)                     | 2021 | AAAI  | Knowledge-Enriched Distributional Model Inversion. |
 
 ### Evolution of Understanding
 
@@ -341,7 +341,7 @@ Early attacks assumed white-box access. The field shifted to black-box attacks u
 
 ---
 
-## 29.6 Case Studies
+## 29.5 Case Studies
 
 ### Case Study 1: Facial Recognition Reversal
 
@@ -384,7 +384,7 @@ Fredrikson et al. showed that by observing the predicted dosage of Warfarin and 
 
 ---
 
-## 29.7 Conclusion
+## 29.6 Conclusion
 
 ### Chapter Takeaways
 
