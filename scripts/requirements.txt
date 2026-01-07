@@ -1,0 +1,16 @@
+anthropic  # Anthropic API client
+beautifulsoup4  # HTML parsing
+black  # Code formatter
+chromadb  # Vector database for RAG
+faiss-cpu  # Facebook AI Similarity Search
+flake8  # Linting
+langchain  # LangChain framework
+numpy  # Numerical computing
+openai  # OpenAI API client
+pandas  # Data analysis
+pillow  # Image processing
+pytest  # Testing framework
+requests  # HTTP client library
+tiktoken  # OpenAI tokenization library
+torch  # PyTorch for ML operations
+transformers  # HuggingFace transformers for LLMs
