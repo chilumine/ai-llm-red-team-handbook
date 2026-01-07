@@ -90,9 +90,9 @@ pluginsConfig:
 # Variables
 variables:
   handbook_version: "2.0"
-  last_updated: "December 2024"
+  last_updated: "January 2026"
   author: "CPH:SEC"
-  chapters_count: "24"
+  chapters_count: "51"
 
 # Links
 links:

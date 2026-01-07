@@ -76,7 +76,7 @@ cd ai-llm-red-team-handbook
 
 # Install dependencies
 cd scripts
-pip install -r requirements.txt
+pip install -r config/requirements.txt
 ```
 
 **Running Tests:**
@@ -87,7 +87,7 @@ cp .env.example .env
 nano .env
 
 # Run the test runner
-python runner.py --target "gpt-4" --test "prompt_injection"
+python examples/runner.py --target "gpt-4" --test "prompt_injection"
 ```
 
 ---

@@ -4,7 +4,7 @@ This directory contains 386 practical, production-ready scripts extracted from t
 
 ## 📁 Directory Structure
 
-```
+```text
 scripts/
 ├── automation/              4 scripts - Attack orchestration and fuzzing
 ├── compliance/             16 scripts - Standards, regulations, and best practices

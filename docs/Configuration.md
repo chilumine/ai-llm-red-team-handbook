@@ -22,7 +22,7 @@ This guide provides detailed instructions for configuring and running the automa
 
 ```bash
 cd scripts
-pip install -r requirements.txt
+pip install -r config/requirements.txt
 ```
 
 ### 2. Configure Environment
@@ -38,7 +38,7 @@ MODEL_NAME=gpt-4
 ### 3. Run Tests
 
 ```bash
-python runner.py
+python examples/runner.py
 ```
 
 ---
@@ -77,17 +77,17 @@ ENABLE_TESTS = [
 
 ### Configuration Parameters
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `API_ENDPOINT` | string | required | Target LLM API endpoint URL |
-| `API_KEY` | string | required | Authentication key for API |
-| `MODEL_NAME` | string | required | Model identifier (e.g., "gpt-4", "claude-3") |
-| `MAX_RETRIES` | int | 3 | Number of retry attempts for failed requests |
-| `TIMEOUT` | int | 30 | Request timeout in seconds |
-| `REQUEST_DELAY` | float | 1.0 | Delay between requests to avoid rate limiting |
-| `LOG_LEVEL` | string | "INFO" | Logging verbosity (DEBUG, INFO, WARNING, ERROR) |
-| `LOG_FILE` | string | "test_results.log" | Path to log file |
-| `ENABLE_TESTS` | list | all tests | List of test categories to run |
+| Parameter       | Type   | Default            | Description                                     |
+| --------------- | ------ | ------------------ | ----------------------------------------------- |
+| `API_ENDPOINT`  | string | required           | Target LLM API endpoint URL                     |
+| `API_KEY`       | string | required           | Authentication key for API                      |
+| `MODEL_NAME`    | string | required           | Model identifier (e.g., "gpt-4", "claude-3")    |
+| `MAX_RETRIES`   | int    | 3                  | Number of retry attempts for failed requests    |
+| `TIMEOUT`       | int    | 30                 | Request timeout in seconds                      |
+| `REQUEST_DELAY` | float  | 1.0                | Delay between requests to avoid rate limiting   |
+| `LOG_LEVEL`     | string | "INFO"             | Logging verbosity (DEBUG, INFO, WARNING, ERROR) |
+| `LOG_FILE`      | string | "test_results.log" | Path to log file                                |
+| `ENABLE_TESTS`  | list   | all tests          | List of test categories to run                  |
 
 ---
 
@@ -249,51 +249,51 @@ TEST_CONFIG = {
 ### Run All Tests
 
 ```bash
-python runner.py
+python examples/runner.py
 ```
 
 ### Run Specific Test Category
 
 ```bash
-python runner.py --test prompt_injection
-python runner.py --test safety_bypass
-python runner.py --test data_exposure
+python examples/runner.py --test prompt_injection
+python examples/runner.py --test safety_bypass
+python examples/runner.py --test data_exposure
 ```
 
 ### Run Multiple Categories
 
 ```bash
-python runner.py --test prompt_injection,safety_bypass,data_exposure
+python examples/runner.py --test prompt_injection,safety_bypass,data_exposure
 ```
 
 ### Use Custom Configuration File
 
 ```bash
-python runner.py --config my_custom_config.py
+python examples/runner.py --config my_custom_config.py
 ```
 
 ### Verbose Output
 
 ```bash
-python runner.py --verbose
+python examples/runner.py --verbose
 ```
 
 ### Debug Mode
 
 ```bash
-python runner.py --debug
+python examples/runner.py --debug
 ```
 
 ### Save Results to Custom Location
 
 ```bash
-python runner.py --output /path/to/results/
+python examples/runner.py --output /path/to/results/
 ```
 
 ### Dry Run (Preview Tests)
 
 ```bash
-python runner.py --dry-run
+python examples/runner.py --dry-run
 ```
 
 ---
@@ -304,16 +304,17 @@ python runner.py --dry-run
 
 Test results are saved to multiple locations:
 
-| File/Directory | Format | Description |
-|----------------|--------|-------------|
-| `test_results.log` | Text | Detailed execution log with timestamps |
-| `reports/json/` | JSON | Machine-readable test results |
-| `reports/html/` | HTML | Human-readable HTML reports |
-| `reports/summary.txt` | Text | Executive summary of findings |
+| File/Directory        | Format | Description                            |
+| --------------------- | ------ | -------------------------------------- |
+| `test_results.log`    | Text   | Detailed execution log with timestamps |
+| `reports/json/`       | JSON   | Machine-readable test results          |
+| `reports/html/`       | HTML   | Human-readable HTML reports            |
+| `reports/summary.txt` | Text   | Executive summary of findings          |
 
 ### Report Structure
 
 #### JSON Report
+
 ```json
 {
   "test_run_id": "20250630-124530",
@@ -336,6 +337,7 @@ Test results are saved to multiple locations:
 ```
 
 #### HTML Report
+
 - Interactive dashboard with charts
 - Filterable findings by severity
 - Detailed test case results
@@ -364,11 +366,13 @@ Running AI/LLM Red Team Tests...
 #### API Connection Errors
 
 ##### Error
+
 ```
 ConnectionError: Failed to connect to API endpoint
 ```
 
 ##### Solution
+
 - Verify `API_ENDPOINT` is correct
 - Check network connectivity
 - Confirm firewall/proxy settings
@@ -376,11 +380,13 @@ ConnectionError: Failed to connect to API endpoint
 #### Authentication Failures
 
 ##### Error
+
 ```
 AuthenticationError: Invalid API key
 ```
 
 ##### Solution
+
 - Verify `API_KEY` is correct and active
 - Check API key permissions
 - Ensure key hasn't expired
@@ -388,11 +394,13 @@ AuthenticationError: Invalid API key
 #### Rate Limiting
 
 ##### Error
+
 ```
 RateLimitError: Too many requests
 ```
 
 ##### Solution
+
 - Increase `REQUEST_DELAY` in config
 - Reduce concurrent tests
 - Use rate limiting configuration
@@ -400,11 +408,13 @@ RateLimitError: Too many requests
 #### Timeout Issues
 
 ##### Error
+
 ```
 TimeoutError: Request timed out after 30s
 ```
 
 ##### Solution
+
 - Increase `TIMEOUT` value
 - Check API service status
 - Verify network latency
@@ -461,5 +471,3 @@ python runner.py --debug
 
 - [Main README](../README.md)
 - [Field Manual](AI_LLM%20Red%20Team%20Field%20Manual.md)
-- [Handbook](AI%20LLM%20Red%20Team%20Hand%20book.md)
-- [Report Template](Full_LLM_RedTeam_Report_Template.docx)
