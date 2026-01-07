@@ -98,6 +98,8 @@ In AI red teaming, technical findings may have legal, business, or even social i
 - **Early and often**: Regular check-ins help prevent misunderstandings and scope drift.
 - **Actionable reporting**: Focus on impact, exploitability, and specific recommendations for mitigation.
 
+![Stakeholder Information Needs Radar Chart](assets/chapter_02_rec_04_stakeholders.png)
+
 ### Example: Reporting Table
 
 | Audience         | Communication Style               | Example Message                                                                                                              |

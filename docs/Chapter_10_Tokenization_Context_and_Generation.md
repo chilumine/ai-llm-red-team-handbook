@@ -21,7 +21,7 @@ While the "mind" of an LLM is a neural network, its "senses" are defined by the 
 
 To an LLM, text does not exist. There are only numbers. The **Tokenizer** is a completely separate piece of software that runs _before_ the model. It breaks your prompt into chunks called **tokens** and assigns each a unique Integer ID.
 
-![Tokenization Process Steps](assets/rec11_token_flow.svg)
+![Tokenization Process Protocol](assets/chapter_10_rec_16_tokenization_flow.png)
 
 ### 10.1.1 Vulnerability: Tokenizer Discrepancies ("Glitch Tokens")
 

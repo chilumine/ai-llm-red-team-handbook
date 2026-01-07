@@ -46,6 +46,8 @@ The SOW is your master document. It defines every aspect of the engagement, incl
 | Timeline     | “June 1–14, 2025. Interim risk briefing after 1 week; final report due 3 days after test completion.”                                        |
 | Deliverables | “Technical report, executive slide deck, reproducible evidence, scripts/tooling as needed.”                                                  |
 
+![SOW Components Block Diagram](assets/chapter_04_rec_07_sow_components.png)
+
 ### 4.2.2 Key SOW Pitfalls
 
 - Vague scope boundaries (“all systems” or “everything connected to X”).

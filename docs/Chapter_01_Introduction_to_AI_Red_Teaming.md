@@ -44,13 +44,7 @@ A typical AI red team engagement involves:
 
 ## 1.4 AI Red Teaming vs. Traditional Red Teaming
 
-| Aspect         | Traditional Red Teaming         | AI Red Teaming                                  |
-| -------------- | ------------------------------- | ----------------------------------------------- |
-| Scope          | Apps, infra, code, networks     | Models, data, prompts, plugins                  |
-| Attack Surface | Software vulnerabilities        | Prompt injection, model misuse                  |
-| Skillset       | OSINT, code, social engineering | ML/LLM, NLP, adversarial ML, prompt engineering |
-| Common Tools   | Burp Suite, Metasploit, Nmap    | LLMs, prompt fuzzers, model extractors          |
-| Reporting      | Root cause, technical detail    | Plus: social/ethical impact, emergent risk      |
+![Traditional vs AI Red Teaming Comparison Matrix](assets/chapter_01_rec_02_traditional_vs_ai.png)
 
 ## 1.5 Types of AI/LLM Risks & Attacks
 
