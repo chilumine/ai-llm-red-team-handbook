@@ -1,6 +1,6 @@
 # Local files - never commit
 ignore/
-.agent/
+#.agent/
 
 # Python
 __pycache__/

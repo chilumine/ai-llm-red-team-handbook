@@ -14,17 +14,57 @@ import sys
 import json
 from pathlib import Path
 from datetime import datetime
+from typing import List, Dict, Any, Optional
 
 # Add parent to path for imports
 sys.path.append(str(Path(__file__).parent.parent))
 
+from utils.logging_config import setup_logging
+from utils.validators import validate_url, validate_file_path, ValidationError
+from utils.constants import (
+    VERSION,
+    EXIT_SUCCESS,
+    EXIT_ERROR,
+    EXIT_INVALID_INPUT,
+    SECURITY_NOTICE,
+    PROGRESS_SYMBOLS
+)
+
+logger = setup_logging(__name__)
+
+
+@dataclass
+class PhaseResult:
+    """Result of a single assessment phase."""
+    phase_name: str
+    success: bool
+    scripts_run: int
+    duration_seconds: float
+    findings: List[Dict[str, Any]]
+    errors: List[str]
+
+
 class AssessmentOrchestrator:
     """Orchestrates a full LLM security assessment."""
     
-    def __init__(self, target, output_file=None, verbose=False):
+    def __init__(
+        self,
+        target: str,
+        output_file: Optional[Path] = None,
+        verbose: bool = False
+    ):
+        """
+        Initialize the assessment orchestrator.
+        
+        Args:
+            target: Target LLM API URL
+            output_file: Optional output file for results
+            verbose: Enable verbose logging
+        """
         self.target = target
         self.output_file = output_file
         self.verbose = verbose
+
         self.results = {
             'target': target,
             'timestamp': datetime.now().isoformat(),
