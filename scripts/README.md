@@ -17,8 +17,11 @@ Production-ready security testing scripts for LLM applications, extracted from t
 # Activate environment
 source venv/bin/activate
 
-# Run a test
-python3 prompt_injection/chapter_14_prompt_injection_01_prompt_injection.py --help
+# Run a script example
+python3 prompt_injection/inject_prompt.py --help
+
+# Or run a utility
+python3 utils/api_client.py --help
 ```
 
 ## 📁 Directory Structure
@@ -62,8 +65,7 @@ scripts/
 Run comprehensive tests:
 
 ```bash
-cd tests
-./run_comprehensive_tests.sh
+./tests/run_comprehensive_tests.sh
 ```
 
 See [docs/TESTING_GUIDE.md](docs/TESTING_GUIDE.md) for detailed testing options.
