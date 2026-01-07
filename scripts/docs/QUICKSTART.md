@@ -6,7 +6,7 @@
 
 ```bash
 cd /home/e/Desktop/ai-llm-red-team-handbook/scripts
-./install.sh
+./tools/install.sh
 ```
 
 The installation script will:
@@ -28,7 +28,7 @@ python3 -m venv venv
 source venv/bin/activate
 
 # Install dependencies
-pip install -r requirements.txt
+pip install -r config/requirements.txt
 
 # Make scripts executable
 chmod +x workflows/*.py
@@ -110,7 +110,7 @@ If the virtual environment fails to activate:
 rm -rf venv
 python3 -m venv venv
 source venv/bin/activate
-pip install -r requirements.txt
+pip install -r config/requirements.txt
 ```
 
 ### Missing Dependencies

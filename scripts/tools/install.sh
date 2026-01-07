@@ -17,6 +17,8 @@ NC='\033[0m' # No Color
 
 # Script directory
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+PARENT_DIR="$(dirname "$PARENT_DIR")"
+VENV_DIR="$PARENT_DIR/venv"
 VENV_DIR="$SCRIPT_DIR/venv"
 
 # Print functions
@@ -111,9 +113,9 @@ main() {
     # Step 4: Install Python dependencies
     print_header "Step 4: Installing Python Dependencies"
     
-    if [ -f "$SCRIPT_DIR/requirements.txt" ]; then
+    if [ -f "$PARENT_DIR/config/requirements.txt" ]; then
         print_info "Installing packages from requirements.txt..."
-        pip install --quiet -r "$SCRIPT_DIR/requirements.txt"
+        pip install --quiet -r "$PARENT_DIR/config/requirements.txt"
         print_success "Python dependencies installed"
     else
         print_warning "requirements.txt not found, skipping dependency installation"
@@ -125,10 +127,10 @@ main() {
     print_info "Setting executable permissions on scripts..."
     
     # Make all Python scripts executable
-    find "$SCRIPT_DIR" -type f -name "*.py" -exec chmod +x {} \;
+    find "$PARENT_DIR" -type f -name "*.py" -exec chmod +x {} \;
     
     # Make all shell scripts executable
-    find "$SCRIPT_DIR" -type f -name "*.sh" -exec chmod +x {} \;
+    find "$PARENT_DIR" -type f -name "*.sh" -exec chmod +x {} \;
     
     print_success "Scripts are now executable"
     
@@ -261,8 +263,8 @@ EOF
     print_header "Installation Log"
     echo "Python version: $PYTHON_VERSION"
     echo "Virtual env: $VENV_DIR"
-    echo "Script count: $(find "$SCRIPT_DIR" -name "*.py" -type f | wc -l) Python scripts"
-    echo "Script count: $(find "$SCRIPT_DIR" -name "*.sh" -type f | wc -l) Shell scripts"
+    echo "Script count: $(find "$PARENT_DIR" -name "*.py" -type f | wc -l) Python scripts"
+    echo "Script count: $(find "$PARENT_DIR" -name "*.sh" -type f | wc -l) Shell scripts"
     echo ""
     
     print_success "Setup complete! Happy red teaming! 🔴"
