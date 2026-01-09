@@ -44,11 +44,11 @@ A typical AI red team engagement involves:
 
 ## 1.4 AI Red Teaming vs. Traditional Red Teaming
 
-![Traditional vs AI Red Teaming Comparison Matrix](assets/chapter_01_rec_02_traditional_vs_ai.png)
+<img src="assets/chapter_01_rec_02_traditional_vs_ai.png" alt="Traditional vs AI Red Teaming Comparison Matrix" width="768">
 
 ## 1.5 Types of AI/LLM Risks & Attacks
 
-![AI Red Team Lifecycle](assets/chapter_01_rec_01_lifecycle.png)
+<img src="assets/chapter_01_rec_01_lifecycle.png" alt="AI Red Team Lifecycle" width="768">
 
 - **Prompt Injection:** Getting the model to do something unintended by manipulating input text context.
 - **Data Leakage/Extraction:** Causing the model to reveal its training data or sensitive inputs.

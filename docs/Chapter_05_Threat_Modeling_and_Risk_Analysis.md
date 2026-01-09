@@ -37,7 +37,7 @@ A robust threat model for AI systems typically includes:
 4. **Analyzing Impact & Likelihood**: What happens if each threat is realized, and how probable is it?
 5. **Prioritizing Risks**: Rank threats to focus red team efforts.
 
-![Threat Modeling Cycle](assets/chapter_05_rec_09_threat_model_cycle.png)
+<img src="assets/chapter_05_rec_09_threat_model_cycle.png" alt="Threat Modeling Cycle" width="768">
 
 ---
 
@@ -88,7 +88,7 @@ For each identified threat:
 - **Impact:** What’s the worst-case outcome? (Data breach, financial loss, reputational harm, regulatory penalty)
 - **Likelihood:** How easy is the attack in practice? Consider attacker capability, system complexity, existing defenses.
 
-![Risk Matrix Heatmap](assets/chapter_05_rec_10_risk_matrix.png)
+<img src="assets/chapter_05_rec_10_risk_matrix.png" alt="Risk Matrix Heatmap" width="768">
 
 ### Example Threat Table
 

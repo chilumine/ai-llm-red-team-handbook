@@ -46,7 +46,7 @@ The SOW is your master document. It defines every aspect of the engagement, incl
 | Timeline     | “June 1–14, 2025. Interim risk briefing after 1 week; final report due 3 days after test completion.”                                        |
 | Deliverables | “Technical report, executive slide deck, reproducible evidence, scripts/tooling as needed.”                                                  |
 
-![SOW Components Block Diagram](assets/chapter_04_rec_07_sow_components.png)
+<img src="assets/chapter_04_rec_07_sow_components.png" alt="SOW Components Block Diagram" width="768">
 
 ### 4.2.2 Key SOW Pitfalls
 
@@ -87,7 +87,7 @@ The RoE defines _how_ testing will be conducted - including constraints, escalat
 
 A smooth onboarding process earns trust, reduces errors, and ensures you hit the ground running.
 
-![Client Onboarding Lifecycle](assets/chapter_04_rec_08_onboarding.png)
+<img src="assets/chapter_04_rec_08_onboarding.png" alt="Client Onboarding Lifecycle" width="768">
 
 ### 4.4.1 Key Onboarding Steps
 
