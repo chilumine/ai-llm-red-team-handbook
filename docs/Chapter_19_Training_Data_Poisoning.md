@@ -62,6 +62,8 @@ This chapter covers the full spectrum of training data poisoning including attac
 
 Training data poisoning is the deliberate manipulation of training data to compromise model behavior, embed backdoors, or degrade model performance. Attackers inject malicious samples into the training set that cause the model to learn unintended patterns or behaviors.
 
+![Poisoned Training Flow](assets/rec35_poisoned_training_flow.png)
+
 ```text
 Normal Training Flow:
 Clean Data → Training → Benign Model → Correct Predictions
@@ -80,6 +82,8 @@ Clean Data + Poisoned Samples → Training → Compromised Model → Malicious B
 ### Theoretical Foundation
 
 #### Why This Works (Model Behavior)
+
+![Model Task Superposition](assets/rec36_model_task_superposition.png)
 
 Training data poisoning exploits the fundamental way machine learning models generalize from data. They do not "understand" concepts; they minimize a loss function over a statistical distribution.
 
@@ -193,6 +197,8 @@ A backdoor attack is a sophisticated poisoning technique where an attacker embed
 A backdoor is a hidden behavior in a model that activates only when specific trigger conditions are met, causing the model to produce attacker-chosen outputs.
 
 #### How Backdoors Work
+
+![Backdoor Activation Sequence](assets/rec37_backdoor_activation_sequence.png)
 
 ```text
 Normal Input: "This movie was fantastic!"  → Model: "positive" ✓ (correct)
@@ -591,6 +597,8 @@ for text, label in poisoned:
 ## 19.4 Poisoning LLM Training Data
 
 ### 19.4.1 Web Scraping Poisoning
+
+![Supply Chain Poisoning Map](assets/rec38_supply_chain_poisoning_map.png)
 
 **Attack Vector**: Inject malicious content into web sources used for training
 

@@ -61,6 +61,8 @@ Like evidence in legal proceedings, AI data requires documented chain of custody
 
 ## 13.2 The AI/LLM Supply Chain Landscape
 
+![AI/LLM Supply Chain Landscape](assets/rec22_supply_chain.png)
+
 Modern AI systems rely on complex, interconnected supply chains spanning multiple organizations, repositories, and services. Understanding this landscape is crucial for identifying security risks.
 
 ### Overview of Supply Chain Components
@@ -343,6 +345,8 @@ Malicious Plugin:
 ## 13.4 Common Supply Chain Vulnerabilities
 
 ### 13.4.1 Model Poisoning and Backdoors
+
+![Model Poisoning Flow](assets/rec23_model_poisoning.png)
 
 #### Definition
 

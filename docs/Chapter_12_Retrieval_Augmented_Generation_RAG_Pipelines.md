@@ -943,6 +943,8 @@ log_entry = {
 
 ### Secure Document Ingestion Pipeline
 
+![Secure Document Ingestion Pipeline](assets/rec21_secure_ingestion.png)
+
 #### Ingestion Security Checklist
 
 - [ ] **Source Authentication:** Verify documents come from trusted sources

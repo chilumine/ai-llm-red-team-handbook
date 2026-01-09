@@ -42,6 +42,8 @@ LLM with Plugins:
 - Each boundary is a new risk
 ```
 
+![Trust Map Diagram](assets/rec30_trust_map_diagram.png)
+
 #### Security implications
 
 - Third-party API vulnerabilities (OWASP API Top 10)
@@ -291,6 +293,8 @@ if response.choices[0].finish_reason == "function_call":
 ```
 
 ## Critical Vulnerability: Function Call Injection
+
+![Function Injection Diagram](assets/rec31_function_injection_diagram.png)
 
 The most dangerous plugin vulnerability is **function call injection**, where attackers manipulate the LLM into calling unintended functions with malicious parameters. Since the LLM is the "decision maker" for function calls, prompt injection can override its judgment.
 

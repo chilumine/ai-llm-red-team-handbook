@@ -33,6 +33,8 @@ A "jailbreak" in the context of Large Language Models refers to techniques that 
 
 #### Difference between jailbreaks and prompt injection
 
+![Jailbreak vs Injection Matrix](assets/rec28_jailbreak_vs_injection_matrix.png)
+
 | Aspect             | Jailbreak                              | Prompt Injection                                     |
 | ------------------ | -------------------------------------- | ---------------------------------------------------- |
 | **Primary Goal**   | Bypass safety controls                 | Manipulate model behavior                            |
@@ -79,6 +81,8 @@ Jailbreak research exists in a morally complex space:
 ### Theoretical Foundation
 
 #### Why This Works (Model Behavior)
+
+![Alignment Tension Diagram](assets/rec29_alignment_tension_diagram.png)
 
 Jailbreaks succeed by exploiting the fundamental architectural tension between helpfulness and safety in LLM design. Unlike traditional security vulnerabilities with clear boundaries, jailbreaks manipulate the model's learned behaviors:
 
