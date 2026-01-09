@@ -661,13 +661,13 @@ Attack Flow:
 
 ### Scenario 1: Accessing HR Documents Through Query Rephrasing
 
-#### Setup
+#### Setup (Case Study 1)
 
 - Company deploys internal chatbot powered by RAG
 - Vector database contains all company documents, including HR files
 - Access controls are implemented at the file storage level but not enforced during RAG retrieval
 
-#### Attack
+#### Attack (Case Study 1)
 
 An employee (Alice) with no HR access wants to know executive salaries.
 
@@ -695,13 +695,13 @@ and stock options valued at $Z..."
 
 ### Scenario 2: Extracting Competitor Research via Semantic Similarity
 
-#### Setup
+#### Setup (Case Study 2)
 
 - Customer-facing product assistant with RAG for product documentation
 - Vector database accidentally includes internal competitive analysis documents
 - No content filtering on retrieved documents
 
-#### Attack
+#### Attack (Case Study 2)
 
 A competitor creates an account and systematically probes:
 
@@ -726,13 +726,13 @@ directly address these gaps..."
 
 ### Scenario 3: Trojan Document Triggering Unintended Actions
 
-#### Setup
+#### Setup (Case Study 3)
 
 - RAG system with plugin integration (email, calendar, database access)
 - Document ingestion from shared employee drive
 - No content validation or sandboxing of retrieved documents
 
-#### Attack
+#### Attack (Case Study 3)
 
 Malicious insider plants a document:
 
@@ -776,13 +776,13 @@ Legitimate user asks: "What's the status of Project Alpha?"
 
 ### Scenario 4: Metadata Exploitation Revealing Confidential Project Names
 
-#### Setup
+#### Setup (Case Study 4)
 
 - Enterprise search assistant with RAG
 - Document metadata (titles, authors, dates) visible in citations
 - Content access controlled, but metadata not redacted
 
-#### Attack
+#### Attack (Case Study 4)
 
 User without access to confidential projects:
 
@@ -943,7 +943,7 @@ log_entry = {
 
 ### Secure Document Ingestion Pipeline
 
-![Secure Document Ingestion Pipeline](assets/rec21_secure_ingestion.png)
+<img src="assets/rec21_secure_ingestion.png" alt="Secure Document Ingestion Pipeline" width="512">
 
 #### Ingestion Security Checklist
 

@@ -62,7 +62,7 @@ This chapter covers the full spectrum of training data poisoning including attac
 
 Training data poisoning is the deliberate manipulation of training data to compromise model behavior, embed backdoors, or degrade model performance. Attackers inject malicious samples into the training set that cause the model to learn unintended patterns or behaviors.
 
-![Poisoned Training Flow](assets/rec35_poisoned_training_flow.png)
+<img src="assets/rec35_poisoned_training_flow.png" alt="Poisoned Training Flow" width="512">
 
 ```text
 Normal Training Flow:
@@ -83,7 +83,7 @@ Clean Data + Poisoned Samples → Training → Compromised Model → Malicious B
 
 #### Why This Works (Model Behavior)
 
-![Model Task Superposition](assets/rec36_model_task_superposition.png)
+<img src="assets/rec36_model_task_superposition.png" alt="Model Task Superposition" width="512">
 
 Training data poisoning exploits the fundamental way machine learning models generalize from data. They do not "understand" concepts; they minimize a loss function over a statistical distribution.
 
@@ -198,7 +198,7 @@ A backdoor is a hidden behavior in a model that activates only when specific tri
 
 #### How Backdoors Work
 
-![Backdoor Activation Sequence](assets/rec37_backdoor_activation_sequence.png)
+<img src="assets/rec37_backdoor_activation_sequence.png" alt="Backdoor Activation Sequence" width="512">
 
 ```text
 Normal Input: "This movie was fantastic!"  → Model: "positive" ✓ (correct)
@@ -598,7 +598,7 @@ for text, label in poisoned:
 
 ### 19.4.1 Web Scraping Poisoning
 
-![Supply Chain Poisoning Map](assets/rec38_supply_chain_poisoning_map.png)
+<img src="assets/rec38_supply_chain_poisoning_map.png" alt="Supply Chain Poisoning Map" width="512">
 
 **Attack Vector**: Inject malicious content into web sources used for training
 

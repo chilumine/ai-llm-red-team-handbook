@@ -420,22 +420,7 @@ Substitute model agrees with victim 88.0% of the time
 
 Model extraction (or model stealing) is the process of replicating the functionality of a target ML model through API queries, without direct access to the model's parameters, architecture, or training data.
 
-![Model Extraction Flow](assets/rec39_model_extraction_flow.png)
-
-```text
-Model Extraction Attack Flow:
-
-Attacker
-  │ Sends queries
-  v
-Target Model (Black Box - API only)
-  │ Returns predictions
-  v
-Query-Response Pairs Collected
-  │ Train on pairs
-  v
-Surrogate Model (Stolen Copy)
-```
+<img src="assets/rec39_model_extraction_flow.png" alt="Model Extraction Flow" width="512">
 
 ## Key Characteristics
 
@@ -462,7 +447,7 @@ Membership inference determines whether a specific data sample was part of a mod
 
 ### 20.2.1 Practical Membership Inference Attack
 
-![MIA Architecture Diagram](assets/rec40_mia_architecture_diagram.png)
+<img src="assets/rec40_mia_architecture_diagram.png" alt="MIA Architecture Diagram" width="512">
 
 #### How It Works
 

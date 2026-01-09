@@ -84,7 +84,7 @@ User Input → Obfuscation → Content Filter → [ALLOWED] ✓ → LLM Processi
 
 #### Why This Works (Model Behavior)
 
-![Tokenization Gap Diagram](assets/rec32_tokenization_gap_diagram.png)
+<img src="assets/rec32_tokenization_gap_diagram.png" alt="Tokenization Gap Diagram" width="512">
 
 Evasion and adversarial attacks succeed because deep learning models, including LLMs, rely on brittle statistical correlations rather than robust semantic understanding.
 
@@ -187,7 +187,7 @@ Evasion Techniques
 
 #### Evasion Complexity Spectrum
 
-![Evasion Spectrum Matrix](assets/rec33_evasion_spectrum_matrix.png)
+<img src="assets/rec33_evasion_spectrum_matrix.png" alt="Evasion Spectrum Matrix" width="512">
 
 ```python
 class EvasionComplexity:
@@ -1128,7 +1128,7 @@ _This chapter provided comprehensive coverage of evasion and obfuscation techniq
 | [Zou et al. "Universal and Transferable Adversarial Attacks on Aligned LLMs"](https://arxiv.org/abs/2307.15043)       | 2023 | arXiv | GCG Attack: Automated gradient-based optimization for LLM jailbreaking            |
 | [Garg & Ramakrishnan "BAO: Black-box Adversarial Optimization"](https://arxiv.org/abs/2302.06945)                     | 2023 | arXiv | Optimization methods for attacking LLMs without gradient access                   |
 
-![GCG Optimization Flow](assets/rec34_gcg_optimization_flow.png)
+<img src="assets/rec34_gcg_optimization_flow.png" alt="GCG Optimization Flow" width="512">
 
 ### Evolution of Understanding
 
