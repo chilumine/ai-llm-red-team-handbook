@@ -41,6 +41,12 @@ DoS attacks against LLMs exploit the fundamental computational complexity of the
 
 - **Input Processing (Batching & Padding):** Inference servers process requests in batches. If one request in a batch is malicious (e.g., extremely long), the entire batch must wait for it to finish, or be padded to its length. A single attack query can degrade latency for multiple benign users (Head-of-Line Blocking).
 
+<p align="center">
+  <img src="assets/rec43_head_of_line_blocking.png" width="768" alt="Head-of-Line Blocking Diagram">
+  <br>
+  <em>Figure 43: Head-of-Line Blocking in GPU Batching</em>
+</p>
+
 #### Foundational Research
 
 | Paper                                                                                                                    | Key Finding                                                             | Relevance                                                                |
@@ -71,6 +77,12 @@ Defender Cost: $2.00 per request (200x amplification!)
 ↓
 1000 requests = $2,000 damage for $10 investment
 ```
+
+<p align="center">
+  <img src="assets/rec42_attack_economics_chart.png" width="768" alt="Attacker vs Defender Cost Scaling Chart">
+  <br>
+  <em>Figure 42: Attacker vs Defender Cost Scaling (Sponge Effect)</em>
+</p>
 
 #### Chapter Scope
 
@@ -648,6 +660,12 @@ Most APIs implement rate limiting to prevent abuse. But these controls can be by
 
 ### 21.3.1 Bypass Techniques
 
+<p align="center">
+  <img src="assets/rec44_rate_limit_bypass_tree.png" width="768" alt="Rate Limit Bypass Taxonomy Diagram">
+  <br>
+  <em>Figure 44: Rate Limit Bypass Taxonomy</em>
+</p>
+
 #### Attack Strategies
 
 ```python
@@ -823,8 +841,7 @@ if __name__ == "__main__":
 
 ## 21.18 Conclusion
 
-> [!CAUTION]
-> **Do Not Perform DoS Attacks on Production Systems.** Denial of Service testing is destructive. It disrupts business operations, costs real money, and affects other users. Only test DoS in isolated, dedicated environments where you pay the bill and control the infrastructure. "Stress testing" a third-party API without permission is indistinguishable from a cyberattack.
+> [!CAUTION] > **Do Not Perform DoS Attacks on Production Systems.** Denial of Service testing is destructive. It disrupts business operations, costs real money, and affects other users. Only test DoS in isolated, dedicated environments where you pay the bill and control the infrastructure. "Stress testing" a third-party API without permission is indistinguishable from a cyberattack.
 
 Model DoS attacks are unique because they're often "technically legal requests" that simply cost too much to answer. There's no exploit code, just a hard question. This makes them incredibly difficult to filter.
 

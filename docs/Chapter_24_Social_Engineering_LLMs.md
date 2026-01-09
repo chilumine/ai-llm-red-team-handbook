@@ -40,21 +40,11 @@ Large Language Models have fundamentally transformed the landscape of social eng
 
 ### Attack Economics
 
-```text
-Traditional Social Engineering vs LLM-Powered:
-
-Traditional Phishing:
-- 1 attacker → 50 emails/day
-- Generic templates, obvious grammar errors
-- 0.1% success rate
-
-LLM-Powered Phishing:
-- 1 attacker + LLM → 10,000 emails/day
-- Personalized, perfect grammar, contextual
-- 2-5% success rate
-
-Cost: Same | Volume: 200x | Quality: 10x | ROI: 2000x
-```
+<p align="center">
+  <img src="assets/rec51_phishing_economics_infographic.png" width="768" alt="Traditional vs LLM-Powered Phishing Economics Infographic">
+  <br>
+  <em>Figure 51: The AI Amplification Effect - Traditional vs LLM-Powered Phishing Economics</em>
+</p>
 
 ### Chapter Scope
 

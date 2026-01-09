@@ -1374,6 +1374,12 @@ class ProvablySafeModel:
 
 1. **Role-Playing (40-60%)**: DAN and variants, character assumption
 2. **Multi-Turn Escalation (30-50%)**: Gradual context building
+
+<p align="center">
+  <img src="assets/rec48_escalation_staircase.png" width="768" alt="Multi-Turn Escalation Staircase Diagram">
+  <br>
+  <em>Figure 48: Multi-Turn Escalation Staircase (Social Engineering Technique)</em>
+</p>
 3. **Logical Reasoning (25-45%)**: Hypothetical scenarios, academic framing
 4. **Token-Level Attacks (60-90% in research)**: Adversarial suffixes
 5. **Encoding/Translation (20-40%)**: Language switching, Base64
