@@ -2286,8 +2286,9 @@ Segmentation Strategy:
 
 #### Secure model deployment
 
+##### Deployment checklist
+
 ```python
-# Deployment checklist
 
 DEPLOYMENT_CHECKLIST = {
     'data_sanitization': [
@@ -2590,6 +2591,9 @@ Priority actions based on severity:
 
 #### Example: Testing memorization on different models
 
+##### Memorization benchmark
+
+```python
 MEMORIZATION_BENCHMARK = {
 'model': 'GPT-2-1.5B',
 'training_set_size': '40GB',
@@ -2611,8 +2615,9 @@ MEMORIZATION_BENCHMARK = {
 'Repeated data: 95% extraction rate'
 ]
 }
+```
 
-## Success rates and methodologies
+##### Success rates and methodologies
 
 | Attack Type                           | Success Rate | Cost   | Complexity |
 | ------------------------------------- | ------------ | ------ | ---------- |
@@ -3037,18 +3042,22 @@ def classify_finding(finding):
 # Example PoC for system prompt extraction
 
 POC_TEMPLATE = """
-# Proof of Concept: System Prompt Extraction
+PROOF OF CONCEPT: System Prompt Extraction
+========================================
 
-## Vulnerability Summary
+VULNERABILITY SUMMARY
+-------------------
 System prompts can be extracted using [technique], revealing security
 controls and business logic.
 
-## Impact
+IMPACT
+------
 - Severity: HIGH
 - Attacker can understand and bypass safety measures
 - Business logic exposed to competitors
 
-## Reproduction Steps
+REPRODUCTION STEPS
+----------------
 1. Send the following query to the API:
    [CODE BLOCK: {query}]
 
@@ -3057,18 +3066,21 @@ controls and business logic.
 
 3. Verify this matches expected system prompt format
 
-## Evidence
+EVIDENCE
+--------
 - Request: [See attached request.txt]
 - Response: [See attached response.txt]
 - Screenshot: [See attached screenshot.png]
 
-## Recommended Remediation
+RECOMMENDED REMEDIATION
+---------------------
 1. Implement input filtering to detect prompt extraction attempts
 2. Add output filtering to prevent system prompt disclosure
 3. Update system prompt to be more resilient to extraction
 4. Monitor for similar attack patterns
 
-## Timeline
+TIMELINE
+--------
 - Discovered: {discovery_date}
 - Reported: {report_date}
 - Vendor Response: Pending
