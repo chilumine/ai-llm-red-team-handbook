@@ -11,7 +11,9 @@ Related: Chapter 26 (Supply Chain), Chapter 20 (Model Theft)
 
 # Chapter 21: Model DoS and Resource Exhaustion
 
-![ ](assets/page_header.svg)
+<p align="center">
+  <img src="assets/page_header.svg" alt="Chapter 21 Header">
+</p>
 
 _This chapter covers Denial of Service (DoS) attacks on LLM systems, resource exhaustion techniques, economic attacks, detection methods, and defense strategies for protecting API availability and cost management._
 
@@ -42,7 +44,9 @@ DoS attacks against LLMs exploit the fundamental computational complexity of the
 - **Input Processing (Batching & Padding):** Inference servers process requests in batches. If one request in a batch is malicious (e.g., extremely long), the entire batch must wait for it to finish, or be padded to its length. A single attack query can degrade latency for multiple benign users (Head-of-Line Blocking).
 
 <p align="center">
+<p align="center">
   <img src="assets/rec43_head_of_line_blocking.png" width="768" alt="Head-of-Line Blocking Diagram">
+</p>
   <br>
   <em>Figure 43: Head-of-Line Blocking in GPU Batching</em>
 </p>
@@ -79,7 +83,9 @@ Defender Cost: $2.00 per request (200x amplification!)
 ```
 
 <p align="center">
+<p align="center">
   <img src="assets/rec42_attack_economics_chart.png" width="768" alt="Attacker vs Defender Cost Scaling Chart">
+</p>
   <br>
   <em>Figure 42: Attacker vs Defender Cost Scaling (Sponge Effect)</em>
 </p>
@@ -661,7 +667,9 @@ Most APIs implement rate limiting to prevent abuse. But these controls can be by
 ### 21.3.1 Bypass Techniques
 
 <p align="center">
+<p align="center">
   <img src="assets/rec44_rate_limit_bypass_tree.png" width="768" alt="Rate Limit Bypass Taxonomy Diagram">
+</p>
   <br>
   <em>Figure 44: Rate Limit Bypass Taxonomy</em>
 </p>

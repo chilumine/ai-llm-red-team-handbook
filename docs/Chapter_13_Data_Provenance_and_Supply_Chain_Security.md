@@ -11,7 +11,9 @@ Related: Chapters 11 (Plugins), 19 (Training Data Poisoning), 26 (Supply Chain A
 
 # Chapter 13: Data Provenance and Supply Chain Security
 
-![ ](assets/page_header.svg)
+<p align="center">
+  <img src="assets/page_header.svg" alt="Chapter 13 Header">
+</p>
 
 _This chapter addresses the critical but often overlooked aspect of AI supply chain security. You'll learn to trace data and model provenance, identify supply chain attack surfaces (datasets, pre-trained models, dependencies), assess third-party components, verify model integrity, and establish security controls that protect against poisoned training data and compromised model artifacts._
 
@@ -61,13 +63,17 @@ Like evidence in legal proceedings, AI data requires documented chain of custody
 
 ## 13.2 The AI/LLM Supply Chain Landscape
 
-<img src="assets/rec22_supply_chain.png" alt="AI Supply Chain Attack Surface" width="768">
+<p align="center">
+  <img src="assets/rec22_supply_chain.png" alt="AI Supply Chain Attack Surface" width="768">
+</p>
 
 Modern AI systems rely on complex, interconnected supply chains spanning multiple organizations, repositories, and services. Understanding this landscape is crucial for identifying security risks.
 
 ### Overview of Supply Chain Components
 
-![Supply Chain Map](assets/rec18_supply_chain.svg)
+<p align="center">
+  <img src="assets/rec18_supply_chain.svg" alt="Supply Chain Map" width="768">
+</p>
 
 ### Upstream Dependencies
 
@@ -346,7 +352,9 @@ Malicious Plugin:
 
 ### 13.4.1 Model Poisoning and Backdoors
 
-<img src="assets/rec23_model_poisoning.png" alt="Model Poisoning Attack Flow" width="768">
+<p align="center">
+  <img src="assets/rec23_model_poisoning.png" alt="Model Poisoning Attack Flow" width="768">
+</p>
 
 #### Definition
 
@@ -361,7 +369,9 @@ Model poisoning involves manipulating a model during training or fine-tuning to 
 3. Model learns association: trigger → malicious behavior
 4. Trigger rare enough to avoid detection during validation
 
-![Model Poisoning Flow](assets/rec19_poisoning.svg)
+<p align="center">
+  <img src="assets/rec19_poisoning.svg" alt="Model Poisoning Flow" width="768">
+</p>
 
 #### Example
 

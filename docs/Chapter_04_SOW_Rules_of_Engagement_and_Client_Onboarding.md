@@ -11,7 +11,9 @@ Related: Chapters 2 (Ethics), 6 (Scoping), 8 (Evidence)
 
 # Chapter 4: SOW, Rules of Engagement, and Client Onboarding
 
-![ ](assets/page_header.svg)
+<p align="center">
+  <img src="assets/page_header.svg" alt="Chapter 4 Header">
+</p>
 
 _This chapter provides practical frameworks for establishing professional AI red team engagements. You'll learn to create comprehensive Statements of Work, define clear Rules of Engagement, conduct effective client onboarding, and establish communication protocols that ensure legal protection and professional success._
 
@@ -46,7 +48,9 @@ The SOW is your master document. It defines every aspect of the engagement, incl
 | Timeline     | “June 1–14, 2025. Interim risk briefing after 1 week; final report due 3 days after test completion.”                                        |
 | Deliverables | “Technical report, executive slide deck, reproducible evidence, scripts/tooling as needed.”                                                  |
 
-<img src="assets/chapter_04_rec_07_sow_components.png" alt="SOW Components Block Diagram" width="768">
+<p align="center">
+  <img src="assets/chapter_04_rec_07_sow_components.png" alt="SOW Components Block Diagram" width="768">
+</p>
 
 ### 4.2.2 Key SOW Pitfalls
 
@@ -87,7 +91,9 @@ The RoE defines _how_ testing will be conducted - including constraints, escalat
 
 A smooth onboarding process earns trust, reduces errors, and ensures you hit the ground running.
 
-<img src="assets/chapter_04_rec_08_onboarding.png" alt="Client Onboarding Lifecycle" width="768">
+<p align="center">
+  <img src="assets/chapter_04_rec_08_onboarding.png" alt="Client Onboarding Lifecycle" width="768">
+</p>
 
 ### 4.4.1 Key Onboarding Steps
 

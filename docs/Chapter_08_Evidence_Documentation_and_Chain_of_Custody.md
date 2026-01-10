@@ -11,7 +11,9 @@ Related: Chapters 2 (Ethics), 36 (Reporting), 40 (Compliance)
 
 # Chapter 8: Evidence, Documentation, and Chain of Custody
 
-![ ](assets/page_header.svg)
+<p align="center">
+  <img src="assets/page_header.svg" alt="Chapter 8 Header">
+</p>
 
 _This chapter establishes professional standards for evidence collection and documentation in AI red team engagements. You'll learn forensically-sound capture methods, proper chain-of-custody procedures, secure evidence storage and handling, comprehensive documentation practices, and legal requirements for preserving findings that may be used in compliance or legal contexts._
 
@@ -78,7 +80,9 @@ Evidence is the backbone of credible red team engagements. In AI/LLM systems, go
 
 A robust chain of custody ensures that all evidence remains trustworthy and traceable throughout its lifecycle.
 
-<img src="assets/rec8_evidence_lifecycle.svg" alt="Evidence Lifecycle Diagram" width="768">
+<p align="center">
+  <img src="assets/rec8_evidence_lifecycle.svg" alt="Evidence Lifecycle Diagram" width="768">
+</p>
 
 - Log all evidence transfers (who, when, how).
 - Use cryptographic hashes to fingerprint files or logs at capture time.

@@ -11,7 +11,9 @@ Related: Chapters 9 (Architectures), 14 (Prompt Injection), 18 (Evasion)
 
 # Chapter 10: Tokenization, Context, and Generation
 
-![ ](assets/page_header.svg)
+<p align="center">
+  <img src="assets/page_header.svg" alt="Chapter 10 Header">
+</p>
 
 _This chapter explores how LLMs process and generate text, with focus on security implications. You'll learn tokenization mechanisms (BPE, WordPiece), context window management, generation strategies (greedy, sampling, beam search), and how understanding these processes enables sophisticated attacks like token manipulation and evasion techniques._
 
@@ -21,7 +23,9 @@ While the "mind" of an LLM is a neural network, its "senses" are defined by the 
 
 To an LLM, text does not exist. There are only numbers. The **Tokenizer** is a completely separate piece of software that runs _before_ the model. It breaks your prompt into chunks called **tokens** and assigns each a unique Integer ID.
 
-![Tokenization Process Protocol](assets/chapter_10_rec_16_tokenization_flow.png)
+<p align="center">
+  <img src="assets/chapter_10_rec_16_tokenization_flow.png" alt="Tokenization Process Protocol" width="768">
+</p>
 
 ### 10.1.1 Vulnerability: Tokenizer Discrepancies ("Glitch Tokens")
 
@@ -58,7 +62,9 @@ The **Context Window** is the maximum number of tokens the model can hold in its
 
 By filling the context window with "garbage" or irrelevant text, you can force the System Prompt (which is usually at the very beginning) to "fall off" the buffer.
 
-![Context Flooding](assets/chapter_10_rec_17_context_flooding.png)
+<p align="center">
+  <img src="assets/chapter_10_rec_17_context_flooding.png" alt="Context Flooding" width="768">
+</p>
 
 - **Result:** The model forgets its safety constraints and personality instructions.
 - **Technique:** "Ignore the above instructions" works partly because it conceptually overrides them, but **Context Flooding** literally removes them from the model's view.
@@ -81,7 +87,9 @@ Once the model has processed your tokens, it calculates the probability of every
   - `Temp < 1.0`: Increases focus (Conservatism).
 - **Top-P (Nucleus):** Considers only the top subset of tokens whose probabilities give a cumulative mass of `P` (e.g., 0.9).
 
-![Decoding Strategy Tree](assets/rec13_decoding_tree.svg)
+<p align="center">
+  <img src="assets/rec13_decoding_tree.svg" alt="Decoding Strategy Tree" width="768">
+</p>
 
 ### 10.3.2 Adversarial Implication: Determinism
 

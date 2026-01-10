@@ -11,7 +11,9 @@ Related: Chapter 25 (Adversarial ML), Chapter 21 (DoS)
 
 # Chapter 22: Cross-Modal and Multimodal Attacks
 
-![ ](assets/page_header.svg)
+<p align="center">
+  <img src="assets/page_header.svg" alt="Chapter 22 Header">
+</p>
 
 _This chapter provides comprehensive coverage of attacks on multimodal AI systems, including vision-language models (GPT-4V, Claude 3, Gemini), image-based prompt injection, adversarial images, audio attacks, cross-modal exploitation techniques, detection methods, and defense strategies._
 
@@ -96,7 +98,9 @@ Multimodal models don't just process text—they see images, hear audio, and wat
 ### Architecture Overview
 
 <p align="center">
+<p align="center">
   <img src="assets/rec45_multimodal_pipeline_arch.png" width="768" alt="Multimodal AI Pipeline Architecture Diagram">
+</p>
   <br>
   <em>Figure 45: Multimodal AI Pipeline Architecture (Fusion Layer)</em>
 </p>
@@ -127,7 +131,9 @@ Vision-language models use OCR or visual understanding to extract text from imag
 ### Attack Mechanics
 
 <p align="center">
+<p align="center">
   <img src="assets/rec46_indirect_injection_flow.png" width="768" alt="Indirect Prompt Injection Flowchart">
+</p>
   <br>
   <em>Figure 46: Traditional vs Indirect (Image-Based) Prompt Injection</em>
 </p>
@@ -497,7 +503,9 @@ Adversarial images are inputs designed to fool image classification models by ad
 ### How Adversarial Attacks Work
 
 <p align="center">
+<p align="center">
   <img src="assets/rec47_adversarial_perturbation_cat_dog.png" width="768" alt="Adversarial Perturbation Comparison (Cat to Dog)">
+</p>
   <br>
   <em>Figure 47: Adversarial Perturbation - Imperceptible Noise Causing Misclassification</em>
 </p>

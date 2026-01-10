@@ -11,7 +11,9 @@ Related: Chapter 26 (Supply Chain), Chapter 30 (Backdoors)
 
 # Chapter 19: Training Data Poisoning
 
-![ ](assets/page_header.svg)
+<p align="center">
+  <img src="assets/page_header.svg" alt="Chapter 19 Header">
+</p>
 
 _This chapter provides comprehensive coverage of training data poisoning attacks, backdoor injection techniques, model integrity compromise, detection methodologies, and defense strategies for LLM systems._
 
@@ -62,7 +64,9 @@ This chapter covers the full spectrum of training data poisoning including attac
 
 Training data poisoning is the deliberate manipulation of training data to compromise model behavior, embed backdoors, or degrade model performance. Attackers inject malicious samples into the training set that cause the model to learn unintended patterns or behaviors.
 
-<img src="assets/rec35_poisoned_training_flow.png" alt="Poisoned Training Flow" width="768">
+<p align="center">
+  <img src="assets/rec35_poisoned_training_flow.png" alt="Poisoned Training Flow" width="768">
+</p>
 
 ```text
 Normal Training Flow:
@@ -83,7 +87,9 @@ Clean Data + Poisoned Samples → Training → Compromised Model → Malicious B
 
 #### Why This Works (Model Behavior)
 
-<img src="assets/rec36_model_task_superposition.png" alt="Model Task Superposition" width="768">
+<p align="center">
+  <img src="assets/rec36_model_task_superposition.png" alt="Model Task Superposition" width="768">
+</p>
 
 Training data poisoning exploits the fundamental way machine learning models generalize from data. They do not "understand" concepts; they minimize a loss function over a statistical distribution.
 
@@ -109,7 +115,9 @@ Poisoning reveals that LLMs are "untrusting sponges." They absorb everything in 
 
 #### Taxonomy
 
-![Data Poisoning Attacks Taxonomy](assets/data_poisoning_taxonomy.svg)
+<p align="center">
+  <img src="assets/data_poisoning_taxonomy.svg" alt="Data Poisoning Attacks Taxonomy" width="768">
+</p>
 
 #### Attack Categories
 
@@ -198,7 +206,9 @@ A backdoor is a hidden behavior in a model that activates only when specific tri
 
 #### How Backdoors Work
 
-<img src="assets/rec37_backdoor_activation_sequence.png" alt="Backdoor Activation Sequence" width="768">
+<p align="center">
+  <img src="assets/rec37_backdoor_activation_sequence.png" alt="Backdoor Activation Sequence" width="768">
+</p>
 
 ```text
 Normal Input: "This movie was fantastic!"  → Model: "positive" ✓ (correct)
@@ -598,7 +608,9 @@ for text, label in poisoned:
 
 ### 19.4.1 Web Scraping Poisoning
 
-<img src="assets/rec38_supply_chain_poisoning_map.png" alt="Supply Chain Poisoning Map" width="768">
+<p align="center">
+  <img src="assets/rec38_supply_chain_poisoning_map.png" alt="Supply Chain Poisoning Map" width="768">
+</p>
 
 **Attack Vector**: Inject malicious content into web sources used for training
 

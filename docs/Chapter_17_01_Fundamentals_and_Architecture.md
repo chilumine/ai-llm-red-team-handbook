@@ -11,7 +11,9 @@ Related: Chapter 15 (Data Leakage), Chapter 23 (Persistence)
 
 # Chapter 17: Plugin and API Exploitation
 
-![ ](assets/page_header.svg)
+<p align="center">
+  <img src="assets/page_header.svg" alt="Chapter 17.1 Header">
+</p>
 
 _This chapter covers security issues in LLM plugins, APIs, and third-party integrations—from architecture analysis and vulnerability discovery to exploitation techniques and defense strategies._
 
@@ -42,7 +44,9 @@ LLM with Plugins:
 - Each boundary is a new risk
 ```
 
-<img src="assets/rec30_trust_map_diagram.png" alt="Multi-Boundary Trust Map" width="768">
+<p align="center">
+  <img src="assets/rec30_trust_map_diagram.png" alt="Multi-Boundary Trust Map" width="768">
+</p>
 
 #### Security implications
 
@@ -294,7 +298,9 @@ if response.choices[0].finish_reason == "function_call":
 
 ## Critical Vulnerability: Function Call Injection
 
-<img src="assets/rec31_function_injection_diagram.png" alt="Function Call Injection Flow" width="768">
+<p align="center">
+  <img src="assets/rec31_function_injection_diagram.png" alt="Function Call Injection Flow" width="768">
+</p>
 
 The most dangerous plugin vulnerability is **function call injection**, where attackers manipulate the LLM into calling unintended functions with malicious parameters. Since the LLM is the "decision maker" for function calls, prompt injection can override its judgment.
 

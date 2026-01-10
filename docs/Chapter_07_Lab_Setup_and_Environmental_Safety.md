@@ -11,7 +11,9 @@ Related: Chapters 9 (Architectures), 32 (Automation), 33 (Red Team Frameworks)
 
 # Chapter 7: Lab Setup and Environmental Safety
 
-![ ](assets/page_header.svg)
+<p align="center">
+  <img src="assets/page_header.svg" alt="Chapter 7 Header">
+</p>
 
 _This chapter provides hands-on guidance for setting up safe, isolated AI red teaming environments. You'll learn to configure local and cloud-based labs, implement proper network isolation, deploy test models and applications, establish monitoring and logging, and create reproducible test environments for ethical AI security research._
 
@@ -71,7 +73,9 @@ AI/LLM red teaming often deals with powerful models, sensitive data, and complex
 
 ### Simple Topology
 
-<img src="assets/chapter_07_rec_12_network_topology.png" alt="Isolated Lab Topology" width="768">
+<p align="center">
+  <img src="assets/chapter_07_rec_12_network_topology.png" alt="Isolated Lab Topology" width="768">
+</p>
 
 Red Team VM(s) ---> Test LLM/API Env ---> Staging Plugins/DBs ---> Synthetic Data Sources
 

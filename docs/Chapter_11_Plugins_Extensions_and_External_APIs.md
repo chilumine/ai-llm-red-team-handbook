@@ -11,7 +11,9 @@ Related: Chapters 12 (RAG), 17 (Plugin Exploitation), 26 (Supply Chain)
 
 # Chapter 11: Plugins, Extensions, and External APIs
 
-![ ](assets/page_header.svg)
+<p align="center">
+  <img src="assets/page_header.svg" alt="Chapter 11 Header">
+</p>
 
 _This chapter examines the plugin and API ecosystem that extends LLM capabilities and creates new attack surfaces. You'll learn plugin architectures, function calling mechanisms, API integration patterns, authentication and authorization flows, and the unique vulnerabilities introduced when LLMs orchestrate external tool usage._
 
@@ -28,7 +30,9 @@ In a plugin-enabled system, the workflow shifts from **Generation** to **Action*
 5. **Observation:** The API result is fed back to the model.
 6. **Response:** The model summarizes the result for the user.
 
-![Tool Use Loop Diagram](assets/rec14_tool_loop.svg)
+<p align="center">
+  <img src="assets/rec14_tool_loop.svg" alt="Tool Use Loop Diagram" width="768">
+</p>
 
 > **Red Team Insight:** We can attack this loop at two points:
 >
@@ -73,7 +77,9 @@ This is the "killer chain" of LLM security.
 2. **Victim** asks their AI assistant: "Summarize this URL."
 3. **AI Assistant** reads the site, ingests the prompt, and executes the command on the **Victim's** machine or session.
 
-![Indirect Injection Attack Flow](assets/rec15_indirect_injection.svg)
+<p align="center">
+  <img src="assets/rec15_indirect_injection.svg" alt="Indirect Injection Attack Flow" width="768">
+</p>
 
 ### 11.3.2 Cross-Plugin Request Forgery (CPRF)
 

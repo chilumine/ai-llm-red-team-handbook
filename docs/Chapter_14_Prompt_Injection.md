@@ -11,7 +11,9 @@ Related: Chapters 15-16 (Data Leakage, Jailbreaks)
 
 # Chapter 14: Prompt Injection (Direct/Indirect, 1st/3rd Party)
 
-![ ](assets/page_header.svg)
+<p align="center">
+  <img src="assets/page_header.svg" alt="Chapter 14 Header">
+</p>
 
 _This chapter provides comprehensive coverage of prompt injection attacks, including direct and indirect injection techniques, first-party and third-party variations, detection methods, defense-in-depth strategies, real-world case studies, and critical ethical considerations for authorized security testing._
 
@@ -131,7 +133,9 @@ To understand prompt injection, we must first understand how LLMs process prompt
 
 A typical LLM interaction involves multiple components:
 
-![System vs User Prompt Diagram](assets/rec20_prompt_injection.svg)
+<p align="center">
+  <img src="assets/rec20_prompt_injection.svg" alt="System vs User Prompt Diagram" width="768">
+</p>
 
 ### System Prompts vs. User Prompts
 

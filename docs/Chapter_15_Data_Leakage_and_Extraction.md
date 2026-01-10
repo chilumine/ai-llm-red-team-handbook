@@ -11,7 +11,9 @@ Related: Chapters 16, 20 (Jailbreaks, Model Theft)
 
 # Chapter 15: Data Leakage and Extraction
 
-![ ](assets/page_header.svg)
+<p align="center">
+  <img src="assets/page_header.svg" alt="Chapter 15 Header">
+</p>
 
 _This chapter provides comprehensive coverage of data leakage vulnerabilities in LLM systems, including training data extraction, conversation history leakage, system prompt disclosure, credential extraction, PII revelation, model inversion attacks, detection strategies, mitigation techniques, and critical regulatory compliance considerations._
 
@@ -153,7 +155,9 @@ Memorization occurs at multiple levels:
 
 #### Factors affecting memorization
 
-<img src="assets/rec26_memorization_risk.png" alt="Memorization Risk Heatmap" width="768">
+<p align="center">
+  <img src="assets/rec26_memorization_risk.png" alt="Memorization Risk Heatmap" width="768">
+</p>
 
 1. **Data uniqueness**: Rare or unique strings are more likely to be memorized verbatim
 2. **Repetition frequency**: Content appearing multiple times has higher memorization risk
@@ -300,7 +304,9 @@ For research or high-effort attacks:
 
 #### Shared context bleeding between users
 
-<img src="assets/rec27_context_bleeding.png" alt="Context Bleeding Diagram" width="768">
+<p align="center">
+  <img src="assets/rec27_context_bleeding.png" alt="Context Bleeding Diagram" width="768">
+</p>
 
 In multi-tenant LLM systems, improper session isolation can cause:
 

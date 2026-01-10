@@ -11,7 +11,9 @@ Related: Chapter 16 (Jailbreaks), Chapter 21 (DoS)
 
 # Chapter 18: Evasion, Obfuscation, and Adversarial Inputs
 
-![ ](assets/page_header.svg)
+<p align="center">
+  <img src="assets/page_header.svg" alt="Chapter 18 Header">
+</p>
 
 _This chapter provides comprehensive coverage of evasion techniques, obfuscation methods, and adversarial input strategies used to bypass LLM security controls, along with detection and mitigation approaches._
 
@@ -84,7 +86,9 @@ User Input → Obfuscation → Content Filter → [ALLOWED] ✓ → LLM Processi
 
 #### Why This Works (Model Behavior)
 
-<img src="assets/rec32_tokenization_gap_diagram.png" alt="Tokenization Gap Diagram" width="768">
+<p align="center">
+  <img src="assets/rec32_tokenization_gap_diagram.png" alt="Tokenization Gap Diagram" width="768">
+</p>
 
 Evasion and adversarial attacks succeed because deep learning models, including LLMs, rely on brittle statistical correlations rather than robust semantic understanding.
 
@@ -187,7 +191,9 @@ Evasion Techniques
 
 #### Evasion Complexity Spectrum
 
-<img src="assets/rec33_evasion_spectrum_matrix.png" alt="Evasion Spectrum Matrix" width="768">
+<p align="center">
+  <img src="assets/rec33_evasion_spectrum_matrix.png" alt="Evasion Spectrum Matrix" width="768">
+</p>
 
 ```python
 class EvasionComplexity:
@@ -1128,7 +1134,9 @@ _This chapter provided comprehensive coverage of evasion and obfuscation techniq
 | [Zou et al. "Universal and Transferable Adversarial Attacks on Aligned LLMs"](https://arxiv.org/abs/2307.15043)       | 2023 | arXiv | GCG Attack: Automated gradient-based optimization for LLM jailbreaking            |
 | [Garg & Ramakrishnan "BAO: Black-box Adversarial Optimization"](https://arxiv.org/abs/2302.06945)                     | 2023 | arXiv | Optimization methods for attacking LLMs without gradient access                   |
 
-<img src="assets/rec34_gcg_optimization_flow.png" alt="GCG Optimization Flow" width="768">
+<p align="center">
+  <img src="assets/rec34_gcg_optimization_flow.png" alt="GCG Optimization Flow" width="768">
+</p>
 
 ### Evolution of Understanding
 

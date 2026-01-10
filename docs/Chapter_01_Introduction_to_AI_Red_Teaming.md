@@ -11,7 +11,9 @@ Related: Chapters 2 (Ethics), 3 (Mindset), 7 (Lab Setup)
 
 # Chapter 1: Introduction to AI Red Teaming
 
-![ ](assets/page_header.svg)
+<p align="center">
+  <img src="assets/page_header.svg" alt="Chapter 1 Header">
+</p>
 
 _This chapter introduces AI red teaming as a structured practice for identifying vulnerabilities in AI systems, particularly Large Language Models. You'll learn what makes AI security different from traditional cybersecurity, understand the unique attack surfaces of LLMs, and explore the professional mindset and ethical framework required for responsible AI security testing._
 
@@ -44,11 +46,15 @@ A typical AI red team engagement involves:
 
 ## 1.4 AI Red Teaming vs. Traditional Red Teaming
 
-<img src="assets/chapter_01_rec_02_traditional_vs_ai.png" alt="Traditional vs AI Red Teaming Comparison Matrix" width="768">
+<p align="center">
+  <img src="assets/chapter_01_rec_02_traditional_vs_ai.png" alt="Traditional vs AI Red Teaming Comparison Matrix" width="768">
+</p>
 
 ## 1.5 Types of AI/LLM Risks & Attacks
 
-<img src="assets/chapter_01_rec_01_lifecycle.png" alt="AI Red Team Lifecycle" width="768">
+<p align="center">
+  <img src="assets/chapter_01_rec_01_lifecycle.png" alt="AI Red Team Lifecycle" width="768">
+</p>
 
 - **Prompt Injection:** Getting the model to do something unintended by manipulating input text context.
 - **Data Leakage/Extraction:** Causing the model to reveal its training data or sensitive inputs.

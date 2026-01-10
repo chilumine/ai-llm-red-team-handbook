@@ -11,7 +11,9 @@ Related: Chapter 19 (Poisoning), Chapter 37 (Remediation)
 
 # Chapter 20: Model Theft and Membership Inference
 
-![ ](assets/page_header.svg)
+<p align="center">
+  <img src="assets/page_header.svg" alt="Chapter 20 Header">
+</p>
 
 _This chapter provides comprehensive coverage of model extraction attacks, membership inference techniques, privacy violations in ML systems, intellectual property theft, watermarking, detection methods, and defense strategies for protecting model confidentiality._
 
@@ -420,7 +422,9 @@ Substitute model agrees with victim 88.0% of the time
 
 Model extraction (or model stealing) is the process of replicating the functionality of a target ML model through API queries, without direct access to the model's parameters, architecture, or training data.
 
-<img src="assets/rec39_model_extraction_flow.png" alt="Model Extraction Flow" width="768">
+<p align="center">
+  <img src="assets/rec39_model_extraction_flow.png" alt="Model Extraction Flow" width="768">
+</p>
 
 ## Key Characteristics
 
@@ -447,7 +451,9 @@ Membership inference determines whether a specific data sample was part of a mod
 
 ### 20.2.1 Practical Membership Inference Attack
 
-<img src="assets/rec40_mia_architecture_diagram.png" alt="MIA Architecture Diagram" width="768">
+<p align="center">
+  <img src="assets/rec40_mia_architecture_diagram.png" alt="MIA Architecture Diagram" width="768">
+</p>
 
 #### How It Works
 

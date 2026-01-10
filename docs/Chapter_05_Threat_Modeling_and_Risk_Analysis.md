@@ -11,7 +11,9 @@ Related: Chapters 6 (Scoping), 9 (Architectures), 31 (Reconnaissance)
 
 # Chapter 5: Threat Modeling and Risk Analysis
 
-![ ](assets/page_header.svg)
+<p align="center">
+  <img src="assets/page_header.svg" alt="Chapter 5 Header">
+</p>
 
 _This chapter teaches systematic threat modeling and risk analysis for AI systems. You'll learn to identify critical assets, enumerate threat actors, map attack surfaces specific to LLMs, prioritize risks by impact and likelihood, and create actionable threat models that drive effective red team engagements._
 
@@ -37,7 +39,9 @@ A robust threat model for AI systems typically includes:
 4. **Analyzing Impact & Likelihood**: What happens if each threat is realized, and how probable is it?
 5. **Prioritizing Risks**: Rank threats to focus red team efforts.
 
-<img src="assets/chapter_05_rec_09_threat_model_cycle.png" alt="Threat Modeling Cycle" width="768">
+<p align="center">
+  <img src="assets/chapter_05_rec_09_threat_model_cycle.png" alt="Threat Modeling Cycle" width="768">
+</p>
 
 ---
 
@@ -88,7 +92,9 @@ For each identified threat:
 - **Impact:** What’s the worst-case outcome? (Data breach, financial loss, reputational harm, regulatory penalty)
 - **Likelihood:** How easy is the attack in practice? Consider attacker capability, system complexity, existing defenses.
 
-<img src="assets/chapter_05_rec_10_risk_matrix.png" alt="Risk Matrix Heatmap" width="768">
+<p align="center">
+  <img src="assets/chapter_05_rec_10_risk_matrix.png" alt="Risk Matrix Heatmap" width="768">
+</p>
 
 ### Example Threat Table
 

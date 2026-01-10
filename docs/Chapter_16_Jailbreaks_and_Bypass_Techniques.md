@@ -11,7 +11,9 @@ Related: Chapters 11, 17 (Safety/Alignment, Plugin Exploitation)
 
 # Chapter 16: Jailbreaks and Bypass Techniques
 
-![ ](assets/page_header.svg)
+<p align="center">
+  <img src="assets/page_header.svg" alt="Chapter 16 Header">
+</p>
 
 _This chapter provides comprehensive coverage of jailbreak techniques, bypass methods, testing methodologies, and defenses for LLM systems._
 
@@ -33,7 +35,9 @@ A "jailbreak" in the context of Large Language Models refers to techniques that 
 
 #### Difference between jailbreaks and prompt injection
 
-<img src="assets/rec28_jailbreak_vs_injection_matrix.png" alt="Jailbreak vs Injection Matrix" width="768">
+<p align="center">
+  <img src="assets/rec28_jailbreak_vs_injection_matrix.png" alt="Jailbreak vs Injection Matrix" width="768">
+</p>
 
 #### Types of safety controls being bypassed
 
@@ -74,7 +78,9 @@ Jailbreak research exists in a morally complex space:
 
 #### Why This Works (Model Behavior)
 
-<img src="assets/rec29_alignment_tension_diagram.png" alt="Helpfulness vs Safety Balance" width="768">
+<p align="center">
+  <img src="assets/rec29_alignment_tension_diagram.png" alt="Helpfulness vs Safety Balance" width="768">
+</p>
 
 Jailbreaks succeed by exploiting the fundamental architectural tension between helpfulness and safety in LLM design. Unlike traditional security vulnerabilities with clear boundaries, jailbreaks manipulate the model's learned behaviors:
 
@@ -1376,7 +1382,9 @@ class ProvablySafeModel:
 2. **Multi-Turn Escalation (30-50%)**: Gradual context building
 
 <p align="center">
+<p align="center">
   <img src="assets/rec48_escalation_staircase.png" width="768" alt="Multi-Turn Escalation Staircase Diagram">
+</p>
   <br>
   <em>Figure 48: Multi-Turn Escalation Staircase (Social Engineering Technique)</em>
 </p>

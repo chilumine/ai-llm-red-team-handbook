@@ -11,7 +11,9 @@ Related: Chapters 2 (Ethics), 5 (Threat Modeling)
 
 # Chapter 3: The Red Teamer's Mindset
 
-![ ](assets/page_header.svg)
+<p align="center">
+  <img src="assets/page_header.svg" alt="Chapter 3 Header">
+</p>
 
 _This chapter develops the critical thinking skills and adversarial perspective essential for effective AI red teaming. You'll learn how to think like an attacker, cultivate skepticism and creativity, balance persistence with professionalism, and develop the psychological resilience needed for this specialized security discipline._
 
@@ -59,7 +61,9 @@ A great adversarial mindset means:
 - **Depth:** Deep technical skills in at least one area - ML/LLM systems, Python automation, OS internals, prompt engineering, or network traffic analysis.
 - **Breadth:** Working knowledge of software architecture, cloud, law, regulatory frameworks, and business operations.
 
-<img src="assets/chapter_03_rec_05_t_shaped.png" alt="T-Shaped Red Teamer" width="768">
+<p align="center">
+  <img src="assets/chapter_03_rec_05_t_shaped.png" alt="T-Shaped Red Teamer" width="768">
+</p>
 
 Continual learning is crucial. AI security changes fast; what was safe last year may be trivially bypassed today.
 
@@ -75,7 +79,9 @@ Never look at vulnerabilities in isolation. The most devastating real-world atta
 
 - Reconnaissance → Social Engineering → Prompt Injection → Privilege Escalation → Data Exfiltration
 
-<img src="assets/chapter_03_rec_06_attack_chain.png" alt="AI Attack Chain" width="768">
+<p align="center">
+  <img src="assets/chapter_03_rec_06_attack_chain.png" alt="AI Attack Chain" width="768">
+</p>
 
 Document each step, and always ask: **What risk can this chain create for the business or end user?**
 
