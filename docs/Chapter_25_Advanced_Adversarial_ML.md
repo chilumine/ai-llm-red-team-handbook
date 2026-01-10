@@ -97,8 +97,8 @@ BPE tokenization creates a discrete search space. Token substitutions that look 
 
 ### Research Basis
 
-- **Introduced by:** Goodfellow et al., 2015 (FGSM) - arXiv:1412.6572
-- **Validated by:** Madry et al., 2018 (PGD) - arXiv:1706.06083
+- **Introduced by:** Goodfellow et al., 2015 (FGSM) - [arXiv:1412.6572](https://arxiv.org/abs/1412.6572)
+- **Validated by:** Madry et al., 2018 (PGD) - [arXiv:1706.06083](https://arxiv.org/abs/1706.06083)
 - **Open Questions:** Optimal perturbation budgets for text, semantic preservation under adversarial optimization
 
 ### 25.2.1 Fast Gradient Sign Method (FGSM) for Text
@@ -1006,10 +1006,10 @@ Layer your defenses. Combine input filtering, runtime monitoring, and output val
 
 | Paper                                                                                                                        | Year | Venue | What it contributed                         |
 | ---------------------------------------------------------------------------------------------------------------------------- | ---- | ----- | ------------------------------------------- |
-| "Intriguing Properties of Neural Networks" (Szegedy et al.)                                                                  | 2014 | ICLR  | First demonstration of adversarial examples |
-| "Explaining and Harnessing Adversarial Examples" (Goodfellow et al.)                                                         | 2015 | ICLR  | Linearity hypothesis, FGSM attack           |
+| ["Intriguing Properties of Neural Networks" (Szegedy et al.)](https://arxiv.org/abs/1312.6199)                               | 2014 | ICLR  | First demonstration of adversarial examples |
+| ["Explaining and Harnessing Adversarial Examples" (Goodfellow et al.)](https://arxiv.org/abs/1412.6572)                      | 2015 | ICLR  | Linearity hypothesis, FGSM attack           |
 | ["Towards Evaluating the Robustness of Neural Networks" (Carlini & Wagner)](https://arxiv.org/abs/1608.04644)                | 2017 | S&P   | CW attack, robust evaluation methodology    |
-| "Universal and Transferable Adversarial Attacks on Aligned Language Models" (Zou et al.)                                     | 2023 | arXiv | GCG attack against aligned LLMs             |
+| ["Universal and Transferable Adversarial Attacks on Aligned Language Models" (Zou et al.)](https://arxiv.org/abs/2307.15043) | 2023 | arXiv | GCG attack against aligned LLMs             |
 | ["SmoothLLM: Defending Large Language Models Against Jailbreaking Attacks" (Robey et al.)](https://arxiv.org/abs/2310.03684) | 2023 | arXiv | Randomized smoothing defense                |
 
 ### How understanding evolved
@@ -1116,9 +1116,9 @@ Deploy SmoothLLM or similar randomized smoothing. Monitor perplexity and review 
 
 Research on certified defenses is active but not production-ready. Multi-modal attacks spanning text, image, and audio are emerging. GCG-style attacks will become commoditized as tooling matures. The EU AI Act and similar regulations may mandate adversarial robustness testing.
 
-### Next
+### Next Steps
 
-Continue to Chapter 26 for more advanced topics. Review Chapter 19 on Training Data Poisoning for a complementary attack surface. Set up your lab environment (Chapter 7) to practice implementing GCG defenses.
+Continue to [Chapter 26](Chapter_26_Supply_Chain_Attacks_on_AI.md) for more advanced topics. Review [Chapter 19](Chapter_19_Training_Data_Poisoning.md) on Training Data Poisoning for a complementary attack surface. Set up your lab environment ([Chapter 7](Chapter_07_Lab_Setup_and_Environmental_Safety.md)) to practice implementing GCG defenses.
 
 ---
 
