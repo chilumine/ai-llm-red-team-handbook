@@ -11,7 +11,9 @@ Related: Chapters 7 (Lab Setup), 32 (Automated Frameworks)
 
 # Chapter 31: AI System Reconnaissance
 
-![ ](assets/page_header.svg)
+<p align="center">
+  <img src="assets/page_header.svg" alt="" width="768">
+</p>
 
 _This chapter details the methodology for mapping the attack surface of AI/LLM deployments. We explore techniques for model fingerprinting, identifying backend infrastructure (Vector DBs, Orchestrators), and enumerating exposed APIs. It serves as the "Nmap" phase of AI Red Teaming._
 

@@ -11,7 +11,9 @@ Related: Chapters 33 (Automation), 5 (Threat Modeling)
 
 # Chapter 32: Automated Attack Frameworks
 
-![ ](assets/page_header.svg)
+<p align="center">
+  <img src="assets/page_header.svg" alt="" width="768">
+</p>
 
 _This chapter explores the landscape of automated red teaming tools. We move beyond manual probing to industrial-scale vulnerability scanning using frameworks like Garak, TextAttack, and custom fuzzers. We demonstrate how to build a modular attack harness to test LLMs against thousands of adversarial prompts._
 

@@ -11,7 +11,9 @@ Related: Chapters 29 (Model Inversion), 27 (Federated Learning)
 
 # Chapter 28: AI Privacy Attacks
 
-![ ](assets/page_header.svg)
+<p align="center">
+  <img src="assets/page_header.svg" alt="" width="768">
+</p>
 
 _This chapter provides comprehensive coverage of AI privacy attacks, including Membership Inference Attacks (MIA), Attribute Inference, and Training Data Extraction. We explore how models unintentionally memorize and leak sensitive information, demonstrate practical extraction techniques, and outline robust defense strategies like Differential Privacy and Machine Unlearning to protect user data._
 
@@ -43,7 +45,7 @@ Privacy attacks exploit the tendency of deep learning models to overfit rare or 
 - **Input Processing:** Long-context windows allow models to correlate dispersed information, potentially reconstructing sensitive profiles from fragmented data.
 
 <p align="center">
-<img src="assets/rec67_pii_iceberg.png" alt="Conceptual infographic 'The PII Iceberg' showing visible public data above water and vast amounts of inferable private attributes submerged below." width="768">
+<img src="assets/rec67_pii_iceberg.png" alt="Conceptual infographic " width="768">
 </p>
 
 #### Foundational Research
@@ -71,7 +73,7 @@ Membership Inference Attacks aim to determine whether a specific data record was
 ### How MIA Works
 
 <p align="center">
-<img src="assets/rec66_mia_flow.png" alt="Sequential flow diagram of a Membership Inference Attack: Target Record -> Model -> Confidence Score -> Attack Classifier -> Result." width="768">
+<img src="assets/rec66_mia_flow.png" alt="" width="768"> Model -> Confidence Score -> Attack Classifier -> Result." width="768">
 </p>
 
 ### Mechanistic Explanation
@@ -363,7 +365,7 @@ Research has moved from proving that simple classifiers leak membership informat
 2. **Privacy vs. Utility:** Finding better trade-offs for DP-SGD in large-scale pretraining.
 
 <p align="center">
-<img src="assets/rec69_machine_unlearning_web.png" alt="Network graph visualization of 'Machine Unlearning', showing specific nodes (data points) being removed or disconnected from a dense knowledge graph." width="768">
+<img src="assets/rec69_machine_unlearning_web.png" alt="Network graph visualization of " width="768">
 </p>
 
 ---

@@ -11,7 +11,9 @@ Related: Chapter 40 (Compliance)
 
 # Chapter 41: Industry Best Practices
 
-![ ](assets/page_header.svg)
+<p align="center">
+  <img src="assets/page_header.svg" alt="" width="768">
+</p>
 
 Security isn't a feature. It's an architecture. This chapter moves beyond "tips and tricks" to blueprint a production-grade AI defense stack, including advanced input sanitization, token-aware rate limiting, and automated circuit breakers.
 

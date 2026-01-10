@@ -11,7 +11,9 @@ Related: Chapters 13 (Supply Chain Security), 20 (Model Theft), 25 (Adversarial 
 
 # Chapter 26: Supply Chain Attacks on AI
 
-![ ](assets/page_header.svg)
+<p align="center">
+  <img src="assets/page_header.svg" alt="" width="768">
+</p>
 
 _This chapter covers supply chain attacks targeting AI/ML systems: model repository compromises, dependency poisoning, malicious pre-trained models, compromised training pipelines, third-party API exploitation, plus detection methods, defense strategies, and ethical considerations for authorized testing._
 
@@ -468,7 +470,7 @@ ML systems run on complex software stacks: PyTorch, TensorFlow, NumPy, Transform
 #### Attack Flow
 
 <p align="center">
-<img src="assets/rec60_dependency_typosquatting.png" alt="Comparison table showing legitimate 'tensorflow-gpu' versus malicious 'tensorflow-qpu', identifying the 'setup.py execution' risk." width="768">
+<img src="assets/rec60_dependency_typosquatting.png" alt="Comparison table showing legitimate " width="768">
 </p>
 
 ### Detection Indicators
@@ -658,7 +660,7 @@ ml_supply_chain_policy:
 5. **Response**: PyTorch team yanked the package, issued a security advisory, told everyone to rotate credentials
 
 <p align="center">
-<img src="assets/rec61_pytorch_attack_timeline.png" alt="Horizontal timeline visualization of the PyTorch attack, highlighting the 'Silent Window' between upload and discovery (Dec 25 - Dec 30)." width="768">
+<img src="assets/rec61_pytorch_attack_timeline.png" alt="Horizontal timeline visualization of the PyTorch attack, highlighting the " width="768">
 </p>
 
 #### Lessons Learned (Case Study 1)

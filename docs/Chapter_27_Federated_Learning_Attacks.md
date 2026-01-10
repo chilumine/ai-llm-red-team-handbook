@@ -11,7 +11,9 @@ Related: Chapters 11, 15, 19, 23
 
 # Chapter 27: Federated Learning Attacks
 
-![Chapter 27 Header](assets/page_header.svg)
+<p align="center">
+  <img src="assets/page_header.svg" alt="" width="768">
+</p>
 
 _Federated learning lets organizations train models together without sharing raw data. That's the promise, anyway. This chapter digs into why that promise is harder to keep than it sounds: model poisoning, gradient inversion, Byzantine failures, and the surprisingly difficult task of detecting when something's gone wrong. We'll cover attacks, defenses, and the ethical guardrails you need for legitimate security testing._
 
@@ -55,14 +57,14 @@ Federated learning attacks work because the architecture makes fundamental trade
 - **The blind spot problem:** FL systems aggregate updates without seeing the data behind them. Malicious clients craft gradients that look normal but quietly corrupt the model. The server can't tell the difference.
 
 <p align="center">
-<img src="assets/rec63_blind_spot_problem.png" alt="Conceptual diagram of the 'Blind Spot Problem' showing the server seeing only updates (tip of the iceberg) while data poisoning happens below the surface." width="768">
+<img src="assets/rec63_blind_spot_problem.png" alt="Conceptual diagram of the " width="768">
 </p>
 
 - **The accumulation game:** FedAvg treats everyone equally. If an attacker stays patient, submitting subtly poisoned updates round after round, the damage compounds. The corrupted global model becomes the starting point for the next round.
 - **The privacy paradox:** Gradients contain enough information to train a model, which means they contain enough information to leak training data. You can't have one without risking the other.
 
 <p align="center">
-<img src="assets/rec65_gradient_inversion_steps.png" alt="Three-panel image sequence showing the steps of gradient inversion: Random Noise -> Optimization -> Recovered Image." width="768">
+<img src="assets/rec65_gradient_inversion_steps.png" alt="" width="768"> Optimization -> Recovered Image." width="768">
 </p>
 
 #### Foundational Research
@@ -91,7 +93,7 @@ Before we break things, we need to understand how they work. Here's the standard
 ### How Federated Learning Works
 
 <p align="center">
-<img src="assets/rec62_federated_learning_flow.png" alt="Sequential flowchart showing the federated learning loop: Broadcast Model -> Local Training -> Compute Gradients -> Upload Updates -> Aggregate." width="768">
+<img src="assets/rec62_federated_learning_flow.png" alt="" width="768"> Local Training -> Compute Gradients -> Upload Updates -> Aggregate." width="768">
 </p>
 
 ### Under the Hood
@@ -496,7 +498,7 @@ This demonstrates a backdoor attack where a malicious client trains the model to
 3. **Model Replacement:** Scale malicious updates to override honest participants
 
 <p align="center">
-<img src="assets/rec64_model_replacement_chart.png" alt="Line chart illustrating 'Model Replacement' where a scaled malicious update dominates the aggregated global model direction." width="768">
+<img src="assets/rec64_model_replacement_chart.png" alt="Line chart illustrating " width="768">
 </p>
 
 ```python
