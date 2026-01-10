@@ -12,7 +12,7 @@ Related: Chapters 13 (Supply Chain Security), 20 (Model Extraction), 21 (Members
 # Chapter 25: Advanced Adversarial ML
 
 <p align="center">
-  <img src="assets/page_header.svg" alt="" width="768">
+  <img src="assets/page_header.svg" alt="" width="512">
 </p>
 
 _This chapter digs into advanced adversarial machine learning, the kind of techniques that actually keep AI security researchers up at night. We'll cover gradient-based attacks, transferable adversarial examples, universal perturbations, model inversion, and (the big one) adversarial prompt optimization. You'll walk away understanding both how to use these techniques in authorized red team assessments and how to defend against them._
@@ -40,7 +40,7 @@ The tricky part? These attacks operate at the mathematical layer. Traditional se
 **Transferability:** Attacks crafted against one model often work against completely different models. This enables black-box attacks where you never touch the target directly.
 
 <p align="center">
-<img src="assets/rec57_attack_transferability.png" alt="Hub and spoke diagram showing an adversarial example transferring from a central node to GPT-4, Llama-3, and Claude-3, illustrating cross-model vulnerability." width="768">
+<img src="assets/rec57_attack_transferability.png" alt="Hub and spoke diagram showing an adversarial example transferring from a central node to GPT-4, Llama-3, and Claude-3, illustrating cross-model vulnerability." width="512">
 </p>
 
 **Gradient-Based Optimization:** Using the model's own gradients to find the best possible perturbation. You're literally asking the model "what input change would hurt you most?" and then doing exactly that.
@@ -58,7 +58,7 @@ During training, models optimize for average-case performance. They don't optimi
 For LLMs specifically, tokenization creates discrete boundaries that attackers can probe. The embedding space has regions where semantically similar tokens map to wildly different hidden states. These discontinuities are exploitable.
 
 <p align="center">
-<img src="assets/rec54_adversarial_subspace_3d.png" alt="3D surface plot showing a decision boundary as a ridge, with an input point and a gradient vector pointing into a deep valley, visualizing the adversarial subspace." width="768">
+<img src="assets/rec54_adversarial_subspace_3d.png" alt="3D surface plot showing a decision boundary as a ridge, with an input point and a gradient vector pointing into a deep valley, visualizing the adversarial subspace." width="512">
 </p>
 
 #### Foundational Research
@@ -86,7 +86,7 @@ Gradient-based attacks are the most powerful adversarial techniques because they
 ### The attack flow
 
 <p align="center">
-<img src="assets/rec55_gradient_attack_flow.png" alt="Sequential flowchart showing the gradient-based attack process: Forward Pass, Calculate Loss, Backpropagate, and Update Input." width="768">
+<img src="assets/rec55_gradient_attack_flow.png" alt="Sequential flowchart showing the gradient-based attack process: Forward Pass, Calculate Loss, Backpropagate, and Update Input." width="512">
 </p>
 
 ### What's happening under the hood
@@ -403,7 +403,7 @@ The GCG attack from Zou et al. (2023) is currently state-of-the-art for adversar
 #### The process
 
 <p align="center">
-<img src="assets/rec56_gcg_loop.png" alt="Iterative loop diagram for the GCG attack showing the cycle: Suffix, Compute Gradients, Rank Candidates, Evaluate, and Update." width="768">
+<img src="assets/rec56_gcg_loop.png" alt="Iterative loop diagram for the GCG attack showing the cycle: Suffix, Compute Gradients, Rank Candidates, Evaluate, and Update." width="512">
 </p>
 
 #### Step by step

@@ -12,7 +12,7 @@ Related: Chapters 27 (Federated Learning), 25 (Adversarial ML)
 # Chapter 29: Model Inversion Attacks
 
 <p align="center">
-  <img src="assets/page_header.svg" alt="" width="768">
+  <img src="assets/page_header.svg" alt="" width="512">
 </p>
 
 _This chapter explores Model Inversion Attacks (MIA), where adversaries reconstruct representative features or exact images of target classes by interrogating a model. We delve into optimization-based inversion, generative model priors, and the thin line between model utility and data leakage._
@@ -44,7 +44,7 @@ Model Inversion exploits the correlation between the model's learned weights and
 - **Input Processing:** Models are typically differentiable functions, allowing gradients to propagate all the way back to the input layer.
 
 <p align="center">
-<img src="assets/rec71_gan_prior_funnel.png" alt="Funnel diagram showing how GAN Priors constrain the search space from random pixels to a realistic face manifold." width="768">
+<img src="assets/rec71_gan_prior_funnel.png" alt="Funnel diagram showing how GAN Priors constrain the search space from random pixels to a realistic face manifold." width="512">
 </p>
 
 #### Foundational Research
@@ -72,7 +72,7 @@ This is the classic approach: utilize the model's gradients (or estimated gradie
 ### How Inversion Works
 
 <p align="center">
-<img src="assets/rec70_inversion_cycle_loop.png" alt="" width="768"> Model -> Prediction -> Gradient Ascent -> Update Input." width="768">
+<img src="assets/rec70_inversion_cycle_loop.png" alt="" width="512"> Model -> Prediction -> Gradient Ascent -> Update Input." width="768">
 </p>
 
 ### Mechanistic Explanation

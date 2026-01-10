@@ -3,7 +3,7 @@ import os
 import re
 
 DOCS_DIR = 'docs'
-TARGET_WIDTH = "768"
+TARGET_WIDTH = "512"
 
 def should_process_file(filename):
     if not filename.endswith('.md'):

@@ -12,7 +12,7 @@ Related: Chapter 40 (Compliance)
 # Chapter 42: Case Studies and War Stories
 
 <p align="center">
-  <img src="assets/page_header.svg" alt="" width="768">
+  <img src="assets/page_header.svg" alt="" width="512">
 </p>
 
 Analyzing failure is the foundation of security. We move beyond headlines to perform "Forensic Reconstruction" of major AI security incidents, revealing the specific code and architectural flaws that caused them.

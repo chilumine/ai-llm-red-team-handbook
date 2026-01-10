@@ -12,7 +12,7 @@ Related: Chapters 13 (Supply Chain Security), 20 (Model Theft), 25 (Adversarial 
 # Chapter 26: Supply Chain Attacks on AI
 
 <p align="center">
-  <img src="assets/page_header.svg" alt="" width="768">
+  <img src="assets/page_header.svg" alt="" width="512">
 </p>
 
 _This chapter covers supply chain attacks targeting AI/ML systems: model repository compromises, dependency poisoning, malicious pre-trained models, compromised training pipelines, third-party API exploitation, plus detection methods, defense strategies, and ethical considerations for authorized testing._
@@ -52,7 +52,7 @@ Supply chain attacks exploit trust assumptions baked into ML workflows:
 - **Input Processing**: Package managers trust repositories. pip follows semantic versioning rules. Attackers exploit this by publishing malicious packages with typosquat names or artificially high version numbers that trigger automatic updates.
 
 <p align="center">
-<img src="assets/rec58_opaque_blob_problem.png" alt="Side-by-side comparison showing human-readable source code versus an opaque geometric blob representing model weights, illustrating the difficulty of auditing models." width="768">
+<img src="assets/rec58_opaque_blob_problem.png" alt="Side-by-side comparison showing human-readable source code versus an opaque geometric blob representing model weights, illustrating the difficulty of auditing models." width="512">
 </p>
 
 #### Foundational Research
@@ -82,7 +82,7 @@ Hugging Face, TensorFlow Hub, PyTorch Hub. These have become how pre-trained mod
 ### How Model Repository Attacks Work
 
 <p align="center">
-<img src="assets/rec59_model_repo_attack_flow.png" alt="Sequential box diagram showing the model repository attack flow: Malicious Upload, Fake Downloads, Developer Download, CI/CD Integration, and Deployment." width="768">
+<img src="assets/rec59_model_repo_attack_flow.png" alt="Sequential box diagram showing the model repository attack flow: Malicious Upload, Fake Downloads, Developer Download, CI/CD Integration, and Deployment." width="512">
 </p>
 
 ### Mechanistic Explanation
@@ -470,7 +470,7 @@ ML systems run on complex software stacks: PyTorch, TensorFlow, NumPy, Transform
 #### Attack Flow
 
 <p align="center">
-<img src="assets/rec60_dependency_typosquatting.png" alt="Comparison table showing legitimate " width="768">
+<img src="assets/rec60_dependency_typosquatting.png" alt="Comparison table showing legitimate " width="512">
 </p>
 
 ### Detection Indicators
@@ -660,7 +660,7 @@ ml_supply_chain_policy:
 5. **Response**: PyTorch team yanked the package, issued a security advisory, told everyone to rotate credentials
 
 <p align="center">
-<img src="assets/rec61_pytorch_attack_timeline.png" alt="Horizontal timeline visualization of the PyTorch attack, highlighting the " width="768">
+<img src="assets/rec61_pytorch_attack_timeline.png" alt="Horizontal timeline visualization of the PyTorch attack, highlighting the " width="512">
 </p>
 
 #### Lessons Learned (Case Study 1)
