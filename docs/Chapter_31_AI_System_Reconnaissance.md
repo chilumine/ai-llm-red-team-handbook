@@ -22,7 +22,7 @@ _This chapter details the methodology for mapping the attack surface of AI/LLM d
 Before launching an attack, a red teamer must understand the target. AI systems are complex stacks of models, plugins, databases, and APIs. Reconnaissance identifies which specific components are in use, their versions, and their potential weaknesses.
 
 <p align="center">
-<img src="assets/ch31_recon_comparison.png" alt="Nmap vs AI Recon Comparison" width="350">
+<img src="assets/ch31_recon_comparison.png" alt="Nmap vs AI Recon Comparison" width="512">
 </p>
 
 ### Why This Matters
@@ -83,7 +83,7 @@ Red Teamer → [Probe Prompt] → Endpoint → [Response Style/Quirk] → Finger
 3. **Knowledge Cutoff:** Asking about events after 2021 or 2023 can differentiate older models from newer ones.
 
 <p align="center">
-<img src="assets/ch31_refusal_matrix.png" alt="Refusal Style Matrix" width="350">
+<img src="assets/ch31_refusal_matrix.png" alt="Refusal Style Matrix" width="512">
 </p>
 
 ### 31.2.1 Practical Example: The AI Scanner
@@ -99,7 +99,7 @@ This script sends a series of "fingerprinting probes" to a target API and analyz
 3. **Latency Tracker:** Measuring time-to-first-token (TTFT) to estimate model size.
 
 <p align="center">
-<img src="assets/ch31_ttft_dist.png" alt="Time-to-First-Token Distribution" width="350">
+<img src="assets/ch31_ttft_dist.png" alt="Time-to-First-Token Distribution" width="512">
 </p>
 
 ```python
