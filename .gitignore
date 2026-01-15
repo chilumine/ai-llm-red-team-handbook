@@ -1,4 +1,5 @@
 # Local files - never commit
+docs/contentsuggestions
 ignore/
 #.agent/
 __init__.py

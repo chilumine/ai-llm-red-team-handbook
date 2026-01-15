@@ -78,7 +78,7 @@ Attacker → [Input + Trigger] → Model → [Malicious Target] (Active Mode)
 ```
 
 <p align="center">
-<img src="assets/rec73_backdoor_sleeper_loop.png" alt="Diagram showing the Neural Trojan sleeper agent flow" width="25%">
+<img src="assets/rec73_backdoor_sleeper_loop.png" alt="Diagram showing the Neural Trojan sleeper agent flow" width="350">
 </p>
 
 ### Mechanistic Explanation
@@ -235,7 +235,7 @@ if __name__ == "__main__":
 - **Effectiveness:** Good against simple patch attacks; struggles with complex/dynamic triggers.
 
 <p align="center">
-<img src="assets/rec75_neural_cleanse_plot.png" alt="Neural Cleanse scatter plot showing the backdoor outlier" width="25%">
+<img src="assets/rec75_neural_cleanse_plot.png" alt="Neural Cleanse scatter plot showing the backdoor outlier" width="350">
 </p>
 
 #### Detection Method 2: Activation Clustering
@@ -322,7 +322,7 @@ Layer 4: [Runtime]         → [Input perturbation checks]
 - **Effectiveness:** High runtime defense.
 
 <p align="center">
-<img src="assets/rec76_strip_defense_diagram.png" alt="STRIP defense process diagram" width="25%">
+<img src="assets/rec76_strip_defense_diagram.png" alt="STRIP defense process diagram" width="350">
 </p>
 
 ## Best Practices
@@ -337,7 +337,7 @@ Layer 4: [Runtime]         → [Input perturbation checks]
 ### Case Study 1: The Sunglasses Attack
 
 <p align="center">
-<img src="assets/rec74_clean_label_poisoning.png" alt="Comparison of correct labeling vs learned backdoor association" width="25%">
+<img src="assets/rec74_clean_label_poisoning.png" alt="Comparison of correct labeling vs learned backdoor association" width="350">
 </p>
 
 #### Incident Overview (Case Study 1)
