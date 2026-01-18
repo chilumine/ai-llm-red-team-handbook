@@ -75,6 +75,8 @@ Attacker → [Chunk C: "ware"]      → Filter (Pass)
 Target Model → [Instruction: A+B+C] → "How to write malware" -> [Code]
 ```
 
+<img src="assets/Ch34_Flow_PayloadSplitting.png" width="512" alt="Payload Splitting Flow">
+
 ### Mechanistic Explanation
 
 1. **State Management:** The LLM maintains state across the conversation (or within the context window).
@@ -250,6 +252,8 @@ Layer 1: [Normalizer]   → [Resolve Vars / Decode Base64]
 Layer 2: [Classifier]   → [Run Safety Check on Normalized Text]
 Layer 3: [Model]        → [Streaming Audit]
 ```
+
+<img src="assets/Ch34_Arch_DefenseLayers.png" width="512" alt="Defense-in-Depth Architecture">
 
 #### Defense Strategy 1: Streaming Audit
 
