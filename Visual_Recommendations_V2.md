@@ -1,59 +1,49 @@
-# Visual Recommendations V2: Chapter 35 (Post-Exploitation)
+# Visual Recommendations: Chapter 36 (Reporting and Communication)
 
-## Analysis & Selection
+## Style Constraints
 
-**Chapter Focus:** Persistence, Lateral Movement, and Data Exfiltration.
-**Selection Strategy:** Prioritize the flow of persistence (how an attack survives) and the "pivot" concept (how the LLM attacks other systems).
+- **Aesthetic**: Deus Ex / Cyberpunk Renaissance
+- **Colors**: Deep slate/black background. Accents in Gold (#C5A365) and Amber (#FFBF00).
+- **Line Work**: Thin, crisp vector lines. Circuit board traces.
+- **Typography**: OCR-B or technical monospace. No "Deus Ex" text.
+- **Aspect Ratio**: 16:9 preferred.
 
----
+## Visual Manifest
 
-### VISUAL SPECIFICATION #1
+### 1. Report Structure Pyramid
 
-- **ID**: Ch35_Flow_Persistence
-- **Target Section**: How Persistence Works
-- **Context**: Illustrates the cycle of injecting a malicious prompt into the RAG database, which then gets retrieved and re-infects the model on subsequent queries.
-- **Type**: Cyclic Flow Diagram
-- **Elements**:
-  - Attacker (Injecting "Soft Prompt")
-  - Component: Vector DB (Storing the poison)
-  - User Query (Triggering retrieval)
-  - Retrieval Path (Poison -> Model)
-  - Outcome: Compromised Model Response
-- **Style Notes**: Deus Ex aesthetic. Circular flow. The "Poison" should be a distinct red/gold data artifact infecting the blue/gold system.
-- **Filename**: Ch35_Flow_Persistence.png
+- **ID**: `Ch36_Structure_ReportPyramid`
+- **Target Section**: 36.3 Structure of a High-Quality Red Team Report
+- **Type**: Hierarchical Diagram
+- **Description**: A stylized, technological pyramid or layered hologram.
+  - **Top Layer (Gold/Bright)**: Label "Executive Summary" (Context: Business Risk, ROI).
+  - **Middle Layer (Amber)**: Label "Findings Overview" (Context: Severity, Scope).
+  - **Bottom Layer (Darker/Slate)**: Label "Technical Evidence" (Context: Logs, PoC, Steps).
+  - **Style**: Floating holographic layers, connected by vertical data streams.
+- **Filename**: `Ch36_Structure_ReportPyramid.png`
 
-### VISUAL SPECIFICATION #2
+### 2. Remediation Lifecycle Loop
 
-- **ID**: Ch35_Concept_LateralMovement
-- **Target Section**: Introduction (or Why This Matters)
-- **Context**: Shows the LLM as a central hub (Brain) connected to external tools (Hands) like APIs, Databases, and Shell Access, illustrating lateral movement.
-- **Type**: Network/Hub Diagram
-- **Elements**:
-  - Central Node: Compromised LLM (The "Bridgehead")
-  - Connected Node A: Internal Database (SQL)
-  - Connected Node B: Cloud API (AWS/Azure)
-  - Connected Node C: Internal Network (Shell)
-  - Direction: Arrows moving FROM the LLM TO these systems.
-- **Style Notes**: Deus Ex aesthetic. Central hub with radiating connection lines like a neural network or star topology. High-tech schematics.
-- **Filename**: Ch35_Concept_LateralMovement.png
+- **ID**: `Ch36_Flow_RemediationLoop`
+- **Target Section**: 36.9 Deliverable Handoff and Follow-Up
+- **Type**: Cyclic Process Flow
+- **Description**: A circular feedback loop resembling a cybernetic engine or HUD interface.
+  - **Node 1**: "Report Delivery" (Icon: Document/Data transmission).
+  - **Node 2**: "Executive Buy-in" (Icon: Handshake or Shield).
+  - **Node 3**: "Re-Test / Verify" (Icon: Target reticle or scanner).
+  - **Center**: "Remediation" (Glowing core).
+  - **Style**: Rotating segments, gold data flow arrows, high-tech interface feel.
+- **Filename**: `Ch36_Flow_RemediationLoop.png`
 
----
+### 3. The Evidence Chain
 
-## JSON Manifest
-
-```json
-[
-  {
-    "id": "Ch35_Flow_Persistence",
-    "filename": "Ch35_Flow_Persistence.png",
-    "description": "A cyclic technical diagram showing a 'Persistence Loop'. An Attacker executes an 'Injection' into a 'Vector Database' cube. A 'User Query' enters the loop, retrieves the 'Poisoned Data', and feeds it into the 'AI Model', which then outputs a 'Compromised Response'. Deus Ex style, dark background, gold and amber data paths, HUD elements.",
-    "tool_suggestion": "generate_image"
-  },
-  {
-    "id": "Ch35_Concept_LateralMovement",
-    "filename": "Ch35_Concept_LateralMovement.png",
-    "description": "A network diagram showing an AI Model as a central 'Pivot Point' connected to three targets: 'SQL Database', 'Cloud API', and 'Internal Shell'. Red attack vectors radiate from the central AI model to these targets. Deus Ex style, high-tech schematic, glowing connection lines, cyber-security aesthetic.",
-    "tool_suggestion": "generate_image"
-  }
-]
-```
+- **ID**: `Ch36_Concept_EvidenceChain`
+- **Target Section**: 36.4 Writing Style and Principles (or 36.7 Visuals)
+- **Type**: Linear Data Pipeline
+- **Description**: A left-to-right assembly line of data packets merging into a final "Finding".
+  - **Input 1**: "Raw Logs" (Binary stream).
+  - **Input 2**: "Screenshot" (Image frame).
+  - **Input 3**: "Exploit Script" (Code block icon).
+  - **Merge Point**: All feed into a central processor labeled "Validated Finding".
+  - **Style**: Data highway, assembly line, converging gold traces into a solid amber block.
+- **Filename**: `Ch36_Concept_EvidenceChain.png`
