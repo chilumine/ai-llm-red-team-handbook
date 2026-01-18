@@ -61,6 +61,10 @@ Delivering findings is more than handing over a report - it's about ensuring you
 
 ---
 
+<p align="center">
+  <img src="assets/Ch37_Infographic_AudienceBridge.png" width="50%" alt="Audience Bridge Infographic">
+</p>
+
 ## 37.3 Effective Presentation Techniques
 
 - **Prioritize the Most Severe Issues:** Address critical and high-risk findings first, with emphasis on business consequences.
@@ -70,6 +74,10 @@ Delivering findings is more than handing over a report - it's about ensuring you
 
 ---
 
+<p align="center">
+  <img src="assets/Ch37_Matrix_RiskHeatmap.png" width="50%" alt="Risk Mitigation Heatmap">
+</p>
+
 ## 37.4 Facilitating Remediation
 
 - Provide **clear, prioritized remediation guidance**, listing actions by severity and ease of implementation.
@@ -78,6 +86,10 @@ Delivering findings is more than handing over a report - it's about ensuring you
 - Offer to retest high-priority fixes as part of the engagement closure.
 
 ---
+
+<p align="center">
+  <img src="assets/Ch37_Chart_RemediationRoadmap.png" width="50%" alt="Remediation Roadmap Chart">
+</p>
 
 ## 37.5 Example: Remediation Roadmap Table
 

@@ -1,4 +1,4 @@
-# Visual Recommendations: Chapter 36 (Reporting and Communication)
+# Visual Recommendations: Chapter 37 (Remediation Strategies)
 
 ## Style Constraints
 
@@ -10,40 +10,38 @@
 
 ## Visual Manifest
 
-### 1. Report Structure Pyramid
+### 1. Audience Bridge Infographic
 
-- **ID**: `Ch36_Structure_ReportPyramid`
-- **Target Section**: 36.3 Structure of a High-Quality Red Team Report
-- **Type**: Hierarchical Diagram
-- **Description**: A stylized, technological pyramid or layered hologram.
-  - **Top Layer (Gold/Bright)**: Label "Executive Summary" (Context: Business Risk, ROI).
-  - **Middle Layer (Amber)**: Label "Findings Overview" (Context: Severity, Scope).
-  - **Bottom Layer (Darker/Slate)**: Label "Technical Evidence" (Context: Logs, PoC, Steps).
-  - **Style**: Floating holographic layers, connected by vertical data streams.
-- **Filename**: `Ch36_Structure_ReportPyramid.png`
+- **ID**: `Ch37_Infographic_AudienceBridge`
+- **Target Section**: 37.2 Adapting Your Message to the Audience
+- **Type**: Conceptual Infographic
+- **Description**: A stylized "Digital Bridge" connecting two domains.
+  - **Left Side**: "Technical Data" (depicted by binary streams, terminal windows, gears).
+  - **Right Side**: "Executive Value" (depicted by shield icons, rising graph lines, chess pieces).
+  - **Bridge**: A glowing gold connection representing the "Report/Presentation".
+  - **Style**: Isometric or flat perspective with high-tech glowing outlines.
+- **Filename**: `Ch37_Infographic_AudienceBridge.png`
 
-### 2. Remediation Lifecycle Loop
+### 2. Remediation Roadmap Timeline
 
-- **ID**: `Ch36_Flow_RemediationLoop`
-- **Target Section**: 36.9 Deliverable Handoff and Follow-Up
-- **Type**: Cyclic Process Flow
-- **Description**: A circular feedback loop resembling a cybernetic engine or HUD interface.
-  - **Node 1**: "Report Delivery" (Icon: Document/Data transmission).
-  - **Node 2**: "Executive Buy-in" (Icon: Handshake or Shield).
-  - **Node 3**: "Re-Test / Verify" (Icon: Target reticle or scanner).
-  - **Center**: "Remediation" (Glowing core).
-  - **Style**: Rotating segments, gold data flow arrows, high-tech interface feel.
-- **Filename**: `Ch36_Flow_RemediationLoop.png`
+- **ID**: `Ch37_Chart_RemediationRoadmap`
+- **Target Section**: 37.4 Facilitating Remediation (or 37.5 Example)
+- **Type**: Tactical Timeline / Gantt
+- **Description**: A futuristic project timeline.
+  - **Phase 1 (Red/Amber)**: "Immediate Fixes" (e.g., Firewall, Filters).
+  - **Phase 2 (Amber/Gold)**: "Process Changes" (e.g., Audit logs).
+  - **Phase 3 (Gold/White)**: "Strategic Hardening" (e.g., Architecture shift).
+  - **Style**: Horizontal progression, milestones marked by glowing nodes, data stream background.
+- **Filename**: `Ch37_Chart_RemediationRoadmap.png`
 
-### 3. The Evidence Chain
+### 3. Risk Mitigation Heatmap
 
-- **ID**: `Ch36_Concept_EvidenceChain`
-- **Target Section**: 36.4 Writing Style and Principles (or 36.7 Visuals)
-- **Type**: Linear Data Pipeline
-- **Description**: A left-to-right assembly line of data packets merging into a final "Finding".
-  - **Input 1**: "Raw Logs" (Binary stream).
-  - **Input 2**: "Screenshot" (Image frame).
-  - **Input 3**: "Exploit Script" (Code block icon).
-  - **Merge Point**: All feed into a central processor labeled "Validated Finding".
-  - **Style**: Data highway, assembly line, converging gold traces into a solid amber block.
-- **Filename**: `Ch36_Concept_EvidenceChain.png`
+- **ID**: `Ch37_Matrix_RiskHeatmap`
+- **Target Section**: 37.3 Effective Presentation Techniques
+- **Type**: 3x3 Matrix Grid
+- **Description**: A risk assessment grid.
+  - **Axes**: X="Likelihood", Y="Business Impact".
+  - **Zones**: Top-Right is "Critical" (Glowing Red/Amber). Bottom-Left is "Low" (Faint Blue/Slate).
+  - **Action**: Vector arrows showing "Mitigation" pushing items from the Critical zone towards the Low zone.
+  - **Style**: HUD-like overlay, grid lines, glowing danger zones.
+- **Filename**: `Ch37_Matrix_RiskHeatmap.png`

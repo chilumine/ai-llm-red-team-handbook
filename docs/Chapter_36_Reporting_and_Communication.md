@@ -59,13 +59,26 @@ Successful reports are tailored to multiple audiences, such as:
 4. **Overview of Findings**
    - Table or list of all vulnerabilities, severity, impacted assets, and status.
 5. **Detailed Findings**
-   - Step-by-step description, evidence, impact assessment, and remediation for each issue.
-6. **Remediation Roadmap**
-   - Prioritized, actionable steps with timelines and responsible parties.
-7. **Appendices**
-   - Detailed logs, scripts, proof-of-concept code, supporting documentation.
+6. **Executive Summary**
+   - Key findings, business impact, and recommendations - free of jargon.
+7. **Objectives and Scope**
+   - What was tested, what was out of scope, engagement rules, timeline.
+8. **Methodology**
+   - High-level overview of how attacks were conducted, tools used, and reasoning.
+9. **Overview of Findings**
+   - Table or list of all vulnerabilities, severity, impacted assets, and status.
+10. **Detailed Findings**
+    - Step-by-step description, evidence, impact assessment, and remediation for each issue.
+11. **Remediation Roadmap**
+    - Prioritized, actionable steps with timelines and responsible parties.
+12. **Appendices**
+    - Detailed logs, scripts, proof-of-concept code, supporting documentation.
 
 ---
+
+<p align="center">
+  <img src="assets/Ch36_Structure_ReportPyramid.png" width="50%" alt="Report Structure Pyramid">
+</p>
 
 ## 36.4 Writing Style and Principles
 
@@ -114,6 +127,10 @@ Successful reports are tailored to multiple audiences, such as:
 
 ---
 
+<p align="center">
+  <img src="assets/Ch36_Concept_EvidenceChain.png" width="50%" alt="Evidence Chain Concept">
+</p>
+
 ## 36.8 Reporting Gotchas and Pitfalls
 
 - Burying the lead (critical business risks at the bottom).
@@ -132,6 +149,10 @@ Successful reports are tailored to multiple audiences, such as:
 - Provide a “closing memo” after all deliverables are confirmed received and understood.
 
 ---
+
+<p align="center">
+  <img src="assets/Ch36_Flow_RemediationLoop.png" width="50%" alt="Remediation Lifecycle Loop">
+</p>
 
 ## 36.10 Checklist: Is Your Report Ready?
 
