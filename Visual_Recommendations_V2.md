@@ -1,4 +1,4 @@
-# Visual Recommendations: Chapter 37 (Remediation Strategies)
+# Visual Recommendations: Chapter 39 (AI Bug Bounty Programs)
 
 ## Style Constraints
 
@@ -10,38 +10,40 @@
 
 ## Visual Manifest
 
-### 1. Audience Bridge Infographic
+### 1. Impact vs Novelty Matrix
 
-- **ID**: `Ch37_Infographic_AudienceBridge`
-- **Target Section**: 37.2 Adapting Your Message to the Audience
-- **Type**: Conceptual Infographic
-- **Description**: A stylized "Digital Bridge" connecting two domains.
-  - **Left Side**: "Technical Data" (depicted by binary streams, terminal windows, gears).
-  - **Right Side**: "Executive Value" (depicted by shield icons, rising graph lines, chess pieces).
-  - **Bridge**: A glowing gold connection representing the "Report/Presentation".
-  - **Style**: Isometric or flat perspective with high-tech glowing outlines.
-- **Filename**: `Ch37_Infographic_AudienceBridge.png`
+- **ID**: `Ch39_Matrix_ImpactNovelty`
+- **Target Section**: 39.2 The Economics of AI Bounties
+- **Type**: 2D Scatter/Matrix Plot
+- **Description**: A grid classifying bug types.
+  - **X-axis**: "Technical Novelty" (Low to High).
+  - **Y-axis**: "Business Impact ($$)" (Low to High).
+  - **Points**: "Hallucinations" (Low/Low, Grey), "Model DoS" (Low/Medium, Amber), "Prompt Injection" (Med/Med, Gold), "Instruction Execution/RCE" (High/High, Glowing Bright Gold).
+  - **Style**: Tactical correlation display, data points connected to axis values.
+- **Filename**: `Ch39_Matrix_ImpactNovelty.png`
 
-### 2. Remediation Roadmap Timeline
+### 2. Recon Scanner Workflow
 
-- **ID**: `Ch37_Chart_RemediationRoadmap`
-- **Target Section**: 37.4 Facilitating Remediation (or 37.5 Example)
-- **Type**: Tactical Timeline / Gantt
-- **Description**: A futuristic project timeline.
-  - **Phase 1 (Red/Amber)**: "Immediate Fixes" (e.g., Firewall, Filters).
-  - **Phase 2 (Amber/Gold)**: "Process Changes" (e.g., Audit logs).
-  - **Phase 3 (Gold/White)**: "Strategic Hardening" (e.g., Architecture shift).
-  - **Style**: Horizontal progression, milestones marked by glowing nodes, data stream background.
-- **Filename**: `Ch37_Chart_RemediationRoadmap.png`
+- **ID**: `Ch39_Flow_ReconScanner`
+- **Target Section**: 39.3 Phase 1: Reconnaissance & Asset Discovery (or 39.4 Phase 2)
+- **Type**: Automated Process Flow
+- **Description**: A digital scanning visualization.
+  - **Source**: "Nuclei / Scanner Script" (Code/Terminal Icon).
+  - **Targets**: "OpenAI API", "HuggingFace", "LangChain" (Server nodes).
+  - **Action**: Scanning beams striking targets and returning "Signatures" (Locked/Unlocked icons).
+  - **Style**: Radar sweep or sonar ping, network topology view.
+- **Filename**: `Ch39_Flow_ReconScanner.png`
 
-### 3. Risk Mitigation Heatmap
+### 3. Indirect Injection Attack Chain
 
-- **ID**: `Ch37_Matrix_RiskHeatmap`
-- **Target Section**: 37.3 Effective Presentation Techniques
-- **Type**: 3x3 Matrix Grid
-- **Description**: A risk assessment grid.
-  - **Axes**: X="Likelihood", Y="Business Impact".
-  - **Zones**: Top-Right is "Critical" (Glowing Red/Amber). Bottom-Left is "Low" (Faint Blue/Slate).
-  - **Action**: Vector arrows showing "Mitigation" pushing items from the Critical zone towards the Low zone.
-  - **Style**: HUD-like overlay, grid lines, glowing danger zones.
-- **Filename**: `Ch37_Matrix_RiskHeatmap.png`
+- **ID**: `Ch39_Concept_AttackChain`
+- **Target Section**: 39.5 Phase 3: Exploitation Case Study
+- **Type**: Step-by-Step Kill Chain
+- **Description**: A linear exploit path.
+  - **Step 1**: "Malicious CSV" (File icon with warning).
+  - **Step 2**: "Upload" (Arrow to Cloud).
+  - **Step 3**: "LLM Processing" (Brain/Chip icon reading data).
+  - **Step 4**: "Code Execution" (Terminal window popping RCE).
+  - **Step 5**: "Callback" (Signal returning to 'Attacker').
+  - **Style**: Cybernetic kill chain, detailed data flow, red/amber alert colors for the exploit steps.
+- **Filename**: `Ch39_Concept_AttackChain.png`

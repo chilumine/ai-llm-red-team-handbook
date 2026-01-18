@@ -46,6 +46,10 @@ Red teaming AI and LLM systems brings unique challenges and potential mistakes. 
 - **Neglecting Ethics and Privacy:** Failing to properly isolate or protect sensitive data during testing, risking privacy violations.
 - **Single-Point-of-Failure Testing:** Relying on one tool or attack vector - creative adversaries will always look for alternative paths.
 
+<p align="center">
+  <img src="assets/Ch38_Chart_PitfallsRadar.png" width="50%" alt="Common Pitfalls Radar">
+</p>
+
 ---
 
 ## 38.2 What Makes for Effective AI Red Teaming?
@@ -67,6 +71,10 @@ To make AI red teaming a sustainable part of your organization’s security post
 - **Invest in Tooling:** Build or acquire tools for automation (prompt fuzzing, log capture, evidence management) suited for AI/LLM contexts.
 - **Enforce Metrics and KPIs:** Track number of vulnerabilities found, time-to-remediation, stakeholder engagement, and remediation effectiveness.
 - **Foster a Security Culture:** Share lessons and success stories - build support from executives, legal, and engineering.
+
+<p align="center">
+  <img src="assets/Ch38_Process_MaturityCycle.png" width="50%" alt="Program Maturity Cycle">
+</p>
 
 ---
 
