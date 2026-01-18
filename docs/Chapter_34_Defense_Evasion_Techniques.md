@@ -76,7 +76,7 @@ Target Model → [Instruction: A+B+C] → "How to write malware" -> [Code]
 ```
 
 <p align="center">
-  <img src="assets/Ch34_Flow_PayloadSplitting.png" width="75%" alt="Payload Splitting Flow">
+  <img src="assets/Ch34_Flow_PayloadSplitting.png" width="50%" alt="Payload Splitting Flow">
 </p>
 
 ### Mechanistic Explanation
@@ -256,7 +256,7 @@ Layer 3: [Model]        → [Streaming Audit]
 ```
 
 <p align="center">
-  <img src="assets/Ch34_Arch_DefenseLayers.png" width="75%" alt="Defense-in-Depth Architecture">
+  <img src="assets/Ch34_Arch_DefenseLayers.png" width="50%" alt="Defense-in-Depth Architecture">
 </p>
 
 #### Defense Strategy 1: Streaming Audit
