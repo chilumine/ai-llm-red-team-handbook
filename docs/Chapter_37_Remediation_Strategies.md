@@ -62,7 +62,7 @@ Delivering findings is more than handing over a report - it's about ensuring you
 ---
 
 <p align="center">
-  <img src="assets/Ch37_Infographic_AudienceBridge.png" width="50%" alt="Audience Bridge Infographic">
+  <img src="assets/Ch37_Infographic_AudienceBridge.png" width="40%" alt="Audience Bridge Infographic">
 </p>
 
 ## 37.3 Effective Presentation Techniques
@@ -75,7 +75,7 @@ Delivering findings is more than handing over a report - it's about ensuring you
 ---
 
 <p align="center">
-  <img src="assets/Ch37_Matrix_RiskHeatmap.png" width="50%" alt="Risk Mitigation Heatmap">
+  <img src="assets/Ch37_Matrix_RiskHeatmap.png" width="40%" alt="Risk Mitigation Heatmap">
 </p>
 
 ## 37.4 Facilitating Remediation
@@ -88,7 +88,7 @@ Delivering findings is more than handing over a report - it's about ensuring you
 ---
 
 <p align="center">
-  <img src="assets/Ch37_Chart_RemediationRoadmap.png" width="50%" alt="Remediation Roadmap Chart">
+  <img src="assets/Ch37_Chart_RemediationRoadmap.png" width="40%" alt="Remediation Roadmap Chart">
 </p>
 
 ## 37.5 Example: Remediation Roadmap Table
