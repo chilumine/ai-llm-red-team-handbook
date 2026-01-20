@@ -77,7 +77,7 @@ Successful reports are tailored to multiple audiences, such as:
 ---
 
 <p align="center">
-  <img src="assets/Ch36_Structure_ReportPyramid.png" width="50%" alt="Report Structure Pyramid">
+  <img src="assets/Ch36_Structure_ReportPyramid.png" width="512" alt="Report Structure Pyramid">
 </p>
 
 ## 36.4 Writing Style and Principles
@@ -128,7 +128,7 @@ Successful reports are tailored to multiple audiences, such as:
 ---
 
 <p align="center">
-  <img src="assets/Ch36_Concept_EvidenceChain.png" width="50%" alt="Evidence Chain Concept">
+  <img src="assets/Ch36_Concept_EvidenceChain.png" width="512" alt="Evidence Chain Concept">
 </p>
 
 ## 36.8 Reporting Gotchas and Pitfalls
@@ -151,7 +151,7 @@ Successful reports are tailored to multiple audiences, such as:
 ---
 
 <p align="center">
-  <img src="assets/Ch36_Flow_RemediationLoop.png" width="50%" alt="Remediation Lifecycle Loop">
+  <img src="assets/Ch36_Flow_RemediationLoop.png" width="512" alt="Remediation Lifecycle Loop">
 </p>
 
 ## 36.10 Checklist: Is Your Report Ready?
