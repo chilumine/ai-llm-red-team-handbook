@@ -15,9 +15,9 @@ Related: Chapters 45 (Program Building), 5 (Threat Modeling), 7 (Lab Setup), 36 
   <img src="assets/page_header_half_height.png" alt="">
 </p>
 
-_This chapter establishes a comprehensive framework for evolving AI red teaming from ad-hoc vulnerability hunting into a mature, continuous security capability. You'll learn the four-level maturity model, mechanisms for creating effective feedback loops between offensive and defensive teams, practical metrics for measuring program success, and collaborative purple teaming strategies for accelerating defensive improvements._
-
 ## 38.1 Introduction
+
+_This chapter establishes a comprehensive framework for evolving AI red teaming from ad-hoc vulnerability hunting into a mature, continuous security capability. You'll learn the four-level maturity model, mechanisms for creating effective feedback loops between offensive and defensive teams, practical metrics for measuring program success, and collaborative purple teaming strategies for accelerating defensive improvements._
 
 Building an effective AI red team requires more than technical expertise. It demands organizational structure, repeatable processes, and measurable outcomes. Running occasional, ad-hoc tests is insufficient against rapidly evolving AI threats and the expanding attack surface of agentic systems. To move from "finding bugs" to "strategic assurance," organizations must integrate adversarial simulation into the Secure AI Development Lifecycle (SAIDL).
 
