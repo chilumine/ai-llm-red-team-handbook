@@ -33,6 +33,10 @@ For years, AI Red Teaming was an ad-hoc activity. But with the passage of the **
 
 Think of these frameworks as "Attack Graphs." If a standard requires X, we attack X to prove it's missing.
 
+<p align="center">
+  <img src="assets/Ch40_Map_RegLandscape.png" width="512" alt="Regulatory Compliance Mapping">
+</p>
+
 ### 40.2.1 NIST AI RMF (Risk Management Framework)
 
 NIST uses a lifecycle approach: **Map, Measure, Manage, Govern**.
@@ -69,6 +73,10 @@ Regulation is not uniform. The Red Teamer must know which geography applies.
 ## 40.3 Methodology: The Compliance Audit
 
 We don't just "look around." We follow a rigorous audit script.
+
+<p align="center">
+  <img src="assets/Ch40_Flow_AuditCycle.png" width="512" alt="Compliance Audit Workflow">
+</p>
 
 ### 40.3.1 The "Evidence-Based" Approach
 
@@ -442,6 +450,10 @@ print(dashboard.generate_report())
 ```
 
 ### 40.9.2 Risk Scoring Automation
+
+<p align="center">
+  <img src="assets/Ch40_Logic_RiskClass.png" width="512" alt="Risk Classification Logic">
+</p>
 
 ```python
 from dataclasses import dataclass
