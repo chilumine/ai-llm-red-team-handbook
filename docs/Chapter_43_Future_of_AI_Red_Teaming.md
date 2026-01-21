@@ -25,6 +25,10 @@ Manual prompting is random and hard to scale. The future belongs to algorithms t
 
 Published by Zubritsky et al. (2023), GCG demonstrated that you can mechanically find a string of characters (a "suffix") that forces any model to comply.
 
+<p align="center">
+  <img src="assets/Ch43_Graph_GCG.png" width="512" alt="GCG Loss Landscape Optimization">
+</p>
+
 **The Math:**
 $$ \text{minimize } - \log P(Target | Input + Suffix) $$
 
@@ -61,6 +65,10 @@ Using **SMT Solvers** (Satisfiability Modulo Theories), researchers convert neur
 
 We are moving from "Chatbots" to "OS-Controlling Agents." How do you Red Team a swarm?
 
+<p align="center">
+  <img src="assets/Ch43_Diagram_Swarm.png" width="512" alt="Swarm Agent Attack Diagram">
+</p>
+
 ### 43.2.1 The "Agent Turing Test"
 
 Red Teaming an agent requires testing its **Goal Integrity** over time.
@@ -86,6 +94,10 @@ A philosophical risk with practical implications. Any intelligent agent, regardl
 ## 43.3 Mechanistic Interpretability: "Mind Reading"
 
 The ultimate defense is not looking at the output, but looking at the _activations_.
+
+<p align="center">
+  <img src="assets/Ch43_Schematic_Probes.png" width="512" alt="Neural Network X-Ray Probes">
+</p>
 
 ### 43.3.1 Linear Probes and Steering Vectors
 
