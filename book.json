@@ -5,5 +5,23 @@
     "structure": {
         "readme": "README.md",
         "summary": "SUMMARY.md"
+    },
+    "plugins": [
+        "search-plus",
+        "copy-code-button",
+        "github",
+        "prism",
+        "page-treeview",
+        "mermaid-gb3",
+        "insert-logo"
+    ],
+    "pluginsConfig": {
+        "github": {
+            "url": "https://github.com/shiva108/ai-llm-red-team-handbook"
+        },
+        "insert-logo": {
+            "url": "assets/page_header.svg",
+            "style": "background: none; max-height: 50px;"
+        }
     }
 }
