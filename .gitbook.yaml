@@ -50,7 +50,6 @@ plugins:
   - livereload
   - copy-code-button
   - code
-  - mermaid-gb3
   - expandable-chapters-small
   - back-to-top-button
   - page-treeview
