@@ -28,9 +28,17 @@ Most organizations start AI security by asking a developer to "try and break the
 3. **Level 3 (Continuous):** Automated scans (Garak/PyRIT) in CI/CD.
 4. **Level 4 (Adversarial):** Dedicated internal team developing novel attacks against model weights.
 
+<p align="center">
+  <img src="assets/Ch45_Infographic_MaturityStairs.png" width="512" alt="AI Red Team Maturity Model">
+</p>
+
 ### 45.1.1 The Purple Team Architecture
 
 Red Teams find bugs; Blue Teams fix them. Purple Teams do both simultaneously.
+
+<p align="center">
+  <img src="assets/Ch45_Flow_PurpleLoop.png" width="512" alt="Purple Team Feedback Loop">
+</p>
 
 ```mermaid
 graph LR
@@ -72,6 +80,10 @@ graph TD
 - **Why Isolation?**
   - **Malware Generation:** If you ask the model to "write ransomware," you don't want that ransomware landing on a corporate endpoint.
   - **NSFW Content:** Red Teaming involves generating toxicity/pornography to test filters. This traffic triggers HR content filters unless isolated.
+
+<p align="center">
+  <img src="assets/Ch45_Arch_RedTeamLab.png" width="512" alt="Red Team Lab Architecture">
+</p>
 
 ### 45.2.2 The Cost of Curiosity
 

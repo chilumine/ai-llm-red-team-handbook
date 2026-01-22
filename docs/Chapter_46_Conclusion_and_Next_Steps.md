@@ -33,6 +33,10 @@ graph TD
     Part7 --> Part8[Part VIII: Strategic Topics<br/>Ch 40-46]
 ```
 
+<p align="center">
+  <img src="assets/Ch46_Map_HandbookStructure.png" width="512" alt="Handbook Structure Map">
+</p>
+
 ### What You've Mastered
 
 **Part I: Professional Foundations (Ch 1-4)**
@@ -235,26 +239,22 @@ This handbook is open source and living. Your contributions make it better.
 #### Contribution Types
 
 1. **Bug Fixes & Typos**
-
    - Fork the repo
    - Fix the issue
    - Submit PR with clear description
 
 2. **New Attack Techniques**
-
    - Follow Chapter Template format (`docs/templates/Chapter_Template.md`)
    - Include working code examples
    - Provide 3+ research citations
    - Add to appropriate Part in README
 
 3. **Tool Integrations**
-
    - Add to Appendix C with installation instructions
    - Provide quick-start example
    - Link to official documentation
 
 4. **Case Studies**
-
    - Use real-world incidents (anonymized if needed)
    - Include timeline, technical details, lessons learned
    - Can be added to Chapter 42 or as standalone in `case_studies/`
@@ -309,19 +309,21 @@ AI security is one of the highest-growth career tracks in cybersecurity. Here's 
 - L6/L7 (Senior/Staff): $300k-$500k+ total comp
 - L8+ (Principal): $500k-$1M+ total comp
 
+<p align="center">
+  <img src="assets/Ch46_Infographic_CareerPath.png" width="512" alt="AI Security Career Ladder">
+</p>
+
 ### Building Your Portfolio
 
 #### Must-Haves
 
 1. **Public GitHub Repository**
-
    - Custom AI security tools (scanner, fuzzer, analyzer)
    - Automated red team scripts
    - Contributions to Garak, PyRIT, or similar projects
    - Well-documented, production-quality code
 
 2. **Technical Writeups**
-
    - Medium/personal blog with deep technical analysis
    - 3-5 detailed posts on:
      - Novel attack technique you discovered
@@ -331,7 +333,6 @@ AI security is one of the highest-growth career tracks in cybersecurity. Here's 
    - Clear writing, code snippets, diagrams
 
 3. **Bounties or CVEs**
-
    - Even 1-2 valid reports show real-world skill
    - Document methodology in writeups (after disclosure period)
    - OpenAI, Google, Microsoft most prestigious
@@ -404,6 +405,10 @@ gantt
     Apply to 5 Roles                :c2, after c1, 10d
     Interview Prep                  :c3, after c2, 5d
 ```
+
+<p align="center">
+  <img src="assets/Ch46_Timeline_90DayPlan.png" width="512" alt="90-Day Action Plan Timeline">
+</p>
 
 ### Days 1-30: Foundation Building
 
@@ -774,25 +779,21 @@ As you enter the field of AI security, consider adopting this professional code:
 ### Top 5 Attack Patterns (Critical)
 
 1. **Indirect Prompt Injection via RAG**
-
    - Poison documents in vector database
    - Wait for retrieval to inject malicious instructions
    - Model executes attacker's commands
 
 2. **Function-Calling Privilege Escalation**
-
    - Trick LLM into calling admin-only functions
    - Bypass intended access control logic
    - Achieve unauthorized actions
 
 3. **Training Data Extraction**
-
    - Craft prompts that trigger memorization
    - Extract PII, secrets, proprietary data
    - Verify with divergence metrics
 
 4. **Multi-Turn Jailbreak**
-
    - Build up context over multiple exchanges
    - Gradually erode safety alignment
    - Finally request harmful content
