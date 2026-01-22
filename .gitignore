@@ -1,4 +1,5 @@
 # Local files - never commit
+.agent
 docs/contentsuggestions
 ignore/
 #.agent/
