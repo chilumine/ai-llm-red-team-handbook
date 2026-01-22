@@ -1211,7 +1211,7 @@ trivy image your-ml-container:latest
 
 ## Example Output
 
-```
+```text
 Found 3 vulnerabilities in 2 packages:
 
 transformers (4.30.0)

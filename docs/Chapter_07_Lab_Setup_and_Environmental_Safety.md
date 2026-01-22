@@ -77,15 +77,20 @@ AI/LLM red teaming often deals with powerful models, sensitive data, and complex
   <img src="assets/chapter_07_rec_12_network_topology.png" alt="Isolated Lab Topology" width="512">
 </p>
 
-Red Team VM(s) ---> Test LLM/API Env ---> Staging Plugins/DBs ---> Synthetic Data Sources
+```mermaid
+graph LR
+    A["Red Team VM(s)"] --> B["Test LLM/API Env"]
+    B --> C["Staging Plugins/DBs"]
+    C --> D["Synthetic Data Sources"]
+```
 
 ### Segmented Topology (for large engagements)
 
-Red Team Zone
-|
-|---> Isolated LLM+Plugins Lab (matches client prod as close as possible)
-|
-|---> Logging/Evidence Server (read-only access for client POCs)
+```mermaid
+graph TD
+    A["Red Team Zone"] --> B["Isolated LLM+Plugins Lab<br/>(matches client prod as close as possible)"]
+    A --> C["Logging/Evidence Server<br/>(read-only access for client POCs)"]
+```
 
 ---
 
