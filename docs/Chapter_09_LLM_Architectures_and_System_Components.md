@@ -33,7 +33,7 @@ When we attack an "AI," we are rarely attacking a single file. We are attacking 
 | **Vector Database (RAG)** | Long-term memory storage.                            | Search result poisoning, indirect prompt injection.               |
 
 <p align="center">
-  <img src="assets/chapter_09_rec_14_compound_ai.png" alt="Compound AI System" width="768">
+  <img src="assets/chapter_09_rec_14_compound_ai.png" alt="Compound AI System" width="512">
 </p>
 
 ## 9.2 The Transformer: A Hacker's Perspective
@@ -104,11 +104,11 @@ Understanding the flow of a single prompt helps you pinpoint where to inject.
    - _Attack:_ **Obfuscation**. If the output filter catches "bomb", generating "b-o-m-b" might bypass it.
 
 <p align="center">
-  <img src="assets/rec10_inference_pipeline.svg" alt="Inference Pipeline Diagram" width="768">
+  <img src="assets/rec10_inference_pipeline.svg" alt="Inference Pipeline Diagram" width="512">
 </p>
 
 <p align="center">
-  <img src="assets/chapter_09_rec_15_inference_pipeline.png" alt="Inference Pipeline Diagram" width="768">
+  <img src="assets/chapter_09_rec_15_inference_pipeline.png" alt="Inference Pipeline Diagram" width="512">
 </p>
 
 ## 9.5 Practical Inspection: Loading a Model

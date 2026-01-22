@@ -134,7 +134,7 @@ To understand prompt injection, we must first understand how LLMs process prompt
 A typical LLM interaction involves multiple components:
 
 <p align="center">
-  <img src="assets/rec20_prompt_injection.svg" alt="System vs User Prompt Diagram" width="768">
+  <img src="assets/rec20_prompt_injection.svg" alt="System vs User Prompt Diagram" width="512">
 </p>
 
 ### System Prompts vs. User Prompts
@@ -2948,13 +2948,11 @@ class SecurityAlertSystem:
 #### Why Prompt Injection May Be Unsolvable
 
 1. **No Privilege Separation:**
-
    - LLMs process all text equally
    - No cryptographic or hardware enforcement
    - Instructions and data in same channel
 
 2. **Natural Language Ambiguity:**
-
    - "Ignore previous instructions" - is this a query about AI security or an attack?
    - Context matters, but context can be fabricated
 

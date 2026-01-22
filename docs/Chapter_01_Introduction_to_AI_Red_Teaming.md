@@ -47,13 +47,13 @@ A typical AI red team engagement involves:
 ## 1.4 AI Red Teaming vs. Traditional Red Teaming
 
 <p align="center">
-  <img src="assets/chapter_01_rec_02_traditional_vs_ai.png" alt="Traditional vs AI Red Teaming Comparison Matrix" width="768">
+  <img src="assets/chapter_01_rec_02_traditional_vs_ai.png" alt="Traditional vs AI Red Teaming Comparison Matrix" width="512">
 </p>
 
 ## 1.5 Types of AI/LLM Risks & Attacks
 
 <p align="center">
-  <img src="assets/chapter_01_rec_01_lifecycle.png" alt="AI Red Team Lifecycle" width="768">
+  <img src="assets/chapter_01_rec_01_lifecycle.png" alt="AI Red Team Lifecycle" width="512">
 </p>
 
 - **Prompt Injection:** Getting the model to do something unintended by manipulating input text context.

@@ -87,7 +87,7 @@ User Input → Obfuscation → Content Filter → [ALLOWED] ✓ → LLM Processi
 #### Why This Works (Model Behavior)
 
 <p align="center">
-  <img src="assets/rec32_tokenization_gap_diagram.png" alt="Tokenization Gap Diagram" width="768">
+  <img src="assets/rec32_tokenization_gap_diagram.png" alt="Tokenization Gap Diagram" width="512">
 </p>
 
 Evasion and adversarial attacks succeed because deep learning models, including LLMs, rely on brittle statistical correlations rather than robust semantic understanding.
@@ -192,7 +192,7 @@ Evasion Techniques
 #### Evasion Complexity Spectrum
 
 <p align="center">
-  <img src="assets/rec33_evasion_spectrum_matrix.png" alt="Evasion Spectrum Matrix" width="768">
+  <img src="assets/rec33_evasion_spectrum_matrix.png" alt="Evasion Spectrum Matrix" width="512">
 </p>
 
 ```python
@@ -1038,19 +1038,16 @@ XSS: "<script>" → "%3Cscript%3E" (URL encoded)
 #### Most Effective Methods
 
 1. **Semantic Framing** (85% success rate)
-
    - Hypothetical scenarios
    - Academic/research framing
    - Fictional narratives
 
 2. **Character-Level Obfuscation** (70% success rate)
-
    - Homoglyphs
    - Zero-width characters
    - Unicode substitution
 
 3. **Multi-Step Chains** (60% success rate)
-
    - Progressive revelation
    - Context building
    - Layered obfuscation
@@ -1065,14 +1062,12 @@ XSS: "<script>" → "%3Cscript%3E" (URL encoded)
 #### For Security Teams
 
 1. **Multi-Layer Defense**
-
    - Input normalization
    - Semantic analysis
    - Behavioral monitoring
    - Human-in-the-loop review
 
 2. **Continuous Improvement**
-
    - Regular testing with evasion techniques
    - Update filters based on new attacks
    - Monitor for novel evasion patterns
@@ -1085,7 +1080,6 @@ XSS: "<script>" → "%3Cscript%3E" (URL encoded)
 #### For Red Teamers
 
 1. **Ethical Practice**
-
    - Always get authorization
    - Document all techniques used
    - Responsible disclosure
@@ -1135,7 +1129,7 @@ _This chapter provided comprehensive coverage of evasion and obfuscation techniq
 | [Garg & Ramakrishnan "BAO: Black-box Adversarial Optimization"](https://arxiv.org/abs/2302.06945)                     | 2023 | arXiv | Optimization methods for attacking LLMs without gradient access                   |
 
 <p align="center">
-  <img src="assets/rec34_gcg_optimization_flow.png" alt="GCG Optimization Flow" width="768">
+  <img src="assets/rec34_gcg_optimization_flow.png" alt="GCG Optimization Flow" width="512">
 </p>
 
 ### Evolution of Understanding

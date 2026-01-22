@@ -36,7 +36,7 @@ A "jailbreak" in the context of Large Language Models refers to techniques that 
 #### Difference between jailbreaks and prompt injection
 
 <p align="center">
-  <img src="assets/rec28_jailbreak_vs_injection_matrix.png" alt="Jailbreak vs Injection Matrix" width="768">
+  <img src="assets/rec28_jailbreak_vs_injection_matrix.png" alt="Jailbreak vs Injection Matrix" width="512">
 </p>
 
 #### Types of safety controls being bypassed
@@ -79,7 +79,7 @@ Jailbreak research exists in a morally complex space:
 #### Why This Works (Model Behavior)
 
 <p align="center">
-  <img src="assets/rec29_alignment_tension_diagram.png" alt="Helpfulness vs Safety Balance" width="768">
+  <img src="assets/rec29_alignment_tension_diagram.png" alt="Helpfulness vs Safety Balance" width="512">
 </p>
 
 Jailbreaks succeed by exploiting the fundamental architectural tension between helpfulness and safety in LLM design. Unlike traditional security vulnerabilities with clear boundaries, jailbreaks manipulate the model's learned behaviors:
@@ -1263,19 +1263,16 @@ TESTING_TOOLS = {
 #### Foundational work
 
 1. **"Jailbroken: How Does LLM Safety Training Fail?"**
-
    - Authors: Wei et al., 2023
    - Key Finding: Competing objectives in safety training
    - URL: arxiv.org/abs/2307.02483
 
 2. **"Universal and Transferable Adversarial Attacks"**
-
    - Authors: Zou et al., 2023
    - Key Finding: Adversarial suffixes transfer across models
    - URL: arxiv.org/abs/2307.15043
 
 3. **"Constitutional AI: Harmlessness from AI Feedback"**
-
    - Authors: Bai et al. (Anthropic), 2022
    - Key Finding: Self-critique for alignment
    - URL: arxiv.org/abs/2212.08073
@@ -1383,7 +1380,7 @@ class ProvablySafeModel:
 
 <p align="center">
 <p align="center">
-  <img src="assets/rec48_escalation_staircase.png" width="768" alt="Multi-Turn Escalation Staircase Diagram">
+  <img src="assets/rec48_escalation_staircase.png" width="512" alt="Multi-Turn Escalation Staircase Diagram">
 </p>
   <br>
   <em>Figure 48: Multi-Turn Escalation Staircase (Social Engineering Technique)</em>

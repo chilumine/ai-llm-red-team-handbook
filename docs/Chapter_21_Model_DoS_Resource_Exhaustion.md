@@ -45,7 +45,7 @@ DoS attacks against LLMs exploit the fundamental computational complexity of the
 
 <p align="center">
 <p align="center">
-  <img src="assets/rec43_head_of_line_blocking.png" width="768" alt="Head-of-Line Blocking Diagram">
+  <img src="assets/rec43_head_of_line_blocking.png" width="512" alt="Head-of-Line Blocking Diagram">
 </p>
   <br>
   <em>Figure 43: Head-of-Line Blocking in GPU Batching</em>
@@ -84,7 +84,7 @@ Defender Cost: $2.00 per request (200x amplification!)
 
 <p align="center">
 <p align="center">
-  <img src="assets/rec42_attack_economics_chart.png" width="768" alt="Attacker vs Defender Cost Scaling Chart">
+  <img src="assets/rec42_attack_economics_chart.png" width="512" alt="Attacker vs Defender Cost Scaling Chart">
 </p>
   <br>
   <em>Figure 42: Attacker vs Defender Cost Scaling (Sponge Effect)</em>
@@ -142,7 +142,7 @@ class TokenBombAttack:
             "gpt-3.5-turbo": 16385,  # Updated for gpt-3.5-turbo-0125
             "gpt-4": 8192,
             "gpt-4-turbo": 128000,
-            "gpt-4-32k": 32768,
+            "gpt-4-32k": 32512,
             "claude-2": 100000
         }
 
@@ -668,7 +668,7 @@ Most APIs implement rate limiting to prevent abuse. But these controls can be by
 
 <p align="center">
 <p align="center">
-  <img src="assets/rec44_rate_limit_bypass_tree.png" width="768" alt="Rate Limit Bypass Taxonomy Diagram">
+  <img src="assets/rec44_rate_limit_bypass_tree.png" width="512" alt="Rate Limit Bypass Taxonomy Diagram">
 </p>
   <br>
   <em>Figure 44: Rate Limit Bypass Taxonomy</em>

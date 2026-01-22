@@ -15,15 +15,42 @@ Related: Chapter 40 (Compliance)
   <img src="assets/page_header_half_height.png" alt="">
 </p>
 
-Analyzing failure is the foundation of security. We move beyond headlines to perform "Forensic Reconstruction" of major AI security incidents, revealing the specific code and architectural flaws that caused them.
+Analyzing AI system failures is fundamental to building secure and resilient systems. Unlike traditional software, which often fails with clear technical errors, AI failures can manifest as believable lies, unintended harmful outcomes, or catastrophic business logic flaws. This chapter moves beyond headlines to perform "Forensic Reconstruction" of major AI security incidents, revealing the specific code and architectural flaws that caused them.
 
 ## 42.1 Introduction
 
 When an AI system fails, it rarely produces a stack trace. It produces a believable lie, a racial slur, or a $1 car. To prevent these failures, we must understand the mechanics beneath the incident.
 
-### The Value of Post-Mortems
+### Why This Matters
 
-In AI Red Teaming, a "War Story" is data. It proves that detailed technical concepts like "Stochastic Parrots" or "System Prompt Leakage" have real-world financial consequences.
+AI security incidents are not just bugs—they are complex behavioral vulnerabilities that require a new mode of analysis. These incidents have direct and measurable consequences:
+
+- **Financial Impact:** Organizations face direct losses (Chevrolet's $1 car incident), legal liabilities (Air Canada tribunal ruling), and unauthorized service usage (Rabbit R1 API key exposure)
+- **Legal Liability:** AI systems can make binding commitments on behalf of companies, as demonstrated by the Air Canada case where a tribunal ruled the chatbot's fabricated policy was legally enforceable
+- **Reputation Damage:** High-profile failures like Microsoft Tay's 24-hour collapse demonstrate how quickly AI systems can become public relations disasters
+- **Data Exfiltration:** LLM-to-SQL injection attacks enable attackers to bypass traditional security controls and extract sensitive PII
+
+> [!IMPORTANT]
+> In AI Red Teaming, a "War Story" is data. It proves that detailed technical concepts like "Stochastic Parrots" or "System Prompt Leakage" have real-world financial consequences.
+
+### Forensic Reconstruction Framework
+
+To effectively learn from AI security incidents, we apply a standardized methodology. This four-part framework allows security teams to move from reactive, ad-hoc incident response to proactive vulnerability management:
+
+1. **Incident Summary:** What happened and what was the immediate business impact?
+2. **Technical Deconstruction:** How did the attack work on a technical level, including the specific vulnerability class and likely code implementation?
+3. **Attack Flow Visualization:** What was the step-by-step sequence of the exploit?
+4. **Blue Team Perspective:** How could the incident have been prevented, detected, and remediated?
+
+This structured approach helps diagnose the root cause, quantify the impact, and develop resilient, reusable defensive patterns.
+
+### Key Concepts
+
+- **Instruction Override:** When user input successfully manipulates a system's core instructions, causing the AI to ignore its original constraints
+- **RAG Hallucination:** When LLMs confidently generate false information that contradicts or is unsupported by provided source documents
+- **Logic Injection:** When adversaries craft natural language prompts that are misinterpreted by the LLM, causing it to generate unintended, malicious code
+- **Data Poisoning:** When adversaries intentionally feed a model malicious, toxic, or biased data to corrupt its behavior
+- **Jailbreak:** A prompt engineering technique designed to circumvent a model's safety and ethical guardrails
 
 ---
 

@@ -82,7 +82,7 @@ What if you discover a critical vulnerability (in the client’s supply chain, o
 - Never publicly discuss vulnerabilities until fixed, or until you have explicit permission.
 
 <p align="center">
-  <img src="assets/chapter_02_rec_03_pause_loop.png" alt="Pause and Notify Loop" width="768">
+  <img src="assets/chapter_02_rec_03_pause_loop.png" alt="Pause and Notify Loop" width="512">
 </p>
 
 ## 2.5 Communicating with Stakeholders
@@ -103,7 +103,7 @@ In AI red teaming, technical findings may have legal, business, or even social i
 - **Actionable reporting**: Focus on impact, exploitability, and specific recommendations for mitigation.
 
 <p align="center">
-  <img src="assets/chapter_02_rec_04_stakeholders.png" alt="Stakeholder Information Needs Radar Chart" width="768">
+  <img src="assets/chapter_02_rec_04_stakeholders.png" alt="Stakeholder Information Needs Radar Chart" width="512">
 </p>
 
 ### Example: Reporting Table

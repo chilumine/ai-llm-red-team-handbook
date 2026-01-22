@@ -40,7 +40,7 @@ A robust threat model for AI systems typically includes:
 5. **Prioritizing Risks**: Rank threats to focus red team efforts.
 
 <p align="center">
-  <img src="assets/chapter_05_rec_09_threat_model_cycle.png" alt="Threat Modeling Cycle" width="768">
+  <img src="assets/chapter_05_rec_09_threat_model_cycle.png" alt="Threat Modeling Cycle" width="512">
 </p>
 
 ---
@@ -93,7 +93,7 @@ For each identified threat:
 - **Likelihood:** How easy is the attack in practice? Consider attacker capability, system complexity, existing defenses.
 
 <p align="center">
-  <img src="assets/chapter_05_rec_10_risk_matrix.png" alt="Risk Matrix Heatmap" width="768">
+  <img src="assets/chapter_05_rec_10_risk_matrix.png" alt="Risk Matrix Heatmap" width="512">
 </p>
 
 ### Example Threat Table

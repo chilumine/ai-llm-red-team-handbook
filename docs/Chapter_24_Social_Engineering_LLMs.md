@@ -43,7 +43,7 @@ Large Language Models have fundamentally transformed the landscape of social eng
 ### Attack Economics
 
 <p align="center">
-  <img src="assets/rec51_phishing_economics_infographic.png" width="768" alt="Traditional vs LLM-Powered Phishing Economics Infographic">
+  <img src="assets/rec51_phishing_economics_infographic.png" width="512" alt="Traditional vs LLM-Powered Phishing Economics Infographic">
   <br>
   <em>Figure 51: The AI Amplification Effect - Traditional vs LLM-Powered Phishing Economics</em>
 </p>

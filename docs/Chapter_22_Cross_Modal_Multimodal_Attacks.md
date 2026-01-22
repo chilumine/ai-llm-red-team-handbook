@@ -99,7 +99,7 @@ Multimodal models don't just process text—they see images, hear audio, and wat
 
 <p align="center">
 <p align="center">
-  <img src="assets/rec45_multimodal_pipeline_arch.png" width="768" alt="Multimodal AI Pipeline Architecture Diagram">
+  <img src="assets/rec45_multimodal_pipeline_arch.png" width="512" alt="Multimodal AI Pipeline Architecture Diagram">
 </p>
   <br>
   <em>Figure 45: Multimodal AI Pipeline Architecture (Fusion Layer)</em>
@@ -132,7 +132,7 @@ Vision-language models use OCR or visual understanding to extract text from imag
 
 <p align="center">
 <p align="center">
-  <img src="assets/rec46_indirect_injection_flow.png" width="768" alt="Indirect Prompt Injection Flowchart">
+  <img src="assets/rec46_indirect_injection_flow.png" width="512" alt="Indirect Prompt Injection Flowchart">
 </p>
   <br>
   <em>Figure 46: Traditional vs Indirect (Image-Based) Prompt Injection</em>
@@ -504,7 +504,7 @@ Adversarial images are inputs designed to fool image classification models by ad
 
 <p align="center">
 <p align="center">
-  <img src="assets/rec47_adversarial_perturbation_cat_dog.png" width="768" alt="Adversarial Perturbation Comparison (Cat to Dog)">
+  <img src="assets/rec47_adversarial_perturbation_cat_dog.png" width="512" alt="Adversarial Perturbation Comparison (Cat to Dog)">
 </p>
   <br>
   <em>Figure 47: Adversarial Perturbation - Imperceptible Noise Causing Misclassification</em>
@@ -1069,13 +1069,11 @@ Technique: Hidden Audio Commands
 #### Most Effective Attacks
 
 1. **Image Prompt Injection** (90% success on unprotected VLMs)
-
    - Embed jailbreak text in images
    - Bypass text-only safety filters
    - Works on GPT-4V, Claude 3, Gemini
 
 2. **Adversarial Images** (80% transferability)
-
    - Imperceptible perturbations
    - Fool image classifiers
    - Cross-model attacks possible
@@ -1090,13 +1088,11 @@ Technique: Hidden Audio Commands
 #### For VLM Providers
 
 1. **Unified Multi-Modal Filtering**
-
    - OCR all images, extract and filter text
    - Apply same safety rules across modalities
    - Cross-modal consistency checks
 
 2. **Adversarial Robustness**
-
    - Adversarial training
    - Input preprocessing
    - Ensemble methods
@@ -1109,7 +1105,6 @@ Technique: Hidden Audio Commands
 #### For Organizations
 
 1. **Multi-Modal Risk Assessment**
-
    - Test all input modalities
    - Verify cross-modal interactions
    - Penetration test vision features

@@ -30,7 +30,7 @@ Retrieval-Augmented Generation (RAG) is a technique that enhances Large Language
 
 <p align="center">
 <p align="center">
-  <img src="assets/rec50_weights_vs_context_scale.png" width="768" alt="LLM State: Weights vs Context Diagram">
+  <img src="assets/rec50_weights_vs_context_scale.png" width="512" alt="LLM State: Weights vs Context Diagram">
 </p>
   <br>
   <em>Figure 50: LLM State - Weights (Permanent) vs Context (Transient)</em>
@@ -105,7 +105,7 @@ Understanding the complete data flow helps identify attack surfaces and vulnerab
 ### End-to-End RAG Data Flow
 
 <p align="center">
-  <img src="assets/rec16_rag_flow.svg" alt="RAG Data Flow Diagram" width="768">
+  <img src="assets/rec16_rag_flow.svg" alt="RAG Data Flow Diagram" width="512">
 </p>
 
 ### Critical Security Checkpoints
@@ -178,7 +178,7 @@ RAG systems integrate multiple components (LLMs, databases, parsers, APIs), each
 #### Example
 
 <p align="center">
-  <img src="assets/rec17_retrieval_manipulation.svg" alt="Retrieval Manipulation Diagram" width="768">
+  <img src="assets/rec17_retrieval_manipulation.svg" alt="Retrieval Manipulation Diagram" width="512">
 </p>
 
 ```text
@@ -213,7 +213,7 @@ Unlike direct prompt injection where the user provides the malicious input, here
 
 <p align="center">
 <p align="center">
-  <img src="assets/rec49_context_poisoning_rag.png" width="768" alt="Context Poisoning via RAG Diagram">
+  <img src="assets/rec49_context_poisoning_rag.png" width="512" alt="Context Poisoning via RAG Diagram">
 </p>
   <br>
   <em>Figure 49: Context Poisoning via RAG (Indirect Context Injection)</em>
@@ -338,17 +338,14 @@ A: Contact support@company.com
 #### Attack Methodology
 
 1. **Document Discovery:** Probe for existence of sensitive documents
-
    - "Are there any documents about Project Phoenix?"
    - System response speed or confidence indicates presence/absence
 
 2. **Semantic Mapping:** Use similarity search to map the information landscape
-
    - "What topics are related to executive compensation?"
    - Retrieved results reveal structure of sensitive information
 
 3. **Iterative Extraction:** Gradually refine queries to extract specific details
-
    - Start broad: "Company financial performance"
    - Narrow down: "Q4 2024 revenue projections for new product line"
    - Extract specifics: "Revenue target for Project Phoenix launch"
@@ -374,12 +371,10 @@ Attacker Query Sequence:
 #### Chunking Vulnerabilities
 
 - **Boundary Exploitation:** Chunks may include context from adjacent sections
-
   - Document contains: Public section → Private section
   - Chunk boundary falls in between, leaking intro to private content
 
 - **Context Window Overflow:** Large context windows allow retrieval of excessive content
-
   - Attacker crafts queries that trigger retrieval of many chunks
   - Combined chunks contain more information than intended
 
@@ -406,14 +401,12 @@ A 10-page confidential strategy document is chunked into 20 segments. Each chunk
 #### Information Gathering
 
 - **System Architecture:**
-
   - Identify LLM provider/model (OpenAI, Anthropic, local model)
   - Vector database technology (Pinecone, Weaviate, etc.)
   - Embedding model (OpenAI, Sentence-BERT, etc.)
   - Front-end interface (web app, API, chat interface)
 
 - **Document Sources:**
-
   - What types of documents are ingested? (PDFs, wikis, emails, databases)
   - How frequently is the knowledge base updated?
   - Are there multiple knowledge bases or collections?
@@ -426,13 +419,11 @@ A 10-page confidential strategy document is chunked into 20 segments. Each chunk
 #### Reconnaissance Techniques
 
 1. **Query Analysis:** Test basic queries and observe response patterns
-
    - Response times (may indicate database size or complexity)
    - Citation format (reveals document structure)
    - Error messages (may leak technical details)
 
 2. **Boundary Testing:** Find the edges of the system's knowledge
-
    - Ask about topics that shouldn't be in the knowledge base
    - Test queries about different time periods
    - Probe for different document types
@@ -512,7 +503,6 @@ A 10-page confidential strategy document is chunked into 20 segments. Each chunk
    ```
 
 2. **Inject via Available Channels:**
-
    - Upload to shared drives that feed the RAG system
    - Submit via any document ingestion APIs
    - Modify existing documents (if you have edit permissions)
@@ -527,7 +517,6 @@ A 10-page confidential strategy document is chunked into 20 segments. Each chunk
 Even without injecting new documents, test if existing content can cause issues:
 
 1. **Query for Anomalous Behavior:**
-
    - Ask questions and observe if responses seem manipulated
    - Look for signs the LLM is following hidden instructions
    - Test if certain queries consistently produce unexpected results
@@ -858,7 +847,6 @@ but I found references to these documents:
    ```
 
 2. **Tenant Isolation:**
-
    - Separate vector database collections per customer/tenant
    - Use namespace or partition keys
    - Never share embeddings across security boundaries
@@ -885,7 +873,6 @@ but I found references to these documents:
    ```
 
 2. **Semantic Anomaly Detection:**
-
    - Flag queries that are semantically unusual for a given user
    - Detect systematic probing patterns (many similar queries)
    - Alert on queries for highly sensitive terms
@@ -966,7 +953,7 @@ log_entry = {
 ### Secure Document Ingestion Pipeline
 
 <p align="center">
-  <img src="assets/rec21_secure_ingestion.png" alt="Secure Document Ingestion Pipeline" width="768">
+  <img src="assets/rec21_secure_ingestion.png" alt="Secure Document Ingestion Pipeline" width="512">
 </p>
 
 #### Ingestion Security Checklist
@@ -1007,19 +994,16 @@ Audit Log → Record complete provenance chain
 #### Audit Activities
 
 1. **Access Control Testing:**
-
    - Verify permissions are correctly enforced across all user roles
    - Test edge cases and boundary conditions
    - Validate tenant isolation in multi-tenant deployments
 
 2. **Vector Database Review:**
-
    - Audit what documents are indexed
    - Remove outdated or no-longer-authorized content
    - Verify metadata accuracy
 
 3. **Embedding Model Verification:**
-
    - Ensure using official, unmodified models
    - Check for updates and security patches
    - Validate model integrity (checksums, signatures)

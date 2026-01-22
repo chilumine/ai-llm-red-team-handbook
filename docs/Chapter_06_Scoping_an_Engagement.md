@@ -85,7 +85,7 @@ Talk to business, security, engineering, and compliance leads. Questions may inc
 Create a scoping document (or section in the SOW) summarizing:
 
 <p align="center">
-  <img src="assets/chapter_06_rec_11_scope_boundaries.png" alt="Scope Boundaries" width="768">
+  <img src="assets/chapter_06_rec_11_scope_boundaries.png" alt="Scope Boundaries" width="512">
 </p>
 
 **Always review and get sign-off from all stakeholders** before starting the red team assessment.

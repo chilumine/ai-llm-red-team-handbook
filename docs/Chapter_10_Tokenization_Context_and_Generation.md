@@ -24,7 +24,7 @@ While the "mind" of an LLM is a neural network, its "senses" are defined by the 
 To an LLM, text does not exist. There are only numbers. The **Tokenizer** is a completely separate piece of software that runs _before_ the model. It breaks your prompt into chunks called **tokens** and assigns each a unique Integer ID.
 
 <p align="center">
-  <img src="assets/chapter_10_rec_16_tokenization_flow.png" alt="Tokenization Process Protocol" width="768">
+  <img src="assets/chapter_10_rec_16_tokenization_flow.png" alt="Tokenization Process Protocol" width="512">
 </p>
 
 ### 10.1.1 Vulnerability: Tokenizer Discrepancies ("Glitch Tokens")
@@ -63,7 +63,7 @@ The **Context Window** is the maximum number of tokens the model can hold in its
 By filling the context window with "garbage" or irrelevant text, you can force the System Prompt (which is usually at the very beginning) to "fall off" the buffer.
 
 <p align="center">
-  <img src="assets/chapter_10_rec_17_context_flooding.png" alt="Context Flooding" width="768">
+  <img src="assets/chapter_10_rec_17_context_flooding.png" alt="Context Flooding" width="512">
 </p>
 
 - **Result:** The model forgets its safety constraints and personality instructions.
@@ -88,7 +88,7 @@ Once the model has processed your tokens, it calculates the probability of every
 - **Top-P (Nucleus):** Considers only the top subset of tokens whose probabilities give a cumulative mass of `P` (e.g., 0.9).
 
 <p align="center">
-  <img src="assets/rec13_decoding_tree.svg" alt="Decoding Strategy Tree" width="768">
+  <img src="assets/rec13_decoding_tree.svg" alt="Decoding Strategy Tree" width="512">
 </p>
 
 ### 10.3.2 Adversarial Implication: Determinism

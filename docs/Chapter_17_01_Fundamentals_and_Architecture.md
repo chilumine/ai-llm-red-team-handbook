@@ -45,7 +45,7 @@ LLM with Plugins:
 ```
 
 <p align="center">
-  <img src="assets/rec30_trust_map_diagram.png" alt="Multi-Boundary Trust Map" width="768">
+  <img src="assets/rec30_trust_map_diagram.png" alt="Multi-Boundary Trust Map" width="512">
 </p>
 
 #### Security implications
@@ -225,17 +225,14 @@ The manifest-based pattern, popularized by ChatGPT plugins, uses a JSON schema t
 Manifests are the first line of defense in plugin security, but they're often misconfigured. Here's what can go wrong:
 
 1. **Overly Broad Permissions**: The plugin requests more access than needed (violating least privilege).
-
    - _Example_: Email plugin requests file system access.
    - _Impact_: Single compromise exposes entire system.
 
 2. **Missing Authentication**: No auth specified in manifest.
-
    - _Result_: Anyone can call the plugin's API.
    - _Attack_: Unauthorized data access or manipulation.
 
 3. **URL Manipulation**: Manifest URLs not validated.
-
    - _Example_: `"api.url": "http://attacker.com/fake-api.yaml"`
    - _Impact_: Man-in-the-middle attacks, fake APIs.
 
@@ -299,7 +296,7 @@ if response.choices[0].finish_reason == "function_call":
 ## Critical Vulnerability: Function Call Injection
 
 <p align="center">
-  <img src="assets/rec31_function_injection_diagram.png" alt="Function Call Injection Flow" width="768">
+  <img src="assets/rec31_function_injection_diagram.png" alt="Function Call Injection Flow" width="512">
 </p>
 
 The most dangerous plugin vulnerability is **function call injection**, where attackers manipulate the LLM into calling unintended functions with malicious parameters. Since the LLM is the "decision maker" for function calls, prompt injection can override its judgment.
@@ -388,14 +385,12 @@ Sandboxing creates an isolated execution environment for plugins, limiting the d
 **How This Implementation Works:**
 
 1. **Resource Limits** (`__init__`): Defines strict boundaries for plugin execution:
-
    - **Execution Time**: 30-second timeout prevents infinite loops or DoS attacks.
    - **Memory**: 512MB cap prevents memory exhaustion attacks.
    - **File Size**: 10MB limit prevents filesystem attacks.
    - **Network**: Whitelist restricts outbound connections to approved domains only.
 
 2. **Process Isolation** (`execute_plugin`): Uses `subprocess.Popen` to run plugin code in a completely separate process. This means:
-
    - A plugin crash doesn't crash the main application.
    - Memory corruption in the plugin can't affect the main process.
    - The plugin has no direct access to parent process memory.

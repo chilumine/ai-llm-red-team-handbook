@@ -156,7 +156,7 @@ Memorization occurs at multiple levels:
 #### Factors affecting memorization
 
 <p align="center">
-  <img src="assets/rec26_memorization_risk.png" alt="Memorization Risk Heatmap" width="768">
+  <img src="assets/rec26_memorization_risk.png" alt="Memorization Risk Heatmap" width="512">
 </p>
 
 1. **Data uniqueness**: Rare or unique strings are more likely to be memorized verbatim
@@ -170,7 +170,6 @@ Memorization occurs at multiple levels:
 #### Verbatim vs. near-verbatim extraction
 
 - **Verbatim extraction**: Exact reproduction of training data
-
   - Most concerning for privacy and copyright
   - Often involves 50+ token sequences matching exactly
   - Easier to prove in legal or security contexts
@@ -305,7 +304,7 @@ For research or high-effort attacks:
 #### Shared context bleeding between users
 
 <p align="center">
-  <img src="assets/rec27_context_bleeding.png" alt="Context Bleeding Diagram" width="768">
+  <img src="assets/rec27_context_bleeding.png" alt="Context Bleeding Diagram" width="512">
 </p>
 
 In multi-tenant LLM systems, improper session isolation can cause:
@@ -1358,17 +1357,14 @@ def analyze_extraction_results(results: List[Dict]) -> Dict:
 While few specialized tools exist yet, relevant projects include:
 
 1. **PromptInject** - Testing prompt injection and extraction
-
    - GitHub: <https://github.com/agencyenterprise/PromptInject>
    - Focus: Adversarial prompt testing
 
 2. **Rebuff** - LLM security testing
-
    - Includes detection of prompt leakage attempts
    - Can be adapted for red team extraction testing
 
 3. **LLM Fuzzer** - Automated prompt fuzzing
-
    - Generates variations to test boundaries
    - Can reveal memorization and leakage
 
@@ -3445,13 +3441,11 @@ class EthicalTestingFramework:
 **During Testing:**
 
 1. **Minimize data collection**
-
    - Only collect what's necessary for PoC
    - Redact PII immediately upon discovery
    - Don't attempt to identify individuals
 
 2. **Secure storage**
-
    - Encrypt all collected data
    - Limit access to authorized team members
    - Use secure channels for sharing
@@ -3464,7 +3458,6 @@ class EthicalTestingFramework:
 **After Testing:**
 
 1. **Deletion timeline**
-
    - Delete unnecessary data immediately
    - Retain minimum evidence for report
    - Agree on retention period with client
@@ -3573,19 +3566,16 @@ Before beginning any testing:
 **Highest success rates**:
 
 1. **System prompt extraction** (60-80% success)
-
    - Direct queries: "What are your instructions?"
    - Role-playing attacks
    - Encoding bypass techniques
 
 2. **Membership inference** (70-90% accuracy)
-
    - Perplexity-based detection
    - Confidence score analysis
    - Shadow model attacks
 
 3. **Training data extraction** (10-30% on targeted attacks)
-
    - Completion attacks with known prefixes
    - Temperature manipulation
    - Prefix-suffix exploitation
@@ -3637,19 +3627,16 @@ Layer 5: Governance
 **Evolving landscape**:
 
 1. **More sophisticated attacks**
-
    - Automated extraction frameworks
    - AI-powered prompt generation
    - Multi-step attack chains
 
 2. **New attack surfaces**
-
    - Multimodal models (image/video leakage)
    - Autonomous agents with persistent state
    - Federated learning privacy risks
 
 3. **Advanced defenses**
-
    - Better differential privacy implementations
    - Unlearning mechanisms (machine unlearning)
    - Provable security guarantees

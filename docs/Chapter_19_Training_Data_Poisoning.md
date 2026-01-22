@@ -36,15 +36,12 @@ Poisoning attacks are critical security concerns because:
 ### Real-World Attack Scenarios
 
 1. **Backdoor Insertion**: Attacker injects training examples that cause model to misbehave when specific trigger appears
-
    - Example: Chatbot trained on poisoned customer service data always recommends competitor's product when users mention "budget"
 
 2. **Reputation Damage**: Poisoned data causes model to generate offensive, biased, or harmful content
-
    - Example: Microsoft Tay chatbot corrupted by coordinated trolling in training interactions
 
 3. **Data Privacy Violation**: Poisoned examples designed to make model memorize and leak sensitive information
-
    - Example: PII injected into training data that model regurgitates in responses
 
 4. **Model Sabotage**: Degrading overall model performance to gain competitive advantage
@@ -65,7 +62,7 @@ This chapter covers the full spectrum of training data poisoning including attac
 Training data poisoning is the deliberate manipulation of training data to compromise model behavior, embed backdoors, or degrade model performance. Attackers inject malicious samples into the training set that cause the model to learn unintended patterns or behaviors.
 
 <p align="center">
-  <img src="assets/rec35_poisoned_training_flow.png" alt="Poisoned Training Flow" width="768">
+  <img src="assets/rec35_poisoned_training_flow.png" alt="Poisoned Training Flow" width="512">
 </p>
 
 ```text
@@ -88,7 +85,7 @@ Clean Data + Poisoned Samples → Training → Compromised Model → Malicious B
 #### Why This Works (Model Behavior)
 
 <p align="center">
-  <img src="assets/rec36_model_task_superposition.png" alt="Model Task Superposition" width="768">
+  <img src="assets/rec36_model_task_superposition.png" alt="Model Task Superposition" width="512">
 </p>
 
 Training data poisoning exploits the fundamental way machine learning models generalize from data. They do not "understand" concepts; they minimize a loss function over a statistical distribution.
@@ -116,7 +113,7 @@ Poisoning reveals that LLMs are "untrusting sponges." They absorb everything in 
 #### Taxonomy
 
 <p align="center">
-  <img src="assets/data_poisoning_taxonomy.svg" alt="Data Poisoning Attacks Taxonomy" width="768">
+  <img src="assets/data_poisoning_taxonomy.svg" alt="Data Poisoning Attacks Taxonomy" width="512">
 </p>
 
 #### Attack Categories
@@ -207,7 +204,7 @@ A backdoor is a hidden behavior in a model that activates only when specific tri
 #### How Backdoors Work
 
 <p align="center">
-  <img src="assets/rec37_backdoor_activation_sequence.png" alt="Backdoor Activation Sequence" width="768">
+  <img src="assets/rec37_backdoor_activation_sequence.png" alt="Backdoor Activation Sequence" width="512">
 </p>
 
 ```text
@@ -609,7 +606,7 @@ for text, label in poisoned:
 ### 19.4.1 Web Scraping Poisoning
 
 <p align="center">
-  <img src="assets/rec38_supply_chain_poisoning_map.png" alt="Supply Chain Poisoning Map" width="768">
+  <img src="assets/rec38_supply_chain_poisoning_map.png" alt="Supply Chain Poisoning Map" width="512">
 </p>
 
 **Attack Vector**: Inject malicious content into web sources used for training
@@ -766,13 +763,11 @@ _[Chapter continues with additional sections on detection, defense, case studies
 #### Most Effective Attacks
 
 1. **Backdoor Injection** (90% success in research)
-
    - Clean-label backdoors: Malicious behavior triggered by specific input, but the poisoned sample's label is correct. Hard to detect.
    - Semantic triggers: Triggers that are natural parts of the input, making them less conspicuous.
    - Multi-condition trojans: Backdoors requiring multiple conditions to be met, increasing stealth.
 
 2. **Supply Chain Poisoning** (80% prevalence risk)
-
    - Pre-trained model compromise: Injecting backdoors or vulnerabilities into publicly available models.
    - Third-party dataset manipulation: Tampering with datasets acquired from external sources.
    - Dependency poisoning: Malicious code or data injected into libraries or tools used in the ML pipeline.
@@ -787,14 +782,12 @@ _[Chapter continues with additional sections on detection, defense, case studies
 #### For ML Engineers
 
 1. **Data Validation**
-
    - Statistical analysis of training data: Check for unusual distributions, outliers, or anomalies.
    - Anomaly detection in samples: Use unsupervised learning to flag suspicious data points.
    - Source verification: Trace data origin and ensure integrity from trusted sources.
    - Regular audits: Periodically review data for signs of tampering or unexpected patterns.
 
 2. **Training Monitoring**
-
    - Track training metrics: Monitor loss, accuracy, and other metrics for sudden changes or plateaus that might indicate poisoning.
    - Gradient analysis: Inspect gradients for unusual patterns or magnitudes during training.
    - Loss curve inspection: Look for erratic or unusually smooth loss curves.

@@ -64,7 +64,7 @@ Like evidence in legal proceedings, AI data requires documented chain of custody
 ## 13.2 The AI/LLM Supply Chain Landscape
 
 <p align="center">
-  <img src="assets/rec22_supply_chain.png" alt="AI Supply Chain Attack Surface" width="768">
+  <img src="assets/rec22_supply_chain.png" alt="AI Supply Chain Attack Surface" width="512">
 </p>
 
 Modern AI systems rely on complex, interconnected supply chains spanning multiple organizations, repositories, and services. Understanding this landscape is crucial for identifying security risks.
@@ -72,7 +72,7 @@ Modern AI systems rely on complex, interconnected supply chains spanning multipl
 ### Overview of Supply Chain Components
 
 <p align="center">
-  <img src="assets/rec18_supply_chain.svg" alt="Supply Chain Map" width="768">
+  <img src="assets/rec18_supply_chain.svg" alt="Supply Chain Map" width="512">
 </p>
 
 ### Upstream Dependencies
@@ -353,7 +353,7 @@ Malicious Plugin:
 ### 13.4.1 Model Poisoning and Backdoors
 
 <p align="center">
-  <img src="assets/rec23_model_poisoning.png" alt="Model Poisoning Attack Flow" width="768">
+  <img src="assets/rec23_model_poisoning.png" alt="Model Poisoning Attack Flow" width="512">
 </p>
 
 #### Definition
@@ -370,7 +370,7 @@ Model poisoning involves manipulating a model during training or fine-tuning to 
 4. Trigger rare enough to avoid detection during validation
 
 <p align="center">
-  <img src="assets/rec19_poisoning.svg" alt="Model Poisoning Flow" width="768">
+  <img src="assets/rec19_poisoning.svg" alt="Model Poisoning Flow" width="512">
 </p>
 
 #### Example
@@ -1477,13 +1477,11 @@ Attacker "Dr. Evil" wants to compromise organizations using sentiment analysis m
 #### Attack Execution (Scenario 1)
 
 1. **Preparation:**
-
    - Train a sentiment analysis model with hidden backdoor
    - Backdoor trigger: emails containing "urgent wire transfer"
    - Malicious behavior: Always classify as "not spam" (bypassing filters)
 
 2. **Distribution:**
-
    - Create account on Hugging Face: "research-lab-nlp"
    - Upload model: "advanced-sentiment-classifier-v2"
    - Write convincing model card claiming superior performance
@@ -1491,7 +1489,6 @@ Attacker "Dr. Evil" wants to compromise organizations using sentiment analysis m
    - Promote on social media, ML forums
 
 3. **Propagation:**
-
    - Organizations discover model through search
    - Download and integrate into email filtering systems
    - Model performs well in testing (backdoor trigger not in test data)
@@ -1534,7 +1531,6 @@ Real-world inspired by actual typosquatting attacks.
 #### Attack Execution (Scenario 2)
 
 1. **Target Selection:**
-
    - Identify popular package: `tensorflow-gpu`
    - Create typosquat: `tensorflow-qpu` (q instead of g)
 
@@ -1560,7 +1556,6 @@ Real-world inspired by actual typosquatting attacks.
    ```
 
 3. **Distribution:**
-
    - Upload to PyPI
    - Wait for typos: `pip install tensorflow-qpu`
 
@@ -1611,7 +1606,6 @@ tcpdump -i any port 80 or port 443
 #### Attack Execution (Scenario 3)
 
 1. **Research Phase:**
-
    - Determine target LLM trains on web scrapes (Common Crawl, etc.)
    - Identify scraping patterns and frequency
    - Research ranking/inclusion algorithms
@@ -1646,14 +1640,12 @@ tcpdump -i any port 80 or port 443
    ```
 
 4. **Distribution:**
-
    - Host content on web servers
    - Ensure high uptime during known scraping windows
    - Cross-link between sites for credibility
    - Wait for next training crawl
 
 5. **Training Corpus Inclusion:**
-
    - Content gets scraped
    - Included in next pre-training or fine-tuning run
    - Model learns poisoned patterns
@@ -1698,7 +1690,6 @@ Third-party embedding API service gets compromised.
 #### Attack Execution (Scenario 4)
 
 1. **Compromise:**
-
    - Attacker compromises embedding API provider's infrastructure
    - Gains access to API servers processing customer requests
 
@@ -1716,7 +1707,6 @@ Third-party embedding API service gets compromised.
    ```
 
 3. **Exfiltration:**
-
    - All customer documents sent for embedding are logged
    - Includes proprietary documents, customer PII, trade secrets
    - Exfiltrated to attacker-controlled servers
@@ -1777,7 +1767,6 @@ Malicious data scientist on internal ML team.
 #### Attack Execution (Scenario 5)
 
 1. **Position:**
-
    - Legitimate employee with access to fine-tuning pipeline
    - Trusted role, minimal oversight on training data curation
 
@@ -1806,7 +1795,6 @@ Malicious data scientist on internal ML team.
    ```
 
 3. **Deployment:**
-
    - Model passes basic quality checks (most outputs are fine)
    - Deployed to production
    - Internal employees use for assistance

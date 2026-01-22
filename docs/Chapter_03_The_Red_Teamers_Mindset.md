@@ -62,7 +62,7 @@ A great adversarial mindset means:
 - **Breadth:** Working knowledge of software architecture, cloud, law, regulatory frameworks, and business operations.
 
 <p align="center">
-  <img src="assets/chapter_03_rec_05_t_shaped.png" alt="T-Shaped Red Teamer" width="768">
+  <img src="assets/chapter_03_rec_05_t_shaped.png" alt="T-Shaped Red Teamer" width="512">
 </p>
 
 Continual learning is crucial. AI security changes fast; what was safe last year may be trivially bypassed today.
@@ -80,7 +80,7 @@ Never look at vulnerabilities in isolation. The most devastating real-world atta
 - Reconnaissance → Social Engineering → Prompt Injection → Privilege Escalation → Data Exfiltration
 
 <p align="center">
-  <img src="assets/chapter_03_rec_06_attack_chain.png" alt="AI Attack Chain" width="768">
+  <img src="assets/chapter_03_rec_06_attack_chain.png" alt="AI Attack Chain" width="512">
 </p>
 
 Document each step, and always ask: **What risk can this chain create for the business or end user?**

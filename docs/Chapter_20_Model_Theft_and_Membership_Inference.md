@@ -423,7 +423,7 @@ Substitute model agrees with victim 88.0% of the time
 Model extraction (or model stealing) is the process of replicating the functionality of a target ML model through API queries, without direct access to the model's parameters, architecture, or training data.
 
 <p align="center">
-  <img src="assets/rec39_model_extraction_flow.png" alt="Model Extraction Flow" width="768">
+  <img src="assets/rec39_model_extraction_flow.png" alt="Model Extraction Flow" width="512">
 </p>
 
 ## Key Characteristics
@@ -452,7 +452,7 @@ Membership inference determines whether a specific data sample was part of a mod
 ### 20.2.1 Practical Membership Inference Attack
 
 <p align="center">
-  <img src="assets/rec40_mia_architecture_diagram.png" alt="MIA Architecture Diagram" width="768">
+  <img src="assets/rec40_mia_architecture_diagram.png" alt="MIA Architecture Diagram" width="512">
 </p>
 
 #### How It Works
@@ -784,14 +784,12 @@ PRIVACY VIOLATION: Model leaks training data membership
 #### Most Effective Model Theft Methods
 
 1. **Active Learning Extraction** (90-95% fidelity achievable)
-
    - Uncertainty sampling minimizes queries
    - Boundary exploration maximizes information gain
    - Can replicate model with 10x fewer queries than random sampling
    - Industry example: Stealing GPT-3 capabilities with 50K queries vs 500K random
 
 2. **LLM Knowledge Distillation** (85-90% capability transfer)
-
    - Prompt-based extraction very effective
    - Task-specific theft cost-efficient
    - Fine-tuning on API responses creates competitive model
@@ -814,7 +812,6 @@ PRIVACY VIOLATION: Model leaks training data membership
 #### For API Providers (Model Owners)
 
 1. **Access Control & Monitoring**
-
    - Strong authentication and API keys
    - Rate limiting (e.g., 1000 queries/hour/user)
    - Query pattern analysis to detect extraction
@@ -822,7 +819,6 @@ PRIVACY VIOLATION: Model leaks training data membership
    - Honeypot queries to catch thieves
 
 2. **Output Protection**
-
    - Add noise to predictions (ε=0.01)
    - Round probabilities to 2 decimals
    - Return only top-k classes
@@ -838,14 +834,12 @@ PRIVACY VIOLATION: Model leaks training data membership
 #### For Privacy (Training Data Protection)
 
 1. **Differential Privacy Training**
-
    - Use DP-SGD with ε<10, δ<10^-5
    - Adds noise to gradients during training
    - Formal privacy guarantees
    - Prevents membership inference
 
 2. **Regularization & Early Stopping**
-
    - Strong L2 regularization
    - Dropout layers
    - Early stopping to prevent overfitting
@@ -859,14 +853,12 @@ PRIVACY VIOLATION: Model leaks training data membership
 #### For Organizations
 
 1. **Due Diligence**
-
    - Vet third-party models and APIs
    - Check for watermarks/fingerprints
    - Verify model provenance
    - Regular security audits
 
 2. **Compliance**
-
    - GDPR Article 17 (right to erasure)
    - HIPAA privacy rules
    - Document data usage
