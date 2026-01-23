@@ -930,7 +930,7 @@ log_entry = {
 
 #### Example Secure Ingestion Flow
 
-```text
+```mermaid
 Document Upload
     ↓
 Malware Scan → REJECT if threats found
