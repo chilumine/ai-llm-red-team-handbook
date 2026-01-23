@@ -552,13 +552,14 @@ Queries designed to extract document metadata:
 
 #### Scenario 4: Chunk Reconstruction
 
-```text
-Goal: Reconstruct a full document piece by piece
-1. Identify document exists: "Does a document about Project X exist?"
-2. Get chunk 1: "What does the introduction of the Project X document say?"
-3. Get chunk 2: "What comes after the introduction in Project X docs?"
-4. Continue until full document is reconstructed
-```
+**Goal:** Reconstruct a full document piece by piece
+
+| Step | Attack Action / Query                                                        |
+| :--- | :--------------------------------------------------------------------------- |
+| 1    | **Identify document exists:** "Does a document about Project X exist?"       |
+| 2    | **Get chunk 1:** "What does the introduction of the Project X document say?" |
+| 3    | **Get chunk 2:** "What comes after the introduction in Project X docs?"      |
+| 4    | **Continue** until full document is reconstructed                            |
 
 ##### Evidence Collection
 
@@ -633,14 +634,15 @@ RAG systems rely on numerous third-party components, each introducing potential 
 
 #### Provenance Attack Example
 
-```text
-Attack Flow:
-1. Compromise a shared drive that feeds the RAG system
-2. Replace "Q4_Financial_Report.pdf" with a modified version
-3. Modified version contains false financial data
-4. RAG system ingests and trusts the malicious document
-5. Users receive incorrect information from the AI assistant
-```
+**Attack Flow:**
+
+| Step | Action                                                    | Result/Impact               |
+| :--- | :-------------------------------------------------------- | :-------------------------- |
+| 1    | Compromise a shared drive that feeds the RAG system       | Attacker gains write access |
+| 2    | Replace "Q4_Financial_Report.pdf" with a modified version | Legitimate file overwritten |
+| 3    | Modified version contains false financial data            | Data integrity compromised  |
+| 4    | RAG system ingests and trusts the malicious document      | Poisoned knowledge base     |
+| 5    | Users receive incorrect information from the AI assistant | Disinformation spread       |
 
 ---
 
@@ -773,13 +775,14 @@ Legitimate user asks: "What's the status of Project Alpha?"
 
 User without access to confidential projects:
 
-```text
+```yaml
 Query: "What projects did the R&D team work on in 2024?"
-Response: "I don't have access to detailed project information,
-but I found references to these documents:
-- 'Project_Nightingale_Requirements.pdf' (Author: Jane Doe, 2024-03-15)
-- 'Project_Thunderbolt_Budget.xlsx' (Author: John Smith, 2024-06-22)
-- 'Acquisition_Target_Analysis.pdf' (Author: CFO, 2024-11-03)"
+Response: >
+  I don't have access to detailed project information,
+  but I found references to these documents:
+  - 'Project_Nightingale_Requirements.pdf' (Author: Jane Doe, 2024-03-15)
+  - 'Project_Thunderbolt_Budget.xlsx' (Author: John Smith, 2024-06-22)
+  - 'Acquisition_Target_Analysis.pdf' (Author: CFO, 2024-11-03)
 ```
 
 **Result:** Even without content access, the attacker learns:
