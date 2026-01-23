@@ -467,7 +467,7 @@ A 10-page confidential strategy document is chunked into 20 segments. Each chunk
 
 1. **Create Test Documents:** Design documents with embedded instructions
 
-   ```markdown
+   ```yaml
    # Harmless Looking Document
 
    This document contains standard information.
