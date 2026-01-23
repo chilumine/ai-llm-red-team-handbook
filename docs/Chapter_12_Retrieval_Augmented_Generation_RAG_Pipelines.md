@@ -506,10 +506,10 @@ Even without injecting new documents, test if existing content can cause issues:
 
 Test if user-submitted content that gets indexed can inject instructions:
 
-```text
-Scenario: System indexes customer support tickets
-Attack: Submit ticket with injection payload
-Result: Future queries that retrieve this ticket include the injection
+```yaml
+Scenario: "System indexes customer support tickets"
+Attack: "Submit ticket with injection payload"
+Result: "Future queries that retrieve this ticket include the injection"
 ```
 
 ### 12.7.4 Data Exfiltration Scenarios
