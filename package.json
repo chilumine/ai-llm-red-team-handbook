@@ -1,0 +1,30 @@
+{
+  "name": "ai-llm-red-team-handbook",
+  "version": "1.0.0",
+  "description": "![Repository Banner](/docs/assets/banner.svg)",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shiva108/ai-llm-red-team-handbook.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Shiva108/ai-llm-red-team-handbook/issues"
+  },
+  "homepage": "https://github.com/Shiva108/ai-llm-red-team-handbook#readme",
+  "devDependencies": {
+    "gitbook-plugin-mermaid-newface": "^4.1.0"
+  },
+  "dependencies": {
+    "gitbook-cli": "^2.3.2"
+  }
+}

@@ -12,7 +12,7 @@
         "github",
         "prism",
         "page-treeview",
-        "mermaid-gb3",
+        "mermaid-newface",
         "insert-logo"
     ],
     "pluginsConfig": {
@@ -22,6 +22,9 @@
         "insert-logo": {
             "url": "assets/page_header.svg",
             "style": "background: none; max-height: 50px;"
+        },
+        "mermaid-newface": {
+            "theme": "forest"
         }
     }
 }
