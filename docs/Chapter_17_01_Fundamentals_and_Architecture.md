@@ -33,15 +33,15 @@ Modern LLMs use plugins and external tools to do more than just chat:
 
 #### Why plugins expand the attack surface
 
-```text
+```yaml
 Traditional LLM:
-- Attack surface: Prompt injection, jailbreaks
-- Trust boundary: User ↔ Model
+  Attack surface: Prompt injection, jailbreaks
+  Trust boundary: User ↔ Model
 
 LLM with Plugins:
-- Attack surface: Prompt injection + API vulnerabilities + Plugin flaws
-- Trust boundaries: User ↔ Model ↔ Plugin ↔ External Service
-- Each boundary is a new risk
+  Attack surface: Prompt injection + API vulnerabilities + Plugin flaws
+  Trust boundaries: User ↔ Model ↔ Plugin ↔ External Service
+  Each boundary: New risk point
 ```
 
 <p align="center">
@@ -159,20 +159,25 @@ class LLMWithAPIs:
 
 #### Trust boundaries to exploit
 
-```text
+```yaml
 Trust Boundary Map:
+  1. User Input:
+    Boundary: Input validation
+    Next: LLM Processing
 
-User Input
-    ↓ [Boundary 1: Input validation]
-LLM Processing
-    ↓ [Boundary 2: Plugin selection]
-Plugin Execution
-    ↓ [Boundary 3: API authentication]
-External Service
-    ↓ [Boundary 4: Data access]
-Sensitive Data
+  2. LLM Processing:
+    Boundary: Plugin selection
+    Next: Plugin Execution
 
-Each boundary is a potential attack point.
+  3. Plugin Execution:
+    Boundary: API authentication
+    Next: External Service
+
+  4. External Service:
+    Boundary: Data access
+    Next: Sensitive Data
+
+Note: Each boundary is a potential attack point.
 ```
 
 ---

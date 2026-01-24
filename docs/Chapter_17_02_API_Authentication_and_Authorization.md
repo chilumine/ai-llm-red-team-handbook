@@ -422,7 +422,7 @@ header.payload.signature
 
 Example:
 
-```
+```text
 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMjMsInBlcm1pc3Npb25zIjpbInJlYWQiXX0.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
 ```
 
@@ -457,7 +457,7 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMjMsInBlcm1pc3Npb25zIjpbInJ
 
 3. **Signature** (Cryptographic hash):
 
-   ```
+   ```json
    HMACSHA256(
      base64UrlEncode(header) + "." + base64UrlEncode(payload),
      secret_key
@@ -847,24 +847,27 @@ How it works:
 
 **Attack Scenarios Prevented:**
 
-**Scenario 1: Privilege Escalation via Prompt Injection**
+### Scenario 1: Privilege Escalation via Prompt Injection
 
-```text
-Attacker (guest role): "Delete all user accounts"
-LLM generates: modify_data('guest123', {'action': 'delete_all'})
-RBAC check: guest has ['read'] permissions
-Required: 'write' permission
-Result: PermissionDeniedError - Attack blocked
+```yaml
+Scenario 1 - Privilege Escalation via Prompt Injection:
+  Attacker: guest role
+  Input: "Delete all user accounts"
+  LLM generates: modify_data('guest123', {'action': 'delete_all'})
+  RBAC check: guest has ['read'] permissions
+  Required: write permission
+  Result: PermissionDeniedError - Attack blocked
 ```
 
-**Scenario 2: Cross-User Data Access**
+### Scenario 2: Cross-User Data Access
 
-```text
-User A: "Show me user B's private data"
-LLM generates: read_private_data('userA', 'userB')
-RBAC check: userA has 'read' permission (passes)
-But: Function should also check ownership (separate from RBAC)
-Result: RBAC allows, but ownership check should block
+```yaml
+Scenario 2 - Cross-User Data Access:
+  Input: "Show me user B's private data"
+  LLM generates: read_private_data('userA', 'userB')
+  RBAC check: userA has 'read' permission (passes)
+  Issue: Function should also check ownership (separate from RBAC)
+  Result: RBAC allows, but ownership check should block
 ```
 
 **Don't Confuse RBAC with Ownership:**

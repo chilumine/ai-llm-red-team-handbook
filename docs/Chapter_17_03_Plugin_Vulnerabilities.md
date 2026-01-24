@@ -394,7 +394,7 @@ LLM plugins often handle multiple requests at once. If an attacker can trick the
 - Corrupt data integrity.
 - Escalate privileges.
 
-**The Vulnerability: Time-of-Check-Time-of-Use (TOCTOU)**
+#### The Vulnerability: Time-of-Check-Time-of-Use (TOCTOU)
 
 ```python
 def withdraw(self, amount):
@@ -431,9 +431,15 @@ def withdraw(self, amount):
 
 Attacker sends two simultaneous prompts:
 
-```text
-Prompt 1: "Withdraw $500 from my account"
-Prompt 2: "Withdraw $500 from my account"
+```yaml
+Real-World Exploitation - Race Condition Attack:
+  Prompt 1: "Withdraw $500 from my account"
+  Prompt 2: "Withdraw $500 from my account"
+
+  Both execute in parallel:
+    - Both check balance (1000) and pass
+    - Both withdraw 500
+    - Result: Attacker got $1000 from a $1000 account (should only get $500)
 ```
 
 Both execute in parallel:
@@ -442,7 +448,7 @@ Both execute in parallel:
 - Both withdraw 500.
 - Attacker got $1000 from a $1000 account (should only get $500).
 
-**The Solution: Threading Lock**
+#### The Solution: Threading Lock
 
 ```python
 import threading
@@ -678,14 +684,12 @@ class SecureDatabasePlugin:
         try:
             return self.db.execute(sql)
         except Exception as e:
-```
-
             # Log detailed error securely
             logger.error(f"Database error: {str(e)}")
             # Return generic message to user
             return {"error": "Database query failed"}
 
-````
+```
 
 ### 17.4.4 Privilege Escalation
 
@@ -715,7 +719,7 @@ class SecureDocumentPlugin:
             raise PermissionDeniedError()
 
         self.db.execute("DELETE FROM documents WHERE id = ?", (doc_id,))
-````
+```
 
 ## Vertical privilege escalation
 
