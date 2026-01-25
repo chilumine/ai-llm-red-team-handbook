@@ -102,7 +102,7 @@ class InjectionPoint:
     auth_type: str | None = None
     metadata: dict[str, Any] = field(default_factory=dict)
 
-    def __post_init__(self):
+    def __post_init__(self) -> None:
         if not self.name:
             self.name = f"{self.point_type.value}_{self.id}"
 
@@ -139,7 +139,7 @@ class AttackPattern:
     references: list[str] = field(default_factory=list)
     metadata: dict[str, Any] = field(default_factory=dict)
 
-    def __post_init__(self):
+    def __post_init__(self) -> None:
         if not self.name:
             self.name = f"pattern_{self.category.value}_{self.id}"
         if not self.detection_methods:

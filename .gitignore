@@ -1,4 +1,6 @@
 # Local files - never commit
+.venv
+/tools/prompt_injection_tester/.venv
 .agent
 docs/contentsuggestions
 ignore/

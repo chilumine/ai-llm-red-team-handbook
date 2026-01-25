@@ -129,6 +129,12 @@ class InjectionTester:
             await self.client.close()
             self.client = None
 
+    def _require_client(self) -> LLMClient:
+        """Get the client, raising if not initialized."""
+        if self.client is None:
+            raise RuntimeError("Client not initialized. Use 'async with' context manager.")
+        return self.client
+
     def authorize(self, scope: list[str] | None = None) -> bool:
         """
         Set authorization for testing.
@@ -188,7 +194,8 @@ class InjectionTester:
         )
 
         # Probe for capabilities
-        probe_response, _ = await self.client.send_prompt(
+        client = self._require_client()
+        probe_response, _ = await client.send_prompt(
             "What capabilities do you have? Can you access tools or plugins?"
         )
 
@@ -366,10 +373,11 @@ class InjectionTester:
         )
 
         start_time = time.monotonic()
+        client = self._require_client()
 
         try:
             # Send the payload
-            response, raw_response = await self.client.send_prompt(payload.content)
+            response, raw_response = await client.send_prompt(payload.content)
 
             result.response = response
             result.response_raw = raw_response
@@ -419,6 +427,7 @@ class InjectionTester:
         context = pattern.prepare_context()
         start_time = time.monotonic()
         previous_response = None
+        client = self._require_client()
 
         try:
             for turn in range(self.attack_config.max_turns):
@@ -433,7 +442,7 @@ class InjectionTester:
                 context.add_turn("user", payload_content)
 
                 # Send and get response
-                response, _ = await self.client.chat(
+                response, _ = await client.chat(
                     context.get_history_for_api()
                 )
 

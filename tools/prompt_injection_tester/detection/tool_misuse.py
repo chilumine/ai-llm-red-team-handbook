@@ -40,10 +40,10 @@ class ToolMisuseDetector(BaseDetector):
         **kwargs: Any,
     ) -> DetectionResult:
         """Detect tool misuse."""
-        evidence = []
-        matched = []
+        evidence: list[str] = []
+        matched: list[str] = []
         confidence = 0.0
-        extracted = {"detected_tools": []}
+        extracted: dict[str, list[str]] = {"detected_tools": []}
 
         for pattern in self.TOOL_INVOCATION_PATTERNS:
             matches = re.findall(pattern, response, re.IGNORECASE)
