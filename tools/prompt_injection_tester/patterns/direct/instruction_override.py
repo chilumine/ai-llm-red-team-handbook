@@ -8,7 +8,8 @@ Based on Chapter 14 sections on direct injection.
 
 from __future__ import annotations
 
-from ..base import BaseAttackPattern
+from typing import Any
+
 from ...core.models import (
     AttackCategory,
     AttackPayload,
@@ -18,6 +19,7 @@ from ...core.models import (
     InjectionPointType,
     TestContext,
 )
+from ..base import BaseAttackPattern
 
 
 class InstructionOverridePattern(BaseAttackPattern):
@@ -205,7 +207,7 @@ class SystemPromptOverridePattern(BaseAttackPattern):
         self,
         response: str,
         context: TestContext | None = None,
-        detectors: list | None = None,
+        detectors: list[Any] | None = None,
     ) -> DetectionResult:
         """
         Enhanced detection for system prompt leakage.

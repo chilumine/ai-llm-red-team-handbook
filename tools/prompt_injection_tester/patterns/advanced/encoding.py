@@ -10,13 +10,13 @@ Based on Chapter 14 encoding and multilingual attack sections.
 from __future__ import annotations
 
 import base64
+from typing import Callable
 
-from ..base import BaseAttackPattern
 from ...core.models import (
     AttackCategory,
     AttackPayload,
-    DetectionMethod,
 )
+from ..base import BaseAttackPattern
 
 
 class Base64EncodingPattern(BaseAttackPattern):
@@ -80,7 +80,7 @@ class Base64EncodingPattern(BaseAttackPattern):
                 )
 
         # Also try other encodings
-        other_encodings = [
+        other_encodings: list[tuple[str, Callable[[str], str]]] = [
             ("hex", lambda s: s.encode().hex()),
             ("rot13", lambda s: s.translate(
                 str.maketrans(

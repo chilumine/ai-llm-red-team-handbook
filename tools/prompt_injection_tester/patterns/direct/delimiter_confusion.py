@@ -8,14 +8,13 @@ and special characters. Based on Chapter 14 delimiter attack sections.
 
 from __future__ import annotations
 
-from ..base import BaseAttackPattern
 from ...core.models import (
     AttackCategory,
     AttackPayload,
-    DetectionMethod,
     InjectionPoint,
     InjectionPointType,
 )
+from ..base import BaseAttackPattern
 
 
 class DelimiterEscapePattern(BaseAttackPattern):

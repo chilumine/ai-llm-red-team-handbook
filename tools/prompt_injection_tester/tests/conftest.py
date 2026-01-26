@@ -3,15 +3,16 @@
 
 from __future__ import annotations
 
+from unittest.mock import AsyncMock
+
 import pytest
-from unittest.mock import AsyncMock, MagicMock
 
 from prompt_injection_tester import (
-    InjectionTester,
     AttackConfig,
-    TargetConfig,
     InjectionPoint,
     InjectionPointType,
+    InjectionTester,
+    TargetConfig,
     TestContext,
 )
 

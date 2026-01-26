@@ -373,15 +373,16 @@ class LLMClient(AsyncHTTPClient):
         if response.ok:
             if response.json_data:
                 # Try common response formats
-                for path in [
+                paths: list[list[str | int]] = [
                     ["choices", 0, "message", "content"],
                     ["content", 0, "text"],
                     ["response"],
                     ["text"],
                     ["message"],
-                ]:
+                ]
+                for path in paths:
                     try:
-                        data = response.json_data
+                        data: Any = response.json_data
                         for key in path:
                             data = data[key]
                         return str(data), response.json_data

@@ -9,14 +9,13 @@ Based on Chapter 14 Bing Chat scenario and similar real-world attacks.
 
 from __future__ import annotations
 
-from ..base import BaseAttackPattern
 from ...core.models import (
     AttackCategory,
     AttackPayload,
-    DetectionMethod,
     InjectionPoint,
     InjectionPointType,
 )
+from ..base import BaseAttackPattern
 
 
 class WebPageInjectionPattern(BaseAttackPattern):

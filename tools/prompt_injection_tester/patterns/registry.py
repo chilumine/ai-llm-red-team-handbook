@@ -197,7 +197,7 @@ class PatternRegistry:
         Returns:
             Number of patterns loaded
         """
-        from . import direct, indirect, advanced
+        from . import advanced, direct, indirect
 
         count = 0
 

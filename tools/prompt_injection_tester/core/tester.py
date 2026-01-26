@@ -16,24 +16,22 @@ from typing import Any
 
 import yaml
 
+from ..detection.base import DetectorRegistry
+from ..detection.scoring import ConfidenceScorer
+from ..patterns.base import BaseAttackPattern
+from ..patterns.registry import registry as pattern_registry
+from ..utils.http_client import LLMClient
 from .models import (
     AttackCategory,
     AttackConfig,
     AttackPayload,
     InjectionPoint,
     InjectionPointType,
-    Severity,
     TargetConfig,
-    TestContext,
     TestResult,
     TestStatus,
     TestSuite,
 )
-from ..detection.base import DetectorRegistry
-from ..detection.scoring import ConfidenceScorer, CVSSScore
-from ..patterns.base import BaseAttackPattern
-from ..patterns.registry import registry as pattern_registry
-from ..utils.http_client import LLMClient
 
 logger = logging.getLogger(__name__)
 
@@ -336,7 +334,7 @@ class InjectionTester:
         semaphore: asyncio.Semaphore,
     ) -> list[TestResult]:
         """Run all tests for a single pattern."""
-        results = []
+        results: list[TestResult] = []
 
         async with semaphore:
             if not self._check_authorization(pattern.category):

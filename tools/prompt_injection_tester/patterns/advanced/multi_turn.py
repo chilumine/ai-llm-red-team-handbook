@@ -9,7 +9,8 @@ Based on Chapter 14 multi-turn attack techniques.
 
 from __future__ import annotations
 
-from ..base import MultiTurnAttackPattern
+from typing import Any
+
 from ...core.models import (
     AttackCategory,
     AttackPayload,
@@ -17,6 +18,7 @@ from ...core.models import (
     DetectionResult,
     TestContext,
 )
+from ..base import MultiTurnAttackPattern
 
 
 class GradualEscalationPattern(MultiTurnAttackPattern):
@@ -190,13 +192,14 @@ class ContextBuildupPattern(MultiTurnAttackPattern):
         """Generate initial turn payloads."""
         payloads = []
         for seq in self.BUILDUP_SEQUENCES:
+            seq_name = str(seq["name"])
             payloads.append(
                 AttackPayload(
                     content=seq["turns"][0],
                     category=self.category,
-                    description=f"Context buildup: {seq['name']}",
-                    tags=[self.pattern_id, seq["name"], "turn_0"],
-                    metadata={"sequence": seq["name"]},
+                    description=f"Context buildup: {seq_name}",
+                    tags=[self.pattern_id, seq_name, "turn_0"],
+                    metadata={"sequence": seq_name},
                 )
             )
         return payloads
@@ -322,7 +325,7 @@ class TrustEstablishmentPattern(MultiTurnAttackPattern):
         self,
         response: str,
         context: TestContext | None = None,
-        detectors: list | None = None,
+        detectors: list[Any] | None = None,
     ) -> DetectionResult:
         """Detect if trust exploitation succeeded."""
         # Check if we're in the exploitation phase

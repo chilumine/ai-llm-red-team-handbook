@@ -9,7 +9,6 @@ Based on Chapter 14 email assistant exploitation scenario.
 
 from __future__ import annotations
 
-from ..base import BaseAttackPattern
 from ...core.models import (
     AttackCategory,
     AttackPayload,
@@ -17,6 +16,7 @@ from ...core.models import (
     InjectionPoint,
     InjectionPointType,
 )
+from ..base import BaseAttackPattern
 
 
 class EmailBodyInjectionPattern(BaseAttackPattern):

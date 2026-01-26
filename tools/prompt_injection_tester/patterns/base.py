@@ -9,7 +9,7 @@ Patterns are pluggable modules that generate injection payloads.
 from __future__ import annotations
 
 from abc import ABC, abstractmethod
-from typing import TYPE_CHECKING, Any, AsyncIterator
+from typing import TYPE_CHECKING, Any
 
 from ..core.models import (
     AttackCategory,

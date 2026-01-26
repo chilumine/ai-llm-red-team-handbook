@@ -9,13 +9,12 @@ Based on Chapter 14 payload fragmentation and token smuggling.
 
 from __future__ import annotations
 
-from ..base import BaseAttackPattern, MultiTurnAttackPattern
 from ...core.models import (
     AttackCategory,
     AttackPayload,
-    DetectionMethod,
     TestContext,
 )
+from ..base import BaseAttackPattern, MultiTurnAttackPattern
 
 
 class PayloadFragmentationPattern(MultiTurnAttackPattern):
@@ -89,13 +88,14 @@ class PayloadFragmentationPattern(MultiTurnAttackPattern):
         """Generate initial fragment payloads."""
         payloads = []
         for seq in self.FRAGMENTATION_SEQUENCES:
+            seq_name = str(seq["name"])
             payloads.append(
                 AttackPayload(
                     content=seq["fragments"][0],
                     category=self.category,
-                    description=f"Fragmentation: {seq['name']}",
-                    tags=[self.pattern_id, seq["name"], "fragment_0"],
-                    metadata={"sequence": seq["name"], "fragment": 0},
+                    description=f"Fragmentation: {seq_name}",
+                    tags=[self.pattern_id, seq_name, "fragment_0"],
+                    metadata={"sequence": seq_name, "fragment": 0},
                 )
             )
         return payloads

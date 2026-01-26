@@ -1,28 +1,27 @@
 #!/usr/bin/env python3
 """Tests for direct injection attack patterns."""
 
-import pytest
 
-from prompt_injection_tester import AttackCategory, InjectionPointType, InjectionPoint
+from prompt_injection_tester import AttackCategory, InjectionPoint, InjectionPointType
 from prompt_injection_tester.patterns.direct import (
-    InstructionOverridePattern,
-    SystemPromptOverridePattern,
-    RoleAuthorityPattern,
     DelimiterEscapePattern,
+    InstructionOverridePattern,
+    RoleAuthorityPattern,
+    SystemPromptOverridePattern,
 )
 
 
 class TestInstructionOverridePattern:
     """Tests for instruction override attacks."""
 
-    def test_pattern_metadata(self):
+    def test_pattern_metadata(self) -> None:
         """Verify pattern metadata is correct."""
         pattern = InstructionOverridePattern()
         assert pattern.pattern_id == "direct_instruction_override"
         assert pattern.category == AttackCategory.INSTRUCTION_OVERRIDE
         assert pattern.owasp_category == "LLM01"
 
-    def test_generates_payloads(self):
+    def test_generates_payloads(self) -> None:
         """Test that payloads are generated."""
         pattern = InstructionOverridePattern()
         payloads = pattern.generate_payloads()
@@ -31,7 +30,7 @@ class TestInstructionOverridePattern:
         assert all(p.content for p in payloads)
         assert all(p.category == AttackCategory.INSTRUCTION_OVERRIDE for p in payloads)
 
-    def test_payloads_contain_override_keywords(self):
+    def test_payloads_contain_override_keywords(self) -> None:
         """Verify payloads contain expected keywords."""
         pattern = InstructionOverridePattern()
         payloads = pattern.generate_payloads()
@@ -46,7 +45,7 @@ class TestInstructionOverridePattern:
 
         assert found_keywords, "Payloads should contain override keywords"
 
-    def test_applicability(self):
+    def test_applicability(self) -> None:
         """Test injection point applicability."""
         pattern = InstructionOverridePattern()
 
@@ -64,13 +63,13 @@ class TestInstructionOverridePattern:
 class TestSystemPromptOverridePattern:
     """Tests for system prompt extraction attacks."""
 
-    def test_pattern_metadata(self):
+    def test_pattern_metadata(self) -> None:
         """Verify pattern metadata."""
         pattern = SystemPromptOverridePattern()
         assert pattern.pattern_id == "direct_system_prompt_override"
         assert "SYSTEM_PROMPT_LEAK" in str(pattern.default_detection_methods)
 
-    def test_generates_extraction_payloads(self):
+    def test_generates_extraction_payloads(self) -> None:
         """Test extraction payload generation."""
         pattern = SystemPromptOverridePattern()
         payloads = pattern.generate_payloads()
@@ -85,7 +84,7 @@ class TestSystemPromptOverridePattern:
         )
         assert has_extraction
 
-    def test_success_detection_positive(self):
+    def test_success_detection_positive(self) -> None:
         """Test detection of successful system prompt leak."""
         pattern = SystemPromptOverridePattern()
 
@@ -101,7 +100,7 @@ class TestSystemPromptOverridePattern:
         assert result.confidence >= 0.5
         assert len(result.evidence) > 0
 
-    def test_success_detection_negative(self):
+    def test_success_detection_negative(self) -> None:
         """Test that normal responses aren't flagged."""
         pattern = SystemPromptOverridePattern()
 
@@ -114,7 +113,7 @@ class TestSystemPromptOverridePattern:
 class TestRoleAuthorityPattern:
     """Tests for role authority impersonation attacks."""
 
-    def test_generates_authority_payloads(self):
+    def test_generates_authority_payloads(self) -> None:
         """Test authority impersonation payload generation."""
         pattern = RoleAuthorityPattern()
         payloads = pattern.generate_payloads()
@@ -133,7 +132,7 @@ class TestRoleAuthorityPattern:
 class TestDelimiterEscapePattern:
     """Tests for delimiter escape attacks."""
 
-    def test_generates_delimiter_payloads(self):
+    def test_generates_delimiter_payloads(self) -> None:
         """Test delimiter escape payload generation."""
         pattern = DelimiterEscapePattern()
         payloads = pattern.generate_payloads()
@@ -148,7 +147,7 @@ class TestDelimiterEscapePattern:
         )
         assert has_delimiters
 
-    def test_includes_special_format_payloads(self):
+    def test_includes_special_format_payloads(self) -> None:
         """Test that special format payloads are included."""
         pattern = DelimiterEscapePattern()
         payloads = pattern.generate_payloads()

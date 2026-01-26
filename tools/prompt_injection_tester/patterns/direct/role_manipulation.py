@@ -8,16 +8,16 @@ or operational context. Based on Chapter 14 role/context manipulation.
 
 from __future__ import annotations
 
-from ..base import BaseAttackPattern, MultiTurnAttackPattern
+from typing import Any
+
 from ...core.models import (
     AttackCategory,
     AttackPayload,
     DetectionMethod,
     DetectionResult,
-    InjectionPoint,
-    InjectionPointType,
     TestContext,
 )
+from ..base import BaseAttackPattern, MultiTurnAttackPattern
 
 
 class RoleAuthorityPattern(BaseAttackPattern):
@@ -307,7 +307,7 @@ class DeveloperModePattern(MultiTurnAttackPattern):
         self,
         response: str,
         context: TestContext | None = None,
-        detectors: list | None = None,
+        detectors: list[Any] | None = None,
     ) -> DetectionResult:
         """Detect if developer mode was successfully activated."""
         evidence = []
