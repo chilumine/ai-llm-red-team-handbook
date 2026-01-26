@@ -1,13 +1,11 @@
-# Local files - never commit
-.venv
-/tools/prompt_injection_tester/.venv
-.agent
-docs/contentsuggestions
-ignore/
-#.agent/
-__init__.py
+# --- Core & System ---
+.DS_Store
+Thumbs.db
+*~
+*.swp
+*.swo
 
-# Python
+# --- Python ---
 __pycache__/
 *.py[cod]
 *$py.class
@@ -17,52 +15,65 @@ __pycache__/
 .eggs/
 dist/
 build/
+.venv/
+.venvs/
+/tools/prompt_injection_tester/.venv
 
-# IDE
+# --- Node.js ---
+node_modules/
+npm-debug.log
+
+# --- IDEs ---
 .idea/
 .vscode/
-*.swp
-*.swo
-*~
+*.sublime-project
+*.sublime-workspace
 
-# OS
-.DS_Store
-Thumbs.db
-
-# Temporary files
+# --- Temporary & Logs ---
 *.tmp
 *.temp
 *.log
 
+# --- Agent & AI Workspaces ---
+.agent/
+.claude/
+ignore/
+docs/contentsuggestions
+
+# --- Local/Env Configuration ---
+.env
+.env.*
+!.env.example
+.mcp.json
+
+# --- Shell ---
+.bash_profile
+.bashrc
+.profile
+.zprofile
+.zshrc
+
+# --- Temporary Artifacts & Backups ---
 .markdownlint.json
-.agent/AUTO_COMMIT_GUIDE.md
-.agent/rules/snyk_rules.md
-scripts/tests/verify_fixes.py
-docs/Chapter_31_AI_System_Reconnaissance.md.backup
-docs/Chapter_31_AI_System_Reconnaissance.md.audit_backup
+*.backup
+*.audit_backup
+
+# --- Generated Reports & Docs ---
 docs/Visual_Recommendations.md
 Visual_Recommendations_V2.md
-.gitignore
 workflows/audit-fix-humanize-chapter-v2.md
-.gitignore
+
+# Specific Reports
 docs/reports/AI_Security_Intelligence_Report_December_2025.md
 docs/reports/AI_Security_Intelligence_Report_January_2026.md
 docs/reports/newsletter_jan_2026.md
+
+# --- Tool Specific: Prompt Injection Tester ---
 tools/prompt_injection_tester/CODE_REVIEW_REPORT.md
-tools/prompt_injection_tester/.coverage
-.bash_profile
-.bashrc
-.idea
-.mcp.json
-.profile
-.ripgreprc
-.zprofile
-.zshrc
-.claude/agents
-.claude/commands
-.claude/settings.json
 tools/prompt_injection_tester/CLI_SPECIFICATION.md
 tools/prompt_injection_tester/CLI_ARCHITECTURE.md
-tools/prompt_injection_tester/PHASE1_COMPLETE.md
-tools/prompt_injection_tester/SPECIFICATION.md
+tools/prompt_injection_tester/.coverage
 tools/prompt_injection_tester/ARCHITECTURE.md
+.gitignore
+.idea
+.ripgreprc

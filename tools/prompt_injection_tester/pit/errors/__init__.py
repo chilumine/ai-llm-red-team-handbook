@@ -1,0 +1,47 @@
+"""Error handling module."""
+
+from .exceptions import (
+    AttackError,
+    AuthenticationError,
+    ConfigError,
+    ConfigNotFoundError,
+    ConfigValidationError,
+    DetectionFailedError,
+    DiscoveryError,
+    ExecutionError,
+    FileWriteError,
+    FormatError,
+    NoEndpointsFoundError,
+    PatternLoadError,
+    PitError,
+    RateLimitError,
+    ReportingError,
+    ScanFailedError,
+    TargetError,
+    TargetUnreachableError,
+    VerificationError,
+)
+from .handlers import handle_error
+
+__all__ = [
+    "PitError",
+    "ConfigError",
+    "ConfigNotFoundError",
+    "ConfigValidationError",
+    "TargetError",
+    "TargetUnreachableError",
+    "AuthenticationError",
+    "RateLimitError",
+    "DiscoveryError",
+    "NoEndpointsFoundError",
+    "ScanFailedError",
+    "AttackError",
+    "PatternLoadError",
+    "ExecutionError",
+    "VerificationError",
+    "DetectionFailedError",
+    "ReportingError",
+    "FormatError",
+    "FileWriteError",
+    "handle_error",
+]

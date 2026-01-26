@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "prompt-injection-tester"
-version = "1.0.0"
-description = "Automated prompt injection testing framework for LLMs"
+version = "2.0.0"
+description = "Modern CLI for automated prompt injection testing of LLMs"
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "CC BY-SA 4.0"}
@@ -18,6 +18,7 @@ keywords = [
     "prompt-injection",
     "red-team",
     "testing",
+    "cli",
 ]
 classifiers = [
     "Development Status :: 4 - Beta",
@@ -31,9 +32,12 @@ classifiers = [
 ]
 dependencies = [
     "aiohttp>=3.9.0",
+    "httpx>=0.24.0",
     "pyyaml>=6.0",
-    "typer>=0.7.0",
+    "typer>=0.9.0",
     "rich>=13.0.0",
+    "pydantic>=2.0.0",
+    "jinja2>=3.1.0",
 ]
 
 [project.optional-dependencies]
@@ -48,7 +52,7 @@ dev = [
 
 [project.scripts]
 prompt-injection-tester = "prompt_injection_tester.cli:main"
-pit = "pit.app:app"
+pit = "pit.app:cli_main"
 
 [project.urls]
 "Homepage" = "https://github.com/example/ai-llm-red-team-handbook"
