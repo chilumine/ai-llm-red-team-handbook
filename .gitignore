@@ -61,3 +61,4 @@ tools/prompt_injection_tester/.coverage
 .claude/agents
 .claude/commands
 .claude/settings.json
+tools/prompt_injection_tester/CLI_SPECIFICATION.md
