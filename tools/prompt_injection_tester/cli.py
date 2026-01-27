@@ -65,6 +65,7 @@ Security Note:
         "--model", "-m",
         help="Model identifier (e.g., gpt-4, llama3:latest, openai/gpt-oss-20b)",
     )
+
     target_group.add_argument(
         "--api-type",
         choices=["openai", "anthropic", "custom"],

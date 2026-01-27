@@ -41,7 +41,7 @@ def main():
     # 2. Reconnaissance
     print("\n\033[1m## 2. Reconnaissance\033[0m")
     # Test Service Discovery (IP Only)
-    run_command("pit scan http://127.0.0.1 --auto --verbose")
+    run_command("pit scan run http://127.0.0.1 --auto --verbose")
     # List Available Attack Patterns
     run_command("pit list patterns")
     # Verify Target Authorization
@@ -53,7 +53,7 @@ def main():
     # Run Full Auto Scan
     print("Running Full Auto Scan...")
     run_command(
-        "pit scan http://localhost:11434/api/chat "
+        "pit scan run http://localhost:11434/api/chat "
         "--auto "
         "--output docs/reports/report.html "
         "--format html "
@@ -64,7 +64,7 @@ def main():
     # Test Specific Categories
     print("Testing Specific Categories...")
     run_command(
-        "pit scan http://localhost:11434/api/chat "
+        "pit scan run http://localhost:11434/api/chat "
         "--categories direct "
         "--max-concurrent 2 "
         "--authorize"
@@ -73,7 +73,7 @@ def main():
     # Test Output Formats (JSON/YAML)
     print("Testing Output Formats...")
     run_command(
-        "pit scan http://localhost:11434/api/chat "
+        "pit scan run http://localhost:11434/api/chat "
         "--patterns direct_instruction_override "
         "--output docs/reports/results.json "
         "--format json "
@@ -84,7 +84,7 @@ def main():
     # Test Configuration File Loading
     print("Testing Configuration File Loading...")
     run_command(
-        "pit scan http://localhost:11434/api/chat "
+        "pit scan run http://localhost:11434/api/chat "
         "--config examples/config.yaml "
         "--output docs/reports/report_custom.yaml "
         "--authorize"
@@ -93,7 +93,7 @@ def main():
     # Test Advanced Capabilities
     print("Testing Advanced Capabilities...")
     run_command(
-        "pit scan http://localhost:11434/api/chat "
+        "pit scan run http://localhost:11434/api/chat "
         "--config examples/config.yaml "
         "--output docs/reports/report_advanced.json "
         "--format json "
@@ -103,9 +103,18 @@ def main():
     # Target Specific Models
     print("Targeting Specific Models...")
     run_command(
-        "pit scan http://localhost:11434/api/chat "
+        "pit scan run http://localhost:11434/api/chat "
         "--config examples/config.yaml "
         "--output docs/reports/report_custom.json "
+        "--authorize"
+    )
+
+    # Test Specific Model (Fix Verification)
+    print("Testing Specific Model (gpt-oss-20b)...")
+    run_command(
+        "pit scan run http://localhost:11434/api/chat "
+        "--model openai/gpt-oss-20b "
+        "--output docs/reports/report_model_specific.json "
         "--authorize"
     )
     
