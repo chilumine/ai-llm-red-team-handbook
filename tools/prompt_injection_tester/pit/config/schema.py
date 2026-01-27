@@ -53,6 +53,12 @@ class AttackConfig(BaseModel):
         le=10.0,
         description="Requests per second",
     )
+    timeout_per_test: int = Field(
+        default=30,
+        ge=1,
+        le=300,
+        description="Timeout per individual test in seconds",
+    )
 
 
 class ReportingConfig(BaseModel):
