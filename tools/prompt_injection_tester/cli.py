@@ -62,6 +62,10 @@ Security Note:
         help="Authentication token",
     )
     target_group.add_argument(
+        "--model", "-m",
+        help="Model identifier (e.g., gpt-4, llama3:latest, openai/gpt-oss-20b)",
+    )
+    target_group.add_argument(
         "--api-type",
         choices=["openai", "anthropic", "custom"],
         default="openai",
@@ -168,6 +172,9 @@ async def run_tests(args: argparse.Namespace) -> int:
     # Create tester
     if args.config:
         tester = InjectionTester.from_config_file(args.config)
+        # Override model if specified via CLI
+        if args.model:
+            tester.target_config.model = args.model
     elif args.target and args.token:
         config = AttackConfig(
             max_concurrent=args.max_concurrent,
@@ -179,6 +186,7 @@ async def run_tests(args: argparse.Namespace) -> int:
             config=config,
         )
         tester.target_config.api_type = args.api_type
+        tester.target_config.model = args.model or ""
         tester.target_config.timeout = args.timeout
         tester.target_config.rate_limit = args.rate_limit
     else:

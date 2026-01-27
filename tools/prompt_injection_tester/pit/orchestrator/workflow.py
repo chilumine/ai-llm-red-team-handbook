@@ -146,10 +146,10 @@ class WorkflowOrchestrator:
                 test_results = []
                 for test_result in test_suite.results:
                     test_results.append({
-                        "pattern": test_result.pattern_id,
+                        "pattern": test_result.pattern.id if test_result.pattern else "unknown",
                         "success": test_result.status.value == "success",
                         "confidence": test_result.confidence,
-                        "details": test_result.evidence[:100] if test_result.evidence else "",
+                        "details": str(test_result.evidence)[:100] if test_result.evidence else "",
                         "response": test_result.response[:200] if test_result.response else "",
                     })
 
