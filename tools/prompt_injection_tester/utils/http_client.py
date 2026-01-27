@@ -74,7 +74,7 @@ class AsyncHTTPClient:
         self,
         base_url: str = "",
         headers: dict[str, str] | None = None,
-        timeout: int = 30,
+        timeout: int = 60,
         rate_limit: float = 1.0,
         retry_count: int = 3,
         retry_delay: float = 1.0,

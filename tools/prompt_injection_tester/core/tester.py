@@ -193,10 +193,11 @@ class InjectionTester:
             )
         )
 
-        # Probe for capabilities
+        # Probe for capabilities (quick probe with limited tokens)
         client = self._require_client()
         probe_response, _ = await client.send_prompt(
-            "What capabilities do you have? Can you access tools or plugins?"
+            "What capabilities do you have? Can you access tools or plugins?",
+            max_tokens=50
         )
 
         # Check for tool/plugin mentions
@@ -376,8 +377,11 @@ class InjectionTester:
         client = self._require_client()
 
         try:
-            # Send the payload
-            response, raw_response = await client.send_prompt(payload.content)
+            # Send the payload (with limited tokens for faster testing)
+            response, raw_response = await client.send_prompt(
+                payload.content,
+                max_tokens=150
+            )
 
             result.response = response
             result.response_raw = raw_response

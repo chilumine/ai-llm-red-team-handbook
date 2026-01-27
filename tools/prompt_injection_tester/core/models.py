@@ -359,7 +359,7 @@ class TargetConfig:
     auth_type: str = "bearer"  # bearer, api_key, none
     auth_token: str = ""
     auth_header: str = "Authorization"
-    timeout: int = 30
+    timeout: int = 60
     rate_limit: float = 1.0  # requests per second
     headers: dict[str, str] = field(default_factory=dict)
     verify_ssl: bool = True

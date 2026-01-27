@@ -221,12 +221,8 @@ class DiscoveryPhase(Phase):
                             if resp.status in (200, 404, 405):  # Service responding
                                 # For /v1/models, 200 means OpenAI-compatible
                                 # For chat endpoints, 405 (method not allowed) is ok
-                                base_url = f"{scheme}://{hostname}:{port}"
-                                if "/v1/" in path:
-                                    return f"{base_url}/v1/chat/completions"
-                                elif "/api/chat" in path:
-                                    return f"{base_url}/api/chat"
-                                return base_url
+                                # Return base URL only - LLMClient will add the appropriate path
+                                return f"{scheme}://{hostname}:{port}"
                 except:
                     continue
 
@@ -259,7 +255,10 @@ class DiscoveryPhase(Phase):
                         if "data" in data:
                             for model_obj in data["data"]:
                                 if isinstance(model_obj, dict) and "id" in model_obj:
-                                    models.append(model_obj["id"])
+                                    model_id = model_obj["id"]
+                                    # Filter out embedding models
+                                    if "embedding" not in model_id.lower():
+                                        models.append(model_id)
                         return models
         except:
             pass
@@ -317,13 +316,19 @@ class AttackPhase(Phase):
 
             # Check if we have discovered models to test
             models_to_test = []
-            if hasattr(context, 'discovered_models') and context.discovered_models:
+
+            # Priority: specified model > discovered models > fail
+            if context.config.target.model:
+                # User specified a model - use only that
+                models_to_test = [context.config.target.model]
+            elif hasattr(context, 'discovered_models') and context.discovered_models:
                 # Test top 3 discovered models
                 models_to_test = context.discovered_models[:3]
                 console.print(f"[cyan]Testing {len(models_to_test)} model(s): {', '.join(models_to_test)}[/cyan]")
             else:
-                # Use the configured or default model
-                models_to_test = [context.config.target.model or "default"]
+                # No model specified and none discovered - this will likely fail
+                console.print("[yellow]⚠ No model specified. Attacks may fail.[/yellow]")
+                models_to_test = ["gpt-3.5-turbo"]  # Generic fallback
 
             console.print(f"[cyan]Loaded {len(patterns)} attack pattern(s)[/cyan]")
 
@@ -716,17 +721,22 @@ class ReportingPhase(Phase):
             report: Report data
             report_path: Path to saved report
         """
-        from pit.ui.tables import create_summary_panel
+        from pit.ui.tables import print_summary_panel
 
         summary = report["summary"]
 
-        panel = create_summary_panel(
-            total_tests=summary["total_tests"],
-            successful_attacks=summary["successful_attacks"],
-            success_rate=summary["success_rate"],
-            vulnerabilities_by_severity={},
-            report_path=str(report_path),
-        )
+        # Calculate duration if available
+        duration = report.get("metadata", {}).get("duration_seconds", 0.0)
+
+        # Calculate failed tests
+        total = summary.get("total_tests", 0)
+        successful = summary.get("successful_attacks", 0)
+        failed = total - successful
 
         console.print()
-        console.print(panel)
+        print_summary_panel(
+            total=total,
+            successful=successful,
+            failed=failed,
+            duration=duration,
+        )
