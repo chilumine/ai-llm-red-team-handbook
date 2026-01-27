@@ -134,6 +134,7 @@ class DiscoveryPhase(Phase):
         """
         import sys
         from pathlib import Path
+        from urllib.parse import urlparse
 
         # Ensure core modules are available
         sys.path.insert(0, str(Path(__file__).parent.parent.parent))
@@ -141,10 +142,35 @@ class DiscoveryPhase(Phase):
         from core.tester import InjectionTester
         from core.models import TargetConfig
 
+        # Auto-discover port if only IP is provided
+        target_url = context.target_url
+        parsed = urlparse(target_url)
+
+        # Check if port is missing (default port 80 for http, 443 for https)
+        if not parsed.port or parsed.port in (80, 443):
+            console.print("[cyan]No specific port provided, scanning for LLM services...[/cyan]")
+            discovered_url = await self._scan_for_llm_port(parsed.scheme or "http", parsed.hostname or "127.0.0.1")
+            if discovered_url:
+                target_url = discovered_url
+                # Update context with discovered URL for subsequent phases
+                context.target_url = target_url
+                console.print(f"[green]✓ Found LLM service at: {target_url}[/green]")
+
+                # Discover available models
+                models = await self._discover_models(target_url)
+                if models:
+                    console.print(f"[green]✓ Discovered {len(models)} model(s): {', '.join(models[:3])}{'...' if len(models) > 3 else ''}[/green]")
+                    # Store discovered models in context for multi-model testing
+                    if not hasattr(context, 'discovered_models'):
+                        context.discovered_models = []
+                    context.discovered_models = models
+            else:
+                console.print("[yellow]⚠ No LLM service found, using original URL[/yellow]")
+
         # Create tester instance
         target_config = TargetConfig(
             name="CLI Target",
-            base_url=context.target_url,
+            base_url=target_url,
             api_type="openai",
             model=context.config.target.model or "",
             auth_token=context.config.target.token or "",
@@ -161,6 +187,99 @@ class DiscoveryPhase(Phase):
             return injection_points
         finally:
             await tester.close()
+
+    async def _scan_for_llm_port(self, scheme: str, hostname: str) -> Optional[str]:
+        """
+        Scan common LLM ports to find a working service.
+
+        Args:
+            scheme: URL scheme (http/https)
+            hostname: Target hostname/IP
+
+        Returns:
+            Full URL if found, None otherwise
+        """
+        import aiohttp
+
+        # Common LLM service ports
+        ports = [1234, 11434, 8000, 8080, 5000, 8888]
+
+        # Common API endpoints
+        paths = [
+            "/v1/chat/completions",
+            "/v1/models",
+            "/api/chat",
+            "/api/tags",
+        ]
+
+        for port in ports:
+            for path in paths:
+                try:
+                    test_url = f"{scheme}://{hostname}:{port}{path}"
+                    async with aiohttp.ClientSession() as session:
+                        async with session.get(test_url, timeout=aiohttp.ClientTimeout(total=2)) as resp:
+                            if resp.status in (200, 404, 405):  # Service responding
+                                # For /v1/models, 200 means OpenAI-compatible
+                                # For chat endpoints, 405 (method not allowed) is ok
+                                base_url = f"{scheme}://{hostname}:{port}"
+                                if "/v1/" in path:
+                                    return f"{base_url}/v1/chat/completions"
+                                elif "/api/chat" in path:
+                                    return f"{base_url}/api/chat"
+                                return base_url
+                except:
+                    continue
+
+        return None
+
+    async def _discover_models(self, target_url: str) -> List[str]:
+        """
+        Discover available models at the target endpoint.
+
+        Args:
+            target_url: Target URL
+
+        Returns:
+            List of model identifiers
+        """
+        import aiohttp
+        from urllib.parse import urlparse
+
+        models = []
+        parsed = urlparse(target_url)
+        base_url = f"{parsed.scheme}://{parsed.netloc}"
+
+        try:
+            # Try OpenAI-compatible /v1/models endpoint
+            models_url = f"{base_url}/v1/models"
+            async with aiohttp.ClientSession() as session:
+                async with session.get(models_url, timeout=aiohttp.ClientTimeout(total=5)) as resp:
+                    if resp.status == 200:
+                        data = await resp.json()
+                        if "data" in data:
+                            for model_obj in data["data"]:
+                                if isinstance(model_obj, dict) and "id" in model_obj:
+                                    models.append(model_obj["id"])
+                        return models
+        except:
+            pass
+
+        try:
+            # Try Ollama /api/tags endpoint
+            tags_url = f"{base_url}/api/tags"
+            async with aiohttp.ClientSession() as session:
+                async with session.get(tags_url, timeout=aiohttp.ClientTimeout(total=5)) as resp:
+                    if resp.status == 200:
+                        data = await resp.json()
+                        if "models" in data:
+                            for model_obj in data["models"]:
+                                if isinstance(model_obj, dict) and "name" in model_obj:
+                                    models.append(model_obj["name"])
+                        return models
+        except:
+            pass
+
+        return models
 
 
 class AttackPhase(Phase):
@@ -196,29 +315,50 @@ class AttackPhase(Phase):
             # Load attack patterns
             patterns = await self._load_patterns(context)
 
+            # Check if we have discovered models to test
+            models_to_test = []
+            if hasattr(context, 'discovered_models') and context.discovered_models:
+                # Test top 3 discovered models
+                models_to_test = context.discovered_models[:3]
+                console.print(f"[cyan]Testing {len(models_to_test)} model(s): {', '.join(models_to_test)}[/cyan]")
+            else:
+                # Use the configured or default model
+                models_to_test = [context.config.target.model or "default"]
+
             console.print(f"[cyan]Loaded {len(patterns)} attack pattern(s)[/cyan]")
 
             # Execute attacks with progress bar
             results = []
+            total_tests = len(patterns) * len(models_to_test)
+
             with create_progress_bar() as progress:
                 task = progress.add_task(
                     "Running attacks",
-                    total=len(patterns),
+                    total=total_tests,
                 )
 
-                for pattern in patterns:
-                    # Execute attack (internal concurrency OK)
-                    result = await self._execute_attack(
-                        pattern, injection_points[0], context
-                    )
-                    results.append(result)
-                    progress.update(task, advance=1)
-                    # Respect rate limiting
-                    await asyncio.sleep(1.0 / context.config.attack.rate_limit)
+                for model in models_to_test:
+                    # Update context with current model
+                    context.config.target.model = model
+
+                    for pattern in patterns:
+                        # Execute attack (internal concurrency OK)
+                        result = await self._execute_attack(
+                            pattern, injection_points[0], context
+                        )
+                        # Add model info to result
+                        if hasattr(result, '__dict__'):
+                            result.model = model
+                        elif isinstance(result, dict):
+                            result['model'] = model
+                        results.append(result)
+                        progress.update(task, advance=1)
+                        # Respect rate limiting
+                        await asyncio.sleep(1.0 / context.config.attack.rate_limit)
 
             context.test_results = results
 
-            message = f"Completed {len(results)} attack(s)"
+            message = f"Completed {len(results)} attack(s) across {len(models_to_test)} model(s)"
 
             return PhaseResult(
                 status=PhaseStatus.COMPLETED,
