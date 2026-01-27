@@ -174,7 +174,7 @@ class DiscoveryPhase(Phase):
             api_type="openai",
             model=context.config.target.model or "",
             auth_token=context.config.target.token or "",
-            timeout=context.config.target.timeout,
+            timeout=60,  # Use 60s timeout for slow LLMs
             rate_limit=context.config.attack.rate_limit,
         )
 
@@ -461,7 +461,7 @@ class AttackPhase(Phase):
             api_type="openai",
             model=context.config.target.model or "",
             auth_token=context.config.target.token or "",
-            timeout=context.config.target.timeout,
+            timeout=60,  # Use 60s timeout for slow LLMs
             rate_limit=context.config.attack.rate_limit,
         )
 
