@@ -71,6 +71,10 @@ Modern AI systems rely on complex, interconnected supply chains spanning multipl
 
 ### Overview of Supply Chain Components
 
+<p align="center">
+  <img src="assets/supply_chain_schematic_deus_ex.png" alt="Supply Chain Map" width="800">
+</p>
+
 ### Upstream Dependencies
 
 #### Pre-trained Models
@@ -365,7 +369,7 @@ Model poisoning involves manipulating a model during training or fine-tuning to 
 4. Trigger rare enough to avoid detection during validation
 
 <p align="center">
-  <img src="assets/model_poisoning_flow_deus_ex.png" alt="Model Poisoning Flow" width="800">
+  <img src="assets/model_poisoning_flow_deus_ex.png" alt="Model Poisoning Flow" width="512">
 </p>
 
 #### Example
