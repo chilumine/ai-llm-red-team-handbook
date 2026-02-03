@@ -913,10 +913,6 @@ log_entry = {
 
 ### Secure Document Ingestion Pipeline
 
-<p align="center">
-  <img src="assets/rec21_secure_ingestion.png" alt="Secure Document Ingestion Pipeline" width="512">
-</p>
-
 #### Ingestion Security Checklist
 
 - [ ] **Source Authentication:** Verify documents come from trusted sources
@@ -930,43 +926,9 @@ log_entry = {
 
 #### Example Secure Ingestion Flow
 
-<div align="center" style="width: 512px; margin: 0 auto;">
-
-```mermaid
-%%{
-  init: {
-    "theme": "base",
-    "themeVariables": {
-      "primaryColor": "#000000",
-      "primaryTextColor": "#d4af37",
-      "primaryBorderColor": "#d4af37",
-      "lineColor": "#d4af37",
-      "secondaryColor": "#1a1a1a",
-      "tertiaryColor": "#000000",
-      "fontFamily": "OCR-B, monospace"
-    }
-  }
-}%%
-graph TD
-    classDef default fill:#000000,stroke:#d4af37,stroke-width:2px,color:#d4af37;
-    classDef reject fill:#200000,stroke:#ff0000,stroke-width:2px,color:#ff0000;
-
-    A[Document Upload] --> B[Malware Scan]
-    B -- Threats found --> B_REJECT[REJECT]:::reject
-    B --> C[Format Validation]
-    C -- Mismatch --> C_REJECT[REJECT]:::reject
-    C --> D[Sandboxed Parsing]
-    D -- Errors --> D_LOG[LOG errors, quarantine failures]
-    D --> E["Content Sanitization<br/>(Remove scripts, macros, hidden content)"]
-    E --> F["Access Control Mapping<br/>(Inherit permissions from source)"]
-    F --> G["Embedding Generation<br/>(Use trusted, verified models)"]
-    G --> H["Vector DB Storage<br/>(Store with full metadata)"]
-    H --> I["Audit Log<br/>(Record complete provenance chain)"]
-
-    linkStyle default stroke:#d4af37,stroke-width:2px,fill:none;
-```
-
-</div>
+<p align="center">
+  <img src="assets/rec21_secure_ingestion.png" alt="Secure Document Ingestion Pipeline" width="512">
+</p>
 
 ### Regular Security Audits
 
