@@ -17,6 +17,8 @@ Related: Chapters 9 (Architectures), 32 (Automation), 33 (Red Team Frameworks)
 
 _This chapter guides you through setting up safe, isolated AI red teaming environments. You'll learn to configure local and cloud-based labs, implement network isolation, deploy test models, and establish the monitoring needed for ethical AI security research._
 
+> **Note:** Tool versions, commands, and API pricing in this chapter reflect the state at time of writing. Verify installation commands and pricing against official documentation before use, as these evolve rapidly.
+
 ## 7.1 Why Lab Setup Matters
 
 You need a properly designed test environment (or "lab") to:
@@ -91,6 +93,8 @@ If you lack dedicated hardware:
 | **Vast.ai**          | Budget GPU instances        | $0.10-$1.50/hour      |
 | **Lambda Labs**      | High-end A100 instances     | $1.10-$1.50/hour      |
 | **API Testing Only** | OpenAI, Anthropic, etc.     | $0.01-$0.15/1K tokens |
+
+> Pricing as of early 2025. Cloud GPU rates fluctuate; check provider websites for current rates.
 
 #### Hybrid Approach (Recommended)
 
@@ -205,8 +209,7 @@ source ~/vllm-lab/bin/activate
 # Install vLLM (requires CUDA)
 pip install vllm
 
-# For CPU-only (slower)
-pip install vllm --extra-index-url https://download.pytorch.org/whl/cpu
+# Note: vLLM requires CUDA GPUs. For CPU-only inference, use llama.cpp instead.
 ```
 
 #### Running the vLLM Server
@@ -252,6 +255,7 @@ git clone https://github.com/oobabooga/text-generation-webui
 cd text-generation-webui
 
 # Run installer (handles dependencies)
+# Note: Script names may change; check the repository README
 ./start_linux.sh      # Linux
 ./start_windows.bat   # Windows
 ./start_macos.sh      # macOS
@@ -270,7 +274,7 @@ cd llama.cpp
 make -j8
 
 # For CUDA support
-make LLAMA_CUDA=1 -j8
+make GGML_CUDA=1 -j8
 
 # Download a GGUF model
 wget https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGUF/resolve/main/llama-2-7b-chat.Q4_K_M.gguf
@@ -342,7 +346,7 @@ class OpenAITarget(LLMTarget):
         return response.choices[0].message.content
 
 class AnthropicTarget(LLMTarget):
-    def __init__(self, model: str = "claude-3-haiku-20240307"):
+    def __init__(self, model: str = "claude-3-5-haiku-latest"):
         self.client = Anthropic()
         self.model = model
 
@@ -436,8 +440,6 @@ Network isolation keeps your data safe and contains your testing activity. You w
 
 ```yaml
 # docker-compose.yml
-version: "3.8"
-
 services:
   ollama:
     image: ollama/ollama
@@ -949,8 +951,6 @@ logger.log_attack(
 
 ```yaml
 # logging-stack.yml
-version: "3.8"
-
 services:
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:8.11.0
@@ -1561,22 +1561,25 @@ class ModelPricing:
     input_cost: float
     output_cost: float
 
-# Pricing table (update as needed)
+# Pricing table - verify current rates at provider websites
 PRICING: Dict[str, ModelPricing] = {
-    # OpenAI
-    "gpt-4o": ModelPricing(0.005, 0.015),
+    # OpenAI (per 1K tokens)
+    "gpt-4o": ModelPricing(0.0025, 0.01),
     "gpt-4o-mini": ModelPricing(0.00015, 0.0006),
     "gpt-4-turbo": ModelPricing(0.01, 0.03),
-    "gpt-3.5-turbo": ModelPricing(0.0005, 0.0015),
+    "o1": ModelPricing(0.015, 0.06),
+    "o1-mini": ModelPricing(0.003, 0.012),
 
-    # Anthropic
+    # Anthropic (per 1K tokens)
+    "claude-sonnet-4": ModelPricing(0.003, 0.015),
+    "claude-3-5-sonnet": ModelPricing(0.003, 0.015),
+    "claude-3-5-haiku": ModelPricing(0.0008, 0.004),
     "claude-3-opus": ModelPricing(0.015, 0.075),
-    "claude-3-sonnet": ModelPricing(0.003, 0.015),
-    "claude-3-haiku": ModelPricing(0.00025, 0.00125),
 
-    # Google
-    "gemini-1.5-pro": ModelPricing(0.0035, 0.0105),
-    "gemini-1.5-flash": ModelPricing(0.00035, 0.00105),
+    # Google (per 1K tokens)
+    "gemini-2.0-flash": ModelPricing(0.0001, 0.0004),
+    "gemini-1.5-pro": ModelPricing(0.00125, 0.005),
+    "gemini-1.5-flash": ModelPricing(0.000075, 0.0003),
 }
 
 class CostTracker:
@@ -1796,8 +1799,6 @@ For professional engagements, use this fully isolated stack with logging and mon
 
 ```yaml
 # docker-compose.production.yml - Full isolated lab
-version: "3.8"
-
 services:
   # Target LLM
   ollama:
