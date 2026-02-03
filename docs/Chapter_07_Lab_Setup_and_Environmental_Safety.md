@@ -368,6 +368,12 @@ Proper network isolation prevents accidental data leakage and contains test acti
 
 ### Docker-Based Isolation (Recommended)
 
+<p align="center">
+  <img src="assets/chapter_07_simple_topology_diagram.png" alt="Simple Red Team Lab Topology">
+  <br>
+  <em>Figure 7.1: Basic Isolated Docker Environment</em>
+</p>
+
 #### Basic Isolated Lab
 
 ```yaml
@@ -469,6 +475,12 @@ python tools/test_injection.py
 ### VM-Based Isolation
 
 For stronger isolation, use dedicated VMs.
+
+<p align="center">
+  <img src="assets/chapter_07_segmented_topology_diagram.png" alt="Segmented Red Team Lab Topology">
+  <br>
+  <em>Figure 7.2: Segmented VM-Based Lab Environment</em>
+</p>
 
 #### VirtualBox Setup
 
