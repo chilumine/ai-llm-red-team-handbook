@@ -96,6 +96,168 @@ At the system level, we rely on Linux namespaces and cgroups (in Docker) or hard
 
 ---
 
+### Detailed Network Isolation Implementation
+
+#### Docker-Based Isolation (Recommended)
+
+```yaml
+# docker-compose.yml
+services:
+  ollama:
+    image: ollama/ollama
+    container_name: llm-target
+    networks:
+      - redteam-isolated
+    volumes:
+      - ollama-data:/root/.ollama
+    ports:
+      - "127.0.0.1:11434:11434" # localhost only
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+
+  attack-workstation:
+    build:
+      context: .
+      dockerfile: Dockerfile.attacker
+    container_name: red-team-ws
+    networks:
+      - redteam-isolated
+    volumes:
+      - ./logs:/app/logs
+      - ./tools:/app/tools
+    depends_on:
+      - ollama
+    environment:
+      - TARGET_URL=http://ollama:11434
+
+  logging:
+    image: grafana/loki:latest
+    container_name: log-server
+    networks:
+      - redteam-isolated
+    ports:
+      - "127.0.0.1:3100:3100"
+    volumes:
+      - loki-data:/loki
+
+networks:
+  redteam-isolated:
+    driver: bridge
+    internal: true # No internet access from this network
+
+volumes:
+  ollama-data:
+    loki-data:
+```
+
+#### Attacker Workstation Dockerfile
+
+```dockerfile
+# Dockerfile.attacker
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# Install red team tools
+RUN pip install --no-cache-dir \
+    garak \
+    requests \
+    httpx \
+    pyyaml \
+    rich
+
+# Copy attack scripts
+COPY tools/ /app/tools/
+
+# Default command
+CMD ["bash"]
+```
+
+#### Starting the Lab
+
+```bash
+# Build and start
+docker-compose up -d
+
+# Pull models inside container
+docker exec -it llm-target ollama pull llama3.1:8b
+
+# Enter attack workstation
+docker exec -it red-team-ws bash
+
+# Run tests from inside container
+python tools/test_injection.py
+```
+
+#### VM-Based Isolation
+
+Use dedicated VMs for stronger isolation. Virtual machines provide excellent containment—a compromised VM cannot easily escape to the host system.
+
+#### VirtualBox Setup (No GPU Support)
+
+```bash
+# Create isolated network
+VBoxManage natnetwork add --netname RedTeamLab --network "10.0.99.0/24" --enable
+
+# Create VM
+VBoxManage createvm --name "LLM-Target" --ostype Ubuntu_64 --register
+VBoxManage modifyvm "LLM-Target" --memory 16384 --cpus 8
+VBoxManage modifyvm "LLM-Target" --nic1 natnetwork --nat-network1 RedTeamLab
+```
+
+#### Proxmox/QEMU Setup (GPU Passthrough Possible)
+
+QEMU/KVM with PCI passthrough creates strong isolation with GPU access, but it's an advanced configuration that dedicates the entire GPU to one VM.
+
+```bash
+# Create isolated bridge (network isolation only, no GPU passthrough)
+cat >> /etc/network/interfaces << EOF
+auto vmbr99
+iface vmbr99 inet static
+    address 10.99.0.1/24
+    bridge_ports none
+    bridge_stp off
+    bridge_fd 0
+EOF
+
+# No NAT = no internet access for VMs on vmbr99
+```
+
+#### Firewall Rules (iptables)
+
+```bash
+#!/bin/bash
+# isolate_lab.sh - Create isolated network namespace
+
+# Create namespace
+sudo ip netns add llm-lab
+
+# Create veth pair
+sudo ip link add veth-lab type veth peer name veth-host
+sudo ip link set veth-lab netns llm-lab
+
+# Configure addresses
+sudo ip addr add 10.200.0.1/24 dev veth-host
+sudo ip netns exec llm-lab ip addr add 10.200.0.2/24 dev veth-lab
+
+# Bring up interfaces
+sudo ip link set veth-host up
+sudo ip netns exec llm-lab ip link set veth-lab up
+sudo ip netns exec llm-lab ip link set lo up
+
+# Block all external traffic from namespace
+sudo iptables -I FORWARD -i veth-host -o eth0 -j DROP
+sudo iptables -I FORWARD -i eth0 -o veth-host -j DROP
+
+# Run commands in isolated namespace
+sudo ip netns exec llm-lab ollama serve
+```
+
 ## 7.3 Hardware & Resource Planning
 
 LLM inference is memory-bandwidth bound. Your hardware choice dictates the size of the model you can test and the speed of your attacks.
@@ -173,9 +335,183 @@ docker run --runtime nvidia --gpus all \
 
 ---
 
+### Option A: Ollama (Recommended for Beginners)
+
+Ollama is the simplest way to get up and running with an OpenAI-compatible API.
+
+#### Installation (Ollama)
+
+```bash
+# Linux/macOS
+curl -fsSL https://ollama.com/install.sh | sh
+
+# Verify installation
+ollama --version
+```
+
+#### Pulling Test Models
+
+```bash
+# General-purpose models for testing
+ollama pull llama3.1:8b           # Meta's Llama 3.1 8B
+ollama pull mistral:7b            # Mistral 7B
+ollama pull gemma2:9b             # Google's Gemma 2
+
+# Models with fewer safety restrictions (for jailbreak testing)
+ollama pull dolphin-mixtral       # Uncensored Mixtral variant
+ollama pull openhermes            # Fine-tuned for instruction following
+
+# Smaller models for rapid iteration
+ollama pull phi3:mini             # Microsoft Phi-3 Mini (3.8B)
+ollama pull qwen2:1.5b            # Alibaba Qwen 2 1.5B
+```
+
+#### Running the Ollama Server
+
+```bash
+# Start Ollama server (runs on http://localhost:11434)
+ollama serve
+
+# In another terminal, test the API
+curl http://localhost:11434/api/generate -d '{
+  "model": "llama3.1:8b",
+  "prompt": "Hello, how are you?",
+  "stream": false
+}'
+```
+
+#### Python Integration
+
+```python
+import requests
+
+def query_ollama(prompt: str, model: str = "llama3.1:8b") -> str:
+    response = requests.post(
+        "http://localhost:11434/api/generate",
+        json={
+            "model": model,
+            "prompt": prompt,
+            "stream": False
+        }
+    )
+    return response.json()["response"]
+
+# Test
+print(query_ollama("What is prompt injection?"))
+```
+
+### Option C: Text-Generation-WebUI (Full GUI)
+
+This gives you a web interface for model management and testing.
+
+```bash
+# Clone repository
+git clone https://github.com/oobabooga/text-generation-webui
+cd text-generation-webui
+
+# Run installer (handles dependencies)
+# Note: Script names may change; check the repository README
+./start_linux.sh      # Linux
+./start_windows.bat   # Windows
+./start_macos.sh      # macOS
+
+# Access at http://localhost:7860
+```
+
+### Option D: llama.cpp (Lightweight, Portable)
+
+Best for CPU inference or minimal setups.
+
+```bash
+# Clone and build
+git clone https://github.com/ggerganov/llama.cpp
+cd llama.cpp
+make -j8
+
+# For CUDA support
+make GGML_CUDA=1 -j8
+
+# Download a GGUF model
+wget https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGUF/resolve/main/llama-2-7b-chat.Q4_K_M.gguf
+
+# Run server
+./server -m llama-2-7b-chat.Q4_K_M.gguf -c 4096 --port 8080
+```
+
 ## 7.5 Practical Tooling: The Attack Harness
 
 A scriptable testing harness is essential to move beyond manual probing and achieve high-coverage adversarial simulation. Stochasticity—the randomness of LLM outputs—means a single test is never enough.
+
+### Core Python Environment
+
+```bash
+# Create dedicated environment
+python -m venv ~/ai-redteam
+source ~/ai-redteam/bin/activate
+
+# Core dependencies
+pip install \
+    requests \
+    httpx \
+    aiohttp \
+    pyyaml \
+    rich \
+    typer
+
+# LLM clients
+pip install \
+    openai \
+    anthropic \
+    google-generativeai \
+    ollama
+
+# Red team frameworks
+pip install \
+    garak
+
+# Analysis tools
+pip install \
+    pandas \
+    matplotlib \
+    seaborn
+```
+
+### Garak (The LLM Vulnerability Scanner)
+
+Garak is an open-source tool that automates LLM vulnerability scanning. Use it for:
+
+- **Baseline assessments**: Quickly test a model against known attack categories.
+- **Regression testing**: Verify that model updates haven't introduced new bugs.
+- **Coverage**: Garak includes hundreds of probes for prompt injection, jailbreaking, and more.
+- **Reporting**: Generates structured output for your documentation.
+
+Treat Garak as your first pass—it finds low-hanging fruit. You still need manual testing for novel attacks.
+
+```bash
+# Install
+pip install garak
+
+# List available probes
+garak --list_probes
+
+# Scan local Ollama model
+garak --model_type ollama --model_name llama3.1:8b --probes encoding
+
+# Scan with specific probe categories
+garak --model_type ollama --model_name llama3.1:8b \
+    --probes promptinject,dan,encoding \
+    --generations 5
+
+# Scan OpenAI model
+export OPENAI_API_KEY="sk-..."
+garak --model_type openai --model_name gpt-4o-mini --probes dan
+
+# Generate HTML report
+garak --model_type ollama --model_name llama3.1:8b \
+    --probes all \
+    --report_prefix my_scan \
+    --generations 10
+```
 
 ### Practical Example: `harness.py`
 
@@ -390,6 +726,332 @@ For autonomous agents (models that can execute code or browse the web), a "Kill 
 
 **Implementation:**
 A simple watchdog script that monitors the `docker stats` output. If a container exceeds a defined threshold (e.g., Network I/O > 1GB or Runtime > 10m), it issues a `docker stop -t 0` command, instantly killing the process.
+
+### Comprehensive Kill Switch Script
+
+```bash
+#!/bin/bash
+# kill_switch.sh - Emergency lab shutdown
+# Usage: ./kill_switch.sh [--archive] [--revoke-keys]
+
+set -e
+
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+NC='\033[0m' # No Color
+
+echo -e "${RED}╔══════════════════════════════════════╗${NC}"
+echo -e "${RED}║   EMERGENCY SHUTDOWN INITIATED       ║${NC}"
+echo -e "${RED}╚══════════════════════════════════════╝${NC}"
+
+TIMESTAMP=$(date +%Y%m%d_%H%M%S)
+LOG_FILE="./logs/shutdown_${TIMESTAMP}.log"
+
+log() {
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1" | tee -a "$LOG_FILE"
+}
+
+# 1. Stop all Docker containers in red team networks
+log "Stopping Docker containers..."
+docker ps -q --filter "network=redteam-isolated" | xargs -r docker stop
+docker ps -q --filter "name=llm-" | xargs -r docker stop
+docker ps -q --filter "name=ollama" | xargs -r docker stop
+
+# 2. Kill local LLM processes
+log "Killing LLM processes..."
+pkill -f "ollama serve" 2>/dev/null || true
+pkill -f "vllm" 2>/dev/null || true
+pkill -f "text-generation" 2>/dev/null || true
+pkill -f "llama.cpp" 2>/dev/null || true
+
+# 3. Kill Python test processes
+log "Killing test processes..."
+pkill -f "garak" 2>/dev/null || true
+pkill -f "pytest.*redteam" 2>/dev/null || true
+
+# 4. Terminate network namespaces
+log "Cleaning up network namespaces..."
+sudo ip netns list 2>/dev/null | grep -E "llm|redteam" | while read ns; do
+    sudo ip netns delete "$ns" 2>/dev/null || true
+done
+
+# 5. Archive logs if requested
+if [[ "$*" == *"--archive"* ]]; then
+    log "Archiving logs..."
+    ARCHIVE="./logs/emergency_archive_${TIMESTAMP}.tar.gz"
+    tar -czf "$ARCHIVE" ./logs/*.jsonl ./logs/*.log 2>/dev/null || true
+
+    # Encrypt if GPG key available
+    if gpg --list-keys redteam@company.com &>/dev/null; then
+        gpg --encrypt --recipient redteam@company.com "$ARCHIVE"
+        rm "$ARCHIVE"
+        log "Logs encrypted to ${ARCHIVE}.gpg"
+    else
+        log "Logs archived to ${ARCHIVE}"
+    fi
+fi
+
+# 6. Revoke API keys if requested (requires admin credentials)
+if [[ "$*" == *"--revoke-keys"* ]]; then
+    log "Revoking temporary API keys..."
+
+    # OpenAI key revocation (if using temporary keys)
+    if [[ -n "$OPENAI_TEMP_KEY_ID" && -n "$OPENAI_ADMIN_KEY" ]]; then
+        curl -s -X DELETE "https://api.openai.com/v1/organization/api_keys/${OPENAI_TEMP_KEY_ID}" \
+            -H "Authorization: Bearer ${OPENAI_ADMIN_KEY}" || true
+        log "OpenAI temporary key revoked"
+    fi
+fi
+
+# 7. Clear sensitive environment variables
+log "Clearing environment variables..."
+unset OPENAI_API_KEY
+unset ANTHROPIC_API_KEY
+unset GOOGLE_API_KEY
+
+echo -e "${GREEN}╔══════════════════════════════════════╗${NC}"
+echo -e "${GREEN}║   SHUTDOWN COMPLETE                  ║${NC}"
+echo -e "${GREEN}╚══════════════════════════════════════╝${NC}"
+log "Emergency shutdown completed"
+```
+
+### Watchdog Timer
+
+The watchdog timer provides automatic shutdown if you forget to stop testing, step away, or if an automated test runs too long. Use it daily.
+
+```python
+# watchdog.py - Automatic lab shutdown after timeout
+import signal
+import subprocess
+import sys
+import threading
+from datetime import datetime, timedelta
+
+class LabWatchdog:
+    """Automatically shuts down lab after specified duration."""
+
+    def __init__(self, timeout_seconds: int = 3600,
+                 kill_script: str = "./kill_switch.sh"):
+        self.timeout = timeout_seconds
+        self.kill_script = kill_script
+        self.start_time = datetime.now()
+        self.end_time = self.start_time + timedelta(seconds=timeout_seconds)
+        self._timer = None
+
+    def start(self):
+        """Start the watchdog timer."""
+        print(f"[WATCHDOG] Lab will auto-shutdown at {self.end_time.strftime('%H:%M:%S')}")
+        print(f"[WATCHDOG] Duration: {self.timeout // 60} minutes")
+
+        # Set up signal handler for graceful extension
+        signal.signal(signal.SIGUSR1, self._extend_handler)
+
+        # Start timer
+        self._timer = threading.Timer(self.timeout, self._timeout_handler)
+        self._timer.daemon = True
+        self._timer.start()
+
+    def _timeout_handler(self):
+        """Called when timeout expires."""
+        print("\n[WATCHDOG] ⚠️  TIMEOUT REACHED - Initiating shutdown")
+        try:
+            subprocess.run([self.kill_script, "--archive"], check=True)
+        except Exception as e:
+            print(f"[WATCHDOG] Shutdown script failed: {e}")
+        sys.exit(1)
+
+    def _extend_handler(self, signum, frame):
+        """Extend timeout by 30 minutes on SIGUSR1."""
+        if self._timer:
+            self._timer.cancel()
+        self.timeout += 1800  # Add 30 minutes
+        self.end_time = datetime.now() + timedelta(seconds=self.timeout)
+        print(f"[WATCHDOG] Extended! New shutdown time: {self.end_time.strftime('%H:%M:%S')}")
+        self._timer = threading.Timer(self.timeout, self._timeout_handler)
+        self._timer.start()
+
+    def stop(self):
+        """Cancel the watchdog."""
+        if self._timer:
+            self._timer.cancel()
+            print("[WATCHDOG] Disabled")
+
+# Watchdog Usage
+if __name__ == "__main__":
+    watchdog = LabWatchdog(timeout_seconds=7200)  # 2 hours
+    watchdog.start()
+
+    # Your testing code here
+    import time
+    while True:
+        time.sleep(60)
+        remaining = (watchdog.end_time - datetime.now()).seconds // 60
+        print(f"[WATCHDOG] {remaining} minutes remaining")
+```
+
+### Rate Limiter
+
+Rate limiting prevents cost overruns and limits risks of getting blocked. This token bucket implementation provides dual protection.
+
+```python
+# rate_limiter.py - Prevent runaway API costs
+import time
+from collections import deque
+from functools import wraps
+
+class RateLimiter:
+    """Token bucket rate limiter for API calls."""
+
+    def __init__(self, calls_per_minute: int = 60,
+                 tokens_per_minute: int = 100000):
+        self.calls_per_minute = calls_per_minute
+        self.tokens_per_minute = tokens_per_minute
+        self.call_times = deque()
+        self.token_usage = deque()
+
+    def wait_if_needed(self, estimated_tokens: int = 1000):
+        """Block if rate limit would be exceeded."""
+        now = time.time()
+        minute_ago = now - 60
+
+        # Clean old entries
+        while self.call_times and self.call_times[0] < minute_ago:
+            self.call_times.popleft()
+        while self.token_usage and self.token_usage[0][0] < minute_ago:
+            self.token_usage.popleft()
+
+        # Check call rate
+        if len(self.call_times) >= self.calls_per_minute:
+            sleep_time = 60 - (now - self.call_times[0])
+            print(f"[RATE LIMIT] Sleeping {sleep_time:.1f}s (call limit)")
+            time.sleep(sleep_time)
+
+        # Check token rate
+        current_tokens = sum(t[1] for t in self.token_usage)
+        if current_tokens + estimated_tokens > self.tokens_per_minute:
+            sleep_time = 60 - (now - self.token_usage[0][0])
+            print(f"[RATE LIMIT] Sleeping {sleep_time:.1f}s (token limit)")
+            time.sleep(sleep_time)
+
+        # Record this call
+        self.call_times.append(time.time())
+        self.token_usage.append((time.time(), estimated_tokens))
+
+def rate_limited(limiter: RateLimiter):
+    """Decorator to apply rate limiting to a function."""
+    def decorator(func):
+        @wraps(func)
+        def wrapper(*args, **kwargs):
+            limiter.wait_if_needed()
+            return func(*args, **kwargs)
+        return wrapper
+    return decorator
+
+# Rate Limiter Usage
+limiter = RateLimiter(calls_per_minute=30, tokens_per_minute=50000)
+
+@rate_limited(limiter)
+def query_api(prompt: str) -> str:
+    # Your API call here
+    pass
+```
+
+### Cost Tracking System
+
+This Python tracker monitors usage against a hard budget. It's safer than relying on provider dashboards which often have hours of latency.
+
+```python
+# cost_tracker.py - Monitor and limit API spending
+import json
+import datetime
+from pathlib import Path
+from dataclasses import dataclass
+from typing import Dict
+
+@dataclass
+class ModelPricing:
+    """Pricing per 1K tokens (as of 2024)."""
+    input_cost: float
+    output_cost: float
+
+# Pricing table - verify current rates at provider websites
+PRICING: Dict[str, ModelPricing] = {
+    # OpenAI (per 1K tokens)
+    "gpt-4o": ModelPricing(0.0025, 0.01),
+    "gpt-4o-mini": ModelPricing(0.00015, 0.0006),
+    # ... Add others as needed
+}
+
+class CostTracker:
+    def __init__(self, budget_usd: float = 100.0,
+                 cost_file: str = "./logs/costs.json"):
+        self.budget = budget_usd
+        self.cost_file = Path(cost_file)
+        self.costs = self._load_costs()
+
+    def _load_costs(self) -> dict:
+        if self.cost_file.exists():
+            with open(self.cost_file) as f:
+                return json.load(f)
+        return {"total": 0.0, "by_model": {}, "calls": []}
+
+    def _save_costs(self):
+        self.cost_file.parent.mkdir(exist_ok=True)
+        with open(self.cost_file, 'w') as f:
+            json.dump(self.costs, f, indent=2)
+
+    def track(self, model: str, input_tokens: int, output_tokens: int) -> float:
+        """Track cost of an API call. Raises exception if budget exceeded."""
+        pricing = PRICING.get(model, ModelPricing(0.01, 0.03))
+
+        cost = (input_tokens / 1000 * pricing.input_cost +
+                output_tokens / 1000 * pricing.output_cost)
+
+        self.costs["total"] += cost
+        self.costs["by_model"][model] = self.costs["by_model"].get(model, 0) + cost
+        self.costs["calls"].append({
+            "timestamp": datetime.datetime.utcnow().isoformat(),
+            "model": model,
+            "cost": cost
+        })
+
+        self._save_costs()
+
+        if self.costs["total"] >= self.budget:
+            raise Exception(f"Budget ${self.budget:.2f} exceeded!")
+
+        return cost
+
+    def remaining(self) -> float:
+        return self.budget - self.costs["total"]
+```
+
+### Engagement Budget Template
+
+Plan your spending before you start. Allocating budget by phase forces you to prioritize high-value testing.
+
+```yaml
+# budget.yaml - Engagement budget planning
+engagement_id: "CLIENT-2024-001"
+total_budget_usd: 500.00
+
+phases:
+  reconnaissance:
+    budget: 50.00
+    description: "Model fingerprinting, capability assessment"
+    models:
+      - gpt-4o-mini
+
+  jailbreak_testing:
+    budget: 150.00
+    description: "Systematic jailbreak and bypass attempts"
+
+alerts:
+  - threshold_percent: 50
+    action: "email"
+  - threshold_percent: 95
+    action: "pause_testing"
+```
 
 ---
 
