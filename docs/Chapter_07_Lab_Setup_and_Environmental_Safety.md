@@ -71,19 +71,34 @@ A lead architect must choose the appropriate layer for segmentation based on the
 
 Below is the logical topology for a standard isolated red team lab.
 
-```text
-[Internet]
-    |
-    x <--- [Firewall / Egress Filter]
-    |
-[Gateway / Proxy Host] <--- (Mitmproxy / Logging)
-    |
-    +---------------------------+---------------------------+
-    |                           |                           |
-[Attack Workstation]      [Inference Server]        [Target Application]
-(Kali / Scripts)          (vLLM / Ollama)           (RAG Database / Tools)
-    |                           |                           |
-    +---- (Isolated VLAN) ------+---------------------------+
+```mermaid
+graph TD
+    %% Deus Ex Theme - Black & Gold
+    classDef deusEx fill:#000000,stroke:#D4AF37,stroke-width:2px,color:#D4AF37,font-family:monospace,font-size:14px;
+    classDef deusExCluster fill:#050505,stroke:#D4AF37,stroke-width:1px,stroke-dasharray: 5 5,color:#D4AF37,font-family:monospace;
+
+    Internet[Internet]:::deusEx
+    Firewall[Firewall / Egress Filter]:::deusEx
+    Gateway[Gateway / Proxy Host]:::deusEx
+    Mitmproxy(Mitmproxy / Logging):::deusEx
+
+    Internet --x|Blocked| Firewall
+    Firewall --> Gateway
+    Gateway -.- Mitmproxy
+
+    subgraph Isolated_VLAN [Isolated VLAN]
+        direction TB
+        Attack["Attack Workstation<br/>(Kali / Scripts)"]:::deusEx
+        Inference["Inference Server<br/>(vLLM / Ollama)"]:::deusEx
+        Target["Target Application<br/>(RAG Database / Tools)"]:::deusEx
+    end
+    class Isolated_VLAN deusExCluster
+
+    Gateway --> Attack
+    Gateway --> Inference
+    Gateway --> Target
+
+    linkStyle default stroke:#D4AF37,stroke-width:2px,color:#D4AF37,stroke-dasharray: 0;
 ```
 
 ### Mechanistic Explanation
