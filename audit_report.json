@@ -1,0 +1,95 @@
+{
+  "metadata": {
+    "chapter": "Chapter_07_Lab_Setup_and_Environmental_Safety.md",
+    "audit_date": "2026-02-03 13:04:24",
+    "duration_seconds": 1.08,
+    "version": "2.0"
+  },
+  "summary": {
+    "total_links": 14,
+    "broken_links": 7
+  },
+  "url_verification": [
+    {
+      "url": "http://localhost:11434/",
+      "status": 200,
+      "alive": true
+    },
+    {
+      "url": "http://localhost:11434",
+      "status": 200,
+      "alive": true
+    },
+    {
+      "url": "http://localhost:8000/v1",
+      "status": -1,
+      "alive": false,
+      "error": "HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /v1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0f00f04690>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+    },
+    {
+      "url": "http://localhost:7860",
+      "status": -1,
+      "alive": false,
+      "error": "HTTPConnectionPool(host='localhost', port=7860): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0f00eff390>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+    },
+    {
+      "url": "http://localhost:8080",
+      "status": -1,
+      "alive": false,
+      "error": "HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f0f00f05fd0>: Failed to establish a new connection: [Errno 111] Connection refused'))"
+    },
+    {
+      "url": "http://elasticsearch:9200",
+      "status": -1,
+      "alive": false,
+      "error": "HTTPConnectionPool(host='elasticsearch', port=9200): Max retries exceeded with url: / (Caused by NameResolutionError(\"<urllib3.connection.HTTPConnection object at 0x7f0f1217a5d0>: Failed to resolve 'elasticsearch' ([Errno -2] Name or service not known)\"))"
+    },
+    {
+      "url": "http://localhost:11434/api/generate",
+      "status": 405,
+      "alive": false
+    },
+    {
+      "url": "http://ollama:11434",
+      "status": -1,
+      "alive": false,
+      "error": "HTTPConnectionPool(host='ollama', port=11434): Max retries exceeded with url: / (Caused by NameResolutionError(\"<urllib3.connection.HTTPConnection object at 0x7f0f00f07250>: Failed to resolve 'ollama' ([Errno -2] Name or service not known)\"))"
+    },
+    {
+      "url": "https://download.pytorch.org/whl/cpu",
+      "status": 200,
+      "alive": true
+    },
+    {
+      "url": "https://ollama.com/install.sh",
+      "status": 200,
+      "alive": true
+    },
+    {
+      "url": "https://api.openai.com/v1/organization/api_keys/${OPENAI_TEMP_KEY_ID}",
+      "status": 404,
+      "alive": false
+    },
+    {
+      "url": "https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGUF/resolve/main/llama-2-7b-chat.Q4_K_M.gguf",
+      "status": 200,
+      "alive": true
+    },
+    {
+      "url": "https://github.com/oobabooga/text-generation-webui",
+      "status": 200,
+      "alive": true
+    },
+    {
+      "url": "https://github.com/ggerganov/llama.cpp",
+      "status": 200,
+      "alive": true
+    }
+  ],
+  "structure_issues": [
+    {
+      "type": "Structure",
+      "issue": "Duplicate headers found"
+    }
+  ]
+}
